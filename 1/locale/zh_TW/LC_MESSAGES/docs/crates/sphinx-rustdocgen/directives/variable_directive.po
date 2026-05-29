@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:3
+msgid "``mod variable_directive``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:10
+msgid "Implementation of the ``rust:variable`` directive"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:94
+msgid "Macros"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:99
+msgid ""
+"DRY macro to create :rust:struct:`VariableDirective` from various ``syn`` "
+"structs."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:104
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:111
+msgid "Struct to hold the data for documenting variables and struct fields."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:119
+msgid "The Rust path of the variable or field."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:127
+msgid "The identifier of the variable or field."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:135
+msgid "The options for the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:143
+msgid "The content of the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:147
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:157
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:167
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:237
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:253
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:173
+msgid "Change the parent directive of the variable."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:180
+msgid "Return the visibility of this directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:187
+msgid "Create a variable directive for a const variable."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:194
+msgid "Create a variable directive for a foreign static variable."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:201
+msgid "Create variable directives from the fields of a struct or enum variant."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:208
+msgid "Create a variable directive for a const variable within an impl block."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:215
+msgid "Create a variable directive for a static variable."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:222
+msgid ""
+"Create a variable directive for a const variable within a trait definition."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:227
+msgid "Traits implemented"
+msgstr ""

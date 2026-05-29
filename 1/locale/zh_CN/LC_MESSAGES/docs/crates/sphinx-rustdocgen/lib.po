@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:3
+msgid "Crate ``sphinx_rustdocgen``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:9
+msgid "Library for the sphinx-rustdocgen executable."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:11
+msgid ""
+"It consists of functions to extract content from the AST and to write the "
+"content to an RST or MD file. The crate is tested on itself, so all the "
+"documentation in the crate is in RST. The tests for Markdown are done on the "
+"dependencies."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:16
+msgid "Modules"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:88
+msgid "Re-exports"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:89
+msgid ":rust:any:`sphinx_rustdocgen::utils::SourceCodeFile`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:90
+msgid ":rust:any:`sphinx_rustdocgen::utils::check_for_manifest`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:94
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:185
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:285
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:319
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:100
+msgid "Traverse the crate and extract the docstrings for the items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:102
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:302
+msgid "Args:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:0
+msgid "config"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:103
+msgid "The configuration for the crate."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:107
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:114
+msgid "Struct to hold the deserialized configuration passed from Python."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:122
+msgid "The name of the crate."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:130
+msgid "The directory containing the Cargo.toml file for the crate."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:138
+msgid ""
+"The directory under which to create the crate's documentation. A new "
+"directory is created under this directory for the crate."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:147
+msgid "Rebuild document for all files, even if it has not changed."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:155
+msgid "The format to use for the output."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:163
+msgid "The required visibility of the items to include."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:171
+msgid "Whether to remove the src/ directory when generating the docs or not."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:175
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:275
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:191
+msgid "Canonicalize the crate directory and return it."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:199
+msgid "Runtime version of the configuration after validation and normalizing."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:207
+msgid "The name of the crate in the configuration."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:215
+msgid "The crate's root directory, the one which contains ``Cargo.toml``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:223
+msgid "The crate's src/ directory, if one is found and ``strip_src`` is true."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:231
+msgid "The directory under which to write the documents."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:239
+msgid "Whether to rewrite all the documents, even the ones that are unchanged."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:247
+msgid "The format of the docstrings."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:255
+msgid "Only document items with visibility less than this."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:263
+msgid "The executables within the crate that will be documented."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:271
+msgid "The crate's library to document, if any."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:291
+msgid ""
+"Returns the stem of the document file relative to the top level directory"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:299
+msgid ""
+"Write a documentation file for the provided source file path and content."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:0
+msgid "source_file_path"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:303
+msgid "The path of the source file corresponding to the content."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:0
+msgid "content_fn"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:305
+msgid "A function to extract the content for the file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:309
+msgid "Traits implemented"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/lib.rst:325
+msgid ""
+"Create a validated and normalized version of the :rust:struct:"
+"`Configuration`."
+msgstr ""

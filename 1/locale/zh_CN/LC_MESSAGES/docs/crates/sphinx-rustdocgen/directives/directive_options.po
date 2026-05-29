@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:3
+msgid "``mod directive_options``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:53
+msgid "Enums"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:59
+msgid "Enum to represent the various options for the directives."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:61
+msgid ""
+"The enum implements the :rust:trait:`RstOption` and :rust:trait:`MdOption` "
+"traits for easily converting the options to required text."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:70
+msgid "The ``:index:`` option"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:78
+msgid "The ``:vis:`` option."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:86
+msgid "The ``:layout:`` option."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:94
+msgid "The ``:toc:`` option."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:98
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:196
+msgid "Traits implemented"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:108
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:124
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:178
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:206
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:222
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:247
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:136
+msgid "Enum for the values of the :rust:struct:`DirectiveOption::Vis` option"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:138
+msgid ""
+"The enum is ordered ``Pub < Crate < Pvt``, so it can be efficiently compared "
+"for filtering. Note that ordering here is opposite to that of the visibility "
+"itself."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:148
+msgid "Public visibility"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:156
+msgid "Crate visibility"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:164
+msgid "Private visibility"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:168
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:184
+msgid ""
+"Determine the effective visibility for an item based on its visibility or "
+"its parent's visibility."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:187
+msgid "Args:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:0
+msgid "visibility"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:188
+msgid "The item's visibility."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:0
+msgid "inherited_visibility"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:189
+msgid "The visibility of the item's parent."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:191
+msgid "Returns:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:192
+msgid "The directive visibility applicable to the item."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:238
+msgid "Types"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:259
+msgid "The different index entry types."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:261
+msgid ""
+"This corresponds to the Python enum :py:class:`sphinxcontrib_rust.items."
+"SphinxIndexEntryType`."
+msgstr ""

@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/indices.rst:3
+msgid "Rust items index"
+msgstr ""
+
+#: ../../../docs/indices.rst:5
+msgid ""
+"The extension produces an index of importable Rust items detected, and "
+"writes it as ``rust-items.html``. It can be referenced in the Sphinx build "
+"as ``:ref:`rust_items``` from any document. The extension indexes all "
+"crates, enums, macros, modules, structs and traits, all types and variables "
+"that are at the top level of a module, and functions that are at the top "
+"level of a module. For enums, structs and traits, it also lists the "
+"variants, fields and items respectively as nested entries."
+msgstr ""
+
+#: ../../../docs/indices.rst:13
+msgid ""
+"The index is also useful for display in the sidebar but has to be "
+"incorporated in the CSS theme to achieve that. Refer to the docs of the CSS "
+"theme used for the Sphinx build on how to do that."
+msgstr ""
+
+#: ../../../docs/indices.rst:17
+msgid ""
+"The index of the ``sphinx-rustdocgen`` crate can be viewed at :ref:`rust-"
+"items` as an example."
+msgstr ""

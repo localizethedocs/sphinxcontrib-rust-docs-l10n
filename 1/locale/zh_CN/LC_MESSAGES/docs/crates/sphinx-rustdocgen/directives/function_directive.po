@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:3
+msgid "``mod function_directive``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:10
+msgid "Implementation of the ``rust:function`` directive"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:114
+msgid "Macros"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:119
+msgid "DRY macro to parse the different item types."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:123
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:196
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:287
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:303
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:129
+msgid "Generate docutils node layout for the function from its signature"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:133
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:140
+msgid "Struct to hold data for documenting a function."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:148
+msgid "The full Rust path of the function."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:156
+msgid "The identifier of the function."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:164
+msgid "The directive options to use."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:172
+msgid "The docstring for the function."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:176
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:186
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:202
+msgid "Change the parent directive of the function."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:209
+msgid "Return the visibility of this directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:216
+msgid "Create a new ``Directive::Function`` from a ``syn::ForeignItemFn``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:218
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:234
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:250
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:266
+msgid "Args:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:0
+msgid "parent_path"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:219
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:267
+msgid "The full path of the trait the function is in."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:0
+msgid "item"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:220
+msgid "The ``syn::ForeignItemFn`` reference to parse."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:0
+msgid "inherited_visibility"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:221
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:253
+msgid "The visibility of the parent module."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:223
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:239
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:255
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:271
+msgid "Returns:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:224
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:240
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:256
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:272
+msgid ""
+"A new ``Directive::Function`` value, which contains the parsed "
+"``FunctionDirective`` in it."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:232
+msgid "Create a new ``Directive::Function`` from a ``syn::ImplItemFn``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:235
+msgid "The full path of the impl block the function is in."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:236
+msgid "The ``syn::ImplItemFn`` reference to parse."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:237
+msgid "The visibility of the impl block."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:248
+msgid "Create a new ``Directive::Function`` from a ``syn::ItemFn``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:251
+msgid "The full path of the module the function is in."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:252
+msgid "The ``syn::ItemFn`` reference to parse."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:264
+msgid "Create a new ``Directive::Function`` from a ``syn::TraitItemFn``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:268
+msgid "The ``syn::TraitItemFn`` reference to parse."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:269
+msgid "The visibility of the trait."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:277
+msgid "Traits implemented"
+msgstr ""
