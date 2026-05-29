@@ -1,0 +1,581 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:3
+msgid "``mod formats``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:10
+msgid "Module for handling the output formats supported."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:42
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:72
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:91
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:117
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:261
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:281
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:300
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:326
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:443
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:508
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:569
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:48
+msgid "Generate title decoration string for RST or fence for MD."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:50
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:134
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:166
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:182
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:198
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:214
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:229
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:245
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:337
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:354
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:367
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:380
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:396
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:411
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:427
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:526
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:582
+msgid "Args:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "ch"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:51
+msgid "The character to use."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "len"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:52
+msgid "The length of the decoration required."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:54
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:137
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:172
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:185
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:204
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:219
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:235
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:344
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:357
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:370
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:386
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:401
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:417
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:530
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:585
+msgid "Returns:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:55
+msgid "A string of length ``len`` composed entirely of ``ch``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:59
+msgid "Traits"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:65
+msgid "Trait for anything that can be converted to MD directive content."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:67
+msgid ""
+"This is implemented for all ``IntoIterator<Item = String>``, effectively "
+"allowing ``Vec<String>`` to be converted to MD content lines."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:81
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:290
+msgid "Implemented for"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:103
+msgid "Trait for directives that can be written as MD content"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:107
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:316
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:489
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:123
+msgid "Calculate the fence size required for the item."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:125
+msgid ""
+"The ``items`` are the members of the current item. So, for a struct, these "
+"will be the list of its fields, for an enum, the variants, for a module, the "
+"items defined in it, etc."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:129
+msgid ""
+"The fence size for the item is 1 + the max fence size of all its members. If "
+"it has no members, the fence size is the default fence size. So, the "
+"returned value is the minimum fence size required to properly document the "
+"item and its members in Markdown."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "items"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:135
+msgid "Items which are members of the current item."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:138
+msgid ""
+"The minimum fence size required to document the item and all its nested "
+"items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:146
+msgid "Return the fence size required for documenting the item."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:148
+msgid ""
+"The default implementation returns ``4``, which allows for members with no "
+"items to create sections within the docstrings, that do not show up in the "
+"``toctree``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:152
+msgid ""
+"Implementations may use :rust:fn:`MdDirective::calc_fence_size` to override "
+"this, when there are nested items present."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:161
+msgid "Generate MD text with the given fence size."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:163
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:334
+msgid ""
+"Implementations must provide a vec of the lines of the content of the item "
+"and all its members."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "fence_size"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:167
+msgid ""
+"The size of the fence for the directive. Use the ``make_fence`` function to "
+"get the actual fence string."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "max_visibility"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:169
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:341
+msgid "Include only items with visibility up to the defined level."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:173
+msgid "The MD text for the documentation of the item and its members."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:180
+msgid "Make a string for the fences for the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:183
+msgid "The size of the fence, must be at least 3."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:186
+msgid "A string of colons of length ``fence_size``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:188
+msgid "Panics:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:189
+msgid "If the ``fence_size`` is less than 3."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:196
+msgid "Make the MD directive header from the directive, name and options."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "directive"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:199
+msgid "The MD directive to make the header for."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "name"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:200
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:382
+msgid "The name of the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "options"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:201
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:383
+msgid "The directive options to add."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "fence"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:202
+msgid "The fence to use for the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:205
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:387
+msgid "A Vec of the directive's header lines."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:212
+msgid "Make an MD list of items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:215
+msgid "The fence size for the list title."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "title"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:216
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:398
+msgid "The title for the list."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:217
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:399
+msgid "A vec of item name and content tuples."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:220
+msgid "Lines of MD text for the list, with the title."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:227
+msgid "Make section in an MD document with the given title and items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "section"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:230
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:412
+msgid "The title of the section."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:231
+msgid "The fence size of the section."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:232
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:414
+msgid "The items to include in the section."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:233
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:415
+msgid "The max visibility of the items to include."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:236
+msgid "The MD text for the section."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:243
+msgid "Make a ``toctree`` directive for MD documents."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:246
+msgid "The fence size for the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "caption"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:247
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:429
+msgid "The caption for the ``toctree``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "maxdepth"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:248
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:430
+msgid ""
+"The desired ``maxdepth`` of the ``toctree``. If None, the ``:maxdepth:`` "
+"option will not be set."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "tree"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:250
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:432
+msgid "The ``toctree`` entries."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:257
+msgid "Trait for MD directive options"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:267
+msgid "Return the MD text for the option."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:274
+msgid "Trait for anything that can be converted to RST directive content."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:276
+msgid ""
+"This is implemented for all ``IntoIterator<Item = String>``, effectively "
+"allowing ``Vec<String>`` to be converted to RST content lines."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:312
+msgid "Trait for directives that can be written as RST content"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:332
+msgid "Generate RST text with the given level of indentation."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "level"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:338
+msgid ""
+"The level of indentation for the content. Use the ``make_indent`` and "
+"``make_content_indent`` functions to get the actual indentation string."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:345
+msgid "The RST text for the documentation of the item and its members."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:352
+msgid "Make a string for indenting the directive's content and options"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:355
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:368
+msgid "The level of the indentation."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:358
+msgid "A string that is ``Self::INDENT`` repeated ``level + 1`` times."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:365
+msgid "Make a string for indenting the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:371
+msgid "A string that is ``Self::INDENT`` repeated ``level`` times."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:378
+msgid "Make the RST directive header from the directive, name and options."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:381
+msgid "The RST directive to make the header for."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:384
+msgid "The indentation level of the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:394
+msgid "Make an RST list of items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "indent"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:397
+msgid "The indentation for the list items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:402
+msgid "Lines of RST text for the list, with the title."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:409
+msgid "Make section in an RST document with the given title and items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:413
+msgid "The indentation level of the section."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:418
+msgid "The RST text for the section."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:425
+msgid "Make a ``toctree`` directive for RST documents."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:428
+msgid "The indentation for the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:439
+msgid "Trait for RST directive options."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:449
+msgid "Return the RST text for the option."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:453
+msgid "Enums"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:459
+msgid "Supported formats for the docstrings"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:467
+msgid "Markdown format"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:475
+msgid "reStructuredText format"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:479
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:496
+msgid "Acceptable text values for Md variant, case-insensitive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:504
+msgid "Acceptable text values for Rst variant, case-insensitive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:514
+msgid "Returns the extension for the format, without the leading \".\"."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:521
+msgid "Get format specific content for the directive for the output file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:523
+msgid ""
+"The function assumes that the directive is the top level directive of the "
+"output file and generates the content accordingly."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:527
+msgid ""
+"The directive to get the content for, typically a ``Crate`` or ``Module`` "
+"directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:531
+msgid "A vec of strings which are the lines of the document."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:538
+msgid ""
+"Convert the provided text to an inline code representation of the text "
+"specific to the format."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:546
+msgid "Make a format specific document title using the provided title string."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:550
+msgid "Traits implemented"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:560
+msgid "Types"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:575
+msgid "Parses the string into an enum value, or panics."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:577
+msgid ""
+"If the string is ``md``, ``.md`` or ``markdown``, the function returns "
+"``Md``. If the string is ``rst``, ``.rst`` or ``restructuredtext``, the "
+"function returns ``Rst``. Comparison is case-insensitive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
+msgid "value"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:583
+msgid "The value to parse."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/formats.rst:586
+msgid "The parsed enum value as the Ok value, or unit type as the Err."
+msgstr ""
