@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:2
+msgid "sphinxcontrib\\_rust"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust:1
+msgid ""
+"Init module for the extension with the ``setup`` function used by Sphinx"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:8
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:13:<autosummary>:1
+msgid ":py:obj:`generate_docs <sphinxcontrib_rust.generate_docs>`\\ \\(app\\)"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.generate_docs:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:13:<autosummary>:1
+msgid "Generate the Rust docs once the builder is ready."
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:13:<autosummary>:1
+msgid ":py:obj:`setup <sphinxcontrib_rust.setup>`\\ \\(app\\)"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.setup:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:13:<autosummary>:1
+msgid "Set up the extension"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:15
+msgid "Classes"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration:1:<autosummary>:1
+msgid ""
+":py:obj:`CrateConfiguration <sphinxcontrib_rust.CrateConfiguration>`\\ "
+"\\(crate\\_name\\, crate\\_dir\\, ...\\)"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration:1
+#: sphinxcontrib_rust.CrateConfiguration:1:<autosummary>:1
+msgid "Dataclass for the crate configuration."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration:3
+msgid ""
+"This is the Python equivalent of :rust:struct:`sphinx_rustdocgen::"
+"Configuration`. It is serialized as JSON and shared with the Rust executable."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:1
+msgid "Extract the configuration for the crates from the Sphinx configuration."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:3
+msgid ""
+"The function mainly checks whether a given configuration option is global or "
+"per crate and creates the appropriate configuration for each crate. If all "
+"options are global, all crates will have the same configuration other than "
+"their ``crate_dir`` field."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:8
+#: sphinxcontrib_rust.generate_docs:3
+msgid "Args:"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:0
+#: sphinxcontrib_rust.generate_docs:0
+msgid "config"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:9
+msgid "The Sphinx configuration."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:11
+msgid "Returns:"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:12
+msgid ""
+"A tuple of the path of the executable for generating the docs and a dict of "
+"crate name to crate configuration mapping."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.generate_docs:0
+msgid "app"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.generate_docs:4
+msgid "The Sphinx application."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: of sphinxcontrib_rust.generate_docs:5
+msgid "The parsed configuration."
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:21
+msgid "Modules"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid ":py:obj:`directives <sphinxcontrib_rust.directives>`\\"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid "Module for all the directive classes of the Rust domain"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid ":py:obj:`domain <sphinxcontrib_rust.domain>`\\"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid "Module for the ``rust`` Sphinx domain for documentation Rust items"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid ":py:obj:`index <sphinxcontrib_rust.index>`\\"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid "Module for code related to generating the index of Rust items"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid ":py:obj:`items <sphinxcontrib_rust.items>`\\"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid "Module for Rust items and related utility classes"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid ":py:obj:`nodes <sphinxcontrib_rust.nodes>`\\"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid ""
+"Module for creating docutils nodes from the JSON in the layout option of the "
+"directives"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid ":py:obj:`rust_link <sphinxcontrib_rust.rust_link>`\\"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
+msgid "Module for enabling intra-doc links similar to Rustdoc"
+msgstr ""

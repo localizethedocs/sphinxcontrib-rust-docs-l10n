@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/main.rst:3
+msgid "sphinx-rustdocgen"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/main.rst:11
+msgid ""
+"sphinx-rustdocgen is an executable to extract doc comments from Rust crates. "
+"It is tightly coupled with the sphinxcontrib-rust extension and is used by "
+"it during the Sphinx build process."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/main.rst:15
+msgid "Usage:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/main.rst:17
+msgid "sphinx-rustdocgen <JSON config>"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/main.rst:21
+msgid ""
+"See :rust:struct:`~sphinx_rustdocgen::Configuration` for the configuration "
+"schema."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/main.rst:42
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/main.rst:52
+msgid "Functions"
+msgstr ""
