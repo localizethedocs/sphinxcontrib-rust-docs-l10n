@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/compatibility.rst:3
+msgid "Compatibility with rustdoc"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:5
+msgid ""
+"This document compares the rustdoc markdown syntax and features with those "
+"supported by this extension via myst-parser. It also provides an explanation "
+"of the various myst-parser extensions that enable this compatibility."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:10
+msgid "Markdown syntax"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:12
+msgid ""
+"myst-parser and `Rust's markdown`_ both target the CommonMark specification. "
+"However, Rust provides some `additional features`_ that are not part of the "
+"CommonMark specification. Almost all of these syntax extensions are "
+"supported by myst-parser. The :ref:`Markdown usage <md usage>` sections "
+"lists all the extensions required."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:16
+msgid ""
+"To make the docstrings work with both rustdoc and this tool, the following "
+"changes may be required to existing docstrings:"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:19
+msgid "Use double tilde (``~~``) only for strike-through."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:20
+msgid ""
+"Use a backslash in front of literal text enclosed in brackets (``\\[foo]`` "
+"instead of ``[foo]``) to prevent it from being rendered as broken link."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:22
+msgid ""
+"Replace links that use ``Self::``, ``self::`` or ``super::`` with the name "
+"of the type, value or macro. Links with ``crate::`` in the target are do not "
+"need to be updated."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:25
+msgid ""
+"The sections below cover any differences in syntax and extensions required "
+"to make docstrings work with both Rust and Sphinx."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:29
+msgid "Attrs block"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:31
+msgid ""
+"The ``attrs_block`` extension is used to separate the sections within "
+"docstrings from the sections of the table of contents. Essentially, the "
+"markdown sections in the docstrings are handled separately from the sections "
+"of the page. See the warning in https://myst-parser.readthedocs.io/en/latest/"
+"syntax/organising_content.html#document-structure for details."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:37
+msgid "Colon-fencing"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:39
+msgid ""
+"The ``colon_fence`` extensions allows using colons (``:::``) for fencing "
+"instead of the usual back-ticks. This is used when generating the docs so "
+"they can be rendered properly in other markdown compatible tools. Removing "
+"this extension will cause issues with the generated documentation. See "
+"https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#code-"
+"fences-using-colons for details."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:45
+msgid "Strikethrough"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:47
+msgid ""
+"Enable the ``strikethrough`` extension for myst-parser in ``conf.py`` and "
+"use ``~~`` for strikethrough in the docstrings. Rust supports a single "
+"``~``, but myst-parser does not. See https://myst-parser.readthedocs.io/en/"
+"latest/syntax/optional.html#strikethrough for details."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:52
+msgid "Footnotes"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:54
+msgid ""
+"Both Rust and myst-parser use the same syntax for footnotes, so they should "
+"work as is. See https://myst-parser.readthedocs.io/en/latest/syntax/"
+"typography.html#footnotes for details."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:58
+msgid "Tables"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:60
+msgid ""
+"Both Rust and myst-parser target the `GitHub markdown table syntax`_. It "
+"should work out of the box."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:63
+msgid "Tasks List"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:65
+msgid ""
+"Enable the ``tasklist`` extension for myst-parser in ``conf.py``. The syntax "
+"is the same with this extension enabled. See https://myst-parser.readthedocs."
+"io/en/latest/syntax/optional.html#task-lists for details."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:69
+msgid "Smart punctuation"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:71
+msgid ""
+"Enable the ``smartquotes`` and ``replacements`` extensions for myst-parser "
+"in ``conf.py``. This will enable smart punctuation similar to Rust's "
+"markdown and some more. See https://myst-parser.readthedocs.io/en/latest/"
+"syntax/optional.html#typography for details."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:76
+msgid "Warning blocks and admonitions"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:78
+msgid ""
+"Rust uses a separate div class for this as described `here <https://doc.rust-"
+"lang.org/rustdoc/how-to-write-documentation.html#adding-a-warning-block>`_. "
+"To support a similar syntax for admonitions, enable the ``html_admonition`` "
+"extension for myst-parser in ``conf.py``. See https://myst-parser."
+"readthedocs.io/en/latest/syntax/optional.html#html-admonitions for details. "
+"There are some additional features supported by myst-parser compared to Rust."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:84
+msgid ""
+"myst-parser supports Sphinx admonition directives as described at https://"
+"myst-parser.readthedocs.io/en/latest/syntax/admonitions.html, but they will "
+"not be rendered by rustdoc."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:88
+msgid "rustdoc features"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:91
+msgid "Missing docs warning"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:93
+msgid ""
+"This extension does not check for missing documentation when executed. It "
+"will list any items that it discovers, even when there are no docs for them. "
+"The warning may be supported in future."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:97
+msgid "#[doc] attributes"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:99
+msgid ""
+"`Crate level doc attributes`_ are not supported. Most crate level doc "
+"attributes deal with the publication of the HTML and executing doctests. If "
+"any of these attributes are present, they are ignored when extracting the "
+"docs. The behavior of some HTML attributes may be achieved via Sphinx "
+"configuration options and extensions."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:103
+msgid ""
+"`Item level doc attributes`_ are not supported at present, but future "
+"versions may support some of them. This section will be updated as support "
+"for various attributes is implemented."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:107
+msgid "Re-exports"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:109
+msgid ""
+"`Re-exports`_ are supported similar to rustdoc, with some differences in "
+"behavior. The tool does not currently recognize rustdoc attributes like "
+"``inline``, ``hidden`` and ``noinline``. So, inlining is done purely based "
+"on whether the item will be documented in its original location or in a re-"
+"exported location. Documentation for the re-export is combined with the "
+"documentation of the original item, if the item is inlined."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:117
+msgid "Intra-doc links"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:119
+msgid ""
+"`Intra-doc links`_ are supported using all 4 syntax shown in the examples "
+"for Markdown only. However, using ``Self::``, ``self::`` and ``super::`` in "
+"the link target is not supported. Link targets with ``crate::`` are "
+"supported. (See Valid links section below.)"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:123
+msgid ""
+"Currently, it is necessary to add a backslash (``\\``) in front of a literal "
+"text that appears within brackets (``\\[foo]`` instead of ``[foo]``). "
+"Otherwise, there will be a warning regarding unresolved references and the "
+"text will be rendered as a broken link. The backslash will remove this issue."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:127
+msgid ""
+"For reStructuredText, it is recommended to use the :rst:role:`rust:any` role "
+"as the default Sphinx role for references to support similar behavior. With "
+"that added to Sphinx configuration, references can simply be written as "
+"```ref```, without specifying the type of the reference."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:132
+msgid "Valid links"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:134
+msgid ""
+"Rustdoc provides a rich syntax for `valid links`_. However, this tool does "
+"not support any of those features, except link references beginning with "
+"``crate::`` and references to items with generic parameters."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:137
+msgid ""
+"Additionally, the tool cannot link to items outside of the crate(s) being "
+"documented, including the standard library."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:141
+msgid "Namespaces and disambiguators"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:143
+msgid ""
+"`Namespaces and disambiguators`_ are supported by this tool and will resolve "
+"correctly. However, there is still work to be done to ensure that link text "
+"removes any disambiguators."
+msgstr ""
+
+#: ../../../docs/compatibility.rst:147
+msgid "Lints"
+msgstr ""
+
+#: ../../../docs/compatibility.rst:149
+msgid ""
+"The `rustdoc-specific lints`_ are not supported currently. There are no "
+"plans to support them at present. If this is required, please create an "
+"issue."
+msgstr ""

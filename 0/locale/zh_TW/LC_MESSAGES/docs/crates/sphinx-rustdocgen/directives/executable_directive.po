@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:3
+msgid "``mod executable_directive``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:10
+msgid "Implementation of the ``rust:executable`` directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:70
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:77
+msgid "Struct to hold data required for documenting an executable."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:79
+msgid ""
+"The data and processing required is pretty much the same as that for a "
+"crate. Only the output directive is different. Hence, this is a newtype "
+"around the :rust:struct:`CrateDirective`."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:85
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:95
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:105
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:139
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:155
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:117
+msgid ""
+"Create a new ``ExecutableDirective`` for the executable from the source file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:125
+msgid "Generate the text for the executable's documentation file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:129
+msgid "Traits implemented"
+msgstr ""
