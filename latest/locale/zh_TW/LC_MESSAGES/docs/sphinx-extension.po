@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/sphinx-extension.rst:3
 msgid "sphinxcontrib_rust documentation"
-msgstr ""
+msgstr "sphinxcontrib_rust 文件"
 
 #: ../../../docs/sphinx-extension.rst:5
 msgid ""

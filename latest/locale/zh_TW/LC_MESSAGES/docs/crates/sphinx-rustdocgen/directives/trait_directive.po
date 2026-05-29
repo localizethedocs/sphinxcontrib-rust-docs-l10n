@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/trait_directive.rst:86
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/trait_directive.rst:93
 msgid "Struct to hold details for documenting a trait."
@@ -63,13 +63,13 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/trait_directive.rst:155
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/trait_directive.rst:165
 #: ../../../docs/crates/sphinx-rustdocgen/directives/trait_directive.rst:219
 #: ../../../docs/crates/sphinx-rustdocgen/directives/trait_directive.rst:235
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/trait_directive.rst:171
 msgid "Add the impl directive to the trait."
@@ -83,7 +83,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/trait_directive.rst:176
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/trait_directive.rst:0
 msgid "impl\\_"

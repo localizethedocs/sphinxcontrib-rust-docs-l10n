@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.domain.rst:8
 msgid "Classes"
-msgstr ""
+msgstr "類別"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
 #: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
@@ -118,7 +118,7 @@ msgstr ""
 #: of sphinxcontrib_rust.domain.RustDomain.find_item:14
 #: sphinxcontrib_rust.domain.RustDomain.find_item_by_name:6
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
 #: of sphinxcontrib_rust.domain.RustDomain.find_item:0
@@ -164,7 +164,7 @@ msgstr ""
 #: of sphinxcontrib_rust.domain.RustDomain.find_item:22
 #: sphinxcontrib_rust.domain.RustDomain.find_item_by_name:13
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
 #: of sphinxcontrib_rust.domain.RustDomain.find_item:23

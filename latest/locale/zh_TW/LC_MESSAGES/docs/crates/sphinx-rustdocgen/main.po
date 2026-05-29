@@ -44,8 +44,8 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/main.rst:42
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/main.rst:52
 msgid "Functions"
-msgstr ""
+msgstr "函數"

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:2
 msgid "sphinxcontrib\\_rust"
-msgstr ""
+msgstr "sphinxcontrib\\_rust"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust:1
@@ -29,11 +29,11 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:8
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:13:<autosummary>:1
 msgid ":py:obj:`generate_docs <sphinxcontrib_rust.generate_docs>`\\ \\(app\\)"
-msgstr ""
+msgstr ":py:obj:`generate_docs <sphinxcontrib_rust.generate_docs>`\\ \\(app\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.generate_docs:1
@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:13:<autosummary>:1
 msgid ":py:obj:`setup <sphinxcontrib_rust.setup>`\\ \\(app\\)"
-msgstr ""
+msgstr ":py:obj:`setup <sphinxcontrib_rust.setup>`\\ \\(app\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.setup:1
@@ -53,7 +53,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:15
 msgid "Classes"
-msgstr ""
+msgstr "類別"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration:1:<autosummary>:1
@@ -93,7 +93,7 @@ msgstr ""
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:8
 #: sphinxcontrib_rust.generate_docs:3
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:0
@@ -104,12 +104,12 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:9
 msgid "The Sphinx configuration."
-msgstr ""
+msgstr "Sphinx 的組態。"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:11
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:12
@@ -135,11 +135,11 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:21
 msgid "Modules"
-msgstr ""
+msgstr "模組"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`directives <sphinxcontrib_rust.directives>`\\"
-msgstr ""
+msgstr ":py:obj:`directives <sphinxcontrib_rust.directives>`\\"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for all the directive classes of the Rust domain"
@@ -147,7 +147,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`domain <sphinxcontrib_rust.domain>`\\"
-msgstr ""
+msgstr ":py:obj:`domain <sphinxcontrib_rust.domain>`\\"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for the ``rust`` Sphinx domain for documentation Rust items"
@@ -171,7 +171,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`nodes <sphinxcontrib_rust.nodes>`\\"
-msgstr ""
+msgstr ":py:obj:`nodes <sphinxcontrib_rust.nodes>`\\"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ""
@@ -181,7 +181,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`rust_link <sphinxcontrib_rust.rust_link>`\\"
-msgstr ""
+msgstr ":py:obj:`rust_link <sphinxcontrib_rust.rust_link>`\\"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for enabling intra-doc links similar to Rustdoc"

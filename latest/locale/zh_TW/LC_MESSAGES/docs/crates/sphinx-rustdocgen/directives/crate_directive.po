@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:3
 msgid "``mod crate_directive``"
-msgstr ""
+msgstr "``mod crate_directive``"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:10
 msgid "Implementation of the ``rust:crate`` directive."
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:102
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:109
 msgid "Struct to hold data required for documenting a crate."
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:141
 msgid "The path to directive's documentation file"
-msgstr ""
+msgstr "指示詞的文件檔案路徑"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:149
 msgid "The directives within the crate's document file."
@@ -59,14 +59,14 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:163
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:173
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:220
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:236
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:258
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:179
 msgid ""
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:186
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:187
 msgid "A vec of directives that will not be documented."

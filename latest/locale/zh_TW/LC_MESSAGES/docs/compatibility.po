@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/compatibility.rst:3
 msgid "Compatibility with rustdoc"
-msgstr ""
+msgstr "與 rustdoc 的相容性"
 
 #: ../../../docs/compatibility.rst:5
 msgid ""
@@ -217,7 +217,7 @@ msgstr ""
 
 #: ../../../docs/compatibility.rst:109
 msgid "Re-exports"
-msgstr ""
+msgstr "重新匯出"
 
 #: ../../../docs/compatibility.rst:111
 msgid ""

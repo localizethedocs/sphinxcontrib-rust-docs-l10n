@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:3
 msgid "``mod variable_directive``"
-msgstr ""
+msgstr "``mod variable_directive``"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:10
 msgid "Implementation of the ``rust:variable`` directive"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:94
 msgid "Macros"
-msgstr ""
+msgstr "巨集"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:99
 msgid ""
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:104
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:111
 msgid "Struct to hold the data for documenting variables and struct fields."
@@ -65,13 +65,13 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:157
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:167
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:237
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:253
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:173
 msgid "Change the parent directive of the variable."
