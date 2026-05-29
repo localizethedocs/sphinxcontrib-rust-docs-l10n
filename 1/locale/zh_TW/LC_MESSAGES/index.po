@@ -33,6 +33,10 @@ msgid ""
 "compatible with both rustdoc and this extension. See :doc:`docs/limitations` "
 "for known limitations compared to rustdoc."
 msgstr ""
+"這是一個用於將 Rust 程式語言專案整合到 `Sphinx`_ 建置中的 Sphinx 擴充功能。它"
+"能與現有的 Rust 文件字串搭配使用，僅需進行少量調整。請參閱 :doc:`docs/"
+"compatibility` 以了解如何撰寫同時相容於 rustdoc 與此擴充功能的文件字串。關於"
+"與 rustdoc 相比的已知限制，請參閱 :doc:`docs/limitations`。"
 
 #: ../../../index.rst:9
 msgid ""
@@ -41,7 +45,7 @@ msgstr ""
 
 #: ../../../index.rst:19
 msgid "Motivation"
-msgstr ""
+msgstr "動機"
 
 #: ../../../index.rst:21
 msgid ""
@@ -149,7 +153,7 @@ msgstr ""
 
 #: ../../../index.rst:75
 msgid "rustdoc compatible Markdown docstrings"
-msgstr ""
+msgstr "與 rustdoc 相容的 Markdown 文件字串"
 
 #: ../../../index.rst:77
 msgid ""
@@ -217,7 +221,7 @@ msgstr ""
 
 #: ../../../index.rst:119
 msgid "reStructuredText docstrings"
-msgstr ""
+msgstr "reStructuredText 文件字串"
 
 #: ../../../index.rst:121
 msgid ""

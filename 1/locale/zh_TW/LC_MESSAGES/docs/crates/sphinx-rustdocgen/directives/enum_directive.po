@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:82
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:89
 msgid "Struct to hold data for documenting an enum"
@@ -67,13 +67,13 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:159
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:169
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:224
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:240
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:175
 msgid "Add the impl directive to the enum."
@@ -88,7 +88,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:180
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:204
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:0
 msgid "impl\\_"
@@ -128,7 +128,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:208
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:209
 msgid ""

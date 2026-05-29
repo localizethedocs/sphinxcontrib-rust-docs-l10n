@@ -35,7 +35,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:149
 #: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:449
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:155
 msgid "Create nodes for an optional ABI specification."

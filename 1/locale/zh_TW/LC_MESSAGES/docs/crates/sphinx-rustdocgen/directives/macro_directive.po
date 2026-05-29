@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/macro_directive.rst:62
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/macro_directive.rst:100
 msgid "Implementations"
@@ -35,13 +35,13 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/macro_directive.rst:110
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/macro_directive.rst:120
 #: ../../../docs/crates/sphinx-rustdocgen/directives/macro_directive.rst:153
 #: ../../../docs/crates/sphinx-rustdocgen/directives/macro_directive.rst:169
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/macro_directive.rst:126
 msgid "Change the parent module of the macro."

@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:3
 msgid "``mod directive_options``"
-msgstr ""
+msgstr "``mod directive_options``"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:53
 msgid "Enums"
-msgstr ""
+msgstr "列舉"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:59
 msgid "Enum to represent the various options for the directives."
@@ -37,19 +37,19 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:70
 msgid "The ``:index:`` option"
-msgstr ""
+msgstr "``:index:`` 選項"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:78
 msgid "The ``:vis:`` option."
-msgstr ""
+msgstr "``:vis:`` 選項。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:86
 msgid "The ``:layout:`` option."
-msgstr ""
+msgstr "``:layout:`` 選項。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:94
 msgid "The ``:toc:`` option."
-msgstr ""
+msgstr "``:toc:`` 選項。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:98
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:196
@@ -63,7 +63,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:222
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:247
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:136
 msgid "Enum for the values of the :rust:struct:`DirectiveOption::Vis` option"
@@ -100,7 +100,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:187
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:0
 msgid "visibility"
@@ -108,11 +108,11 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:188
 msgid "The item's visibility."
-msgstr ""
+msgstr "項目的可見性。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:0
 msgid "inherited_visibility"
-msgstr ""
+msgstr "inherited_visibility"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:189
 msgid "The visibility of the item's parent."
@@ -120,7 +120,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:191
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:192
 msgid "The directive visibility applicable to the item."

@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.index.rst:8
 msgid "Classes"
-msgstr ""
+msgstr "類別"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex:1:<autosummary>:1
@@ -56,7 +56,7 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:3
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:0
@@ -83,7 +83,7 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:10
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:11

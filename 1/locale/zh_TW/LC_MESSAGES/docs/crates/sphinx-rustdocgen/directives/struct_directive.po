@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:3
 msgid "``mod struct_directive``"
-msgstr ""
+msgstr "``mod struct_directive``"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:10
 msgid "Implementation of the ``rust:struct`` directive"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:106
 msgid "Macros"
-msgstr ""
+msgstr "巨集"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:111
 msgid "DRY macro to create the nodes for the directive's layout."
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:115
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:122
 msgid "Struct to hold details for documenting a struct or a union."
@@ -75,13 +75,13 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:192
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:202
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:263
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:279
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:208
 msgid "Add the impl directive to the struct."
@@ -95,7 +95,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:213
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:0
 msgid "impl\\_"
