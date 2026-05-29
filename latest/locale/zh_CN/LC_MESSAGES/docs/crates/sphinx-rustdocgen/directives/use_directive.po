@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:3
+msgid "``mod use_directive``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:73
+msgid "Enums"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:79
+msgid "Options for the use directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:97
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:271
+msgid "Traits implemented"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:107
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:123
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:190
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:281
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:297
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:132
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:170
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:180
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:196
+msgid "Check whether the directive contains the given path."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:198
+msgid ""
+"This returns true if the ``item_path`` is one of the paths in the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:206
+msgid "Return the visibility of this directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:213
+msgid "Find the path for the given ident within the use directive, if any."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:220
+msgid "Create a use directive for a path with the provided target."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:227
+msgid "Create a use directive using the provided used name to path map."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:234
+msgid "Create a use directive from the AST item parsed by syn."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:241
+msgid ""
+"Create a use directive and wrap it within the :rust:struct:`Directive::"
+"UseDirective` enum variant."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:249
+msgid "Inlines an item and returns it as a new ``(used_name, path)`` tuple."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:251
+msgid ""
+"The new path is ``{reexport}::{used_name}`` of the old path. The used name "
+"for the new path is the same as that of the old path."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:254
+msgid "Returns:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:255
+msgid ""
+"The function returns None if the directive is not a re-export or a path "
+"matching the item was not found."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:263
+msgid "Resolve any relative paths using the list of modules provided."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:265
+msgid ""
+"The method checks if any of the use paths are relative paths by comparing "
+"the first segment with the module's ident. If it matches, the path is "
+"updated to be an absolute path starting with the crate."
+msgstr ""

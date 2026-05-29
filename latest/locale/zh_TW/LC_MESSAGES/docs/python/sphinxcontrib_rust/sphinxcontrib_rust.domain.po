@@ -1,0 +1,363 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.domain.rst:2
+msgid "sphinxcontrib\\_rust.domain"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain:1
+msgid "Module for the ``rust`` Sphinx domain for documentation Rust items"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.domain.rst:8
+msgid "Classes"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
+msgid ":py:obj:`RustDomain <sphinxcontrib_rust.domain.RustDomain>`\\ \\(env\\)"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain:1
+#: sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
+msgid "The Sphinx domain for the Rust programming language."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
+msgid ""
+":py:obj:`RustXRefRole <sphinxcontrib_rust.domain.RustXRefRole>`\\ "
+"\\(\\[fix\\_parens\\, lowercase\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
+#: sphinxcontrib_rust.domain.RustXRefRole:1
+msgid "An :py:class:`XRefRole` extension for Rust roles"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain:3
+msgid ""
+"The domain provides the various roles and directives that can be used in the "
+"Sphinx documentation for linking with Rust code."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.clear_doc:1
+msgid "Remove traces of a document in the domain-specific inventories."
+msgstr ""
+
+#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.data:1
+msgid "data value"
+msgstr ""
+
+#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.data_version:1
+msgid "data version, bump this when the format of `self.data` changes"
+msgstr ""
+
+#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.directives:1
+msgid "directive name -> directive class"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:1
+msgid "Find a matching item based on a reference target and item type."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:3
+msgid ""
+"This function checks for an item that matches the provided reference target. "
+"There are 3 cases for the target, which are checked in order of priority:"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:6
+msgid "The target matches an item name directly."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:7
+msgid ""
+"The target is relative to the current doc and the reference is in the doc "
+"where it is defined."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:9
+msgid "The target is relative to a use directive in the current doc."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:11
+msgid ""
+"Once a check matches an item, the item is returned and other cases are not "
+"evaluated."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:14
+#: sphinxcontrib_rust.domain.RustDomain.find_item_by_name:6
+msgid "Args:"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:0
+msgid "fromdocname"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:15
+msgid "The document name in which the reference was found."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:0
+msgid "target"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:16
+msgid "The target for the reference."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:18
+#: sphinxcontrib_rust.domain.RustDomain.find_item_by_name:9
+msgid "Kwargs:"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:0
+#: sphinxcontrib_rust.domain.RustDomain.find_item_by_name:0
+msgid "typ=None"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:19
+#: sphinxcontrib_rust.domain.RustDomain.find_item_by_name:10
+msgid ""
+"The item type to search for. This must be a valid :py:class:`RustItemType` "
+"value."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:22
+#: sphinxcontrib_rust.domain.RustDomain.find_item_by_name:13
+msgid "Returns:"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item:23
+#: sphinxcontrib_rust.domain.RustDomain.find_item_by_name:14
+msgid "The :py:class:`RustItem` for the item if found, and `None` otherwise."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item_by_name:1
+msgid "Find a matching item based on the name and item type."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item_by_name:3
+msgid ""
+"This function checks for an item with the provided name. If a type is "
+"specified, only items of that type are considered."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item_by_name:0
+msgid "name"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.find_item_by_name:7
+msgid "The name of the item to find."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:1
+msgid "Return an iterable of \"object descriptions\"."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:3
+msgid "Object descriptions are tuples with six items:"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:5
+msgid "``name``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:6
+msgid "Fully qualified name."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:8
+msgid "``dispname``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:9
+msgid "Name to display when searching/linking."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:11
+msgid "``type``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:12
+msgid "Object type, a key in ``self.object_types``."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:14
+msgid "``docname``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:15
+msgid "The document where it is to be found."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:17
+msgid "``anchor``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:18
+msgid "The anchor name for the object."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:20
+msgid "``priority``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:21
+msgid ""
+"How \"important\" the object is (determines placement in search results). "
+"One of:"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:24
+msgid "``1``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:25
+msgid "Default priority (placed before full-text matches)."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:26
+msgid "``0``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:27
+msgid "Object is important (placed before default-priority objects)."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:28
+msgid "``2``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:29
+msgid "Object is unimportant (placed after full-text matches)."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:30
+msgid "``-1``"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.get_objects:31
+msgid "Object should not show up in search at all."
+msgstr ""
+
+#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.indices:1
+msgid "a list of Index subclasses"
+msgstr ""
+
+#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.initial_data:1
+msgid "data value for a fresh environment"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.items:1
+msgid "Return the Rust items with in the documentation"
+msgstr ""
+
+#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.label:1
+msgid "domain label: longer, more descriptive (used in messages)"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.merge_domaindata:1
+msgid ""
+"Merge in data regarding *docnames* from a different domaindata inventory "
+"(coming from a subprocess in parallel builds)."
+msgstr ""
+
+#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.name:1
+msgid "domain name: should be short, but unique"
+msgstr ""
+
+#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.object_types:1
+msgid "type (usually directive) name -> ObjType instance"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.resolve_any_xref:1
+msgid "Resolve a reference to a Rust item with an unspecified directive type"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.resolve_xref:1
+msgid "Resolve a reference to a Rust item with the directive type specified"
+msgstr ""
+
+#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.roles:1
+msgid "role name -> role callable"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.uses:1
+msgid "Return the dict of use statements per document within the documentation"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustXRefRole.process_link:1
+msgid "Process the link by parsing the title and the target"
+msgstr ""

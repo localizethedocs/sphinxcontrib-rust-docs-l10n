@@ -1,0 +1,377 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../index.rst:203
+msgid "Detailed docs"
+msgstr ""
+
+#: ../../../index.rst:3
+msgid "Sphinxcontrib-rust"
+msgstr ""
+
+#: ../../../index.rst:5
+msgid ""
+"This is a `Sphinx`_ extension for integrating Rust programming language "
+"projects in Sphinx builds. It will work with existing Rust docstrings with "
+"some minor tweaks. See :doc:`docs/compatibility` for writing docstrings "
+"compatible with both rustdoc and this extension. See :doc:`docs/limitations` "
+"for known limitations compared to rustdoc."
+msgstr ""
+
+#: ../../../index.rst:9
+msgid ""
+"You can also read this documentation on `Gitlab Pages`_ or `readthedocs`_."
+msgstr ""
+
+#: ../../../index.rst:19
+msgid "Motivation"
+msgstr ""
+
+#: ../../../index.rst:21
+msgid ""
+"This is primarily meant for teams and projects that are already using Sphinx "
+"as a documentation build tool, and would like to include documentation for "
+"Rust projects in it along with Python, C, and other languages."
+msgstr ""
+
+#: ../../../index.rst:24
+msgid "Using the extension adds the following functionality:"
+msgstr ""
+
+#: ../../../index.rst:26
+msgid ""
+"Rust specific :doc:`directives <docs/directives>` and :doc:`roles <docs/"
+"roles>` that can be used to define and link to Rust items."
+msgstr ""
+
+#: ../../../index.rst:28
+msgid "rustdoc comments may be written in reStructuredText."
+msgstr ""
+
+#: ../../../index.rst:29
+msgid ""
+"Various Sphinx features and extensions can be used to generate and publish "
+"the docs."
+msgstr ""
+
+#: ../../../index.rst:31
+msgid ""
+"This is not a replacement for `rustdoc`_, and since rustdoc is a part of the "
+"Rust language itself, it will not have all the same features as `rustdoc`_."
+msgstr ""
+
+#: ../../../index.rst:34
+msgid ""
+"The goal is to provide a way for teams and projects using multiple languages "
+"to publish a single, consolidated documentation and use this, along with "
+"rustdoc, as part of the documentation workflow."
+msgstr ""
+
+#: ../../../index.rst:37
+msgid ""
+"See :doc:`docs/limitations` for some cases where the tool will not work the "
+"same as rustdoc and :doc:`docs/compatibility` for any tweaks required to "
+"make the tool work with existing docstrings."
+msgstr ""
+
+#: ../../../index.rst:43
+msgid "Installation"
+msgstr ""
+
+#: ../../../index.rst:45
+msgid "There are two components that are required for this to work"
+msgstr ""
+
+#: ../../../index.rst:47
+msgid "The ``sphinx-rustdocgen`` Rust crate for extracting the docs."
+msgstr ""
+
+#: ../../../index.rst:48
+msgid "The ``sphinxcontrib_rust`` Python package, which is a Sphinx extension."
+msgstr ""
+
+#: ../../../index.rst:50
+msgid "Both components are installed when installing the Python package with"
+msgstr ""
+
+#: ../../../index.rst:52
+msgid "pip install sphinxcontrib-rust"
+msgstr ""
+
+#: ../../../index.rst:56
+msgid ""
+"The installation will check for ``cargo`` in the ``$PATH`` environment "
+"variable and will use that to build and install the Rust executable."
+msgstr ""
+
+#: ../../../index.rst:59
+msgid ""
+"The executable is built with the Rust code shipped with the Python package "
+"to ensure that the Rust executable and Python package are always compatible "
+"with each other."
+msgstr ""
+
+#: ../../../index.rst:62
+msgid ""
+"Make sure that the directory where ``cargo`` installs the executable is in "
+"``$PATH`` as well. If the default installation directory is not part of the "
+"``$PATH`` environment, the installed executable may be specified in the "
+"Sphinx configuration with ``rust_rustdocgen`` option."
+msgstr ""
+
+#: ../../../index.rst:66
+msgid ""
+"If for any reason the crate does not get installed with Python package, it "
+"can be installed directly from crates.io with ``cargo install sphinx-"
+"rustdocgen``. Make sure to install the same version of the create as the "
+"Python package."
+msgstr ""
+
+#: ../../../index.rst:70
+msgid "Configuration"
+msgstr ""
+
+#: ../../../index.rst:75
+msgid "rustdoc compatible Markdown docstrings"
+msgstr ""
+
+#: ../../../index.rst:77
+msgid ""
+"This is most probably what you want to do and allows generating Sphinx "
+"documentation separately from rustdoc output."
+msgstr ""
+
+#: ../../../index.rst:79
+msgid ""
+"To use the extension along with rustdoc, add the extension to Sphinx's "
+"``conf.py`` file and also add the `myst-parser`_ extension. Sphinx also "
+"needs to be `configured for Markdown builds`_. Use the code snippet below "
+"with your crates specified in ``rust_crates`` to enable all if this."
+msgstr ""
+
+#: ../../../index.rst:83
+msgid ""
+"Using various extensions for myst-parser, existing docstrings can be "
+"rendered with Sphinx with minimal changes. See :doc:`docs/compatibility` for "
+"details on how to write docstrings that can work with both rustdoc and "
+"Sphinx."
+msgstr ""
+
+#: ../../../index.rst:86
+msgid ""
+"extensions = [\"sphinxcontrib_rust\", \"myst_parser\"]\n"
+"source_suffix = {\n"
+"    \".rst\": \"restructuredtext\",\n"
+"    \".md\": \"markdown\",\n"
+"    \".txt\": \"markdown\", # Optional\n"
+"}\n"
+"# See docs/compatibility for details on these extensions.\n"
+"myst_enable_extensions = {\n"
+"    \"attrs_block\",\n"
+"    \"colon_fence\",\n"
+"    \"html_admonition\",\n"
+"    \"replacements\",\n"
+"    \"smartquotes\",\n"
+"    \"strikethrough\",\n"
+"    \"tasklist\",\n"
+"}\n"
+"rust_crates = {\n"
+"    \"my_crate\": \".\",\n"
+"    \"my_crate_derive\": \"my-crate-derive\",\n"
+"}\n"
+"rust_doc_dir = \"docs/crates/\"\n"
+"rust_rustdoc_fmt = \"md\""
+msgstr ""
+
+#: ../../../index.rst:111
+msgid ""
+"This will generate the documentation from your Rust crates and put them in "
+"the ``docs/crates/<crate_name>`` directories. :doc:`docs/including` "
+"describes the various ways to integrate the documentation in the Sphinx "
+"build. The Rust items can then be referenced using :doc:`docs/roles` from "
+"other docs in the Sphinx build."
+msgstr ""
+
+#: ../../../index.rst:115
+msgid ""
+"See the `configuration options for MyST`_  for other options that are "
+"supported by myst-parser. They can be changed as required to customize the "
+"generated docs."
+msgstr ""
+
+#: ../../../index.rst:119
+msgid "reStructuredText docstrings"
+msgstr ""
+
+#: ../../../index.rst:121
+msgid ""
+"Using the extension, it is also possible to write the Rust docstrings in "
+"reStructuredText. Note that this makes the docstrings unusable with Rustdoc "
+"and should only be considered when the rustdoc documentation will not be "
+"used. Publishing a crate with such docstrings is still possible, but the "
+"documentation on docs.rs for the crate will not be rendered properly."
+msgstr ""
+
+#: ../../../index.rst:126
+msgid ""
+"To enable RST docstrings, add the extension to the ``conf.py`` file and "
+"configure it appropriately."
+msgstr ""
+
+#: ../../../index.rst:128
+msgid ""
+"extensions = [\"sphinxcontrib_rust\"]\n"
+"rust_crates = {\n"
+"    \"my_crate\": \".\",\n"
+"    \"my_crate_derive\": \"my-crate-derive\",\n"
+"}\n"
+"rust_doc_dir = \"docs/crates/\"\n"
+"rust_rustdoc_fmt = \"rst\""
+msgstr ""
+
+#: ../../../index.rst:138
+msgid ""
+"This will generate the documentation from your Rust crates and put them in "
+"the ``docs/crates/<crate_name>`` directories. You can link against the "
+"documentation in your ``toctree`` by specifying the path to ``lib`` file and "
+"any executables. See :doc:`docs/including` for more details. The Rust items "
+"can then be referenced using :doc:`docs/roles` from other docs in the Sphinx "
+"build."
+msgstr ""
+
+#: ../../../index.rst:144
+msgid "Recommendations"
+msgstr ""
+
+#: ../../../index.rst:146
+msgid ""
+"Use a HTML theme that allows expanding the TOC in the sidebar completely. "
+"For example, if using ``sphinx_rtd_theme``, set the ``navigation_depth`` in "
+"``html_theme_options`` to -1 in the ``conf.py`` file (``html_theme_options = "
+"{\"navigation_depth\": -1}``). This makes the sidebar much better to use."
+msgstr ""
+
+#: ../../../index.rst:149
+msgid ""
+"It is possible to write docstrings in Markdown and other documentation in "
+"reStructuredText. The configuration should be the same as what is described "
+"in :ref:`md usage`. The roles and directives will work the same regardless "
+"of the choice of the docstrings syntax."
+msgstr ""
+
+#: ../../../index.rst:154
+msgid "Options"
+msgstr ""
+
+#: ../../../index.rst:156
+msgid ""
+"Options are simply Python variables set in the ``conf.py`` file. Most "
+"options can be provided as a global value or a dict of values per crate, "
+"with the crate name as the key. The options that are global only are listed "
+"separately below."
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "rust_crates"
+msgstr ""
+
+#: ../../../index.rst:159
+msgid ""
+"(Required) A dict of crate names and their source code directories. This "
+"must be a dict even for a single crate. It determines which crates are "
+"documented. The directory should be the one which contains the ``Cargo."
+"toml`` file for the crate and each crate in the workspace must be listed "
+"explicitly."
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "rust_doc_dir"
+msgstr ""
+
+#: ../../../index.rst:164
+msgid ""
+"(Required) A directory under which to write the docs for all crates, or a "
+"dict of directory for each crate name. The directories will be read by "
+"Sphinx during the build, so they must be part of the source tree and not "
+"under the build directory. The build process will create a directory with "
+"the crate name under this, even when specified per crate."
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "rust_rustdoc_fmt"
+msgstr ""
+
+#: ../../../index.rst:170
+msgid "Either ``rst`` or ``md``. (Default: ``rst``)"
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "rust_visibility"
+msgstr ""
+
+#: ../../../index.rst:171
+msgid ""
+"Only includes documentation and indexes for items with visibility greater "
+"than or equal to the setting. The value can be ``pub``, ``crate`` or "
+"``pvt``. Visibility restrictions like ``super`` and ``in <path>`` are not "
+"supported currently and are treated as private. (Default: ``pub``)."
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "rust_strip_src"
+msgstr ""
+
+#: ../../../index.rst:174
+msgid ""
+"Whether to remove the ``src/`` directory when creating output files or not. "
+"The default is ``True``, since that was the initial behavior. So, instead of "
+"creating output files as ``<crate_name>/src/<mod_name>.rst``, the output "
+"files are created as ``<crate_name>/<mod_name>.rst``, effectively removing "
+"``src/`` from the paths. Set to ``False`` for crates that use a different "
+"path. (Default: True)"
+msgstr ""
+
+#: ../../../index.rst:181
+msgid ""
+"The below options are global options, and cannot be specified per crate."
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "rust_generate_mode"
+msgstr ""
+
+#: ../../../index.rst:183
+msgid ""
+"One of ``always``, ``skip`` or ``changed``. If set to ``always``, all "
+"documents are regenerated. If set to ``skip``, the docs are not regenerated "
+"at all. If set to ``changed``, only docs whose source files have been "
+"modified since they were last modified are regenerated. (Default: "
+"``changed``)"
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "rust_rustdocgen"
+msgstr ""
+
+#: ../../../index.rst:188
+msgid ""
+"The path to the ``sphinx-rustdocgen`` executable to use. The path must be an "
+"absolute path or relative to Sphinx's working directory. (Default: Obtained "
+"from the ``$PATH`` environment variable.)"
+msgstr ""

@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/release-notes.rst:2
+msgid "Release Notes"
+msgstr ""
+
+#: ../../../docs/release-notes.rst:0
+msgid "v1.0.0"
+msgstr ""
+
+#: ../../../docs/release-notes.rst:6
+msgid "Initial release of the extension."
+msgstr ""
+
+#: ../../../docs/release-notes.rst:0
+msgid "v1.0.1"
+msgstr ""
+
+#: ../../../docs/release-notes.rst:10
+msgid ""
+"fix: Extension does not eager evaluate potential file names while unwrapping "
+"``Option``."
+msgstr ""
+
+#: ../../../docs/release-notes.rst:0
+msgid "v1.1.0"
+msgstr ""
+
+#: ../../../docs/release-notes.rst:13
+msgid ""
+"feature: Add support for module's with custom source code paths defined with "
+"``#[path = \"...\"]`` attribute."
+msgstr ""

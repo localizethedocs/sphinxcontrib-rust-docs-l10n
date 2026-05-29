@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:3
+msgid "``mod utils``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:10
+msgid "Module for various utility classes and structs."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:50
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:73
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:109
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:160
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:56
+msgid "Check the provided paths for the Cargo.toml file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:58
+msgid "Returns:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:59
+msgid ""
+"A Some value of the path that contained the Cargo manifest and the "
+"associated manifest for the first path contains a ``Cargo.toml`` file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:64
+msgid "Traits"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:88
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:95
+msgid "Newtype struct for the Cargo manifest from cargo_toml."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:99
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:150
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:115
+msgid "Get all the executable files in the crate."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:122
+msgid "Get the library file for the crate, if any."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:130
+msgid "Struct for the source code files encountered when scanning the crate."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:138
+msgid "The path to the file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:146
+msgid "The name of the item in the file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:166
+msgid "Generate and return the AST for the file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:173
+msgid "Returns the name of the crate from the item name."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:180
+msgid "Create an instance for the product in the crate."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:182
+msgid "Args:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:0
+msgid "prd"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:183
+msgid "The product for which the file should be created."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:0
+msgid "crate_dir"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:184
+msgid ""
+"The path for the crate's directory, used to generate the absolute path for "
+"the file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:192
+msgid "Get the parent directory of the file for the item."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/utils.rst:194
+msgid ""
+"The item of the returned struct is the same as this struct's item. This is "
+"mainly used for ``mod.rs`` and ``lib.rs`` files, where the directory name "
+"determines the item's name."
+msgstr ""
