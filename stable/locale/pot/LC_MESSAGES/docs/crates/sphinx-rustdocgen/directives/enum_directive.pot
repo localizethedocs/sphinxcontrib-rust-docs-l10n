@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:3
+msgid "``mod enum_directive``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:10
+msgid "Implementation of the ``rust:enum`` directive"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:82
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:89
+msgid "Struct to hold data for documenting an enum"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:97
+msgid "The full Rust path of the enum, used as the name of the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:105
+msgid "The identifier for the enum."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:113
+msgid "The directive options to use."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:121
+msgid "The docstring for the enum."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:129
+msgid "The variants within the enum."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:137
+msgid "Items within impl blocks for the enum."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:145
+msgid "Trait impls for the enum."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:149
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:159
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:169
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:224
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:240
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:175
+msgid "Add the impl directive to the enum."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:177
+msgid ""
+"The parent and visibility of the impl directive are updated along with the "
+"ownership."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:180
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:204
+msgid "Args:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:0
+msgid "impl\\_"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:181
+msgid "The :rust:struct:`ImplDirective` for the enum."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:188
+msgid "Change the parent module of the enum and its variants."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:195
+msgid "Return the visibility of this directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:202
+msgid "Create a new ``Directive::Enum`` from a ``syn::ItemEnum``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:0
+msgid "parent_path"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:205
+msgid "The full path of the module the enum is in."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:0
+msgid "item"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:206
+msgid "The ``syn::ItemEnum`` to parse."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:208
+msgid "Returns:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:209
+msgid ""
+"A new ``Directive::Enum``, which contains the parsed ``EnumDirective`` in it."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:214
+msgid "Traits implemented"
+msgstr ""

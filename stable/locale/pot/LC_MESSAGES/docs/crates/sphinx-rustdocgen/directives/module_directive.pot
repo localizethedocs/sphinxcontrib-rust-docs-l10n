@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:3
+msgid "``mod module_directive``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:10
+msgid "Implementation of the ``rust:module`` directive"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:126
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:189
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:296
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:380
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:396
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:418
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:132
+msgid "Find the file for the module under the provided directory."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:134
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:312
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:359
+msgid "Args:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:0
+msgid "module_ident"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:135
+msgid "The identifier of the module."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:0
+msgid "directory"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:136
+msgid "The directory under which to find the module's file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:138
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:315
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:344
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:364
+msgid "Returns:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:139
+msgid ""
+"A None value if neither ``<directory>/<module>.rs`` nor ``<directory>/"
+"<module>/mod.rs`` exist, otherwise a Some value for the path of the file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:148
+msgid "Check if the module is a test module or not."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:152
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:159
+msgid "Module attributes"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:167
+msgid "Whether the module is a test module or not"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:175
+msgid "Path to the module"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:179
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:276
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:195
+msgid "Create a file path for the module's source code and documentation."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:197
+msgid ""
+"If the module is defined in its own file, the function will try to find the "
+"file and return its path. Otherwise, it will return a hypothetical path as "
+"if the module were defined in a ``mod.rs`` file in its own directory. This "
+"is mainly to prevent conflicts with existing files of the same name."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:208
+msgid "Parse module attrs"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:216
+msgid "Struct to hold data for a module's documentation."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:224
+msgid "The full path to the module."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:232
+msgid "The options for the module directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:240
+msgid "The docstring for the module."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:248
+msgid "The identifier of the module (i.e. the final portion of name)."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:256
+msgid "The path to directive's documentation file"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:264
+msgid "The source code file for the module."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:272
+msgid "The directives within the crate's document file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:286
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:302
+msgid "Change the parent module of the module."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:309
+msgid ""
+"Attach impl directives to the appropriate struct, enum or trait directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:0
+msgid "impls"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:313
+msgid "The impl directives to claim from."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:316
+msgid "A vec of impl directives that were not claimed."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:323
+msgid "Collect all impl directives from self and any sub-modules."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:330
+msgid "Return the visibility of this directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:337
+msgid ""
+"Filter out items that will not be documented due to visibility restrictions."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:340
+msgid ""
+"The function recurses through all submodules and identifies items that will "
+"not be documented due to the configured visibility. As part of the "
+"filtering, it will also identify any re-exports that should be inlined."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:345
+msgid "A vec of directives that will not be documented."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:352
+msgid ""
+"Create a :rust:struct:`ModuleDirective` from the item, if the module is not "
+"a test module."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:355
+msgid ""
+"If the module's items are in a different file, the function will try to find "
+"the appropriate file and parse it for the items. This is done recursively "
+"for any submodules within the items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:0
+msgid "parent_path"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:360
+msgid "The path of the module's parent module or the crate name."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:0
+msgid "item"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:362
+msgid "The ``ItemMod`` parsed out by ``syn``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:365
+msgid ""
+"A ``Some`` value if the module is not a test module, otherwise ``None``."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:370
+msgid "Traits implemented"
+msgstr ""
