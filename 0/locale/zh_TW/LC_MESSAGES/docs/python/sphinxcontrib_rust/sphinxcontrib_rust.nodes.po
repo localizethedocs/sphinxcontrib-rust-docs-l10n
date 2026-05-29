@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.nodes.rst:8
 msgid "Classes"
-msgstr ""
+msgstr "類別"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node:1:<autosummary>:1
@@ -85,7 +85,7 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:7
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:0
@@ -111,7 +111,7 @@ msgstr ""
 #: of sphinxcontrib_rust.nodes.Node.create_signature:11
 #: sphinxcontrib_rust.nodes.Node.to_docutils_node:3
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:12

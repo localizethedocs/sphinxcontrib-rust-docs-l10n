@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:70
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:77
 msgid "Struct to hold data required for documenting an executable."
@@ -46,13 +46,13 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:95
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:105
 #: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:139
 #: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:155
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/executable_directive.rst:117
 msgid ""

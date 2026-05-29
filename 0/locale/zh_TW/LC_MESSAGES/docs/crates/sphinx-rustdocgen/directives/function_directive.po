@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:114
 msgid "Macros"
-msgstr ""
+msgstr "巨集"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:119
 msgid "DRY macro to parse the different item types."
@@ -38,7 +38,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:287
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:303
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:129
 msgid "Generate docutils node layout for the function from its signature"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:133
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:140
 msgid "Struct to hold data for documenting a function."
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:186
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:202
 msgid "Change the parent directive of the function."
@@ -93,7 +93,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:250
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:266
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:0
 msgid "parent_path"
@@ -114,7 +114,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:0
 msgid "inherited_visibility"
-msgstr ""
+msgstr "inherited_visibility"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:221
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:253
@@ -126,7 +126,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:255
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:271
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:224
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:240

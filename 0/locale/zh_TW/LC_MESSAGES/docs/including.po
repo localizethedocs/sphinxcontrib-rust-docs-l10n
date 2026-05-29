@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/including.rst:3
 msgid "Including the docs in the Sphinx build"
-msgstr ""
+msgstr "在 Sphinx 建置中引入文件"
 
 #: ../../../docs/including.rst:5
 msgid ""
@@ -80,6 +80,13 @@ msgid ""
 "   crates/my_crate/lib\n"
 "   other_docs/*"
 msgstr ""
+".. toctree::\n"
+"   :glob:\n"
+"\n"
+"   some_doc\n"
+"   crates/my_crate/main\n"
+"   crates/my_crate/lib\n"
+"   other_docs/*"
 
 #: ../../../docs/including.rst:39
 msgid ""
@@ -104,7 +111,7 @@ msgstr ""
 
 #: ../../../docs/including.rst:50
 msgid "Including in other docs"
-msgstr ""
+msgstr "在其他文件中引入"
 
 #: ../../../docs/including.rst:52
 msgid ""

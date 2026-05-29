@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:90
 msgid "Macros"
-msgstr ""
+msgstr "巨集"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:95
 msgid ""
@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:99
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:106
 msgid "Struct to hold the data for documenting type definitions."
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:130
 msgid "The options of the directive."
-msgstr ""
+msgstr "指示詞的選項。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:138
 msgid "The content of the directive."
@@ -64,13 +64,13 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:152
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:162
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:218
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:234
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:168
 msgid "Change the parent module of the type."

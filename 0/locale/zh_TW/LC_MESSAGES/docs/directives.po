@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/directives.rst:3
 msgid "Rust specific directives"
-msgstr ""
+msgstr "Rust 專屬的指示詞"
 
 #: ../../../docs/directives.rst:7
 msgid ""
@@ -205,6 +205,10 @@ msgid ""
 "\n"
 "      Macro docstring."
 msgstr ""
+".. rust:module:: <my_crate>::<some_module>\n"
+"   .. rust:macro:: <my_crate>::<some_module>::<macro>\n"
+"\n"
+"      Macro docstring."
 
 #: ../../../docs/directives.rst:112
 msgid ""

@@ -35,26 +35,26 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:16
 msgid "Modules"
-msgstr ""
+msgstr "模組"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:84
 msgid "Re-exports"
-msgstr ""
+msgstr "重新匯出"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:85
 msgid ":rust:any:`sphinx_rustdocgen::utils::SourceCodeFile`"
-msgstr ""
+msgstr ":rust:any:`sphinx_rustdocgen::utils::SourceCodeFile`"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:86
 msgid ":rust:any:`sphinx_rustdocgen::utils::check_for_manifest`"
-msgstr ""
+msgstr ":rust:any:`sphinx_rustdocgen::utils::check_for_manifest`"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:90
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:181
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:281
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:307
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:96
 msgid "Traverse the crate and extract the docstrings for the items."
@@ -63,7 +63,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:98
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:290
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:0
 msgid "config"
@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:103
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:110
 msgid "Struct to hold the deserialized configuration passed from Python."
@@ -146,7 +146,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:243
 msgid "The format of the docstrings."
-msgstr ""
+msgstr "文件字串的格式。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:251
 msgid "Only document items with visibility less than this."
@@ -167,7 +167,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:0
 msgid "source_file_path"
-msgstr ""
+msgstr "source_file_path"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:291
 msgid "The path of the source file corresponding to the content."
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:0
 msgid "content_fn"
-msgstr ""
+msgstr "content_fn"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:293
 msgid "A function to extract the content for the file."

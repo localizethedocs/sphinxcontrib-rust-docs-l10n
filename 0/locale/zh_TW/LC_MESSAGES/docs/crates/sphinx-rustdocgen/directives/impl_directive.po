@@ -30,7 +30,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/impl_directive.rst:250
 #: ../../../docs/crates/sphinx-rustdocgen/directives/impl_directive.rst:266
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/impl_directive.rst:100
 msgid "Generate docutils nodes for the impl block's signature."
@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/impl_directive.rst:104
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/impl_directive.rst:111
 msgid "Struct to hold details for documenting an impl block."
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/impl_directive.rst:189
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/impl_directive.rst:205
 msgid "Change the parent module of the impl and its items."

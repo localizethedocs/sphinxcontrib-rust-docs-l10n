@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rust_link.rst:8
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link.link:1:<autosummary>:1
@@ -56,7 +56,7 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link.link:7
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link.link:8

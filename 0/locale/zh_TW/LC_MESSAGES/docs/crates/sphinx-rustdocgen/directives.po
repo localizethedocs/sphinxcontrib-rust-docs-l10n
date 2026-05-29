@@ -43,11 +43,11 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:24
 msgid "Modules"
-msgstr ""
+msgstr "模組"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:160
 msgid "Re-exports"
-msgstr ""
+msgstr "重新匯出"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:161
 msgid ""
@@ -59,6 +59,8 @@ msgid ""
 ":rust:any:`sphinx_rustdocgen::directives::directive_options::"
 "DirectiveVisibility`"
 msgstr ""
+":rust:any:`sphinx_rustdocgen::directives::directive_options::"
+"DirectiveVisibility`"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:163
 msgid ""
@@ -127,7 +129,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:187
 msgid "Macros"
-msgstr ""
+msgstr "巨集"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:192
 msgid "Macro to sort and push items within a vec."
@@ -139,7 +141,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:500
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:568
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:202
 msgid "Extract the docstring from the attrs of an item."
@@ -155,7 +157,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:459
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:582
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:0
 msgid "attrs"
@@ -175,7 +177,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:448
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:463
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:208
 msgid ""
@@ -363,7 +365,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:515
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:529
 msgid "The directives for the modules defined in the file."

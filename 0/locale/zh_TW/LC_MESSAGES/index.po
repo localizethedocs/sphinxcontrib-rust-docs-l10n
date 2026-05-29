@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../../index.rst:23
 msgid "Motivation"
-msgstr ""
+msgstr "動機"
 
 #: ../../../index.rst:25
 msgid ""
@@ -159,7 +159,7 @@ msgstr ""
 
 #: ../../../index.rst:79
 msgid "rustdoc compatible Markdown docstrings"
-msgstr ""
+msgstr "與 rustdoc 相容的 Markdown 文件字串"
 
 #: ../../../index.rst:81
 msgid ""
@@ -227,7 +227,7 @@ msgstr ""
 
 #: ../../../index.rst:123
 msgid "reStructuredText docstrings"
-msgstr ""
+msgstr "reStructuredText 文件字串"
 
 #: ../../../index.rst:125
 msgid ""
