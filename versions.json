@@ -11,11 +11,11 @@
   ],
   "rel" : [
     {
-      "VERSION" : "1.x",
+      "VERSION" : "1",
       "VERSION_COMPENDIUM" : "latest"
     },
     {
-      "VERSION" : "0.x",
+      "VERSION" : "0",
       "VERSION_COMPENDIUM" : "latest"
     }
   ]
