@@ -30,7 +30,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/utils.rst:109
 #: ../../../docs/crates/sphinx-rustdocgen/utils.rst:160
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/utils.rst:56
 msgid "Check the provided paths for the Cargo.toml file."
@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/utils.rst:58
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../docs/crates/sphinx-rustdocgen/utils.rst:59
 msgid ""
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/utils.rst:88
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/utils.rst:95
 msgid "Newtype struct for the Cargo manifest from cargo_toml."
@@ -97,7 +97,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/utils.rst:182
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/utils.rst:0
 msgid "prd"

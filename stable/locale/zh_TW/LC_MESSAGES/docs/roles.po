@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/roles.rst:3
 msgid "Rust specific roles"
-msgstr ""
+msgstr "Rust 專屬的角色"
 
 #: ../../../docs/roles.rst:5
 msgid ""
@@ -267,4 +267,4 @@ msgstr ""
 
 #: ../../../docs/roles.rst:146
 msgid "Alias for :rst:role:`rust:variable`."
-msgstr ""
+msgstr ":rst:role:`rust:variable` 的別名。"

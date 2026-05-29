@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/sphinx-rustdocgen.rst:3
 msgid "sphinx-rustdocgen documentation"
-msgstr ""
+msgstr "sphinx-rustdocgen 文件"
 
 #: ../../../docs/sphinx-rustdocgen.rst:5
 msgid ""

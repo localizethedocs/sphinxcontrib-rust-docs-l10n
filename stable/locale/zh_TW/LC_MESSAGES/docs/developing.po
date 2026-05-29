@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/developing.rst:3
 msgid "Developer Documentation"
-msgstr ""
+msgstr "開發者文件"
 
 #: ../../../docs/developing.rst:6
 msgid "Organization"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/developing.rst:8
 msgid "The project consists of 3 main components:"
-msgstr ""
+msgstr "該專案由 3 個主要組件組成："
 
 #: ../../../docs/developing.rst:10
 msgid ""

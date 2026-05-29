@@ -32,7 +32,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:396
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:418
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:132
 msgid "Find the file for the module under the provided directory."
@@ -42,7 +42,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:312
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:359
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:0
 msgid "module_ident"
@@ -65,7 +65,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:344
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:364
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:139
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:152
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:159
 msgid "Module attributes"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:256
 msgid "The path to directive's documentation file"
-msgstr ""
+msgstr "指示詞的文件檔案路徑"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:264
 msgid "The source code file for the module."
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:286
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/module_directive.rst:302
 msgid "Change the parent module of the module."

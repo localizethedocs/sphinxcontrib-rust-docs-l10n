@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/indices.rst:3
 msgid "Rust items index"
-msgstr ""
+msgstr "Rust 項目索引"
 
 #: ../../../docs/indices.rst:5
 msgid ""

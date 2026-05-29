@@ -37,7 +37,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:508
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:569
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:48
 msgid "Generate title decoration string for RST or fence for MD."
@@ -61,7 +61,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:526
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:582
 msgid "Args:"
-msgstr ""
+msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:0
 msgid "ch"
@@ -95,7 +95,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:530
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:585
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:55
 msgid "A string of length ``len`` composed entirely of ``ch``."
@@ -128,7 +128,7 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:316
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:489
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/formats.rst:123
 msgid "Calculate the fence size required for the item."

@@ -40,11 +40,11 @@ msgstr ""
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:281
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:297
 msgid "Functions"
-msgstr ""
+msgstr "函數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:132
 msgid "Structs and Unions"
-msgstr ""
+msgstr "結構體與聯合體"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:170
 msgid "Implementations"
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:180
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:196
 msgid "Check whether the directive contains the given path."
@@ -101,7 +101,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:254
 msgid "Returns:"
-msgstr ""
+msgstr "回傳值："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:255
 msgid ""

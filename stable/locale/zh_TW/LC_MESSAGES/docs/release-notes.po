@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/release-notes.rst:2
 msgid "Release Notes"
-msgstr ""
+msgstr "發行備註"
 
 #: ../../../docs/release-notes.rst:0
 msgid "v1.0.0"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../docs/release-notes.rst:6
 msgid "Initial release of the extension."
-msgstr ""
+msgstr "此擴充功能的初始發行版。"
 
 #: ../../../docs/release-notes.rst:0
 msgid "v1.0.1"
