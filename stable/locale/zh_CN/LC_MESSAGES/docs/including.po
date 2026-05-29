@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/including.rst:3
+msgid "Including the docs in the Sphinx build"
+msgstr ""
+
+#: ../../../docs/including.rst:5
+msgid ""
+"The :rust:exe:`sphinx-rustdocgen` application generates one document for "
+"each source file in the crate. The generated documents are stored in "
+"``<rust_doc_dir>/<crate_name>`` directory. The extension does not generate a "
+"\"cover page\" or provide a directive to generate one, and the users have to "
+"determine how best they want to structure their docs. Various ways to link "
+"the individual documents, items and"
+msgstr ""
+
+#: ../../../docs/including.rst:10
+msgid ""
+"The generated documentation is organized similar to the crate, except that "
+"``src/module/mod.rs`` files are documented as ``<rust_doc_dir>/crate/module."
+"<rst|md>`` instead of ``<rust_doc_dir>/crate/module/mod.<rst|md>``."
+msgstr ""
+
+#: ../../../docs/including.rst:13
+msgid ""
+"For files that compile to an executable (like ``main.rs``), the "
+"documentation is placed in a file with the same name as the executable under "
+"the output directory. Within the file, there is a generated table of "
+"contents for any modules declared in the executable itself."
+msgstr ""
+
+#: ../../../docs/including.rst:17
+msgid ""
+"For the library modules, the documentation is extracted for all items, "
+"except test modules. The documentation for the ``lib.rs`` file contains a "
+"table of contents that links to the other modules within the library."
+msgstr ""
+
+#: ../../../docs/including.rst:20
+msgid ""
+"The generated documents can be linked with the ``toctree``, included in "
+"other docs and referenced using the ``:doc:`` role in Sphinx."
+msgstr ""
+
+#: ../../../docs/including.rst:24
+msgid "Via the ``toctree``"
+msgstr ""
+
+#: ../../../docs/including.rst:26
+msgid ""
+"The simplest way to include the documentation is to add the crate and "
+"executable docs in a ``toctree`` directive. This will automatically add the "
+"other documents to the ``toctree`` also."
+msgstr ""
+
+#: ../../../docs/including.rst:29
+msgid ""
+".. toctree::\n"
+"   :glob:\n"
+"\n"
+"   some_doc\n"
+"   crates/my_crate/main\n"
+"   crates/my_crate/lib\n"
+"   other_docs/*"
+msgstr ""
+
+#: ../../../docs/including.rst:39
+msgid ""
+"If the crate has multiple executables, add the documents for the other "
+"executables (like ``crates/my_crate/bin/<executable>``) to the ``toctree`` "
+"entries as well."
+msgstr ""
+
+#: ../../../docs/including.rst:42
+msgid ""
+"Do not use glob patterns with the generated documentation since the "
+"necessary ``toctree`` directives are already included in the relevant docs. "
+"Only the doc for each executable and the crate itself should be included in "
+"the ``toctree``."
+msgstr ""
+
+#: ../../../docs/including.rst:46
+msgid ""
+"The path in the ``toctree`` must be relative to the document in which the "
+"``toctree`` is or an absolute path rooted in the Sphinx source directory."
+msgstr ""
+
+#: ../../../docs/including.rst:50
+msgid "Including in other docs"
+msgstr ""
+
+#: ../../../docs/including.rst:52
+msgid ""
+"It may be preferred to include the generated content in other documents, "
+"specially when there is only one executable. The Sphinx ``include`` "
+"directive can be used for this, like ``:::{include} path/to/file.md:::`` or "
+"``.. include:: path/to/file.rst``. Note that the path must include the "
+"extension of the document here and must be relative to the file it is "
+"included in. As with the ``toctree`` method, only the crate or executable "
+"documents should be included."
+msgstr ""
+
+#: ../../../docs/including.rst:58
+msgid ""
+"The main gotcha here is the use of titles in the generated documentation. "
+"The generated documentation uses ``=`` as the title decoration character and "
+"adds it both on the top and bottom of the title. As long as there is no "
+"conflict with this decoration in the document, the documentation will be "
+"generated properly."
+msgstr ""
+
+#: ../../../docs/including.rst:62
+msgid ""
+"In case Sphinx warns about files not included in the ``toctree``, the file "
+"can be added to the ``exclude_patterns`` list in the Sphinx configuration or "
+"included in a hidden ``toctree``."
+msgstr ""
+
+#: ../../../docs/including.rst:66
+msgid "Linking directly to Rust items"
+msgstr ""
+
+#: ../../../docs/including.rst:68
+msgid ""
+"The various roles described in :doc:`roles` can be used to link directly to "
+"an item. Using these, the documentation can be organized in tables, lists, "
+"paragraphs or any other structure supported by Sphinx."
+msgstr ""
+
+#: ../../../docs/including.rst:71
+msgid ""
+"When using this method, a hidden ``toctree`` should be generated for the "
+"documents of the executable and crate to ensure that Sphinx can discover all "
+"documents properly."
+msgstr ""
