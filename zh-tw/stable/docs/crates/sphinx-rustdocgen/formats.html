@@ -1,0 +1,778 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mod formats &mdash; sphinxcontrib-rust  說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=76b4835e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/sphinxcontrib-rust-docs-l10n/docs/crates/sphinx-rustdocgen/formats.html" />
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=0d9984b1"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/translations.js?v=cbf116e0"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../../search.html" />
+    <link rel="next" title="mod nodes" href="nodes.html" />
+    <link rel="prev" title="mod variable_directive" href="directives/variable_directive.html" />
+ 
+<script type="text/javascript" src="../../../ltd-provenance.js"></script>
+<script type="text/javascript" src="../../../ltd-current.js"></script>
+<script type="text/javascript" src="../../../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            sphinxcontrib-rust
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../including.html">在 Sphinx 建置中引入文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roles.html">Rust 專屬的角色</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../directives.html">Rust 專屬的指示詞</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indices.html">Rust 項目索引</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compatibility.html">與 rustdoc 的相容性</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developing.html">開發者文件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../sphinx-rustdocgen.html">sphinx-rustdocgen 文件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main.html">sphinx-rustdocgen</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="lib.html">Crate <code class="docutils literal notranslate"><span class="pre">sphinx_rustdocgen</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="directives.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">directives</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">formats</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx_rustdocgen-formats-generate_decoration"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">generate_decoration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdContent"><code class="docutils literal notranslate"><span class="pre">trait</span> <span class="pre">MdContent</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdContent-get_md_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_md_text</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-T-MdContent"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">MdContent</span> <span class="pre">for</span> <span class="pre">T</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-T-MdContent-get_md_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_md_text</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective"><code class="docutils literal notranslate"><span class="pre">trait</span> <span class="pre">MdDirective</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-DEFAULT_FENCE_SIZE"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">DEFAULT_FENCE_SIZE</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-calc_fence_size"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">calc_fence_size</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-fence_size"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">fence_size</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-get_md_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_md_text</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-make_fence"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_fence</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-make_md_header"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_md_header</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-make_md_list"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_md_list</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-make_md_section"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_md_section</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-make_md_toctree"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_md_toctree</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdOption"><code class="docutils literal notranslate"><span class="pre">trait</span> <span class="pre">MdOption</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-MdOption-get_md_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_md_text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstContent"><code class="docutils literal notranslate"><span class="pre">trait</span> <span class="pre">RstContent</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstContent-get_rst_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_rst_text</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-T-RstContent"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">RstContent</span> <span class="pre">for</span> <span class="pre">T</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-T-RstContent-get_rst_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_rst_text</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective"><code class="docutils literal notranslate"><span class="pre">trait</span> <span class="pre">RstDirective</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective-INDENT"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">INDENT</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective-get_rst_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_rst_text</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective-make_content_indent"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_content_indent</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective-make_indent"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_indent</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective-make_rst_header"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_rst_header</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective-make_rst_list"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_rst_list</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective-make_rst_section"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_rst_section</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective-make_rst_toctree"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_rst_toctree</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstOption"><code class="docutils literal notranslate"><span class="pre">trait</span> <span class="pre">RstOption</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-RstOption-get_rst_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_rst_text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format"><code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">Format</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-Md"><code class="docutils literal notranslate"><span class="pre">Md</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-Rst"><code class="docutils literal notranslate"><span class="pre">Rst</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">Format</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-MD_VALUES"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">MD_VALUES</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-RST_VALUES"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">RST_VALUES</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-extension"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">extension</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-format_directive"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">format_directive</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-make_inline_code"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_inline_code</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-make_title"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">make_title</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-FromStr"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">FromStr</span> <span class="pre">for</span> <span class="pre">Format</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-FromStr-Err"><code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">Err</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-formats-Format-FromStr-from_str"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">from_str</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">nodes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">utils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="lib.html#sphinx_rustdocgen-traverse_crate"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">traverse_crate</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="lib.html#sphinx_rustdocgen-Configuration"><code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">Configuration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="lib.html#sphinx_rustdocgen-RuntimeConfiguration"><code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">RuntimeConfiguration</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx-extension.html">sphinxcontrib_rust 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">發行備註</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sphinxcontrib-rust</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../sphinx-rustdocgen.html">sphinx-rustdocgen 文件</a></li>
+          <li class="breadcrumb-item"><a href="lib.html">Crate <code class="docutils literal notranslate"><span class="pre">sphinx_rustdocgen</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">formats</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/docs/crates/sphinx-rustdocgen/formats.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mod-formats">
+<h1><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">formats</span></code><a class="headerlink" href="#mod-formats" title="連結到這個標頭"></a></h1>
+<dl class="rust module">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats">
+<span class="sig-name descname"><span class="k"><span class="pre">module</span></span><span class="w"> </span><span class="n"><span class="pre">formats</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats" title="連結到這個定義"></a></dt>
+<dd><p>Module for handling the output formats supported.</p>
+<p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-generate_decoration">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">generate_decoration</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">ch</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">char</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">len</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">String</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-generate_decoration" title="連結到這個定義"></a></dt>
+<dd><p>Generate title decoration string for RST or fence for MD.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">ch<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The character to use.</p>
+</dd>
+<dt class="field-even">len<span class="colon">:</span></dt>
+<dd class="field-even"><p>The length of the decoration required.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>A string of length <code class="docutils literal notranslate"><span class="pre">len</span></code> composed entirely of <code class="docutils literal notranslate"><span class="pre">ch</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Traits</p>
+<dl class="rust trait">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdContent">
+<span class="sig-name descname"><span class="k"><span class="pre">trait</span></span><span class="w"> </span><span class="n"><span class="pre">MdContent</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdContent" title="連結到這個定義"></a></dt>
+<dd><p>Trait for anything that can be converted to MD directive content.</p>
+<p>This is implemented for all <code class="docutils literal notranslate"><span class="pre">IntoIterator&lt;Item</span> <span class="pre">=</span> <span class="pre">String&gt;</span></code>, effectively
+allowing <code class="docutils literal notranslate"><span class="pre">Vec&lt;String&gt;</span></code> to be converted to MD content lines.</p>
+<p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdContent-get_md_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_md_text</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdContent-get_md_text" title="連結到這個定義"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Implemented for</p>
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-T-MdContent">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-formats-MdContent" title="sphinx_rustdocgen::formats::MdContent"><span class="n"><span class="pre">MdContent</span></span></a><span class="w"> </span><span class="k"><span class="pre">for</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-T-MdContent" title="連結到這個定義"></a><br /><span class="k"><span class="pre">where</span></span><br /><span class="w">&#160;&#160;&#160; </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">IntoIterator</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Item</span></span><span class="p"> <span class="pre">=</span> </span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span><br /><a class="headerlink" href="#sphinx_rustdocgen-formats-T-MdContent" title="連結到這個定義"></a></dt>
+<dd><p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-T-MdContent-get_md_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_md_text</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-T-MdContent-get_md_text" title="連結到這個定義"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="rust trait">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective">
+<span class="sig-name descname"><span class="k"><span class="pre">trait</span></span><span class="w"> </span><span class="n"><span class="pre">MdDirective</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective" title="連結到這個定義"></a></dt>
+<dd><p>Trait for directives that can be written as MD content</p>
+<p class="rubric">變數</p>
+<dl class="rust variable">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective-DEFAULT_FENCE_SIZE">
+<span class="sig-name descname"><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">DEFAULT_FENCE_SIZE</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective-DEFAULT_FENCE_SIZE" title="連結到這個定義"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective-calc_fence_size">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">calc_fence_size</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="directives.html#sphinx_rustdocgen-directives-Directive" title="sphinx_rustdocgen::directives::Directive"><span class="n"><span class="pre">Directive</span></span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">usize</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective-calc_fence_size" title="連結到這個定義"></a></dt>
+<dd><p>Calculate the fence size required for the item.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">items</span></code> are the members of the current item. So, for
+a struct, these will be the list of its fields, for an enum,
+the variants, for a module, the items defined in it, etc.</p>
+<p>The fence size for the item is 1 + the max fence size of all
+its members. If it has no members, the fence size is the default fence
+size. So, the returned value is the minimum fence size required to
+properly document the item and its members in Markdown.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">items<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Items which are members of the current item.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>The minimum fence size required to document the item and all its
+nested items.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective-fence_size">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">fence_size</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">usize</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective-fence_size" title="連結到這個定義"></a></dt>
+<dd><p>Return the fence size required for documenting the item.</p>
+<p>The default implementation returns <code class="docutils literal notranslate"><span class="pre">4</span></code>, which allows for members
+with no items to create sections within the docstrings, that do not
+show up in the <code class="docutils literal notranslate"><span class="pre">toctree</span></code>.</p>
+<p>Implementations may use
+<a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective-calc_fence_size" title="sphinx_rustdocgen::formats::MdDirective::calc_fence_size"><code class="xref rust rust-fn docutils literal notranslate"><span class="pre">MdDirective::calc_fence_size</span></code></a>
+to override this, when there are nested items present.</p>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective-get_md_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_md_text</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">fence_size</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">max_visibility</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><a class="reference internal" href="directives/directive_options.html#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective-get_md_text" title="連結到這個定義"></a></dt>
+<dd><p>Generate MD text with the given fence size.</p>
+<p>Implementations must provide a vec of the lines of the content of the
+item and all its members.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">fence_size<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The size of the fence for the directive. Use the
+<code class="docutils literal notranslate"><span class="pre">make_fence</span></code> function to get the actual fence string.</p>
+</dd>
+<dt class="field-even">max_visibility<span class="colon">:</span></dt>
+<dd class="field-even"><p>Include only items with visibility up to the
+defined level.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>The MD text for the documentation of the item and its members.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective-make_fence">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_fence</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">fence_size</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">String</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective-make_fence" title="連結到這個定義"></a></dt>
+<dd><p>Make a string for the fences for the directive.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">fence_size<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The size of the fence, must be at least 3.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>A string of colons of length <code class="docutils literal notranslate"><span class="pre">fence_size</span></code>.</p>
+</dd>
+<dt>Panics:</dt><dd><p>If the <code class="docutils literal notranslate"><span class="pre">fence_size</span></code> is less than 3.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective-make_md_header">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_md_header</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">O</span></span><span class="p"><span class="pre">:</span> </span><a class="reference internal" href="#sphinx_rustdocgen-formats-MdOption" title="sphinx_rustdocgen::formats::MdOption"><span class="n"><span class="pre">MdOption</span></span></a><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Display</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">E</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Display</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">directive</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">E</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">O</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">fence</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective-make_md_header" title="連結到這個定義"></a></dt>
+<dd><p>Make the MD directive header from the directive, name and options.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">directive<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The MD directive to make the header for.</p>
+</dd>
+<dt class="field-even">name<span class="colon">:</span></dt>
+<dd class="field-even"><p>The name of the directive.</p>
+</dd>
+<dt class="field-odd">options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The directive options to add.</p>
+</dd>
+<dt class="field-even">fence<span class="colon">:</span></dt>
+<dd class="field-even"><p>The fence to use for the directive.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>A Vec of the directive's header lines.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective-make_md_list">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_md_list</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">fence_size</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective-make_md_list" title="連結到這個定義"></a></dt>
+<dd><p>Make an MD list of items.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">fence_size<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The fence size for the list title.</p>
+</dd>
+<dt class="field-even">title<span class="colon">:</span></dt>
+<dd class="field-even"><p>The title for the list.</p>
+</dd>
+<dt class="field-odd">items<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A vec of item name and content tuples.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>Lines of MD text for the list, with the title.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective-make_md_section">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_md_section</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">section</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">fence_size</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="directives.html#sphinx_rustdocgen-directives-Directive" title="sphinx_rustdocgen::directives::Directive"><span class="n"><span class="pre">Directive</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">max_visibility</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><a class="reference internal" href="directives/directive_options.html#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective-make_md_section" title="連結到這個定義"></a></dt>
+<dd><p>Make section in an MD document with the given title and items.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">section<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The title of the section.</p>
+</dd>
+<dt class="field-even">fence_size<span class="colon">:</span></dt>
+<dd class="field-even"><p>The fence size of the section.</p>
+</dd>
+<dt class="field-odd">items<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The items to include in the section.</p>
+</dd>
+<dt class="field-even">max_visibility<span class="colon">:</span></dt>
+<dd class="field-even"><p>The max visibility of the items to include.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>The MD text for the section.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdDirective-make_md_toctree">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_md_toctree</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">I</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Display</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Iterator</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Item</span></span><span class="p"> <span class="pre">=</span> </span><span class="n"><span class="pre">I</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">fence_size</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">caption</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Option</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">u8</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">tree</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdDirective-make_md_toctree" title="連結到這個定義"></a></dt>
+<dd><p>Make a <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive for MD documents.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">fence_size<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The fence size for the directive.</p>
+</dd>
+<dt class="field-even">caption<span class="colon">:</span></dt>
+<dd class="field-even"><p>The caption for the <code class="docutils literal notranslate"><span class="pre">toctree</span></code>.</p>
+</dd>
+<dt class="field-odd">maxdepth<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The desired <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> of the <code class="docutils literal notranslate"><span class="pre">toctree</span></code>. If None,
+the <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code> option will not be set.</p>
+</dd>
+<dt class="field-even">tree<span class="colon">:</span></dt>
+<dd class="field-even"><p>The <code class="docutils literal notranslate"><span class="pre">toctree</span></code> entries.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="rust trait">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdOption">
+<span class="sig-name descname"><span class="k"><span class="pre">trait</span></span><span class="w"> </span><span class="n"><span class="pre">MdOption</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdOption" title="連結到這個定義"></a></dt>
+<dd><p>Trait for MD directive options</p>
+<p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-MdOption-get_md_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_md_text</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Option</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-MdOption-get_md_text" title="連結到這個定義"></a></dt>
+<dd><p>Return the MD text for the option.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="rust trait">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstContent">
+<span class="sig-name descname"><span class="k"><span class="pre">trait</span></span><span class="w"> </span><span class="n"><span class="pre">RstContent</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstContent" title="連結到這個定義"></a></dt>
+<dd><p>Trait for anything that can be converted to RST directive content.</p>
+<p>This is implemented for all <code class="docutils literal notranslate"><span class="pre">IntoIterator&lt;Item</span> <span class="pre">=</span> <span class="pre">String&gt;</span></code>, effectively
+allowing <code class="docutils literal notranslate"><span class="pre">Vec&lt;String&gt;</span></code> to be converted to RST content lines.</p>
+<p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstContent-get_rst_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_rst_text</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstContent-get_rst_text" title="連結到這個定義"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Implemented for</p>
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-T-RstContent">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-formats-RstContent" title="sphinx_rustdocgen::formats::RstContent"><span class="n"><span class="pre">RstContent</span></span></a><span class="w"> </span><span class="k"><span class="pre">for</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-T-RstContent" title="連結到這個定義"></a><br /><span class="k"><span class="pre">where</span></span><br /><span class="w">&#160;&#160;&#160; </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">IntoIterator</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Item</span></span><span class="p"> <span class="pre">=</span> </span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span><br /><a class="headerlink" href="#sphinx_rustdocgen-formats-T-RstContent" title="連結到這個定義"></a></dt>
+<dd><p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-T-RstContent-get_rst_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_rst_text</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-T-RstContent-get_rst_text" title="連結到這個定義"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="rust trait">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstDirective">
+<span class="sig-name descname"><span class="k"><span class="pre">trait</span></span><span class="w"> </span><span class="n"><span class="pre">RstDirective</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstDirective" title="連結到這個定義"></a></dt>
+<dd><p>Trait for directives that can be written as RST content</p>
+<p class="rubric">變數</p>
+<dl class="rust variable">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstDirective-INDENT">
+<span class="sig-name descname"><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">INDENT</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">'static</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstDirective-INDENT" title="連結到這個定義"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstDirective-get_rst_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_rst_text</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">max_visibility</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><a class="reference internal" href="directives/directive_options.html#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstDirective-get_rst_text" title="連結到這個定義"></a></dt>
+<dd><p>Generate RST text with the given level of indentation.</p>
+<p>Implementations must provide a vec of the lines of the content of the
+item and all its members.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">level<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The level of indentation for the content. Use the
+<code class="docutils literal notranslate"><span class="pre">make_indent</span></code> and <code class="docutils literal notranslate"><span class="pre">make_content_indent</span></code> functions to get
+the actual indentation string.</p>
+</dd>
+<dt class="field-even">max_visibility<span class="colon">:</span></dt>
+<dd class="field-even"><p>Include only items with visibility up to the
+defined level.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>The RST text for the documentation of the item and its members.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstDirective-make_content_indent">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_content_indent</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">String</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstDirective-make_content_indent" title="連結到這個定義"></a></dt>
+<dd><p>Make a string for indenting the directive's content and options</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">level<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The level of the indentation.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>A string that is <code class="docutils literal notranslate"><span class="pre">Self::INDENT</span></code> repeated <code class="docutils literal notranslate"><span class="pre">level</span> <span class="pre">+</span> <span class="pre">1</span></code> times.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstDirective-make_indent">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_indent</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">String</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstDirective-make_indent" title="連結到這個定義"></a></dt>
+<dd><p>Make a string for indenting the directive.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">level<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The level of the indentation.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>A string that is <code class="docutils literal notranslate"><span class="pre">Self::INDENT</span></code> repeated <code class="docutils literal notranslate"><span class="pre">level</span></code> times.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstDirective-make_rst_header">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_rst_header</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">O</span></span><span class="p"><span class="pre">:</span> </span><a class="reference internal" href="#sphinx_rustdocgen-formats-RstOption" title="sphinx_rustdocgen::formats::RstOption"><span class="n"><span class="pre">RstOption</span></span></a><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Display</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">E</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Display</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">directive</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">E</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">O</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstDirective-make_rst_header" title="連結到這個定義"></a></dt>
+<dd><p>Make the RST directive header from the directive, name and options.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">directive<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The RST directive to make the header for.</p>
+</dd>
+<dt class="field-even">name<span class="colon">:</span></dt>
+<dd class="field-even"><p>The name of the directive.</p>
+</dd>
+<dt class="field-odd">options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The directive options to add.</p>
+</dd>
+<dt class="field-even">level<span class="colon">:</span></dt>
+<dd class="field-even"><p>The indentation level of the directive.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>A Vec of the directive's header lines.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstDirective-make_rst_list">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_rst_list</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstDirective-make_rst_list" title="連結到這個定義"></a></dt>
+<dd><p>Make an RST list of items.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">indent<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The indentation for the list items.</p>
+</dd>
+<dt class="field-even">title<span class="colon">:</span></dt>
+<dd class="field-even"><p>The title for the list.</p>
+</dd>
+<dt class="field-odd">items<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A vec of item name and content tuples.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>Lines of RST text for the list, with the title.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstDirective-make_rst_section">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_rst_section</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">section</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">usize</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="directives.html#sphinx_rustdocgen-directives-Directive" title="sphinx_rustdocgen::directives::Directive"><span class="n"><span class="pre">Directive</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">max_visibility</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><a class="reference internal" href="directives/directive_options.html#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstDirective-make_rst_section" title="連結到這個定義"></a></dt>
+<dd><p>Make section in an RST document with the given title and items.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">section<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The title of the section.</p>
+</dd>
+<dt class="field-even">level<span class="colon">:</span></dt>
+<dd class="field-even"><p>The indentation level of the section.</p>
+</dd>
+<dt class="field-odd">items<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The items to include in the section.</p>
+</dd>
+<dt class="field-even">max_visibility<span class="colon">:</span></dt>
+<dd class="field-even"><p>The max visibility of the items to include.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>The RST text for the section.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstDirective-make_rst_toctree">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_rst_toctree</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">I</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Display</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Iterator</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Item</span></span><span class="p"> <span class="pre">=</span> </span><span class="n"><span class="pre">I</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">caption</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Option</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">u8</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">tree</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstDirective-make_rst_toctree" title="連結到這個定義"></a></dt>
+<dd><p>Make a <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive for RST documents.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">indent<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The indentation for the directive.</p>
+</dd>
+<dt class="field-even">caption<span class="colon">:</span></dt>
+<dd class="field-even"><p>The caption for the <code class="docutils literal notranslate"><span class="pre">toctree</span></code>.</p>
+</dd>
+<dt class="field-odd">maxdepth<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The desired <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> of the <code class="docutils literal notranslate"><span class="pre">toctree</span></code>. If None,
+the <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code> option will not be set.</p>
+</dd>
+<dt class="field-even">tree<span class="colon">:</span></dt>
+<dd class="field-even"><p>The <code class="docutils literal notranslate"><span class="pre">toctree</span></code> entries.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="rust trait">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstOption">
+<span class="sig-name descname"><span class="k"><span class="pre">trait</span></span><span class="w"> </span><span class="n"><span class="pre">RstOption</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstOption" title="連結到這個定義"></a></dt>
+<dd><p>Trait for RST directive options.</p>
+<p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-RstOption-get_rst_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_rst_text</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Option</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-RstOption-get_rst_text" title="連結到這個定義"></a></dt>
+<dd><p>Return the RST text for the option.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p class="rubric">Enums</p>
+<dl class="rust enum">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format">
+<span class="sig-name descname"><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">Format</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format" title="連結到這個定義"></a></dt>
+<dd><p>Supported formats for the docstrings</p>
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-Md">
+<span class="sig-name descname"><span class="n"><span class="pre">Md</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-Md" title="連結到這個定義"></a></dt>
+<dd><p>Markdown format</p>
+</dd></dl>
+
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-Rst">
+<span class="sig-name descname"><span class="n"><span class="pre">Rst</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-Rst" title="連結到這個定義"></a></dt>
+<dd><p>reStructuredText format</p>
+</dd></dl>
+
+<p class="rubric">Implementations</p>
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-formats-Format" title="sphinx_rustdocgen::formats::Format"><span class="n"><span class="pre">Format</span></span></a></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format" title="連結到這個定義"></a></dt>
+<dd><p class="rubric">變數</p>
+<dl class="rust variable">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-MD_VALUES">
+<span class="sig-name descname"><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">MD_VALUES</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">'static</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">;</span> </span><span class="s"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-MD_VALUES" title="連結到這個定義"></a></dt>
+<dd><p>Acceptable text values for Md variant, case-insensitive.</p>
+</dd></dl>
+
+<dl class="rust variable">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-RST_VALUES">
+<span class="sig-name descname"><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">RST_VALUES</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">'static</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">;</span> </span><span class="s"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-RST_VALUES" title="連結到這個定義"></a></dt>
+<dd><p>Acceptable text values for Rst variant, case-insensitive.</p>
+</dd></dl>
+
+<p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-extension">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">'static</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-extension" title="連結到這個定義"></a></dt>
+<dd><p>Returns the extension for the format, without the leading &quot;.&quot;.</p>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-format_directive">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">format_directive</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">directive</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">max_visibility</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><a class="reference internal" href="directives/directive_options.html#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-format_directive" title="連結到這個定義"></a><br /><span class="k"><span class="pre">where</span></span><br /><span class="w">&#160;&#160;&#160; </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span> </span><a class="reference internal" href="#sphinx_rustdocgen-formats-RstDirective" title="sphinx_rustdocgen::formats::RstDirective"><span class="n"><span class="pre">RstDirective</span></span></a><span class="p"> <span class="pre">+</span> </span><a class="reference internal" href="#sphinx_rustdocgen-formats-MdDirective" title="sphinx_rustdocgen::formats::MdDirective"><span class="n"><span class="pre">MdDirective</span></span></a><br /><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-format_directive" title="連結到這個定義"></a></dt>
+<dd><p>Get format specific content for the directive for the output file.</p>
+<p>The function assumes that the directive is the top level directive of
+the output file and generates the content accordingly.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">directive<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The directive to get the content for, typically a
+<code class="docutils literal notranslate"><span class="pre">Crate</span></code> or <code class="docutils literal notranslate"><span class="pre">Module</span></code> directive.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>A vec of strings which are the lines of the document.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-make_inline_code">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_inline_code</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">Display</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span> </span><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">String</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-make_inline_code" title="連結到這個定義"></a></dt>
+<dd><p>Convert the provided text to an inline code representation of the text
+specific to the format.</p>
+</dd></dl>
+
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-make_title">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">make_title</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-make_title" title="連結到這個定義"></a></dt>
+<dd><p>Make a format specific document title using the provided title string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p class="rubric">Traits implemented</p>
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-FromStr">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="w"> </span><span class="n"><span class="pre">FromStr</span></span><span class="w"> </span><span class="k"><span class="pre">for</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-formats-Format" title="sphinx_rustdocgen::formats::Format"><span class="n"><span class="pre">Format</span></span></a></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-FromStr" title="連結到這個定義"></a></dt>
+<dd><p class="rubric">Types</p>
+<dl class="rust type">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-FromStr-Err">
+<span class="sig-name descname"><span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="n"><span class="pre">Err</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-FromStr-Err" title="連結到這個定義"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">函數</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-formats-Format-FromStr-from_str">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">from_str</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">Self</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Err</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-formats-Format-FromStr-from_str" title="連結到這個定義"></a></dt>
+<dd><p>Parses the string into an enum value, or panics.</p>
+<p>If the string is <code class="docutils literal notranslate"><span class="pre">md</span></code>, <code class="docutils literal notranslate"><span class="pre">.md</span></code> or <code class="docutils literal notranslate"><span class="pre">markdown</span></code>, the function
+returns <code class="docutils literal notranslate"><span class="pre">Md</span></code>. If the string is <code class="docutils literal notranslate"><span class="pre">rst</span></code>, <code class="docutils literal notranslate"><span class="pre">.rst</span></code> or
+<code class="docutils literal notranslate"><span class="pre">restructuredtext</span></code>, the function returns <code class="docutils literal notranslate"><span class="pre">Rst</span></code>. Comparison is
+case-insensitive.</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">value<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The value to parse.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>The parsed enum value as the Ok value, or unit type as the Err.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="directives/variable_directive.html" class="btn btn-neutral float-left" title="mod variable_directive" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nodes.html" class="btn btn-neutral float-right" title="mod nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Munir Contractor.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sphinxcontrib_rust.rust_link &mdash; sphinxcontrib-rust  說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=76b4835e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/sphinxcontrib-rust-docs-l10n/docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rust_link.html" />
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=0d9984b1"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/translations.js?v=cbf116e0"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../../search.html" />
+    <link rel="next" title="發行備註" href="../../release-notes.html" />
+    <link rel="prev" title="sphinxcontrib_rust.nodes" href="sphinxcontrib_rust.nodes.html" />
+ 
+<script type="text/javascript" src="../../../ltd-provenance.js"></script>
+<script type="text/javascript" src="../../../ltd-current.js"></script>
+<script type="text/javascript" src="../../../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            sphinxcontrib-rust
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../including.html">在 Sphinx 建置中引入文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roles.html">Rust 專屬的角色</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../directives.html">Rust 專屬的指示詞</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indices.html">Rust 項目索引</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compatibility.html">與 rustdoc 的相容性</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developing.html">開發者文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx-rustdocgen.html">sphinx-rustdocgen 文件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../sphinx-extension.html">sphinxcontrib_rust 文件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../sphinx-extension.html#python-package-documentation">Python package documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="sphinxcontrib_rust.html">sphinxcontrib_rust</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.html#sphinxcontrib_rust.CrateConfiguration"><code class="docutils literal notranslate"><span class="pre">CrateConfiguration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.html#sphinxcontrib_rust.generate_docs"><code class="docutils literal notranslate"><span class="pre">generate_docs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.html#sphinxcontrib_rust.setup"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.directives.html">sphinxcontrib_rust.directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.domain.html">sphinxcontrib_rust.domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.index.html">sphinxcontrib_rust.index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.items.html">sphinxcontrib_rust.items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.nodes.html">sphinxcontrib_rust.nodes</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">sphinxcontrib_rust.rust_link</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.rust_link.link"><code class="docutils literal notranslate"><span class="pre">link()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">發行備註</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sphinxcontrib-rust</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../sphinx-extension.html">sphinxcontrib_rust 文件</a></li>
+          <li class="breadcrumb-item"><a href="sphinxcontrib_rust.html">sphinxcontrib_rust</a></li>
+      <li class="breadcrumb-item active">sphinxcontrib_rust.rust_link</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rust_link.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-sphinxcontrib_rust.rust_link">
+<span id="sphinxcontrib-rust-rust-link"></span><h1>sphinxcontrib_rust.rust_link<a class="headerlink" href="#module-sphinxcontrib_rust.rust_link" title="連結到這個標頭"></a></h1>
+<p>Module for enabling intra-doc links similar to Rustdoc</p>
+<p class="rubric">函數</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.rust_link.link" title="sphinxcontrib_rust.rust_link.link"><code class="xref py py-obj docutils literal notranslate"><span class="pre">link</span></code></a>(state, silent)</p></td>
+<td><p>This is a monkey patch used to replace the <code class="xref py py-func docutils literal notranslate"><span class="pre">markdown_it.rules_inline.link.link()</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.rust_link.link">
+<span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.rust_link.</span></span><span class="sig-name descname"><span class="pre">link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">StateInline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sphinxcontrib_rust.rust_link.link" title="連結到這個定義"></a></dt>
+<dd><p>This is a monkey patch used to replace the <code class="xref py py-func docutils literal notranslate"><span class="pre">markdown_it.rules_inline.link.link()</span></code>.</p>
+<p>The main difference here is that it will mark any text with brackets as a link, even if there
+is no reference for it. This allows us to inject links for Rust items in the docs similar to
+rustdoc. However, it will also make links out of text that is not a Rust item name.</p>
+<dl class="simple">
+<dt>回傳值：</dt><dd><p>True, if it found a link, otherwise False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sphinxcontrib_rust.nodes.html" class="btn btn-neutral float-left" title="sphinxcontrib_rust.nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../release-notes.html" class="btn btn-neutral float-right" title="發行備註" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Munir Contractor.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

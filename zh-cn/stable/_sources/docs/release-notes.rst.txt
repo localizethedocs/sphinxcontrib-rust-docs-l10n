@@ -1,0 +1,13 @@
+Release Notes
+=============
+
+:v1.0.0:
+
+  * Initial release of the extension.
+
+:v1.0.1:
+
+   * fix: Extension does not eager evaluate potential file names while unwrapping ``Option``.
+
+:v1.1.0:
+   * feature: Add support for module's with custom source code paths defined with ``#[path = "..."]`` attribute.

@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mod directive_options &mdash; sphinxcontrib-rust  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=76b4835e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/sphinxcontrib-rust-docs-l10n/docs/crates/sphinx-rustdocgen/directives/directive_options.html" />
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=ccd1e645"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="mod enum_directive" href="enum_directive.html" />
+    <link rel="prev" title="mod crate_directive" href="crate_directive.html" />
+ 
+<script type="text/javascript" src="../../../../ltd-provenance.js"></script>
+<script type="text/javascript" src="../../../../ltd-current.js"></script>
+<script type="text/javascript" src="../../../../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            sphinxcontrib-rust
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../including.html">Including the docs in the Sphinx build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../roles.html">Rust specific roles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../directives.html">Rust specific directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../indices.html">Rust items index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compatibility.html">Compatibility with rustdoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developing.html">Developer Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../sphinx-rustdocgen.html">sphinx-rustdocgen documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../main.html">sphinx-rustdocgen</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../lib.html">Crate <code class="docutils literal notranslate"><span class="pre">sphinx_rustdocgen</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../directives.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">directives</span></code></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="crate_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">crate_directive</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">directive_options</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption"><code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">DirectiveOption</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-Index"><code class="docutils literal notranslate"><span class="pre">Index</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-Vis"><code class="docutils literal notranslate"><span class="pre">Vis</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-Layout"><code class="docutils literal notranslate"><span class="pre">Layout</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-Toc"><code class="docutils literal notranslate"><span class="pre">Toc</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-RstOption"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">RstOption</span> <span class="pre">for</span> <span class="pre">DirectiveOption</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-RstOption-get_rst_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_rst_text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-MdOption"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">MdOption</span> <span class="pre">for</span> <span class="pre">DirectiveOption</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-MdOption-get_md_text"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">get_md_text</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility"><code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">DirectiveVisibility</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Pub"><code class="docutils literal notranslate"><span class="pre">Pub</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Crate"><code class="docutils literal notranslate"><span class="pre">Crate</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Pvt"><code class="docutils literal notranslate"><span class="pre">Pvt</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">DirectiveVisibility</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-effective_visibility"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">effective_visibility</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Display"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">Display</span> <span class="pre">for</span> <span class="pre">DirectiveVisibility</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Display-fmt"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">fmt</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-From"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">From</span> <span class="pre">for</span> <span class="pre">DirectiveVisibility</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-From-from"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">from</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-FromStr"><code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">FromStr</span> <span class="pre">for</span> <span class="pre">DirectiveVisibility</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-FromStr-Err"><code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">Err</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-FromStr-from_str"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">from_str</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType"><code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">IndexEntryType</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType-None"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType-Normal"><code class="docutils literal notranslate"><span class="pre">Normal</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType-WithSubEntries"><code class="docutils literal notranslate"><span class="pre">WithSubEntries</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType-SubEntry"><code class="docutils literal notranslate"><span class="pre">SubEntry</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="enum_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">enum_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="executable_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">executable_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">function_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="impl_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">impl_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="macro_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">macro_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="module_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">module_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">struct_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="trait_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">trait_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="type_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">type_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="use_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">use_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_directive.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">variable_directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../directives.html#sphinx_rustdocgen-directives-ItemSections"><code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">ItemSections</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../directives.html#sphinx_rustdocgen-directives-push_sorted"><code class="docutils literal notranslate"><span class="pre">macro</span> <span class="pre">push_sorted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../directives.html#sphinx_rustdocgen-directives-extract_doc_from_attrs"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">extract_doc_from_attrs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../directives.html#sphinx_rustdocgen-directives-order_items"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">order_items</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../directives.html#sphinx_rustdocgen-directives-Directive"><code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">Directive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../directives.html#sphinx_rustdocgen-directives-FileDirectives"><code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">FileDirectives</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../formats.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">formats</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nodes.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">nodes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">utils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lib.html#sphinx_rustdocgen-traverse_crate"><code class="docutils literal notranslate"><span class="pre">fn</span> <span class="pre">traverse_crate</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lib.html#sphinx_rustdocgen-Configuration"><code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">Configuration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lib.html#sphinx_rustdocgen-RuntimeConfiguration"><code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">RuntimeConfiguration</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sphinx-extension.html">sphinxcontrib_rust documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">sphinxcontrib-rust</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../sphinx-rustdocgen.html">sphinx-rustdocgen documentation</a></li>
+          <li class="breadcrumb-item"><a href="../lib.html">Crate <code class="docutils literal notranslate"><span class="pre">sphinx_rustdocgen</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../directives.html"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">directives</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">directive_options</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/docs/crates/sphinx-rustdocgen/directives/directive_options.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mod-directive-options">
+<h1><code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">directive_options</span></code><a class="headerlink" href="#mod-directive-options" title="Link to this heading"></a></h1>
+<dl class="rust module">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options">
+<span class="sig-name descname"><span class="k"><span class="pre">module</span></span><span class="w"> </span><span class="n"><span class="pre">directive_options</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options" title="Link to this definition"></a></dt>
+<dd><p class="rubric">Enums</p>
+<dl class="rust enum">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveOption">
+<span class="sig-name descname"><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">DirectiveOption</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption" title="Link to this definition"></a></dt>
+<dd><p>Enum to represent the various options for the directives.</p>
+<p>The enum implements the <a class="reference internal" href="../formats.html#sphinx_rustdocgen-formats-RstOption" title="sphinx_rustdocgen::formats::RstOption"><code class="xref rust rust-trait docutils literal notranslate"><span class="pre">RstOption</span></code></a> and <a class="reference internal" href="../formats.html#sphinx_rustdocgen-formats-MdOption" title="sphinx_rustdocgen::formats::MdOption"><code class="xref rust rust-trait docutils literal notranslate"><span class="pre">MdOption</span></code></a>
+traits for easily converting the options to required text.</p>
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveOption-Index">
+<span class="sig-name descname"><span class="n"><span class="pre">Index</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType" title="sphinx_rustdocgen::directives::directive_options::IndexEntryType"><span class="n"><span class="pre">IndexEntryType</span></span></a><span class="p"><span class="pre">)</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-Index" title="Link to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">:index:</span></code> option</p>
+</dd></dl>
+
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveOption-Vis">
+<span class="sig-name descname"><span class="n"><span class="pre">Vis</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a><span class="p"><span class="pre">)</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-Vis" title="Link to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">:vis:</span></code> option.</p>
+</dd></dl>
+
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveOption-Layout">
+<span class="sig-name descname"><span class="n"><span class="pre">Layout</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">Vec</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../nodes.html#sphinx_rustdocgen-nodes-Node" title="sphinx_rustdocgen::nodes::Node"><span class="n"><span class="pre">Node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">)</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-Layout" title="Link to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">:layout:</span></code> option.</p>
+</dd></dl>
+
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveOption-Toc">
+<span class="sig-name descname"><span class="n"><span class="pre">Toc</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">)</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-Toc" title="Link to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">:toc:</span></code> option.</p>
+</dd></dl>
+
+<p class="rubric">Traits implemented</p>
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveOption-RstOption">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="w"> </span><a class="reference internal" href="../formats.html#sphinx_rustdocgen-formats-RstOption" title="sphinx_rustdocgen::formats::RstOption"><span class="n"><span class="pre">RstOption</span></span></a><span class="w"> </span><span class="k"><span class="pre">for</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption" title="sphinx_rustdocgen::directives::directive_options::DirectiveOption"><span class="n"><span class="pre">DirectiveOption</span></span></a></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-RstOption" title="Link to this definition"></a></dt>
+<dd><p class="rubric">Functions</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveOption-RstOption-get_rst_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_rst_text</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Option</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-RstOption-get_rst_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveOption-MdOption">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="w"> </span><a class="reference internal" href="../formats.html#sphinx_rustdocgen-formats-MdOption" title="sphinx_rustdocgen::formats::MdOption"><span class="n"><span class="pre">MdOption</span></span></a><span class="w"> </span><span class="k"><span class="pre">for</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption" title="sphinx_rustdocgen::directives::directive_options::DirectiveOption"><span class="n"><span class="pre">DirectiveOption</span></span></a></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-MdOption" title="Link to this definition"></a></dt>
+<dd><p class="rubric">Functions</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveOption-MdOption-get_md_text">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">get_md_text</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Option</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-MdOption-get_md_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="rust enum">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility">
+<span class="sig-name descname"><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">DirectiveVisibility</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="Link to this definition"></a></dt>
+<dd><p>Enum for the values of the <a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveOption-Vis" title="sphinx_rustdocgen::directives::directive_options::DirectiveOption::Vis"><code class="xref rust rust-struct docutils literal notranslate"><span class="pre">DirectiveOption::Vis</span></code></a> option</p>
+<p>The enum is ordered <code class="docutils literal notranslate"><span class="pre">Pub</span> <span class="pre">&lt;</span> <span class="pre">Crate</span> <span class="pre">&lt;</span> <span class="pre">Pvt</span></code>, so it can be efficiently
+compared for filtering. Note that ordering here is opposite to that of the
+visibility itself.</p>
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Pub">
+<span class="sig-name descname"><span class="n"><span class="pre">Pub</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Pub" title="Link to this definition"></a></dt>
+<dd><p>Public visibility</p>
+</dd></dl>
+
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Crate">
+<span class="sig-name descname"><span class="n"><span class="pre">Crate</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Crate" title="Link to this definition"></a></dt>
+<dd><p>Crate visibility</p>
+</dd></dl>
+
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Pvt">
+<span class="sig-name descname"><span class="n"><span class="pre">Pvt</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Pvt" title="Link to this definition"></a></dt>
+<dd><p>Private visibility</p>
+</dd></dl>
+
+<p class="rubric">Implementations</p>
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="Link to this definition"></a></dt>
+<dd><p class="rubric">Functions</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-effective_visibility">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">effective_visibility</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">visibility</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">Visibility</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">inherited_visibility</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">Option</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">Visibility</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-effective_visibility" title="Link to this definition"></a></dt>
+<dd><p>Determine the effective visibility for an item based on its visibility
+or its parent’s visibility.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">visibility<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The item’s visibility.</p>
+</dd>
+<dt class="field-even">inherited_visibility<span class="colon">:</span></dt>
+<dd class="field-even"><p>The visibility of the item’s parent.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>The directive visibility applicable to the item.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p class="rubric">Traits implemented</p>
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Display">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="w"> </span><span class="n"><span class="pre">Display</span></span><span class="w"> </span><span class="k"><span class="pre">for</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Display" title="Link to this definition"></a></dt>
+<dd><p class="rubric">Functions</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Display-fmt">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">fmt</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="k"><span class="pre">mut</span></span><span class="w"> </span><span class="n"><span class="pre">Formatter</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">'_</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">fmt</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Result</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-Display-fmt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-From">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="w"> </span><span class="n"><span class="pre">From</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">Visibility</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="k"><span class="pre">for</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-From" title="Link to this definition"></a></dt>
+<dd><p class="rubric">Functions</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-From-from">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">from</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">Visibility</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-From-from" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="rust impl">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-FromStr">
+<span class="sig-name descname"><span class="k"><span class="pre">impl</span></span><span class="w"> </span><span class="n"><span class="pre">FromStr</span></span><span class="w"> </span><span class="k"><span class="pre">for</span></span><span class="w"> </span><a class="reference internal" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility" title="sphinx_rustdocgen::directives::directive_options::DirectiveVisibility"><span class="n"><span class="pre">DirectiveVisibility</span></span></a></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-FromStr" title="Link to this definition"></a></dt>
+<dd><p class="rubric">Types</p>
+<dl class="rust type">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-FromStr-Err">
+<span class="sig-name descname"><span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="n"><span class="pre">Err</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-FromStr-Err" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Functions</p>
+<dl class="rust function">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-FromStr-from_str">
+<span class="sig-name descname"><span class="k"><span class="pre">fn</span></span><span class="w"> </span><span class="n"><span class="pre">from_str</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span> </span><span class="p"><span class="pre">&amp;</span></span><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Self</span></span><span class="p"><span class="pre">,</span> </span><span class="n"><span class="pre">Self</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Err</span></span><span class="p"><span class="pre">&gt;</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-DirectiveVisibility-FromStr-from_str" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="rust enum">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-IndexEntryType">
+<span class="sig-name descname"><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">IndexEntryType</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType" title="Link to this definition"></a></dt>
+<dd><p>The different index entry types.</p>
+<p>This corresponds to the Python enum
+<a class="reference internal" href="../../../python/sphinxcontrib_rust/sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.SphinxIndexEntryType" title="sphinxcontrib_rust.items.SphinxIndexEntryType"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinxcontrib_rust.items.SphinxIndexEntryType</span></code></a>.</p>
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-IndexEntryType-None">
+<span class="sig-name descname"><span class="n"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType-None" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-IndexEntryType-Normal">
+<span class="sig-name descname"><span class="n"><span class="pre">Normal</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType-Normal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-IndexEntryType-WithSubEntries">
+<span class="sig-name descname"><span class="n"><span class="pre">WithSubEntries</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType-WithSubEntries" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="rust struct">
+<dt class="sig sig-object rust" id="sphinx_rustdocgen-directives-directive_options-IndexEntryType-SubEntry">
+<span class="sig-name descname"><span class="n"><span class="pre">SubEntry</span></span></span><a class="headerlink" href="#sphinx_rustdocgen-directives-directive_options-IndexEntryType-SubEntry" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="crate_directive.html" class="btn btn-neutral float-left" title="mod crate_directive" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_directive.html" class="btn btn-neutral float-right" title="mod enum_directive" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Munir Contractor.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

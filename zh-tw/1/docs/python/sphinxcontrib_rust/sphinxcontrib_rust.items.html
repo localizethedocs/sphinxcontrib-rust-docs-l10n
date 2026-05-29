@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sphinxcontrib_rust.items &mdash; sphinxcontrib-rust  說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=76b4835e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/sphinxcontrib-rust-docs-l10n/docs/python/sphinxcontrib_rust/sphinxcontrib_rust.items.html" />
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=0d9984b1"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/translations.js?v=cbf116e0"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../../search.html" />
+    <link rel="next" title="sphinxcontrib_rust.nodes" href="sphinxcontrib_rust.nodes.html" />
+    <link rel="prev" title="sphinxcontrib_rust.index" href="sphinxcontrib_rust.index.html" />
+ 
+<script type="text/javascript" src="../../../ltd-provenance.js"></script>
+<script type="text/javascript" src="../../../ltd-current.js"></script>
+<script type="text/javascript" src="../../../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            sphinxcontrib-rust
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../including.html">在 Sphinx 建置中引入文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roles.html">Rust 專屬的角色</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../directives.html">Rust 專屬的指示詞</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indices.html">Rust 項目索引</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compatibility.html">與 rustdoc 的相容性</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developing.html">開發者文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx-rustdocgen.html">sphinx-rustdocgen 文件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../sphinx-extension.html">sphinxcontrib_rust 文件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../sphinx-extension.html#python-package-documentation">Python package documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="sphinxcontrib_rust.html">sphinxcontrib_rust</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.html#sphinxcontrib_rust.CrateConfiguration"><code class="docutils literal notranslate"><span class="pre">CrateConfiguration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.html#sphinxcontrib_rust.generate_docs"><code class="docutils literal notranslate"><span class="pre">generate_docs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.html#sphinxcontrib_rust.setup"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.directives.html">sphinxcontrib_rust.directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.domain.html">sphinxcontrib_rust.domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.index.html">sphinxcontrib_rust.index</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">sphinxcontrib_rust.items</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItem"><code class="docutils literal notranslate"><span class="pre">RustItem</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItem.make_index_entry"><code class="docutils literal notranslate"><span class="pre">RustItem.make_index_entry()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType"><code class="docutils literal notranslate"><span class="pre">RustItemType</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType.disambiguated_target"><code class="docutils literal notranslate"><span class="pre">RustItemType.disambiguated_target()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType.display_text"><code class="docutils literal notranslate"><span class="pre">RustItemType.display_text</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType.from_str"><code class="docutils literal notranslate"><span class="pre">RustItemType.from_str()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType.get_roles"><code class="docutils literal notranslate"><span class="pre">RustItemType.get_roles()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType.get_sphinx_obj_type"><code class="docutils literal notranslate"><span class="pre">RustItemType.get_sphinx_obj_type()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType.index_section_name"><code class="docutils literal notranslate"><span class="pre">RustItemType.index_section_name</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType.iter_roles"><code class="docutils literal notranslate"><span class="pre">RustItemType.iter_roles()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.items.SphinxIndexEntryType"><code class="docutils literal notranslate"><span class="pre">SphinxIndexEntryType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.nodes.html">sphinxcontrib_rust.nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.rust_link.html">sphinxcontrib_rust.rust_link</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">發行備註</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sphinxcontrib-rust</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../sphinx-extension.html">sphinxcontrib_rust 文件</a></li>
+          <li class="breadcrumb-item"><a href="sphinxcontrib_rust.html">sphinxcontrib_rust</a></li>
+      <li class="breadcrumb-item active">sphinxcontrib_rust.items</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/docs/python/sphinxcontrib_rust/sphinxcontrib_rust.items.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-sphinxcontrib_rust.items">
+<span id="sphinxcontrib-rust-items"></span><h1>sphinxcontrib_rust.items<a class="headerlink" href="#module-sphinxcontrib_rust.items" title="連結到這個標頭"></a></h1>
+<p>Module for Rust items and related utility classes</p>
+<p class="rubric">類別</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.items.RustItem" title="sphinxcontrib_rust.items.RustItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustItem</span></code></a>(name, display_text, type_, docname)</p></td>
+<td><p>A dataclass for holding the details of a Sphinx object for Rust domain</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustItemType</span></code></a>(*values)</p></td>
+<td><p>Enum of the various Rust items that are supported by the directives</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.items.SphinxIndexEntryType" title="sphinxcontrib_rust.items.SphinxIndexEntryType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SphinxIndexEntryType</span></code></a>(*values)</p></td>
+<td><p>Various index types implemented by Sphinx.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItem">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.items.</span></span><span class="sig-name descname"><span class="pre">RustItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">docname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_entry_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#sphinxcontrib_rust.items.SphinxIndexEntryType" title="sphinxcontrib_rust.items.SphinxIndexEntryType"><span class="pre">SphinxIndexEntryType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">SphinxIndexEntryType.NORMAL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_descr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reexport_of</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.items.RustItem" title="連結到這個定義"></a></dt>
+<dd><p>A dataclass for holding the details of a Sphinx object for Rust domain</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the object.</p>
+</dd>
+<dt class="field-even">dispname<span class="colon">:</span></dt>
+<dd class="field-even"><p>The name of the object used in directives and references.</p>
+</dd>
+<dt class="field-odd">type_<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The object type.</p>
+</dd>
+<dt class="field-even">docname<span class="colon">:</span></dt>
+<dd class="field-even"><p>The document the object is defined in. This is the generated
+reStructured Text document, not the source code.</p>
+</dd>
+<dt class="field-odd">qualifier<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Qualifier for the description.</p>
+</dd>
+<dt class="field-even">anchor<span class="colon">:</span></dt>
+<dd class="field-even"><p>Anchor for the entry within the docname.</p>
+</dd>
+<dt class="field-odd">priority<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The search priority for the object.</p>
+</dd>
+<dt class="field-even">entry_type<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Sphinx index entry type for the object.</p>
+</dd>
+<dt class="field-odd">reexport_of<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If the <code class="docutils literal notranslate"><span class="pre">type_</span></code> is <code class="docutils literal notranslate"><span class="pre">RustItemType.USE</span></code>, the <code class="docutils literal notranslate"><span class="pre">reexport_of</span></code>
+field is the name of the item that was re-exported.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItem.make_index_entry">
+<span class="sig-name descname"><span class="pre">make_index_entry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">IndexEntry</span></span></span><a class="headerlink" href="#sphinxcontrib_rust.items.RustItem.make_index_entry" title="連結到這個定義"></a></dt>
+<dd><p>Make the Sphinx index entry for the item</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItemType">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.items.</span></span><span class="sig-name descname"><span class="pre">RustItemType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.items.RustItemType" title="連結到這個定義"></a></dt>
+<dd><p>Enum of the various Rust items that are supported by the directives</p>
+<p>Each item type is associated with a directive. The enum provides methods
+for the role names, index section name, etc. that are used in the output
+and also methods for interacting with Sphinx.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItemType.disambiguated_target">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">disambiguated_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#sphinxcontrib_rust.items.RustItemType.disambiguated_target" title="連結到這個定義"></a></dt>
+<dd><p>Disambiguate the target's type from the target</p>
+<dl class="simple">
+<dt>引數：</dt><dd><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The link target to disambiguate.</p>
+</dd>
+<dt class="field-even">default_type<span class="colon">:</span></dt>
+<dd class="field-even"><p>The default type to return when there are no disambiguators.</p>
+</dd>
+</dl>
+</dd>
+<dt>回傳值：</dt><dd><p>A tuple of the new target and the disambiguated type. This is the same as
+the input arguments when there are no disambiguators present.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItemType.display_text">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">display_text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sphinxcontrib_rust.items.RustItemType.display_text" title="連結到這個定義"></a></dt>
+<dd><p>Return the string to display for the item type.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">fn</span></code> for the <code class="docutils literal notranslate"><span class="pre">FUNCTION</span></code> item type and the value
+for all other item types.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItemType.from_str">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></span></span><a class="headerlink" href="#sphinxcontrib_rust.items.RustItemType.from_str" title="連結到這個定義"></a></dt>
+<dd><p>Get the enum corresponding to the string value</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItemType.get_roles">
+<span class="sig-name descname"><span class="pre">get_roles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#sphinxcontrib_rust.items.RustItemType.get_roles" title="連結到這個定義"></a></dt>
+<dd><p>Get the Sphinx roles that can reference the object type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItemType.get_sphinx_obj_type">
+<span class="sig-name descname"><span class="pre">get_sphinx_obj_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ObjType</span></span></span><a class="headerlink" href="#sphinxcontrib_rust.items.RustItemType.get_sphinx_obj_type" title="連結到這個定義"></a></dt>
+<dd><p>Get the Sphinx <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjType</span></code> instance for the object type</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItemType.index_section_name">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index_section_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sphinxcontrib_rust.items.RustItemType.index_section_name" title="連結到這個定義"></a></dt>
+<dd><p>Return the index section name for the item type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.RustItemType.iter_roles">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iter_roles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#sphinxcontrib_rust.items.RustItemType.iter_roles" title="連結到這個定義"></a></dt>
+<dd><p>Iterate over (type, role) tuples across all types</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.items.SphinxIndexEntryType">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.items.</span></span><span class="sig-name descname"><span class="pre">SphinxIndexEntryType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.items.SphinxIndexEntryType" title="連結到這個定義"></a></dt>
+<dd><p>Various index types implemented by Sphinx.</p>
+<p>The corresponding Rust enum is <code class="xref rust rust-crate docutils literal notranslate"><span class="pre">sphinx_rustdocgen::directives::IndexEntryType</span></code>.</p>
+<dl class="simple">
+<dt>See Also:</dt><dd><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/domainapi.html#sphinx.domains.Index.generate">https://www.sphinx-doc.org/en/master/extdev/domainapi.html#sphinx.domains.Index.generate</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sphinxcontrib_rust.index.html" class="btn btn-neutral float-left" title="sphinxcontrib_rust.index" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sphinxcontrib_rust.nodes.html" class="btn btn-neutral float-right" title="sphinxcontrib_rust.nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Munir Contractor.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

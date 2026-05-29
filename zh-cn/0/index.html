@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sphinxcontrib-rust &mdash; sphinxcontrib-rust  文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=76b4835e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/sphinxcontrib-rust-docs-l10n/index.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7d86a446"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=beaddf03"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Including the docs in the Sphinx build" href="docs/including.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            sphinxcontrib-rust
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docs/including.html">Including the docs in the Sphinx build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/roles.html">Rust specific roles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/directives.html">Rust specific directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/indices.html">Rust items index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/compatibility.html">Compatibility with rustdoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/developing.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/sphinx-rustdocgen.html">sphinx-rustdocgen documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/sphinx-extension.html">sphinxcontrib_rust documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">sphinxcontrib-rust</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Sphinxcontrib-rust</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinxcontrib-rust">
+<h1>Sphinxcontrib-rust<a class="headerlink" href="#sphinxcontrib-rust" title="Link to this heading"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">This project is a beta project. It will work with existing Rust docstrings with some minor tweaks, but
+there may be breaking changes between minor version releases.</div>
+<div class="line">See <a class="reference internal" href="docs/compatibility.html"><span class="doc">Compatibility with rustdoc</span></a> for writing docstrings compatible with both rustdoc and Sphinx.</div>
+<div class="line">See <a class="reference internal" href="docs/limitations.html"><span class="doc">Limitations</span></a> for known limitations compared to rustdoc.</div>
+</div>
+</div>
+<p>This is a <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a> extension for integrating Rust programming language projects in Sphinx builds. You can read this
+documentation on <a class="reference external" href="https://munir0b0t.gitlab.io/sphinxcontrib-rust">Gitlab Pages</a> or <a class="reference external" href="https://sphinxcontrib-rust.readthedocs.io/en/latest/">readthedocs</a>.</p>
+<nav class="contents local" id="id1">
+<ul class="simple">
+<li><p><a class="reference internal" href="#motivation" id="id2">Motivation</a></p></li>
+<li><p><a class="reference internal" href="#installation" id="id3">Installation</a></p></li>
+<li><p><a class="reference internal" href="#configuration" id="id4">Configuration</a></p>
+<ul>
+<li><p><a class="reference internal" href="#rustdoc-compatible-markdown-docstrings" id="id5">rustdoc compatible Markdown docstrings</a></p></li>
+<li><p><a class="reference internal" href="#restructuredtext-docstrings" id="id6">reStructuredText docstrings</a></p></li>
+<li><p><a class="reference internal" href="#recommendations" id="id7">Recommendations</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#options" id="id8">Options</a></p></li>
+</ul>
+</nav>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading"></a></h2>
+<p>This is primarily meant for teams and projects that are already using Sphinx as a documentation build tool, and would
+like to include documentation for Rust projects in it along with Python, C, and other languages.</p>
+<p>Using the extension adds the following functionality:</p>
+<ol class="arabic simple">
+<li><p>Rust specific <a class="reference internal" href="docs/directives.html"><span class="doc">directives</span></a> and <a class="reference internal" href="docs/roles.html"><span class="doc">roles</span></a> that can be used to define and
+link to Rust items.</p></li>
+<li><p>rustdoc comments may be written in reStructuredText.</p></li>
+<li><p>Various Sphinx features and extensions can be used to generate and publish the docs.</p></li>
+</ol>
+<p>This is not a replacement for <a class="reference external" href="https://doc.rust-lang.org/rustdoc/index.html">rustdoc</a>, and since rustdoc is a part of the Rust language itself, it will not have all
+the same features as <a class="reference external" href="https://doc.rust-lang.org/rustdoc/index.html">rustdoc</a>.</p>
+<p>The goal is to provide a way for teams and projects using multiple languages to publish a single, consolidated
+documentation and use this, along with rustdoc, as part of the documentation workflow.</p>
+<p>See <a class="reference internal" href="docs/limitations.html"><span class="doc">Limitations</span></a> for some cases where the tool will not work the same as rustdoc and
+<a class="reference internal" href="docs/compatibility.html"><span class="doc">Compatibility with rustdoc</span></a> for any tweaks required to make the tool work with existing docstrings.</p>
+</section>
+<section id="installation">
+<span id="usage"></span><h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>There are two components that are required for this to work</p>
+<ol class="arabic simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">sphinx-rustdocgen</span></code> Rust crate for extracting the docs.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">sphinxcontrib_rust</span></code> Python package, which is a Sphinx extension.</p></li>
+</ol>
+<p>Both components are installed when installing the Python package with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">rust</span>
+</pre></div>
+</div>
+<p>The installation will check for <code class="docutils literal notranslate"><span class="pre">cargo</span></code> in the <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> environment variable and will use that to build and install
+the Rust executable.</p>
+<p>The executable is built with the Rust code shipped with the Python package to ensure that the Rust executable and
+Python package are always compatible with each other.</p>
+<p>Make sure that the directory where <code class="docutils literal notranslate"><span class="pre">cargo</span></code> installs the executable is in <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> as well. If the default
+installation directory is not part of the <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> environment, the installed executable may be specified in the
+Sphinx configuration with <code class="docutils literal notranslate"><span class="pre">rust_rustdocgen</span></code> option.</p>
+<p>If for any reason the crate does not get installed with Python package, it can be installed directly from crates.io
+with <code class="docutils literal notranslate"><span class="pre">cargo</span> <span class="pre">install</span> <span class="pre">sphinx-rustdocgen</span></code>. Make sure to install the same version of the create as the Python package.</p>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading"></a></h2>
+<section id="rustdoc-compatible-markdown-docstrings">
+<span id="md-usage"></span><h3>rustdoc compatible Markdown docstrings<a class="headerlink" href="#rustdoc-compatible-markdown-docstrings" title="Link to this heading"></a></h3>
+<p>This is most probably what you want to do and allows generating Sphinx documentation separately from rustdoc output.</p>
+<p>To use the extension along with rustdoc, add the extension to Sphinx's <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file and also add the
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/index.html">myst-parser</a> extension. Sphinx also needs to be <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/markdown.html">configured for Markdown builds</a>. Use the code snippet below with
+your crates specified in <code class="docutils literal notranslate"><span class="pre">rust_crates</span></code> to enable all if this.</p>
+<p>Using various extensions for myst-parser, existing docstrings can be rendered with Sphinx with minimal changes.
+See <a class="reference internal" href="docs/compatibility.html"><span class="doc">Compatibility with rustdoc</span></a> for details on how to write docstrings that can work with both rustdoc and Sphinx.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sphinxcontrib_rust&quot;</span><span class="p">,</span> <span class="s2">&quot;myst_parser&quot;</span><span class="p">]</span>
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;.rst&quot;</span><span class="p">:</span> <span class="s2">&quot;restructuredtext&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;.md&quot;</span><span class="p">:</span> <span class="s2">&quot;markdown&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;.txt&quot;</span><span class="p">:</span> <span class="s2">&quot;markdown&quot;</span><span class="p">,</span> <span class="c1"># Optional</span>
+<span class="p">}</span>
+<span class="c1"># See docs/compatibility for details on these extensions.</span>
+<span class="n">myst_enable_extensions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;attrs_block&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;colon_fence&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;html_admonition&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;replacements&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;smartquotes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;strikethrough&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tasklist&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">rust_crates</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;my_crate&quot;</span><span class="p">:</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;my_crate_derive&quot;</span><span class="p">:</span> <span class="s2">&quot;my-crate-derive&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">rust_doc_dir</span> <span class="o">=</span> <span class="s2">&quot;docs/crates/&quot;</span>
+<span class="n">rust_rustdoc_fmt</span> <span class="o">=</span> <span class="s2">&quot;md&quot;</span>
+</pre></div>
+</div>
+<p>This will generate the documentation from your Rust crates and put them in the <code class="docutils literal notranslate"><span class="pre">docs/crates/&lt;crate_name&gt;</span></code> directories.
+<a class="reference internal" href="docs/including.html"><span class="doc">Including the docs in the Sphinx build</span></a> describes the various ways to integrate the documentation in the Sphinx build. The Rust items
+can then be referenced using <a class="reference internal" href="docs/roles.html"><span class="doc">Rust specific roles</span></a> from other docs in the Sphinx build.</p>
+<p>See the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/configuration.html">configuration options for MyST</a>  for other options that are supported by myst-parser. They can be changed
+as required to customize the generated docs.</p>
+</section>
+<section id="restructuredtext-docstrings">
+<h3>reStructuredText docstrings<a class="headerlink" href="#restructuredtext-docstrings" title="Link to this heading"></a></h3>
+<p>Using the extension, it is also possible to write the Rust docstrings in reStructuredText. Note that this makes the
+docstrings unusable with Rustdoc and should only be considered when the rustdoc documentation will not be used.
+Publishing a crate with such docstrings is still possible, but the documentation on docs.rs for the crate will not be
+rendered properly.</p>
+<p>To enable RST docstrings, add the extension to the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file and configure it appropriately.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sphinxcontrib_rust&quot;</span><span class="p">]</span>
+<span class="n">rust_crates</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;my_crate&quot;</span><span class="p">:</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;my_crate_derive&quot;</span><span class="p">:</span> <span class="s2">&quot;my-crate-derive&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">rust_doc_dir</span> <span class="o">=</span> <span class="s2">&quot;docs/crates/&quot;</span>
+<span class="n">rust_rustdoc_fmt</span> <span class="o">=</span> <span class="s2">&quot;rst&quot;</span>
+</pre></div>
+</div>
+<p>This will generate the documentation from your Rust crates and put them in the <code class="docutils literal notranslate"><span class="pre">docs/crates/&lt;crate_name&gt;</span></code> directories.
+You can link against the documentation in your <code class="docutils literal notranslate"><span class="pre">toctree</span></code> by specifying the path to <code class="docutils literal notranslate"><span class="pre">lib</span></code> file and any executables.
+See <a class="reference internal" href="docs/including.html"><span class="doc">Including the docs in the Sphinx build</span></a> for more details. The Rust items can then be referenced using <a class="reference internal" href="docs/roles.html"><span class="doc">Rust specific roles</span></a> from other
+docs in the Sphinx build.</p>
+</section>
+<section id="recommendations">
+<h3>Recommendations<a class="headerlink" href="#recommendations" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use a HTML theme that allows expanding the TOC in the sidebar completely. For example, if using <code class="docutils literal notranslate"><span class="pre">sphinx_rtd_theme</span></code>,
+set the <code class="docutils literal notranslate"><span class="pre">navigation_depth</span></code> in <code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code> to -1 in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file
+(<code class="docutils literal notranslate"><span class="pre">html_theme_options</span> <span class="pre">=</span> <span class="pre">{&quot;navigation_depth&quot;:</span> <span class="pre">-1}</span></code>). This makes the sidebar much better to use.</p></li>
+<li><p>It is possible to write docstrings in Markdown and other documentation in reStructuredText. The configuration should
+be the same as what is described in <a class="reference internal" href="#md-usage"><span class="std std-ref">rustdoc compatible Markdown docstrings</span></a>. The roles and directives will work the same regardless of the
+choice of the docstrings syntax.</p></li>
+</ul>
+</section>
+</section>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Link to this heading"></a></h2>
+<p>Options are simply Python variables set in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file. Most options can be provided as a global value or a
+dict of values per crate, with the crate name as the key. The options that are global only are listed separately below.</p>
+<dl class="field-list simple">
+<dt class="field-odd">rust_crates<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(Required) A dict of crate names and their source code directories.
+This must be a dict even for a single crate. It determines which
+crates are documented. The directory should be the one which contains
+the <code class="docutils literal notranslate"><span class="pre">Cargo.toml</span></code> file for the crate and each crate in the workspace
+must be listed explicitly.</p>
+</dd>
+<dt class="field-even">rust_doc_dir<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Required) A directory under which to write the docs for all crates,
+or a dict of directory for each crate name. The directories will be
+read by Sphinx during the build, so they must be part of the source
+tree and not under the build directory. The build process will create
+a directory with the crate name under this, even when specified per
+crate.</p>
+</dd>
+<dt class="field-odd">rust_rustdoc_fmt<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Either <code class="docutils literal notranslate"><span class="pre">rst</span></code> or <code class="docutils literal notranslate"><span class="pre">md</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">rst</span></code>)</p>
+</dd>
+<dt class="field-even">rust_visibility<span class="colon">:</span></dt>
+<dd class="field-even"><p>Only includes documentation and indexes for items with visibility greater than or equal to the
+setting. The value can be <code class="docutils literal notranslate"><span class="pre">pub</span></code>, <code class="docutils literal notranslate"><span class="pre">crate</span></code> or <code class="docutils literal notranslate"><span class="pre">pvt</span></code>. Visibility restrictions like <code class="docutils literal notranslate"><span class="pre">super</span></code> and
+<code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">&lt;path&gt;</span></code> are not supported currently and are treated as private. (Default: <code class="docutils literal notranslate"><span class="pre">pub</span></code>).</p>
+</dd>
+<dt class="field-odd">rust_strip_src<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether to remove the <code class="docutils literal notranslate"><span class="pre">src/</span></code> directory when creating output files or not.
+The default is <code class="docutils literal notranslate"><span class="pre">True</span></code>, since that was the initial behavior. So,
+instead of creating output files as <code class="docutils literal notranslate"><span class="pre">&lt;crate_name&gt;/src/&lt;mod_name&gt;.rst</span></code>,
+the output files are created as <code class="docutils literal notranslate"><span class="pre">&lt;crate_name&gt;/&lt;mod_name&gt;.rst</span></code>, effectively
+removing <code class="docutils literal notranslate"><span class="pre">src/</span></code> from the paths. Set to <code class="docutils literal notranslate"><span class="pre">False</span></code> for crates that use a
+different path. (Default: True)</p>
+</dd>
+</dl>
+<p>The below options are global options, and cannot be specified per crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">rust_generate_mode<span class="colon">:</span></dt>
+<dd class="field-odd"><p>One of <code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">skip</span></code> or <code class="docutils literal notranslate"><span class="pre">changed</span></code>. If set to
+<code class="docutils literal notranslate"><span class="pre">always</span></code>, all documents are regenerated. If set to <code class="docutils literal notranslate"><span class="pre">skip</span></code>,
+the docs are not regenerated at all. If set to <code class="docutils literal notranslate"><span class="pre">changed</span></code>,
+only docs whose source files have been modified since they
+were last modified are regenerated. (Default: <code class="docutils literal notranslate"><span class="pre">changed</span></code>)</p>
+</dd>
+<dt class="field-even">rust_rustdocgen<span class="colon">:</span></dt>
+<dd class="field-even"><p>The path to the <code class="docutils literal notranslate"><span class="pre">sphinx-rustdocgen</span></code> executable to use.
+The path must be an absolute path or relative to Sphinx's
+working directory. (Default: Obtained from the <code class="docutils literal notranslate"><span class="pre">$PATH</span></code>
+environment variable.)</p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound" id="details">
+<p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docs/including.html">Including the docs in the Sphinx build</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/including.html#via-the-toctree">Via the <code class="docutils literal notranslate"><span class="pre">toctree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/including.html#including-in-other-docs">Including in other docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/including.html#linking-directly-to-rust-items">Linking directly to Rust items</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/roles.html">Rust specific roles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/roles.html#role-targets-within-docstrings">Role targets within docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/roles.html#provided-roles">Provided roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/directives.html">Rust specific directives</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-crate"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:crate::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-enum"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:enum::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-executable"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:executable::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-function"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:function::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-impl"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:impl::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-macro"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:macro::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-module"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:module::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-struct"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:struct::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-trait"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:trait::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-type"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:type::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-use"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:use::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/directives.html#directive-rust-variable"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:variable::</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/indices.html">Rust items index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/compatibility.html">Compatibility with rustdoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/compatibility.html#markdown-syntax">Markdown syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/compatibility.html#rustdoc-features">rustdoc features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/developing.html">Developer Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/developing.html#organization">Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/developing.html#design-and-execution">Design and execution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/sphinx-rustdocgen.html">sphinx-rustdocgen documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/crates/sphinx-rustdocgen/lib.html">Crate <code class="docutils literal notranslate"><span class="pre">sphinx_rustdocgen</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/sphinx-extension.html">sphinxcontrib_rust documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/sphinx-extension.html#python-package-documentation">Python package documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#questions">Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#contribute">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#styleguides">Styleguides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#commit-messages">Commit Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#join-the-project-team">Join The Project Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#attribution">Attribution</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="docs/including.html" class="btn btn-neutral float-right" title="Including the docs in the Sphinx build" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, Munir Contractor。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

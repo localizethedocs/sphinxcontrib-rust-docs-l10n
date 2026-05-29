@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>與 rustdoc 的相容性 &mdash; sphinxcontrib-rust  說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=76b4835e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/sphinxcontrib-rust-docs-l10n/docs/compatibility.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d9984b1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=cbf116e0"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="開發者文件" href="developing.html" />
+    <link rel="prev" title="Limitations" href="limitations.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            sphinxcontrib-rust
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="including.html">在 Sphinx 建置中引入文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roles.html">Rust 專屬的角色</a></li>
+<li class="toctree-l1"><a class="reference internal" href="directives.html">Rust 專屬的指示詞</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indices.html">Rust 項目索引</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">與 rustdoc 的相容性</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#markdown-syntax">Markdown syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#attrs-block">Attrs block</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colon-fencing">Colon-fencing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#strikethrough">Strikethrough</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tasks-list">Tasks List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smart-punctuation">Smart punctuation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#warning-blocks-and-admonitions">Warning blocks and admonitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rustdoc-features">rustdoc features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#missing-docs-warning">Missing docs warning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#doc-attributes">#[doc] attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#re-exports">重新匯出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intra-doc-links">Intra-doc links</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#valid-links">Valid links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#namespaces-and-disambiguators">Namespaces and disambiguators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lints">Lints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html">開發者文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-rustdocgen.html">sphinx-rustdocgen 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-extension.html">sphinxcontrib_rust 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-notes.html">發行備註</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinxcontrib-rust</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">與 rustdoc 的相容性</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/docs/compatibility.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="compatibility-with-rustdoc">
+<h1>與 rustdoc 的相容性<a class="headerlink" href="#compatibility-with-rustdoc" title="連結到這個標頭"></a></h1>
+<p>This document compares the rustdoc markdown syntax and features with those supported by this extension
+via myst-parser. It also provides an explanation of the various myst-parser extensions that enable this
+compatibility.</p>
+<section id="markdown-syntax">
+<h2>Markdown syntax<a class="headerlink" href="#markdown-syntax" title="連結到這個標頭"></a></h2>
+<p>myst-parser and <a class="reference external" href="https://doc.rust-lang.org/rustdoc/how-to-write-documentation.html#markdown">Rust's markdown</a> both target the CommonMark specification. However, Rust provides some <a class="reference external" href="https://doc.rust-lang.org/rustdoc/how-to-write-documentation.html#markdown">additional
+features</a> that are not part of the CommonMark specification. Almost all of these syntax extensions are supported by
+myst-parser. The <a class="reference internal" href="../index.html#md-usage"><span class="std std-ref">Markdown usage</span></a> sections lists all the extensions required.</p>
+<p>To make the docstrings work with both rustdoc and this tool, the following changes may
+be required to existing docstrings:</p>
+<ol class="arabic simple">
+<li><p>Use double tilde (<code class="docutils literal notranslate"><span class="pre">~~</span></code>) only for strike-through.</p></li>
+<li><p>Use a backslash in front of literal text enclosed in brackets (<code class="docutils literal notranslate"><span class="pre">\[foo]</span></code> instead of <code class="docutils literal notranslate"><span class="pre">[foo]</span></code>) to
+prevent it from being rendered as broken link.</p></li>
+<li><p>Replace links that use <code class="docutils literal notranslate"><span class="pre">Self::</span></code>, <code class="docutils literal notranslate"><span class="pre">self::</span></code> or <code class="docutils literal notranslate"><span class="pre">super::</span></code> with the name of the type, value or macro.
+Links with <code class="docutils literal notranslate"><span class="pre">crate::</span></code> in the target do not need to be updated.</p></li>
+<li><p>Use explicit text for the hyperlink when using namespaces and disambiguators, as in <code class="docutils literal notranslate"><span class="pre">[`Foo`](struct&#64;Foo)</span></code>
+instead of <code class="docutils literal notranslate"><span class="pre">[`struct&#64;Foo`]</span></code>.</p></li>
+</ol>
+<p>The sections below cover any differences in syntax and extensions required to make docstrings work with both Rust and
+Sphinx.</p>
+<section id="attrs-block">
+<h3>Attrs block<a class="headerlink" href="#attrs-block" title="連結到這個標頭"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">attrs_block</span></code> extension is used to separate the sections within docstrings from the sections of the
+table of contents. Essentially, the markdown sections in the docstrings are handled separately from the sections of
+the page. See the warning in <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/organising_content.html#document-structure">https://myst-parser.readthedocs.io/en/latest/syntax/organising_content.html#document-structure</a>
+for details.</p>
+</section>
+<section id="colon-fencing">
+<h3>Colon-fencing<a class="headerlink" href="#colon-fencing" title="連結到這個標頭"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">colon_fence</span></code> extensions allows using colons (<code class="docutils literal notranslate"><span class="pre">:::</span></code>) for fencing instead of the usual back-ticks. This is used
+when generating the docs so they can be rendered properly in other markdown compatible tools. Removing this extension
+will cause issues with the generated documentation. See
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#code-fences-using-colons">https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#code-fences-using-colons</a> for details.</p>
+</section>
+<section id="strikethrough">
+<h3>Strikethrough<a class="headerlink" href="#strikethrough" title="連結到這個標頭"></a></h3>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">strikethrough</span></code> extension for myst-parser in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and use <code class="docutils literal notranslate"><span class="pre">~~</span></code> for strikethrough in the
+docstrings. Rust supports a single <code class="docutils literal notranslate"><span class="pre">~</span></code>, but myst-parser does not.
+See <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#strikethrough">https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#strikethrough</a> for details.</p>
+</section>
+<section id="footnotes">
+<h3>Footnotes<a class="headerlink" href="#footnotes" title="連結到這個標頭"></a></h3>
+<p>Both Rust and myst-parser use the same syntax for footnotes, so they should work as is.
+See <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#footnotes">https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#footnotes</a> for details.</p>
+</section>
+<section id="tables">
+<h3>Tables<a class="headerlink" href="#tables" title="連結到這個標頭"></a></h3>
+<p>Both Rust and myst-parser target the <a class="reference external" href="https://github.github.com/gfm/#tables-extension-">GitHub markdown table syntax</a>. It should work out of the box.</p>
+</section>
+<section id="tasks-list">
+<h3>Tasks List<a class="headerlink" href="#tasks-list" title="連結到這個標頭"></a></h3>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">tasklist</span></code> extension for myst-parser in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. The syntax is the same with this extension enabled.
+See <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#task-lists">https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#task-lists</a> for details.</p>
+</section>
+<section id="smart-punctuation">
+<h3>Smart punctuation<a class="headerlink" href="#smart-punctuation" title="連結到這個標頭"></a></h3>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">smartquotes</span></code> and <code class="docutils literal notranslate"><span class="pre">replacements</span></code> extensions for myst-parser in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. This will enable smart
+punctuation similar to Rust's markdown and some more. See
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#typography">https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#typography</a> for details.</p>
+</section>
+<section id="warning-blocks-and-admonitions">
+<h3>Warning blocks and admonitions<a class="headerlink" href="#warning-blocks-and-admonitions" title="連結到這個標頭"></a></h3>
+<p>Rust uses a separate div class for this as described <a class="reference external" href="https://doc.rust-lang.org/rustdoc/how-to-write-documentation.html#adding-a-warning-block">here</a>.
+To support a similar syntax for admonitions, enable the <code class="docutils literal notranslate"><span class="pre">html_admonition</span></code> extension for myst-parser in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.
+See <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#html-admonitions">https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#html-admonitions</a> for details. There are some
+additional features supported by myst-parser compared to Rust.</p>
+<p>myst-parser supports Sphinx admonition directives as described at
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/admonitions.html">https://myst-parser.readthedocs.io/en/latest/syntax/admonitions.html</a>, but they will not be rendered by rustdoc.</p>
+</section>
+</section>
+<section id="rustdoc-features">
+<h2>rustdoc features<a class="headerlink" href="#rustdoc-features" title="連結到這個標頭"></a></h2>
+<section id="missing-docs-warning">
+<h3>Missing docs warning<a class="headerlink" href="#missing-docs-warning" title="連結到這個標頭"></a></h3>
+<p>This extension does not check for missing documentation when executed. It will list any items that it discovers, even
+when there are no docs for them. The warning may be supported in future.</p>
+</section>
+<section id="doc-attributes">
+<h3>#[doc] attributes<a class="headerlink" href="#doc-attributes" title="連結到這個標頭"></a></h3>
+<p><a class="reference external" href="https://doc.rust-lang.org/rustdoc/write-documentation/the-doc-attribute.html#at-the-crate-level">Crate level doc attributes</a> are not supported. Most crate level doc attributes deal with the publication of the
+HTML and executing doctests. If any of these attributes are present, they are ignored when extracting the docs. The
+behavior of some HTML attributes may be achieved via Sphinx configuration options and extensions.</p>
+<p><a class="reference external" href="https://doc.rust-lang.org/rustdoc/write-documentation/the-doc-attribute.html#at-the-item-level">Item level doc attributes</a> are not supported at present, but future versions may support some of them. This section
+will be updated as support for various attributes is implemented.</p>
+</section>
+<section id="re-exports">
+<h3>重新匯出<a class="headerlink" href="#re-exports" title="連結到這個標頭"></a></h3>
+<p><a class="reference external" href="https://doc.rust-lang.org/rustdoc/write-documentation/re-exports.html">Re-exports</a> are supported similar to rustdoc, with some differences in behavior. The tool does not currently recognize
+rustdoc attributes like <code class="docutils literal notranslate"><span class="pre">inline</span></code>, <code class="docutils literal notranslate"><span class="pre">hidden</span></code> and <code class="docutils literal notranslate"><span class="pre">noinline</span></code>. So, inlining is done purely based on whether the
+item will be documented in its original location or in a re-exported location. Documentation for the re-export is
+combined with the documentation of the original item, if the item is inlined.</p>
+</section>
+<section id="intra-doc-links">
+<span id="intra-doc"></span><h3>Intra-doc links<a class="headerlink" href="#intra-doc-links" title="連結到這個標頭"></a></h3>
+<p><a class="reference external" href="https://doc.rust-lang.org/rustdoc/write-documentation/linking-to-items-by-name.html">Intra-doc links</a> are supported using all 4 syntax shown in the examples for Markdown only. However,
+using <code class="docutils literal notranslate"><span class="pre">Self::</span></code>, <code class="docutils literal notranslate"><span class="pre">self::</span></code> and <code class="docutils literal notranslate"><span class="pre">super::</span></code> in the link target is not supported. Link targets with
+<code class="docutils literal notranslate"><span class="pre">crate::</span></code> are supported. (See Valid links section below.)</p>
+<p>Currently, it is necessary to add a backslash (<code class="docutils literal notranslate"><span class="pre">\</span></code>) in front of a literal text that appears within brackets
+(<code class="docutils literal notranslate"><span class="pre">\[foo]</span></code> instead of <code class="docutils literal notranslate"><span class="pre">[foo]</span></code>). Otherwise, there will be a warning regarding unresolved references and the text
+will be rendered as a broken link. The backslash will remove this issue.</p>
+<p>For reStructuredText, it is recommended to use the <a class="reference internal" href="roles.html#role-rust-any" title="rust:any role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">rust:any</span></code></a> role as the default Sphinx role for references
+to support similar behavior. With that added to Sphinx configuration, references can simply be written as <code class="docutils literal notranslate"><span class="pre">`ref`</span></code>,
+without specifying the type of the reference.</p>
+<section id="valid-links">
+<h4>Valid links<a class="headerlink" href="#valid-links" title="連結到這個標頭"></a></h4>
+<p>Rustdoc provides a rich syntax for <a class="reference external" href="https://doc.rust-lang.org/rustdoc/write-documentation/linking-to-items-by-name.html#valid-links">valid links</a>. However, this tool does not support any of those features,
+except link references beginning with <code class="docutils literal notranslate"><span class="pre">crate::</span></code> and references to items with generic parameters.</p>
+<p>Additionally, the tool cannot link to items outside of the crate(s) being documented, including the standard
+library.</p>
+</section>
+<section id="namespaces-and-disambiguators">
+<h4>Namespaces and disambiguators<a class="headerlink" href="#namespaces-and-disambiguators" title="連結到這個標頭"></a></h4>
+<p><a class="reference external" href="https://doc.rust-lang.org/rustdoc/write-documentation/linking-to-items-by-name.html#namespaces-and-disambiguators">Namespaces and disambiguators</a> are supported by this tool and will resolve correctly, but the prefixes are
+not stripped. To remove prefixes, use an explicit text for the link. <code class="docutils literal notranslate"><span class="pre">[`Foo`](struct&#64;Foo)</span></code> will render as
+<code class="docutils literal notranslate"><span class="pre">Foo</span></code>, but <code class="docutils literal notranslate"><span class="pre">[`struct&#64;Foo`]</span></code> will render as <code class="docutils literal notranslate"><span class="pre">[struct&#64;Foo]</span></code>.</p>
+</section>
+</section>
+<section id="lints">
+<h3>Lints<a class="headerlink" href="#lints" title="連結到這個標頭"></a></h3>
+<p>The <a class="reference external" href="https://doc.rust-lang.org/rustdoc/lints.html">rustdoc-specific lints</a> are not supported currently. There are no plans to support them at present. If this is
+required, please create an issue.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="limitations.html" class="btn btn-neutral float-left" title="Limitations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="developing.html" class="btn btn-neutral float-right" title="開發者文件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Munir Contractor.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

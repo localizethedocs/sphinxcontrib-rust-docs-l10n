@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rust 專屬的指示詞 &mdash; sphinxcontrib-rust  說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=76b4835e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/sphinxcontrib-rust-docs-l10n/docs/directives.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d9984b1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=cbf116e0"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="Rust 項目索引" href="indices.html" />
+    <link rel="prev" title="Rust 專屬的角色" href="roles.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            sphinxcontrib-rust
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="including.html">在 Sphinx 建置中引入文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roles.html">Rust 專屬的角色</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rust 專屬的指示詞</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-crate"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:crate::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-enum"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:enum::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-executable"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:executable::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-function"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:function::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-impl"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:impl::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-macro"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:macro::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-module"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:module::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-struct"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:struct::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-trait"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:trait::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-type"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:type::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-use"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:use::</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directive-rust-variable"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:variable::</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="indices.html">Rust 項目索引</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compatibility.html">與 rustdoc 的相容性</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html">開發者文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-rustdocgen.html">sphinx-rustdocgen 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-extension.html">sphinxcontrib_rust 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-notes.html">發行備註</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinxcontrib-rust</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Rust 專屬的指示詞</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/docs/directives.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rust-specific-directives">
+<h1>Rust 專屬的指示詞<a class="headerlink" href="#rust-specific-directives" title="連結到這個標頭"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>Understanding this is not required to use the tool. Most things can be achieved with <a class="reference internal" href="including.html"><span class="doc">在 Sphinx 建置中引入文件</span></a> and
+<a class="reference internal" href="roles.html"><span class="doc">Rust 專屬的角色</span></a>. This is an internal interface and there is no guarantee of stability.</p>
+</div>
+<p>The extension adds the directives listed here, that are used by the <a class="reference internal" href="crates/sphinx-rustdocgen/main.html#sphinx-rustdocgen" title="sphinx-rustdocgen"><code class="xref rust rust-exe docutils literal notranslate"><span class="pre">sphinx-rustdocgen</span></code></a> in its output.
+All directives, except <a class="reference internal" href="#directive-rust-use" title="rust:use directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">rust:use</span></code></a>, can have content. Directives can be nested under each other for structuring
+the documentation. See the documentation for the individual directives, if defining them manually in a document.
+However, that is not a recommended use and the directives are designed for programmatic creation and manipulation.</p>
+<p>All directives, except <a class="reference internal" href="#directive-rust-use" title="rust:use directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">rust:use</span></code></a>, take the following options:</p>
+<dl class="field-list simple">
+<dt class="field-odd">index<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(Required) A integer that indicates the type of the index.
+See <a class="reference internal" href="python/sphinxcontrib_rust/sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.SphinxIndexEntryType" title="sphinxcontrib_rust.items.SphinxIndexEntryType"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinxcontrib_rust.items.SphinxIndexEntryType</span></code></a> or
+<code class="xref rust rust-enum docutils literal notranslate"><span class="pre">sphinx_rustdocgen::directives::IndexEntryType</span></code> for values.</p>
+</dd>
+<dt class="field-even">vis<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Required) The visibility of the directive, <code class="docutils literal notranslate"><span class="pre">pub</span></code>, <code class="docutils literal notranslate"><span class="pre">crate</span></code> or <code class="docutils literal notranslate"><span class="pre">pvt</span></code>.</p>
+</dd>
+<dt class="field-odd">layout<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(Optional) A JSON list of <a class="reference internal" href="python/sphinxcontrib_rust/sphinxcontrib_rust.nodes.html#sphinxcontrib_rust.nodes.Node" title="sphinxcontrib_rust.nodes.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinxcontrib_rust.nodes.Node</span></code></a> objects.
+Currently, the JSON must be entirely on one line. If not provided, the
+directives signature will be rendered as the item type in a keyword node
+and the last segment of the directive item's path as the name.</p>
+</dd>
+<dt class="field-even">toc<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Optional) The signature of the directive to display in the <code class="docutils literal notranslate"><span class="pre">toctree</span></code>.
+By default, this is the item type and the identifier of the item.</p>
+</dd>
+</dl>
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-crate">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:crate::</span></span><a class="headerlink" href="#directive-rust-crate" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:crate::</span> <span class="pre">&lt;crate_name&gt;</span></code> directive documents the crate itself, using the documentation from the
+<code class="docutils literal notranslate"><span class="pre">lib.rs</span></code> file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">crate</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span>
+
+   <span class="n">This</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">awesome</span> <span class="n">crate</span><span class="o">.</span>
+
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">module</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-enum">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:enum::</span></span><a class="headerlink" href="#directive-rust-enum" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:enum::</span> <span class="pre">&lt;enum_path&gt;</span></code> directive documents an enum. To document individual variants, use the <code class="docutils literal notranslate"><span class="pre">struct</span></code>
+directive and nest it under the <code class="docutils literal notranslate"><span class="pre">enum</span></code> directive.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">enum</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">my_enum</span><span class="o">&gt;</span>
+
+   <span class="n">Enum</span> <span class="n">docstring</span> <span class="n">here</span>
+
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">struct</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">my_enum</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">variant0</span><span class="o">&gt;</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-executable">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:executable::</span></span><a class="headerlink" href="#directive-rust-executable" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:executable::</span> <span class="pre">&lt;executable_name&gt;</span></code> directive documents an executable provided by the crate. Note that the
+target here is the name of the generated executable, and not a Rust path to the executable. Items within the
+executable can be referenced with the executable name as the prefix instead of the crate name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">executable</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my</span><span class="o">-</span><span class="n">crate</span><span class="o">&gt;</span>
+
+   <span class="n">This</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">awesome</span> <span class="n">crate</span><span class="s1">&#39;s executable.</span>
+
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">module</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my</span><span class="o">-</span><span class="n">crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-function">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:function::</span></span><a class="headerlink" href="#directive-rust-function" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:function::</span> <span class="pre">&lt;fn_path&gt;</span></code> directive documents a function. The function may be an associated function of
+a struct/enum, or part of a trait impl of a struct.</p>
+<p>In such cases, the path to the function is <code class="docutils literal notranslate"><span class="pre">&lt;module_path&gt;::&lt;struct_ident&gt;::&lt;fn_ident&gt;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&lt;module_path&gt;::&lt;struct_ident&gt;::&lt;trait_ident&gt;::&lt;fn_ident&gt;</span></code>. The <code class="docutils literal notranslate"><span class="pre">module_path</span></code> must be the path of the module in
+which the struct or the enum is defined, and not where the impl is defined.</p>
+<p>The directive can also be used for a function declaration within an <code class="docutils literal notranslate"><span class="pre">extern</span> <span class="pre">&quot;C&quot;</span></code> block. In this case, the function
+is nested directly under the module and the reference path should be <code class="docutils literal notranslate"><span class="pre">&lt;module_path&gt;::&lt;fn_ident&gt;</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rust</span><span class="p">::</span><span class="n">module</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span>
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">function</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">func</span><span class="o">&gt;</span>
+
+      <span class="n">Function</span> <span class="n">docstring</span> <span class="n">here</span><span class="o">.</span>
+
+<span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">struct</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">struct</span><span class="o">&gt;</span>
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">impl</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">struct</span><span class="o">&gt;</span>
+      <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">function</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">struct</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">func</span><span class="o">&gt;</span>
+
+         <span class="n">Function</span> <span class="n">docstring</span> <span class="n">here</span>
+
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">impl</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">struct</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">trait</span><span class="o">&gt;</span>
+      <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">function</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">struct</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">trait</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">trait_func</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-impl">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:impl::</span></span><a class="headerlink" href="#directive-rust-impl" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:impl::</span> <span class="pre">&lt;impl_path&gt;</span></code> directive documents an impl block. For inherent impl blocks, the path is the
+path to the <code class="docutils literal notranslate"><span class="pre">Self</span></code> type of the impl block (i.e. the struct or enum). For trait impl blocks, the path is the path
+to the <code class="docutils literal notranslate"><span class="pre">Self</span></code> type, followed by the trait name. This also applies to trait impls on generics, where the <code class="docutils literal notranslate"><span class="pre">Self</span></code>
+type is the generic used (<code class="docutils literal notranslate"><span class="pre">T</span></code>, <code class="docutils literal notranslate"><span class="pre">Vec&lt;T&gt;</span></code>, etc.).</p>
+<p>If manually writing the documentation, it is best to nest impl blocks under the struct/enum's directive,
+with the impl block of the struct/enum first, followed by various trait impls of the struct/enum.</p>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-macro">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:macro::</span></span><a class="headerlink" href="#directive-rust-macro" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:macro::</span> <span class="pre">&lt;marco_path&gt;</span></code> directive documents a macro.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">module</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span>
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">macro</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">macro</span><span class="o">&gt;</span>
+
+      <span class="n">Macro</span> <span class="n">docstring</span><span class="o">.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-module">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:module::</span></span><a class="headerlink" href="#directive-rust-module" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:module::</span> <span class="pre">&lt;module_path&gt;</span></code> directive documents a macro. When the module contains other modules, they can
+be nested under the parent module's directive or in a different file and linked to parent module using a <code class="docutils literal notranslate"><span class="pre">toctree</span></code>.</p>
+<p>The <a class="reference internal" href="sphinx-rustdocgen.html"><span class="doc">sphinx-rustdocgen 文件</span></a> automatically organizes the module directives based on where the module's items are
+defined and places the links in the parent module.</p>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-struct">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:struct::</span></span><a class="headerlink" href="#directive-rust-struct" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:struct::</span> <span class="pre">&lt;struct_path&gt;</span></code> directive documents a struct, a union or an enum variant. When documenting an
+enum variant, the path is <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:struct::&lt;enum_path&gt;::&lt;variant&gt;</span></code>.</p>
+<p>To document individual fields, use the <a class="reference internal" href="#directive-rust-variable" title="rust:variable directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">rust:variable</span></code></a> directive and nest it under the struct directive.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">module</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span>
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">struct</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">struct</span><span class="o">&gt;</span>
+
+      <span class="n">Struct</span><span class="s1">&#39;s docstring.</span>
+
+      <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">variable</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">struct</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">field0</span><span class="o">&gt;</span>
+
+         <span class="n">Field</span><span class="s1">&#39;s docstring.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-trait">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:trait::</span></span><a class="headerlink" href="#directive-rust-trait" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:trait::</span> <span class="pre">&lt;trait_path&gt;</span></code> directive documents a trait.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">module</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span>
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">trait</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">trait</span><span class="o">&gt;</span>
+
+      <span class="n">Trait</span><span class="s1">&#39;s docstring.</span>
+
+      <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="nb">type</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">trait</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">assoc_type</span><span class="o">&gt;</span>
+
+         <span class="n">Type</span><span class="s1">&#39;s docstring.</span>
+
+      <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">function</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">trait</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">trait_function</span><span class="o">&gt;</span>
+
+         <span class="n">Function</span><span class="s1">&#39;s docstring.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-type">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:type::</span></span><a class="headerlink" href="#directive-rust-type" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:type::</span> <span class="pre">&lt;type_path&gt;</span></code> directive documents a type defined with <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">T</span> <span class="pre">=</span> <span class="pre">...</span></code> syntax, including types
+within a trait or an extern block.</p>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-use">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:use::</span></span><a class="headerlink" href="#directive-rust-use" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:use::</span></code> directive is a meta-directive that has no content. The argument to the directive is a path that
+is used in the file being processed.</p>
+<p>The directive has a required option, <code class="docutils literal notranslate"><span class="pre">used_name</span></code>, which indicates the name provided by the use path that can be
+used in references in the same file. The value can be set to <code class="docutils literal notranslate"><span class="pre">self</span></code> to reference items defined within the document
+itself.</p>
+<p>It also has an optional option, <code class="docutils literal notranslate"><span class="pre">reexport</span></code>, whose value is the path under which the name is reexported. This is
+generally the path of the module in which the use statement appears.</p>
+<p>This allows using shorter paths for Rust item references within the document itself. Note that this only applies to
+references, and not directive names.</p>
+<p>There can be multiple <code class="docutils literal notranslate"><span class="pre">rust:use</span></code> directives in a document. If there are conflicts, the last defined mapping is
+picked.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">module</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span>
+
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">use</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">other_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">other_struct</span><span class="o">&gt;</span>
+      <span class="p">:</span><span class="n">used_name</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">other_struct</span><span class="o">&gt;</span>
+
+   <span class="o">..</span> <span class="n">rust</span><span class="p">:</span><span class="n">use</span><span class="p">::</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">submodule</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">submodule_struct</span><span class="o">&gt;</span>
+      <span class="p">:</span><span class="n">used_name</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">submodule_struct</span><span class="o">&gt;</span>
+      <span class="p">:</span><span class="n">reexport</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">my_crate</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">some_module</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-rust-variable">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">rust:variable::</span></span><a class="headerlink" href="#directive-rust-variable" title="連結到這個定義"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rust:variable::</span> <span class="pre">&lt;variable_path&gt;</span></code> directive documents a variable or a field in a struct.</p>
+<p>For fields, the path is the <code class="docutils literal notranslate"><span class="pre">&lt;struct_path&gt;::&lt;field_name&gt;</span></code>. For tuple structs, the <code class="docutils literal notranslate"><span class="pre">field_name</span></code> is the index of
+the field within the tuple.</p>
+<p>The variable can also be a static variable declaration within an <code class="docutils literal notranslate"><span class="pre">extern</span> <span class="pre">&quot;C&quot;</span></code> block. In this case, the variable is
+nested directly under the module and the reference path should be <code class="docutils literal notranslate"><span class="pre">&lt;module_path&gt;::&lt;type_ident&gt;</span></code>.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="roles.html" class="btn btn-neutral float-left" title="Rust 專屬的角色" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="indices.html" class="btn btn-neutral float-right" title="Rust 項目索引" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Munir Contractor.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

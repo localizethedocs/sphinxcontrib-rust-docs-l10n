@@ -1,0 +1,14 @@
+sphinxcontrib\_rust.items
+=========================
+
+.. automodule:: sphinxcontrib_rust.items
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      RustItem
+      RustItemType
+      SphinxIndexEntryType
+   

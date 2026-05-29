@@ -1,0 +1,258 @@
+==========================
+``mod variable_directive``
+==========================
+
+
+.. rust:module:: sphinx_rustdocgen::directives::variable_directive
+   :index: 0
+   :vis: pvt
+
+   Implementation of the ``rust:variable`` directive
+
+   .. rust:use:: sphinx_rustdocgen::directives::variable_directive
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: syn::Fields
+      :used_name: Fields
+
+
+   .. rust:use:: syn::ForeignItemStatic
+      :used_name: ForeignItemStatic
+
+
+   .. rust:use:: syn::ImplItemConst
+      :used_name: ImplItemConst
+
+
+   .. rust:use:: syn::ItemConst
+      :used_name: ItemConst
+
+
+   .. rust:use:: syn::ItemStatic
+      :used_name: ItemStatic
+
+
+   .. rust:use:: syn::TraitItemConst
+      :used_name: TraitItemConst
+
+
+   .. rust:use:: syn::Visibility
+      :used_name: Visibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveOption
+      :used_name: DirectiveOption
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility
+      :used_name: DirectiveVisibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::IndexEntryType
+      :used_name: IndexEntryType
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::Directive
+      :used_name: Directive
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::extract_doc_from_attrs
+      :used_name: extract_doc_from_attrs
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdContent
+      :used_name: MdContent
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdDirective
+      :used_name: MdDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstContent
+      :used_name: RstContent
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstDirective
+      :used_name: RstDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::nodes::Node
+      :used_name: Node
+
+
+   .. rust:use:: sphinx_rustdocgen::nodes::nodes_for_type
+      :used_name: nodes_for_type
+
+
+   .. rubric:: Macros
+
+
+   .. rust:macro:: sphinx_rustdocgen::directives::variable_directive::var_from_item
+      :index: 0
+      :vis: pvt
+
+      DRY macro to create :rust:struct:`VariableDirective` from various ``syn``
+      structs.
+
+   .. rubric:: Structs and Unions
+
+
+   .. rust:struct:: sphinx_rustdocgen::directives::variable_directive::VariableDirective
+      :index: 1
+      :vis: pub
+      :toc: struct VariableDirective
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"VariableDirective"}]
+
+      Struct to hold the data for documenting variables and struct fields.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::name
+         :index: 2
+         :vis: crate
+         :toc: name
+         :layout: [{"type":"name","value":"name"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+         The Rust path of the variable or field.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::ident
+         :index: 2
+         :vis: crate
+         :toc: ident
+         :layout: [{"type":"name","value":"ident"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+         The identifier of the variable or field.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::options
+         :index: 2
+         :vis: crate
+         :toc: options
+         :layout: [{"type":"name","value":"options"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"DirectiveOption","target":"DirectiveOption"},{"type":"punctuation","value":">"}]
+
+         The options for the directive.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::content
+         :index: 2
+         :vis: crate
+         :toc: content
+         :layout: [{"type":"name","value":"content"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         The content of the directive.
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::variable_directive::VariableDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"VariableDirective","target":"VariableDirective"}]
+         :toc: impl VariableDirective
+
+
+         .. rubric:: Variables
+
+
+         .. rust:variable:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::DIRECTIVE_NAME
+            :index: -1
+            :vis: pvt
+            :toc: const DIRECTIVE_NAME
+            :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"DIRECTIVE_NAME"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"}]
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::change_parent
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"change_parent"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"new_parent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"}]
+
+            Change the parent directive of the variable.
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::directive_visibility
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"directive_visibility"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+
+            Return the visibility of this directive.
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::from_const
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_const"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ItemConst","target":"ItemConst"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+
+            Create a variable directive for a const variable.
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::from_extern_static
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_extern_static"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ForeignItemStatic","target":"ForeignItemStatic"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+
+            Create a variable directive for a foreign static variable.
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::from_fields
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_fields"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"fields"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Fields","target":"Fields"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":", "},{"type":"name","value":"index_entry_type"},{"type":"punctuation","value":": "},{"type":"link","value":"IndexEntryType","target":"IndexEntryType"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Self","target":"Self"},{"type":"punctuation","value":">"}]
+
+            Create variable directives from the fields of a struct or enum variant.
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::from_impl_const
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_impl_const"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ImplItemConst","target":"ImplItemConst"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+
+            Create a variable directive for a const variable within an impl block.
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::from_static
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_static"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ItemStatic","target":"ItemStatic"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+
+            Create a variable directive for a static variable.
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::from_trait_const
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_trait_const"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"TraitItemConst","target":"TraitItemConst"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+
+            Create a variable directive for a const variable within a trait
+            definition.
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::RstDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"RstDirective","target":"RstDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"VariableDirective","target":"VariableDirective"}]
+         :toc: impl RstDirective for VariableDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::RstDirective::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::MdDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MdDirective","target":"MdDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"VariableDirective","target":"VariableDirective"}]
+         :toc: impl MdDirective for VariableDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::variable_directive::VariableDirective::MdDirective::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
