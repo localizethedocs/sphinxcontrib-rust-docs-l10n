@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/directives.rst:3
+msgid "Rust specific directives"
+msgstr ""
+
+#: ../../../docs/directives.rst:7
+msgid ""
+"Understanding this is not required to use the tool. Most things can be "
+"achieved with :doc:`including` and :doc:`roles`. This is an internal "
+"interface and there is no guarantee of stability."
+msgstr ""
+
+#: ../../../docs/directives.rst:10
+msgid ""
+"The extension adds the directives listed here, that are used by the :rust:"
+"exe:`sphinx-rustdocgen` in its output. All directives, except :rst:dir:`rust:"
+"use`, can have content. Directives can be nested under each other for "
+"structuring the documentation. See the documentation for the individual "
+"directives, if defining them manually in a document. However, that is not a "
+"recommended use and the directives are designed for programmatic creation "
+"and manipulation."
+msgstr ""
+
+#: ../../../docs/directives.rst:15
+msgid "All directives, except :rst:dir:`rust:use`, take the following options:"
+msgstr ""
+
+#: ../../../docs/directives.rst:0
+msgid "index"
+msgstr ""
+
+#: ../../../docs/directives.rst:17
+msgid ""
+"(Required) A integer that indicates the type of the index. See :py:class:"
+"`sphinxcontrib_rust.items.SphinxIndexEntryType` or :rust:enum:"
+"`sphinx_rustdocgen::directives::IndexEntryType` for values."
+msgstr ""
+
+#: ../../../docs/directives.rst:0
+msgid "vis"
+msgstr ""
+
+#: ../../../docs/directives.rst:20
+msgid ""
+"(Required) The visibility of the directive, ``pub``, ``crate`` or ``pvt``."
+msgstr ""
+
+#: ../../../docs/directives.rst:0
+msgid "layout"
+msgstr ""
+
+#: ../../../docs/directives.rst:21
+msgid ""
+"(Optional) A JSON list of :py:class:`sphinxcontrib_rust.nodes.Node` objects. "
+"Currently, the JSON must be entirely on one line. If not provided, the "
+"directives signature will be rendered as the item type in a keyword node and "
+"the last segment of the directive item's path as the name."
+msgstr ""
+
+#: ../../../docs/directives.rst:0
+msgid "toc"
+msgstr ""
+
+#: ../../../docs/directives.rst:25
+msgid ""
+"(Optional) The signature of the directive to display in the ``toctree``. By "
+"default, this is the item type and the identifier of the item."
+msgstr ""
+
+#: ../../../docs/directives.rst:30
+msgid ""
+"The ``.. rust:crate:: <crate_name>`` directive documents the crate itself, "
+"using the documentation from the ``lib.rs`` file. ::"
+msgstr ""
+
+#: ../../../docs/directives.rst:33
+msgid ""
+".. rust:crate:: <my_crate>\n"
+"\n"
+"   This is my awesome crate.\n"
+"\n"
+"   .. rust:module:: <my_crate>::<some_module>\n"
+"..."
+msgstr ""
+
+#: ../../../docs/directives.rst:42
+msgid ""
+"The ``.. rust:enum:: <enum_path>`` directive documents an enum. To document "
+"individual variants, use the ``struct`` directive and nest it under the "
+"``enum`` directive. ::"
+msgstr ""
+
+#: ../../../docs/directives.rst:45
+msgid ""
+".. rust:enum:: <my_crate>::<some_module>::<my_enum>\n"
+"\n"
+"   Enum docstring here\n"
+"\n"
+"   .. rust:struct:: <my_crate>::<some_module>::<my_enum>::<variant0>\n"
+"..."
+msgstr ""
+
+#: ../../../docs/directives.rst:54
+msgid ""
+"The ``.. rust:executable:: <executable_name>`` directive documents an "
+"executable provided by the crate. Note that the target here is the name of "
+"the generated executable, and not a Rust path to the executable. Items "
+"within the executable can be referenced with the executable name as the "
+"prefix instead of the crate name. ::"
+msgstr ""
+
+#: ../../../docs/directives.rst:58
+msgid ""
+".. rust:executable:: <my-crate>\n"
+"\n"
+"   This is my awesome crate's executable.\n"
+"\n"
+"   .. rust:module:: <my-crate>::<some_module>\n"
+"..."
+msgstr ""
+
+#: ../../../docs/directives.rst:67
+msgid ""
+"The ``.. rust:function:: <fn_path>`` directive documents a function. The "
+"function may be an associated function of a struct/enum, or part of a trait "
+"impl of a struct."
+msgstr ""
+
+#: ../../../docs/directives.rst:70
+msgid ""
+"In such cases, the path to the function is ``<module_path>::<struct_ident>::"
+"<fn_ident>`` or ``<module_path>::<struct_ident>::<trait_ident>::"
+"<fn_ident>``. The ``module_path`` must be the path of the module in which "
+"the struct or the enum is defined, and not where the impl is defined."
+msgstr ""
+
+#: ../../../docs/directives.rst:74
+msgid ""
+"The directive can also be used for a function declaration within an ``extern "
+"\"C\"`` block. In this case, the function is nested directly under the "
+"module and the reference path should be ``<module_path>::<fn_ident>``. ::"
+msgstr ""
+
+#: ../../../docs/directives.rst:77
+msgid ""
+".. rust::module:: <my_crate>::<some_module>\n"
+"   .. rust:function:: <my_crate>::<some_module>::<func>\n"
+"\n"
+"      Function docstring here.\n"
+"\n"
+".. rust:struct:: <my_crate>::<some_module>::<struct>\n"
+"   .. rust:impl:: <my_crate>::<some_module>::<struct>\n"
+"      .. rust:function:: <my_crate>::<some_module>::<struct>::<func>\n"
+"\n"
+"         Function docstring here\n"
+"\n"
+"   .. rust:impl:: <my_crate>::<some_module>::<struct>::<trait>\n"
+"      .. rust:function:: <my_crate>::<some_module>::<struct>::<trait>::"
+"<trait_func>"
+msgstr ""
+
+#: ../../../docs/directives.rst:93
+msgid ""
+"The ``.. rust:impl:: <impl_path>`` directive documents an impl block. For "
+"inherent impl blocks, the path is the path to the ``Self`` type of the impl "
+"block (i.e. the struct or enum). For trait impl blocks, the path is the path "
+"to the ``Self`` type, followed by the trait name. This also applies to trait "
+"impls on generics, where the ``Self`` type is the generic used (``T``, "
+"``Vec<T>``, etc.)."
+msgstr ""
+
+#: ../../../docs/directives.rst:98
+msgid ""
+"If manually writing the documentation, it is best to nest impl blocks under "
+"the struct/enum's directive, with the impl block of the struct/enum first, "
+"followed by various trait impls of the struct/enum."
+msgstr ""
+
+#: ../../../docs/directives.rst:103
+msgid "The ``.. rust:macro:: <marco_path>`` directive documents a macro. ::"
+msgstr ""
+
+#: ../../../docs/directives.rst:105
+msgid ""
+".. rust:module:: <my_crate>::<some_module>\n"
+"   .. rust:macro:: <my_crate>::<some_module>::<macro>\n"
+"\n"
+"      Macro docstring."
+msgstr ""
+
+#: ../../../docs/directives.rst:112
+msgid ""
+"The ``.. rust:module:: <module_path>`` directive documents a macro. When the "
+"module contains other modules, they can be nested under the parent module's "
+"directive or in a different file and linked to parent module using a "
+"``toctree``."
+msgstr ""
+
+#: ../../../docs/directives.rst:115
+msgid ""
+"The :doc:`sphinx-rustdocgen` automatically organizes the module directives "
+"based on where the module's items are defined and places the links in the "
+"parent module."
+msgstr ""
+
+#: ../../../docs/directives.rst:120
+msgid ""
+"The ``.. rust:struct:: <struct_path>`` directive documents a struct, a union "
+"or an enum variant. When documenting an enum variant, the path is ``.. rust:"
+"struct::<enum_path>::<variant>``."
+msgstr ""
+
+#: ../../../docs/directives.rst:123
+msgid ""
+"To document individual fields, use the :rst:dir:`rust:variable` directive "
+"and nest it under the struct directive. ::"
+msgstr ""
+
+#: ../../../docs/directives.rst:125
+msgid ""
+".. rust:module:: <my_crate>::<some_module>\n"
+"   .. rust:struct:: <my_crate>::<some_module>::<struct>\n"
+"\n"
+"      Struct's docstring.\n"
+"\n"
+"      .. rust:variable:: <my_crate>::<some_module>::<struct>::<field0>\n"
+"\n"
+"         Field's docstring."
+msgstr ""
+
+#: ../../../docs/directives.rst:136
+msgid "The ``.. rust:trait:: <trait_path>`` directive documents a trait. ::"
+msgstr ""
+
+#: ../../../docs/directives.rst:138
+msgid ""
+".. rust:module:: <my_crate>::<some_module>\n"
+"   .. rust:trait:: <my_crate>::<some_module>::<trait>\n"
+"\n"
+"      Trait's docstring.\n"
+"\n"
+"      .. rust:type:: <my_crate>::<some_module>::<trait>::<assoc_type>\n"
+"\n"
+"         Type's docstring.\n"
+"\n"
+"      .. rust:function:: <my_crate>::<some_module>::<trait>::"
+"<trait_function>\n"
+"\n"
+"         Function's docstring."
+msgstr ""
+
+#: ../../../docs/directives.rst:153
+msgid ""
+"The ``.. rust:type:: <type_path>`` directive documents a type defined with "
+"``type T = ...`` syntax, including types within a trait or an extern block."
+msgstr ""
+
+#: ../../../docs/directives.rst:158
+msgid ""
+"The ``.. rust:use::`` directive is a meta-directive that has no content. The "
+"argument to the directive is a path that is used in the file being processed."
+msgstr ""
+
+#: ../../../docs/directives.rst:161
+msgid ""
+"The directive has a required option, ``used_name``, which indicates the name "
+"provided by the use path that can be used in references in the same file. "
+"The value can be set to ``self`` to reference items defined within the "
+"document itself."
+msgstr ""
+
+#: ../../../docs/directives.rst:165
+msgid ""
+"It also has an optional option, ``reexport``, whose value is the path under "
+"which the name is reexported. This is generally the path of the module in "
+"which the use statement appears."
+msgstr ""
+
+#: ../../../docs/directives.rst:168
+msgid ""
+"This allows using shorter paths for Rust item references within the document "
+"itself. Note that this only applies to references, and not directive names."
+msgstr ""
+
+#: ../../../docs/directives.rst:171
+msgid ""
+"There can be multiple ``rust:use`` directives in a document. If there are "
+"conflicts, the last defined mapping is picked. ::"
+msgstr ""
+
+#: ../../../docs/directives.rst:174
+msgid ""
+".. rust:module:: <my_crate>::<some_module>\n"
+"\n"
+"   .. rust:use:: <my_crate>::<other_module>::<other_struct>\n"
+"      :used_name: <other_struct>\n"
+"\n"
+"   .. rust:use:: <my_crate>::<some_module>::<submodule>::<submodule_struct>\n"
+"      :used_name: <submodule_struct>\n"
+"      :reexport: <my_crate>::<some_module>"
+msgstr ""
+
+#: ../../../docs/directives.rst:185
+msgid ""
+"The ``.. rust:variable:: <variable_path>`` directive documents a variable or "
+"a field in a struct."
+msgstr ""
+
+#: ../../../docs/directives.rst:187
+msgid ""
+"For fields, the path is the ``<struct_path>::<field_name>``. For tuple "
+"structs, the ``field_name`` is the index of the field within the tuple."
+msgstr ""
+
+#: ../../../docs/directives.rst:190
+msgid ""
+"The variable can also be a static variable declaration within an ``extern "
+"\"C\"`` block. In this case, the variable is nested directly under the "
+"module and the reference path should be ``<module_path>::<type_ident>``."
+msgstr ""

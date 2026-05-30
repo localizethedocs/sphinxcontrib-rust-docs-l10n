@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rust_link.rst:2
+msgid "sphinxcontrib\\_rust.rust\\_link"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: of sphinxcontrib_rust.rust_link:1
+msgid "Module for enabling intra-doc links similar to Rustdoc"
+msgstr ""
+
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rust_link.rst:8
+msgid "Functions"
+msgstr "函數"
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: of sphinxcontrib_rust.rust_link.link:1:<autosummary>:1
+msgid ""
+":py:obj:`link <sphinxcontrib_rust.rust_link.link>`\\ \\(state\\, silent\\)"
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: of sphinxcontrib_rust.rust_link.link:1
+#: sphinxcontrib_rust.rust_link.link:1:<autosummary>:1
+msgid ""
+"This is a monkey patch used to replace the :py:func:`markdown_it."
+"rules_inline.link.link`."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: of sphinxcontrib_rust.rust_link.link:3
+msgid ""
+"The main difference here is that it will mark any text with brackets as a "
+"link, even if there is no reference for it. This allows us to inject links "
+"for Rust items in the docs similar to rustdoc. However, it will also make "
+"links out of text that is not a Rust item name."
+msgstr ""
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: of sphinxcontrib_rust.rust_link.link:7
+msgid "Returns:"
+msgstr "回傳值："
+
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: of sphinxcontrib_rust.rust_link.link:8
+msgid "True, if it found a link, otherwise False."
+msgstr ""
