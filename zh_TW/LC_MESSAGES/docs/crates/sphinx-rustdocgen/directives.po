@@ -1,0 +1,406 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:3
+msgid "``mod directives``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:10
+msgid "Module for the various Sphinx directives for the Rust domain."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:12
+msgid ""
+"The module primarily provides the :rust:enum:`Directive`, which implements "
+"the various directives using directive specific structs. The enum and all "
+"directive specific structs implement both :rust:trait:`~sphinx_rustdocgen::"
+"formats::RstContent` and :rust:trait:`~sphinx_rustdocgen::formats::"
+"MdContent` traits. It also provides the :rust:enum:`DirectiveOption` enum, "
+"which implements the various options of the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:20
+msgid ""
+"The output of the directives is parsed by the :py:class:`sphinxcontrib_rust."
+"directives.RustDirective` within the Python extension."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:24
+msgid "Modules"
+msgstr "模組"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:164
+msgid "Re-exports"
+msgstr "重新匯出"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:165
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::crate_directive::CrateDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:166
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::directive_options::"
+"DirectiveVisibility`"
+msgstr ""
+":rust:any:`sphinx_rustdocgen::directives::directive_options::"
+"DirectiveVisibility`"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:167
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::enum_directive::EnumDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:168
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::executable_directive::"
+"ExecutableDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:169
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::function_directive::"
+"FunctionDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:170
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::impl_directive::ImplDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:171
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::macro_directive::MacroDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:172
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::module_directive::ModuleDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:173
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::struct_directive::StructDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:174
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::trait_directive::TraitDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:175
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::type_directive::TypeDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:176
+msgid ":rust:any:`sphinx_rustdocgen::directives::use_directive::UseDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:177
+msgid ""
+":rust:any:`sphinx_rustdocgen::directives::variable_directive::"
+"VariableDirective`"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:181
+msgid "Types"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:187
+msgid "Named type for the output of :rust:fn:`order_items`."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:191
+msgid "Macros"
+msgstr "巨集"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:196
+msgid "Macro to sort and push items within a vec."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:200
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:345
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:488
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:504
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:572
+msgid "Functions"
+msgstr "函數"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:206
+msgid "Extract the docstring from the attrs of an item."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:208
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:376
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:391
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:405
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:420
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:434
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:448
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:463
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:586
+msgid "Args:"
+msgstr "引數："
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:0
+msgid "attrs"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:209
+msgid "``syn::attr::Attribute`` vec."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:211
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:236
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:380
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:395
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:409
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:424
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:438
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:452
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:467
+msgid "Returns:"
+msgstr "回傳值："
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:212
+msgid ""
+"A vec of strings, where each string is a line of a documentation comment. If "
+"there are no documentation comments, an empty vec is returned."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:221
+msgid "Order the items for documentation"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:223
+msgid "The items are ordered using the following rules:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:225
+msgid ""
+"If the item is a module without content, it is removed and a link to the "
+"module is added to the ``toctree``. If there are no such module, the "
+"``toctree`` isn't added."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:228
+msgid ""
+"Each directive is then separated by type and ordered alphabetically except "
+"for ``impl`` directives."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:230
+msgid ""
+"All ``impl`` blocks associated with a struct or enum are ordered after it, "
+"starting with the associated ``impl`` block, followed by trait ``impl`` "
+"blocks in alphabetical order."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:234
+msgid "It uses the :rust:any:`push_sorted!()` macro."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:237
+msgid "A vec of section names with their directives."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:241
+msgid "Enums"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:247
+msgid "The Sphinx directives that are implemented by the Rust domain."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:335
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:562
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:351
+msgid "Add the content to the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:353
+msgid "The content is appended to any existing content."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:360
+msgid "Change the parent of the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:367
+msgid "Get the visibility of the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:374
+msgid "Create the appropriate directive from the provided ``syn::ForeignItem``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:0
+msgid "parent_path"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:377
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:464
+msgid "The path of the module which defines the items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:0
+msgid "item"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:378
+msgid "The foreign item to parse into a directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:381
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:410
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:439
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:453
+msgid "An option a :rust:enum:`Directive` variant."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:388
+msgid ""
+"Create the appropriate directives from the provided ``syn::ForeignItem`` "
+"iterator."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:392
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:449
+msgid "The path of the trait which defines the items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:0
+msgid "items"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:393
+msgid "The foreign items to parse into a directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:396
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:425
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:468
+msgid "An vec of :rust:enum:`Directive` variants."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:403
+msgid "Create the appropriate directive from the provided ``syn::ImplItem``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:406
+msgid "The path of the impl block which defines the item."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:407
+msgid "The impl item to parse into a directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:417
+msgid ""
+"Create the appropriate directives from the provided ``syn::ImplItem`` "
+"iterator."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:421
+msgid "The path of the impl block which defines the items."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:422
+msgid "The impl items to parse into a directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:432
+msgid "Create the appropriate directive from the provided ``syn::Item``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:435
+msgid "The parent path of the item."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:436
+msgid "The item to parse into a directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:446
+msgid "Create the appropriate directive from the provided ``syn::TraitItem``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:450
+msgid "The trait item to parse into a directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:460
+msgid ""
+"Create the appropriate directives from the provided ``syn::TraitItem`` "
+"iterator."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:465
+msgid "The trait items to parse into a directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:478
+msgid "Traits implemented"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:519
+msgid "Structs and Unions"
+msgstr "結構體與聯合體"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:533
+msgid "The directives for the modules defined in the file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:541
+msgid "The directives for the impls defined in the file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:549
+msgid "The directives for the use statements in the file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:557
+msgid ""
+"The directives for all other items in the file. This will never contain a "
+"module, impl or use directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:584
+msgid "Create new file directives from the AST of a file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:0
+msgid "ast_items"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:587
+msgid "A list of items parsed by syn."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:0
+msgid "module_parent"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives.rst:588
+msgid "The parent source code file to find modules under."
+msgstr ""

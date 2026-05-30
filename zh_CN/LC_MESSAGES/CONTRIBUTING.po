@@ -1,0 +1,383 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../CONTRIBUTING.rst:3
+msgid "Contributing to sphinxcontrib-rust"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:5
+msgid "First off, thanks for taking the time to contribute! ❤️"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:7
+msgid "All types of contributions are encouraged and valued."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:9
+msgid ""
+"See the Contents for different ways to help and details about how this "
+"project handles them. Please make sure to read the relevant section before "
+"making your contribution. It will make it a lot easier for us maintainers "
+"and smooth out the experience for all involved. The community looks forward "
+"to your contributions. 🎉"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:13
+msgid ""
+"And if you like the project, but just don't have time to contribute, that's "
+"fine. There are other easy ways to support the project and show your "
+"appreciation, which we would also be very happy about:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:16
+msgid "Star the project"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:17
+msgid "Share it online"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:18
+msgid "Refer this project in your project's readme"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:19
+msgid "Mention the project at local meetups and tell your friends/colleagues"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:21
+msgid "Contents"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:24
+msgid "Questions"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:26
+msgid ""
+"Please read the documentation on `readthedocs <https://sphinxcontrib-rust."
+"readthedocs.io/en/stable/index.html>`_ or `Gitlab Pages <https://"
+"sphinxcontrib-rust-mmc691-8fb22cc6152ca3a233f41dbc6179d6a5fd539.gitlab.io/"
+">`_ before asking the question."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:30
+msgid ""
+"If the documentation does not cover it, search for existing `Issues <https://"
+"gitlab.com/munir0b0t/sphinxcontrib-rust/issues>`_ that might help you. In "
+"case you have found a suitable issue and still need clarification, you can "
+"write your question in this issue."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:34
+msgid ""
+"If you then still feel the need to ask a question and need clarification, we "
+"recommend the following:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:36
+msgid ""
+"Open an `Issue <https://gitlab.com/munir0b0t/sphinxcontrib-rust/issues/"
+"new>`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:37
+msgid "Provide as much context as you can about what you're running into."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:38
+msgid ""
+"Provide the project, Sphinx, Python and Rust versions and also the OS used."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:40
+msgid "We will then take care of the issue as soon as possible."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:43
+msgid "Contribute"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:45
+msgid ""
+"This project is licensed as GNU GPL v3.0 or later. Please ensure all "
+"contributions are your original work or otherwise compliant with the license."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:49
+msgid "Reporting Bugs"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:52
+msgid "Before Submitting a Bug Report"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:54
+msgid ""
+"A good bug report shouldn't leave others needing to chase you up for more "
+"information. Therefore, we ask you to investigate carefully, collect "
+"information and describe the issue in detail in your report."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:57
+msgid ""
+"Please complete the following steps in advance to help us fix any potential "
+"bug as fast as possible."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:59
+msgid "Make sure that you are using the latest version."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:60
+msgid "Ensure that the issue can be reliably reproduced."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:61
+msgid "Collect information about the bug:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:63
+msgid "Stack traces"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:64
+msgid "Sphinx log for the build"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:65
+msgid "Sphinx configuration and usage"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:66
+msgid "Python, Rust and Sphinx versions"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:67
+msgid "OS, Platform and Version"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:69
+msgid ""
+"We use GitLab issues to track bugs and errors. If you run into an issue with "
+"the project:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:71
+msgid ""
+"`Open an Issue <https://gitlab.com/munir0b0t/sphinxcontrib-rust/issues/"
+"new>`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:72
+msgid "Explain the behavior you would expect and the actual behavior."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:73
+msgid ""
+"Please provide as much context as possible and describe the *reproduction "
+"steps* that someone else can follow to recreate the issue on their own. This "
+"usually includes your code. For good bug reports you should isolate the "
+"problem and create a reduced test case."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:76
+msgid "Provide the information you collected in the previous section."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:78
+msgid "Once it's filed:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:80
+msgid "The project team will label the issue accordingly."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:81
+msgid "A team member will try to reproduce the issue with your provided steps."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:83
+msgid ""
+"If there are no reproduction steps or no obvious way to reproduce the issue, "
+"the team will ask you for those steps and mark the issue as ``needs-repro``. "
+"Bugs with the ``needs-repro`` tag will not be addressed until they are "
+"reproduced."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:87
+msgid ""
+"If the team is able to reproduce the issue, it will be marked ``needs-fix``, "
+"as well as possibly other tags (such as ``critical``), and the issue will be "
+"prioritized for addressing."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:89
+msgid ""
+"If you have a potential fix for the issue, please also `open a MR <https://"
+"gitlab.com/munir0b0t/sphinxcontrib-rust/-/merge_requests/new>`_ referencing "
+"the issue."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:93
+msgid "Suggesting Enhancements"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:95
+msgid ""
+"This section guides you through submitting an enhancement suggestion for "
+"sphinxcontrib-rust, **including completely new features and minor "
+"improvements to existing functionality**. Following these guidelines will "
+"help maintainers and the community to understand your suggestion and find "
+"related suggestions."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:100
+msgid "Before Submitting"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:102
+msgid ""
+"Check the `Gitlab issues`_ for any open issues that might cover the "
+"situtation."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:105
+msgid "Submitting suggestions"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:107
+msgid "Enhancement suggestions are tracked as `GitLab issues`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:109
+msgid ""
+"Use a **clear and descriptive title** for the issue to identify the "
+"suggestion."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:110
+msgid ""
+"Provide a **step-by-step description of the suggested enhancement** in as "
+"many details as possible."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:111
+msgid ""
+"**Describe the current behavior** and **explain which behavior you expected "
+"to see instead** and why. At this point you can also tell which alternatives "
+"do not work for you."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:113
+msgid ""
+"You may want to **include screenshots or expected output** which help you "
+"demonstrate the steps or point out the part which the suggestion is related "
+"to."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:115
+msgid ""
+"**Explain why this enhancement would be useful** to most sphinxcontrib-rust "
+"users."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:120
+msgid "Styleguides"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:123
+msgid "Rust"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:125
+msgid ""
+"A ``rustfmt.toml`` file is included with project for the Rust code style. "
+"Make sure to execute ``cargo +nightly fmt`` before submitting the MR. The CI "
+"will verify the code style and fail if it does not conform."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:128
+msgid ""
+"The CI will also run ``cargo +nightly clippy`` on the Rust crate and expect "
+"a success return code from it. Please address any new issues detected by "
+"clippy, even if the CI passes."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:132
+msgid "Python"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:134
+msgid ""
+"The project uses `black <https://github.com/psf/black>`_ for formating the "
+"Python code. Make sure to run ``black .`` before submitting the MR."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:137
+msgid ""
+"The CI will also run ``pylint`` on the code. The ``.pylintrc`` to use is "
+"included in the project repository."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:140
+msgid "Commit Messages"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:142
+msgid ""
+"Please create meaningful commit messages in the MR. You will be asked to "
+"edit the commit message if the maintainers feel so. The general format of "
+"the commit message should be ::"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:145
+msgid ""
+"Brief description of the MR's goals\n"
+"\n"
+"A detailed description of the why and how of the changes\n"
+"in the MR. This can be as long as you like.\n"
+"\n"
+"closes #<issue>"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:154
+msgid "Join The Project Team"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:156
+msgid "The project requires a good understanding of Sphinx and how it works."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:158
+msgid ""
+"It also uses both Rust and Python, so you must be able to review other "
+"people's code in both languages. Familiarize yourself with the project's "
+"organization and developer notes using :doc:`docs/developing`."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:162
+msgid "Attribution"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:164
+msgid ""
+"This guide is based on the **contributing-gen**. `Make your own! <https://"
+"github.com/bttger/contributing-gen>`_"
+msgstr ""

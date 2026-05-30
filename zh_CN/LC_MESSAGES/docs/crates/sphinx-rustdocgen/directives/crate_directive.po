@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:3
+msgid "``mod crate_directive``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:10
+msgid "Implementation of the ``rust:crate`` directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:102
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:109
+msgid "Struct to hold data required for documenting a crate."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:117
+msgid "The name of the crate."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:125
+msgid "The options for the crate directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:133
+msgid "The docstring for the crate's lib.rs file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:141
+msgid "The path to directive's documentation file"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:149
+msgid "The directives within the crate's document file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:153
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:163
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:173
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:220
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:236
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:258
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:179
+msgid ""
+"Filter out items that will not be documented due to visibility restrictions."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:182
+msgid ""
+"The function goes through all modules and identifies items that will not be "
+"documented due to the configured visibility. As part of the filtering, it "
+"will also identify any re-exports that should be inlined."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:186
+msgid "Returns:"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:187
+msgid "A vec of directives that will not be documented."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:194
+msgid "Collect all impl directive and move them under appropriate parent."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:196
+msgid ""
+"The new parent for the impl directive is the struct or enum that is its self "
+"type, or the trait that is being implemented. If both the self type and "
+"trait are in the crate, the self type is preferred as the parent."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:206
+msgid "Create a new ``CrateDirective`` for the crate from the source file."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:210
+msgid "Traits implemented"
+msgstr ""
