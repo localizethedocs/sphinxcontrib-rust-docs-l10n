@@ -57,7 +57,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:143
 msgid "The content of the directive."
-msgstr ""
+msgstr "指示詞的目錄。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/variable_directive.rst:147
 msgid "Implementations"

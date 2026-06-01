@@ -49,11 +49,11 @@ msgstr ""
 
 #: ../../../docs/sphinx-extension.rst:17
 msgid "Python package documentation"
-msgstr ""
+msgstr "Python 軟體包文件"
 
 #: ../../../docs/sphinx-extension.rst:23:<autosummary>:1
 msgid ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`\\"
-msgstr ""
+msgstr ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`\\"
 
 #: ../../../docs/sphinx-extension.rst:23:<autosummary>:1
 msgid ""

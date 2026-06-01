@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:3
 msgid "``mod type_directive``"
-msgstr ""
+msgstr "``mod type_directive``"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:10
 msgid "Implementation of the ``rust:type`` directive"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:114
 msgid "The Rust path of the type."
-msgstr ""
+msgstr "型別的 Rust 路徑。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:122
 msgid "The identifier of the type."
@@ -56,7 +56,7 @@ msgstr "指示詞的選項。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:138
 msgid "The content of the directive."
-msgstr ""
+msgstr "指示詞的目錄。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:142
 msgid "Implementations"

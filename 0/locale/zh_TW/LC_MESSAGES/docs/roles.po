@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../../docs/roles.rst:24
 msgid "Role targets within docstrings"
-msgstr ""
+msgstr "文件字串中的角色目標"
 
 #: ../../../docs/roles.rst:26
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #: ../../../docs/roles.rst:41
 msgid "Markdown docstrings and intra-doc links"
-msgstr ""
+msgstr "Markdown 文件字串與文件內連結"
 
 #: ../../../docs/roles.rst:43
 msgid ""
@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../../../docs/roles.rst:49
 msgid "reStructuredText and intra-doc links"
-msgstr ""
+msgstr "reStructuredText 與文件內連結"
 
 #: ../../../docs/roles.rst:51
 msgid ""
@@ -121,7 +121,7 @@ msgstr ""
 
 #: ../../../docs/roles.rst:56
 msgid "Provided roles"
-msgstr ""
+msgstr "提供的角色"
 
 #: ../../../docs/roles.rst:60
 msgid ""
@@ -154,7 +154,7 @@ msgstr ""
 
 #: ../../../docs/roles.rst:79
 msgid "Alias for :rst:role:`rust:exe`."
-msgstr ""
+msgstr ":rst:role:`rust:exe` 的別名。"
 
 #: ../../../docs/roles.rst:83
 msgid "``:rust:fn:`<fn_path>``` links to a function's documentation."
@@ -176,7 +176,7 @@ msgstr ""
 
 #: ../../../docs/roles.rst:93
 msgid "Alias for :rst:role:`rust:fn`."
-msgstr ""
+msgstr ":rst:role:`rust:fn` 的別名。"
 
 #: ../../../docs/roles.rst:97
 msgid ""
@@ -205,7 +205,7 @@ msgstr ""
 
 #: ../../../docs/roles.rst:110
 msgid "``:rust:macro:`<macro_path>``` inks to a macro's documentation."
-msgstr ""
+msgstr "``:rust:macro:`<macro_path>``` 會連結到巨集的文件。"
 
 #: ../../../docs/roles.rst:114
 msgid ""

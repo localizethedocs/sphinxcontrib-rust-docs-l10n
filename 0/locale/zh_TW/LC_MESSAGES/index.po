@@ -59,6 +59,8 @@ msgid ""
 "as a documentation build tool, and would like to include documentation for "
 "Rust projects in it along with Python, C, and other languages."
 msgstr ""
+"這主要針對已經使用 Sphinx 作為文件建置工具的團隊和專案，並希望在其中與 "
+"Python、C 及其它語言一起引入 Rust 專案的文件。"
 
 #: ../../../index.rst:28
 msgid "Using the extension adds the following functionality:"
@@ -72,13 +74,13 @@ msgstr ""
 
 #: ../../../index.rst:32
 msgid "rustdoc comments may be written in reStructuredText."
-msgstr ""
+msgstr "rustdoc 註釋可以使用 reStructuredText 撰寫。"
 
 #: ../../../index.rst:33
 msgid ""
 "Various Sphinx features and extensions can be used to generate and publish "
 "the docs."
-msgstr ""
+msgstr "各種 Sphinx 功能與擴充功能可用來生成並發佈文件。"
 
 #: ../../../index.rst:35
 msgid ""
@@ -243,6 +245,7 @@ msgid ""
 "To enable RST docstrings, add the extension to the ``conf.py`` file and "
 "configure it appropriately."
 msgstr ""
+"若要啟用 RST 文件字串，請將此擴充功能增添到 ``conf.py`` 檔案並進行適當設定。"
 
 #: ../../../index.rst:132
 msgid ""
@@ -287,7 +290,7 @@ msgstr ""
 
 #: ../../../index.rst:158
 msgid "Options"
-msgstr ""
+msgstr "選項"
 
 #: ../../../index.rst:160
 msgid ""
