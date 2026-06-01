@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../../../docs/compatibility.rst:10
 msgid "Markdown syntax"
-msgstr ""
+msgstr "Markdown 語法"
 
 #: ../../../docs/compatibility.rst:12
 msgid ""
@@ -186,7 +186,7 @@ msgstr ""
 
 #: ../../../docs/compatibility.rst:93
 msgid "Missing docs warning"
-msgstr ""
+msgstr "遺失文件警告"
 
 #: ../../../docs/compatibility.rst:95
 msgid ""

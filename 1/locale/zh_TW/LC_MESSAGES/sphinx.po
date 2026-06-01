@@ -1503,7 +1503,7 @@ msgstr ""
 
 #: _cli/__init__.py:98
 msgid "Options"
-msgstr ""
+msgstr "選項"
 
 #: _cli/__init__.py:113 _cli/__init__.py:181
 msgid "For more information, visit https://www.sphinx-doc.org/en/master/man/."
