@@ -35,15 +35,15 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:117
 msgid "The name of the crate."
-msgstr ""
+msgstr "軟體箱的名稱。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:125
 msgid "The options for the crate directive."
-msgstr ""
+msgstr "軟體箱指示詞的選項。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:133
 msgid "The docstring for the crate's lib.rs file."
-msgstr ""
+msgstr "軟體箱的 lib.rs 檔案的文件字串。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/crate_directive.rst:141
 msgid "The path to directive's documentation file"

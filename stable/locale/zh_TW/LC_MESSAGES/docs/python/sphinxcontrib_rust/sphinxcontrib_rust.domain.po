@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.domain.rst:2
 msgid "sphinxcontrib\\_rust.domain"
-msgstr ""
+msgstr "sphinxcontrib\\_rust.domain"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
 #: of sphinxcontrib_rust.domain:1
@@ -34,6 +34,7 @@ msgstr "類別"
 #: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
 msgid ":py:obj:`RustDomain <sphinxcontrib_rust.domain.RustDomain>`\\ \\(env\\)"
 msgstr ""
+":py:obj:`RustDomain <sphinxcontrib_rust.domain.RustDomain>`\\ \\(env\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
 #: of sphinxcontrib_rust.domain.RustDomain:1
@@ -47,6 +48,8 @@ msgid ""
 ":py:obj:`RustXRefRole <sphinxcontrib_rust.domain.RustXRefRole>`\\ "
 "\\(\\[fix\\_parens\\, lowercase\\, ...\\]\\)"
 msgstr ""
+":py:obj:`RustXRefRole <sphinxcontrib_rust.domain.RustXRefRole>`\\ "
+"\\(\\[fix\\_parens\\, lowercase\\, ...\\]\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
 #: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1

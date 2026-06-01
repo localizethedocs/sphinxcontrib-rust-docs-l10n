@@ -61,6 +61,8 @@ msgid ""
 ":py:obj:`CrateConfiguration <sphinxcontrib_rust.CrateConfiguration>`\\ "
 "\\(crate\\_name\\, crate\\_dir\\, ...\\)"
 msgstr ""
+":py:obj:`CrateConfiguration <sphinxcontrib_rust.CrateConfiguration>`\\ "
+"\\(crate\\_name\\, crate\\_dir\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration:1
@@ -99,7 +101,7 @@ msgstr "引數："
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:0
 #: sphinxcontrib_rust.generate_docs:0
 msgid "config"
-msgstr ""
+msgstr "組態"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:9
@@ -131,7 +133,7 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.generate_docs:5
 msgid "The parsed configuration."
-msgstr ""
+msgstr "剖析的組態。"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:21
 msgid "Modules"
@@ -155,7 +157,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`index <sphinxcontrib_rust.index>`\\"
-msgstr ""
+msgstr ":py:obj:`index <sphinxcontrib_rust.index>`\\"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for code related to generating the index of Rust items"
@@ -163,7 +165,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`items <sphinxcontrib_rust.items>`\\"
-msgstr ""
+msgstr ":py:obj:`items <sphinxcontrib_rust.items>`\\"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for Rust items and related utility classes"

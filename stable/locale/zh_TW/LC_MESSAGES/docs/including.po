@@ -108,6 +108,8 @@ msgid ""
 "The path in the ``toctree`` must be relative to the document in which the "
 "``toctree`` is or an absolute path rooted in the Sphinx source directory."
 msgstr ""
+"``toctree`` 中的路徑必須相對於包含 ``toctree`` 的文件，或是以 Sphinx 來源目錄"
+"為根的絕對路徑。"
 
 #: ../../../docs/including.rst:50
 msgid "Including in other docs"
@@ -142,7 +144,7 @@ msgstr ""
 
 #: ../../../docs/including.rst:66
 msgid "Linking directly to Rust items"
-msgstr ""
+msgstr "直接連結到 Rust 項目"
 
 #: ../../../docs/including.rst:68
 msgid ""

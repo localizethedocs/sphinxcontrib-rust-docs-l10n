@@ -35,6 +35,7 @@ msgstr "函數"
 msgid ""
 ":py:obj:`link <sphinxcontrib_rust.rust_link.link>`\\ \\(state\\, silent\\)"
 msgstr ""
+":py:obj:`link <sphinxcontrib_rust.rust_link.link>`\\ \\(state\\, silent\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link.link:1
