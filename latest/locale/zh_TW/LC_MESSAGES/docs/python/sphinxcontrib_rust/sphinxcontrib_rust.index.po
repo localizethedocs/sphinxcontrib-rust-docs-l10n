@@ -34,6 +34,7 @@ msgstr "類別"
 #: of sphinxcontrib_rust.index.RustIndex:1:<autosummary>:1
 msgid ":py:obj:`RustIndex <sphinxcontrib_rust.index.RustIndex>`\\ \\(domain\\)"
 msgstr ""
+":py:obj:`RustIndex <sphinxcontrib_rust.index.RustIndex>`\\ \\(domain\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex:1

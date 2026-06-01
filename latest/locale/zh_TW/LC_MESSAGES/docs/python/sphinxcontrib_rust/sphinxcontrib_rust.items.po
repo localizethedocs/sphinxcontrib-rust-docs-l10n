@@ -36,6 +36,8 @@ msgid ""
 ":py:obj:`RustItem <sphinxcontrib_rust.items.RustItem>`\\ \\(name\\, "
 "display\\_text\\, type\\_\\, docname\\)"
 msgstr ""
+":py:obj:`RustItem <sphinxcontrib_rust.items.RustItem>`\\ \\(name\\, "
+"display\\_text\\, type\\_\\, docname\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
 #: of sphinxcontrib_rust.items.RustItem:1
@@ -49,6 +51,8 @@ msgid ""
 ":py:obj:`RustItemType <sphinxcontrib_rust.items.RustItemType>`\\ "
 "\\(\\*values\\)"
 msgstr ""
+":py:obj:`RustItemType <sphinxcontrib_rust.items.RustItemType>`\\ "
+"\\(\\*values\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
 #: of sphinxcontrib_rust.items.RustItem:1:<autosummary>:1
@@ -62,6 +66,8 @@ msgid ""
 ":py:obj:`SphinxIndexEntryType <sphinxcontrib_rust.items."
 "SphinxIndexEntryType>`\\ \\(\\*values\\)"
 msgstr ""
+":py:obj:`SphinxIndexEntryType <sphinxcontrib_rust.items."
+"SphinxIndexEntryType>`\\ \\(\\*values\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
 #: of sphinxcontrib_rust.items.RustItem:1:<autosummary>:1

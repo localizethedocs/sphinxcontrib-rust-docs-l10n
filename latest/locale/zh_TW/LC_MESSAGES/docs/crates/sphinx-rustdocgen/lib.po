@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:9
 msgid "Library for the sphinx-rustdocgen executable."
-msgstr ""
+msgstr "sphinx-rustdocgen 執行檔的程式庫。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:11
 msgid ""
@@ -83,11 +83,11 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:122
 msgid "The name of the crate."
-msgstr ""
+msgstr "軟體箱的名稱。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:130
 msgid "The directory containing the Cargo.toml file for the crate."
-msgstr ""
+msgstr "包含該軟體箱的 Cargo.toml 檔案的目錄。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:138
 msgid ""
@@ -97,7 +97,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:147
 msgid "Rebuild document for all files, even if it has not changed."
-msgstr ""
+msgstr "重新建置所有檔案的文件，即使它們沒有變更。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:155
 msgid "The format to use for the output."

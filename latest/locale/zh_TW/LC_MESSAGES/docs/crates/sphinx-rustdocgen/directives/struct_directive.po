@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:154
 msgid "The docstring for the struct."
-msgstr ""
+msgstr "結構體的文件字串。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:162
 msgid "The fields of the struct, named or unnamed."
