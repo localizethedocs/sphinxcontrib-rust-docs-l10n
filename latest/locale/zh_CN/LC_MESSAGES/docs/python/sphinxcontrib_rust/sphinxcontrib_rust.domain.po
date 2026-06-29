@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"POT-Creation-Date: 2026-06-29 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,27 +30,25 @@ msgstr ""
 msgid "Classes"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
-#: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.domain.rst:12:<autosummary>:1
 msgid ":py:obj:`RustDomain <sphinxcontrib_rust.domain.RustDomain>`\\ \\(env\\)"
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
 #: of sphinxcontrib_rust.domain.RustDomain:1
-#: sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.domain.rst:12:<autosummary>:1
 msgid "The Sphinx domain for the Rust programming language."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
-#: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.domain.rst:12:<autosummary>:1
 msgid ""
 ":py:obj:`RustXRefRole <sphinxcontrib_rust.domain.RustXRefRole>`\\ "
 "\\(\\[fix\\_parens\\, lowercase\\, ...\\]\\)"
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
-#: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
-#: sphinxcontrib_rust.domain.RustXRefRole:1
+#: of sphinxcontrib_rust.domain.RustXRefRole:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.domain.rst:12:<autosummary>:1
 msgid "An :py:class:`XRefRole` extension for Rust roles"
 msgstr ""
 
@@ -66,15 +64,18 @@ msgstr ""
 msgid "Remove traces of a document in the domain-specific inventories."
 msgstr ""
 
-#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.data:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.data:1
 msgid "data value"
 msgstr ""
 
-#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.data_version:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.data_version:1
 msgid "data version, bump this when the format of `self.data` changes"
 msgstr ""
 
-#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.directives:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.directives:1
 msgid "directive name -> directive class"
 msgstr ""
 
@@ -306,11 +307,13 @@ msgstr ""
 msgid "Object should not show up in search at all."
 msgstr ""
 
-#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.indices:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.indices:1
 msgid "a list of Index subclasses"
 msgstr ""
 
-#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.initial_data:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.initial_data:1
 msgid "data value for a fresh environment"
 msgstr ""
 
@@ -319,7 +322,8 @@ msgstr ""
 msgid "Return the Rust items with in the documentation"
 msgstr ""
 
-#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.label:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.label:1
 msgid "domain label: longer, more descriptive (used in messages)"
 msgstr ""
 
@@ -330,11 +334,13 @@ msgid ""
 "(coming from a subprocess in parallel builds)."
 msgstr ""
 
-#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.name:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.name:1
 msgid "domain name: should be short, but unique"
 msgstr ""
 
-#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.object_types:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.object_types:1
 msgid "type (usually directive) name -> ObjType instance"
 msgstr ""
 
@@ -348,7 +354,8 @@ msgstr ""
 msgid "Resolve a reference to a Rust item with the directive type specified"
 msgstr ""
 
-#: ../../../docstring of sphinxcontrib_rust.domain.RustDomain.roles:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
+#: of sphinxcontrib_rust.domain.RustDomain.roles:1
 msgid "role name -> role callable"
 msgstr ""
 

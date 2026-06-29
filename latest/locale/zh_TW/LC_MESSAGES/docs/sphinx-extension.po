@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"POT-Creation-Date: 2026-06-29 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,10 +52,13 @@ msgid "Python package documentation"
 msgstr "Python 軟體包文件"
 
 #: ../../../docs/sphinx-extension.rst:23:<autosummary>:1
-msgid ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`\\"
-msgstr ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`\\"
+msgid ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`"
+msgstr ""
 
 #: ../../../docs/sphinx-extension.rst:23:<autosummary>:1
 msgid ""
 "Init module for the extension with the ``setup`` function used by Sphinx"
 msgstr ""
+
+#~ msgid ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`\\"
+#~ msgstr ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`\\"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"POT-Creation-Date: 2026-06-29 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,8 +30,7 @@ msgstr ""
 msgid "Classes"
 msgstr "類別"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustCrateDirective <sphinxcontrib_rust.directives."
 "RustCrateDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
@@ -41,12 +40,11 @@ msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustCrateDirective:1
-#: sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling crate documentation"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustDirective <sphinxcontrib_rust.directives.RustDirective>`\\ "
 "\\(name\\, arguments\\, options\\, ...\\)"
@@ -55,13 +53,12 @@ msgstr ""
 "\\(name\\, arguments\\, options\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustDirective:1
+#: of sphinxcontrib_rust.directives.RustDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Base class for Rust directives."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustEnumDirective <sphinxcontrib_rust.directives."
 "RustEnumDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
@@ -70,13 +67,12 @@ msgstr ""
 "RustEnumDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustEnumDirective:1
+#: of sphinxcontrib_rust.directives.RustEnumDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling enum documentation"
 msgstr "處理列舉文件的指示詞"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustExecutableDirective <sphinxcontrib_rust.directives."
 "RustExecutableDirective>`\\ \\(name\\, arguments\\, ...\\)"
@@ -85,13 +81,12 @@ msgstr ""
 "RustExecutableDirective>`\\ \\(name\\, arguments\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustExecutableDirective:1
+#: of sphinxcontrib_rust.directives.RustExecutableDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling executable documentation"
 msgstr "處理執行檔文件的指示詞"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustFunctionDirective <sphinxcontrib_rust.directives."
 "RustFunctionDirective>`\\ \\(name\\, arguments\\, ...\\)"
@@ -100,13 +95,12 @@ msgstr ""
 "RustFunctionDirective>`\\ \\(name\\, arguments\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustFunctionDirective:1
+#: of sphinxcontrib_rust.directives.RustFunctionDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling function documentation"
 msgstr "處理函數文件的指示詞"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustImplDirective <sphinxcontrib_rust.directives."
 "RustImplDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
@@ -115,13 +109,12 @@ msgstr ""
 "RustImplDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustImplDirective:1
+#: of sphinxcontrib_rust.directives.RustImplDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling impl documentation"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustMacroDirective <sphinxcontrib_rust.directives."
 "RustMacroDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
@@ -130,13 +123,12 @@ msgstr ""
 "RustMacroDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustMacroDirective:1
+#: of sphinxcontrib_rust.directives.RustMacroDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling macro documentation"
 msgstr "處理巨集文件的指示詞"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustModuleDirective <sphinxcontrib_rust.directives."
 "RustModuleDirective>`\\ \\(name\\, arguments\\, ...\\)"
@@ -145,13 +137,12 @@ msgstr ""
 "RustModuleDirective>`\\ \\(name\\, arguments\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustModuleDirective:1
+#: of sphinxcontrib_rust.directives.RustModuleDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling module documentation"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustStructDirective <sphinxcontrib_rust.directives."
 "RustStructDirective>`\\ \\(name\\, arguments\\, ...\\)"
@@ -160,13 +151,12 @@ msgstr ""
 "RustStructDirective>`\\ \\(name\\, arguments\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustStructDirective:1
+#: of sphinxcontrib_rust.directives.RustStructDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling struct documentation"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustTraitDirective <sphinxcontrib_rust.directives."
 "RustTraitDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
@@ -175,13 +165,12 @@ msgstr ""
 "RustTraitDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustTraitDirective:1
+#: of sphinxcontrib_rust.directives.RustTraitDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling trait documentation"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustTypeDirective <sphinxcontrib_rust.directives."
 "RustTypeDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
@@ -190,14 +179,13 @@ msgstr ""
 "RustTypeDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustTypeDirective:1
+#: of sphinxcontrib_rust.directives.RustTypeDirective:1
 #: sphinxcontrib_rust.directives.RustVariableDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling type documentation"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustUseDirective <sphinxcontrib_rust.directives."
 "RustUseDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
@@ -206,13 +194,12 @@ msgstr ""
 "RustUseDirective>`\\ \\(name\\, arguments\\, options\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
-#: sphinxcontrib_rust.directives.RustUseDirective:1
+#: of sphinxcontrib_rust.directives.RustUseDirective:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling the use statements in the file."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
-#: of sphinxcontrib_rust.directives.RustCrateDirective:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`RustVariableDirective <sphinxcontrib_rust.directives."
 "RustVariableDirective>`\\ \\(name\\, arguments\\, ...\\)"
@@ -357,8 +344,8 @@ msgid ""
 "defines the hierarchy of the object for indexing."
 msgstr ""
 
-#: ../../../docstring of
-#: sphinxcontrib_rust.directives.RustDirective.option_spec:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: of sphinxcontrib_rust.directives.RustDirective.option_spec:1
 #: sphinxcontrib_rust.directives.RustUseDirective.option_spec:1
 msgid "Mapping of option names to validator functions."
 msgstr ""
@@ -378,8 +365,8 @@ msgid ""
 "with. It does not behave like other directives."
 msgstr ""
 
-#: ../../../docstring of
-#: sphinxcontrib_rust.directives.RustUseDirective.has_content:1
+#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: of sphinxcontrib_rust.directives.RustUseDirective.has_content:1
 msgid "May the directive have content?"
 msgstr ""
 

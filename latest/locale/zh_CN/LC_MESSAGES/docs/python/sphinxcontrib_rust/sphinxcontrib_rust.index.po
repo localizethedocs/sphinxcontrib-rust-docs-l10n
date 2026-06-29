@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"POT-Creation-Date: 2026-06-29 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,14 +30,13 @@ msgstr ""
 msgid "Classes"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
-#: of sphinxcontrib_rust.index.RustIndex:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.index.rst:11:<autosummary>:1
 msgid ":py:obj:`RustIndex <sphinxcontrib_rust.index.RustIndex>`\\ \\(domain\\)"
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex:1
-#: sphinxcontrib_rust.index.RustIndex:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.index.rst:11:<autosummary>:1
 msgid "Class for implementing the index of Rust items."
 msgstr ""
 
