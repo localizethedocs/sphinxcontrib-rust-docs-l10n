@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust stable\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"POT-Creation-Date: 2026-06-29 13:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,8 +32,7 @@ msgstr ""
 msgid "Classes"
 msgstr "類別"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
-#: of sphinxcontrib_rust.nodes.Node:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.nodes.rst:12:<autosummary>:1
 msgid ""
 ":py:obj:`Node <sphinxcontrib_rust.nodes.Node>`\\ \\(type\\[\\, value\\, "
 "target\\]\\)"
@@ -43,20 +42,19 @@ msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node:1
-#: sphinxcontrib_rust.nodes.Node:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.nodes.rst:12:<autosummary>:1
 msgid "A node in the document signatures that represents a Rust item."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
-#: of sphinxcontrib_rust.nodes.Node:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.nodes.rst:12:<autosummary>:1
 msgid ""
 ":py:obj:`NodeType <sphinxcontrib_rust.nodes.NodeType>`\\ \\(\\*values\\)"
 msgstr ""
 ":py:obj:`NodeType <sphinxcontrib_rust.nodes.NodeType>`\\ \\(\\*values\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
-#: of sphinxcontrib_rust.nodes.Node:1:<autosummary>:1
-#: sphinxcontrib_rust.nodes.NodeType:1
+#: of sphinxcontrib_rust.nodes.NodeType:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.nodes.rst:12:<autosummary>:1
 msgid "Types of the nodes for the Rust items in the signatures"
 msgstr ""
 
