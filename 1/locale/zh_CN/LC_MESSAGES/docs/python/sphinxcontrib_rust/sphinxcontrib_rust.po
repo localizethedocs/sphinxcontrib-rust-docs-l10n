@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"POT-Creation-Date: 2026-06-29 12:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,8 +55,7 @@ msgstr ""
 msgid "Classes"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
-#: of sphinxcontrib_rust.CrateConfiguration:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:18:<autosummary>:1
 msgid ""
 ":py:obj:`CrateConfiguration <sphinxcontrib_rust.CrateConfiguration>`\\ "
 "\\(crate\\_name\\, crate\\_dir\\, ...\\)"
@@ -64,7 +63,7 @@ msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration:1
-#: sphinxcontrib_rust.CrateConfiguration:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:18:<autosummary>:1
 msgid "Dataclass for the crate configuration."
 msgstr ""
 
@@ -138,7 +137,7 @@ msgid "Modules"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
-msgid ":py:obj:`directives <sphinxcontrib_rust.directives>`\\"
+msgid ":py:obj:`directives <sphinxcontrib_rust.directives>`"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
@@ -146,7 +145,7 @@ msgid "Module for all the directive classes of the Rust domain"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
-msgid ":py:obj:`domain <sphinxcontrib_rust.domain>`\\"
+msgid ":py:obj:`domain <sphinxcontrib_rust.domain>`"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
@@ -154,7 +153,7 @@ msgid "Module for the ``rust`` Sphinx domain for documentation Rust items"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
-msgid ":py:obj:`index <sphinxcontrib_rust.index>`\\"
+msgid ":py:obj:`index <sphinxcontrib_rust.index>`"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
@@ -162,7 +161,7 @@ msgid "Module for code related to generating the index of Rust items"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
-msgid ":py:obj:`items <sphinxcontrib_rust.items>`\\"
+msgid ":py:obj:`items <sphinxcontrib_rust.items>`"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
@@ -170,7 +169,7 @@ msgid "Module for Rust items and related utility classes"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
-msgid ":py:obj:`nodes <sphinxcontrib_rust.nodes>`\\"
+msgid ":py:obj:`nodes <sphinxcontrib_rust.nodes>`"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
@@ -180,7 +179,7 @@ msgid ""
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
-msgid ":py:obj:`rust_link <sphinxcontrib_rust.rust_link>`\\"
+msgid ":py:obj:`rust_link <sphinxcontrib_rust.rust_link>`"
 msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1

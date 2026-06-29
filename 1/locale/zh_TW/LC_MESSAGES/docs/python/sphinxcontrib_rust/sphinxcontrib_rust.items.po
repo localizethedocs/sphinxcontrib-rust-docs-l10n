@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"POT-Creation-Date: 2026-06-29 12:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,8 +30,7 @@ msgstr ""
 msgid "Classes"
 msgstr "類別"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
-#: of sphinxcontrib_rust.items.RustItem:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.items.rst:13:<autosummary>:1
 msgid ""
 ":py:obj:`RustItem <sphinxcontrib_rust.items.RustItem>`\\ \\(name\\, "
 "display\\_text\\, type\\_\\, docname\\)"
@@ -41,12 +40,11 @@ msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
 #: of sphinxcontrib_rust.items.RustItem:1
-#: sphinxcontrib_rust.items.RustItem:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.items.rst:13:<autosummary>:1
 msgid "A dataclass for holding the details of a Sphinx object for Rust domain"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
-#: of sphinxcontrib_rust.items.RustItem:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.items.rst:13:<autosummary>:1
 msgid ""
 ":py:obj:`RustItemType <sphinxcontrib_rust.items.RustItemType>`\\ "
 "\\(\\*values\\)"
@@ -55,13 +53,12 @@ msgstr ""
 "\\(\\*values\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
-#: of sphinxcontrib_rust.items.RustItem:1:<autosummary>:1
-#: sphinxcontrib_rust.items.RustItemType:1
+#: of sphinxcontrib_rust.items.RustItemType:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.items.rst:13:<autosummary>:1
 msgid "Enum of the various Rust items that are supported by the directives"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
-#: of sphinxcontrib_rust.items.RustItem:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.items.rst:13:<autosummary>:1
 msgid ""
 ":py:obj:`SphinxIndexEntryType <sphinxcontrib_rust.items."
 "SphinxIndexEntryType>`\\ \\(\\*values\\)"
@@ -70,8 +67,8 @@ msgstr ""
 "SphinxIndexEntryType>`\\ \\(\\*values\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
-#: of sphinxcontrib_rust.items.RustItem:1:<autosummary>:1
-#: sphinxcontrib_rust.items.SphinxIndexEntryType:1
+#: of sphinxcontrib_rust.items.SphinxIndexEntryType:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.items.rst:13:<autosummary>:1
 msgid "Various index types implemented by Sphinx."
 msgstr ""
 
