@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"POT-Creation-Date: 2026-06-29 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,15 +30,14 @@ msgstr ""
 msgid "Functions"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
-#: of sphinxcontrib_rust.rust_link.link:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rust_link.rst:11:<autosummary>:1
 msgid ""
 ":py:obj:`link <sphinxcontrib_rust.rust_link.link>`\\ \\(state\\, silent\\)"
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link.link:1
-#: sphinxcontrib_rust.rust_link.link:1:<autosummary>:1
+#: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rust_link.rst:11:<autosummary>:1
 msgid ""
 "This is a monkey patch used to replace the :py:func:`markdown_it."
 "rules_inline.link.link`."
