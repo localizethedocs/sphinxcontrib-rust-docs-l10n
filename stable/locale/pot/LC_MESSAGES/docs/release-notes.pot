@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust stable\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 11:57+0000\n"
+"POT-Creation-Date: 2026-06-29 13:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,8 +43,16 @@ msgstr ""
 msgid "v1.1.0"
 msgstr ""
 
-#: ../../../docs/release-notes.rst:13
+#: ../../../docs/release-notes.rst:14
 msgid ""
 "feature: Add support for module's with custom source code paths defined with "
 "``#[path = \"...\"]`` attribute."
+msgstr ""
+
+#: ../../../docs/release-notes.rst:0
+msgid "v1.2.0"
+msgstr ""
+
+#: ../../../docs/release-notes.rst:18
+msgid "dependencies: Add support for Sphinx 9.x and myst-parser 5.x"
 msgstr ""
