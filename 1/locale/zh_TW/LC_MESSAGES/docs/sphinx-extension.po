@@ -59,6 +59,3 @@ msgstr ""
 msgid ""
 "Init module for the extension with the ``setup`` function used by Sphinx"
 msgstr ""
-
-#~ msgid ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`\\"
-#~ msgstr ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`\\"

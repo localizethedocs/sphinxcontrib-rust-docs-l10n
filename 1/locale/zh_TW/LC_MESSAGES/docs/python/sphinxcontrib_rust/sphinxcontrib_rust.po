@@ -187,21 +187,3 @@ msgstr ""
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for enabling intra-doc links similar to Rustdoc"
 msgstr ""
-
-#~ msgid ":py:obj:`directives <sphinxcontrib_rust.directives>`\\"
-#~ msgstr ":py:obj:`directives <sphinxcontrib_rust.directives>`\\"
-
-#~ msgid ":py:obj:`domain <sphinxcontrib_rust.domain>`\\"
-#~ msgstr ":py:obj:`domain <sphinxcontrib_rust.domain>`\\"
-
-#~ msgid ":py:obj:`index <sphinxcontrib_rust.index>`\\"
-#~ msgstr ":py:obj:`index <sphinxcontrib_rust.index>`\\"
-
-#~ msgid ":py:obj:`items <sphinxcontrib_rust.items>`\\"
-#~ msgstr ":py:obj:`items <sphinxcontrib_rust.items>`\\"
-
-#~ msgid ":py:obj:`nodes <sphinxcontrib_rust.nodes>`\\"
-#~ msgstr ":py:obj:`nodes <sphinxcontrib_rust.nodes>`\\"
-
-#~ msgid ":py:obj:`rust_link <sphinxcontrib_rust.rust_link>`\\"
-#~ msgstr ":py:obj:`rust_link <sphinxcontrib_rust.rust_link>`\\"
