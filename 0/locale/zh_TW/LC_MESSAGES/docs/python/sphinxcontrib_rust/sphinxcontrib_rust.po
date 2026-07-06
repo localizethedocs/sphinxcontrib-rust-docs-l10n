@@ -141,7 +141,7 @@ msgstr "模組"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`directives <sphinxcontrib_rust.directives>`\\"
-msgstr ":py:obj:`directives <sphinxcontrib_rust.directives>`\\"
+msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for all the directive classes of the Rust domain"
@@ -149,7 +149,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`domain <sphinxcontrib_rust.domain>`\\"
-msgstr ":py:obj:`domain <sphinxcontrib_rust.domain>`\\"
+msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for the ``rust`` Sphinx domain for documentation Rust items"
@@ -157,7 +157,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`index <sphinxcontrib_rust.index>`\\"
-msgstr ":py:obj:`index <sphinxcontrib_rust.index>`\\"
+msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for code related to generating the index of Rust items"
@@ -165,7 +165,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`items <sphinxcontrib_rust.items>`\\"
-msgstr ":py:obj:`items <sphinxcontrib_rust.items>`\\"
+msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for Rust items and related utility classes"
@@ -173,7 +173,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`nodes <sphinxcontrib_rust.nodes>`\\"
-msgstr ":py:obj:`nodes <sphinxcontrib_rust.nodes>`\\"
+msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ""
@@ -183,7 +183,7 @@ msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid ":py:obj:`rust_link <sphinxcontrib_rust.rust_link>`\\"
-msgstr ":py:obj:`rust_link <sphinxcontrib_rust.rust_link>`\\"
+msgstr ""
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:31:<autosummary>:1
 msgid "Module for enabling intra-doc links similar to Rustdoc"
