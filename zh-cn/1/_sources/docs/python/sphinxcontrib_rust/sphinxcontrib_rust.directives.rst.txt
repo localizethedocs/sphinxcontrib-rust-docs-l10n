@@ -1,0 +1,24 @@
+sphinxcontrib\_rust.directives
+==============================
+
+.. automodule:: sphinxcontrib_rust.directives
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      RustCrateDirective
+      RustDirective
+      RustEnumDirective
+      RustExecutableDirective
+      RustFunctionDirective
+      RustImplDirective
+      RustMacroDirective
+      RustModuleDirective
+      RustStructDirective
+      RustTraitDirective
+      RustTypeDirective
+      RustUseDirective
+      RustVariableDirective
+   

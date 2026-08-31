@@ -1,0 +1,197 @@
+============================
+``mod executable_directive``
+============================
+
+
+.. rust:module:: sphinx_rustdocgen::directives::executable_directive
+   :index: 0
+   :vis: pvt
+
+   Implementation of the ``rust:executable`` directive.
+
+   .. rust:use:: sphinx_rustdocgen::directives::executable_directive
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: std::path
+      :used_name: path
+
+
+   .. rust:use:: std::path::Path
+      :used_name: Path
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveOption
+      :used_name: DirectiveOption
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility
+      :used_name: DirectiveVisibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::CrateDirective
+      :used_name: CrateDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::Directive
+      :used_name: Directive
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::MdDirective
+      :used_name: MdDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::RstDirective
+      :used_name: RstDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::order_items
+      :used_name: order_items
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::Format
+      :used_name: Format
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdContent
+      :used_name: MdContent
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstContent
+      :used_name: RstContent
+
+
+   .. rust:use:: sphinx_rustdocgen::nodes::Node
+      :used_name: Node
+
+
+   .. rust:use:: sphinx_rustdocgen::utils::FileTopLevelDirective
+      :used_name: FileTopLevelDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::utils::SourceCodeFile
+      :used_name: SourceCodeFile
+
+
+   .. rust:use:: sphinx_rustdocgen::RuntimeConfiguration
+      :used_name: RuntimeConfiguration
+
+
+   .. rubric:: Structs and Unions
+
+
+   .. rust:struct:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective
+      :index: 1
+      :vis: pub
+      :toc: struct ExecutableDirective
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"ExecutableDirective"},{"type":"punctuation","value":"("},{"type":"link","value":"CrateDirective","target":"CrateDirective"},{"type":"punctuation","value":")"}]
+
+      Struct to hold data required for documenting an executable.
+      
+      The data and processing required is pretty much the same as that for a
+      crate. Only the output directive is different. Hence, this is a newtype
+      around the :rust:struct:`CrateDirective`.
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"ExecutableDirective","target":"ExecutableDirective"}]
+         :toc: impl ExecutableDirective
+
+
+         .. rubric:: Variables
+
+
+         .. rust:variable:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::DIRECTIVE_NAME
+            :index: -1
+            :vis: pvt
+            :toc: const DIRECTIVE_NAME
+            :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"DIRECTIVE_NAME"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"}]
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::filter_items
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"filter_items"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::new
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"new"},{"type":"punctuation","value":"("},{"type":"name","value":"rc"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"RuntimeConfiguration","target":"RuntimeConfiguration"},{"type":"punctuation","value":", "},{"type":"name","value":"source_code_file"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"SourceCodeFile","target":"SourceCodeFile"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"ExecutableDirective","target":"ExecutableDirective"}]
+
+            Create a new ``ExecutableDirective`` for the executable from the source
+            file.
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::RstDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"RstDirective","target":"RstDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"ExecutableDirective","target":"ExecutableDirective"}]
+         :toc: impl RstDirective for ExecutableDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::RstDirective::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::MdDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MdDirective","target":"MdDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"ExecutableDirective","target":"ExecutableDirective"}]
+         :toc: impl MdDirective for ExecutableDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::MdDirective::fence_size
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"fence_size"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"usize","target":"usize"}]
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::MdDirective::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::FileTopLevelDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"FileTopLevelDirective","target":"FileTopLevelDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"ExecutableDirective","target":"ExecutableDirective"}]
+         :toc: impl FileTopLevelDirective for ExecutableDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::FileTopLevelDirective::get_doc_file
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_doc_file"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"link","value":"Path","target":"Path"}]
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective::FileTopLevelDirective::get_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"format"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Format","target":"Format"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+

@@ -1,0 +1,31 @@
+﻿sphinxcontrib\_rust
+===================
+
+.. automodule:: sphinxcontrib_rust
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      generate_docs
+      setup
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      CrateConfiguration
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   directives
+   domain
+   index
+   items
+   nodes
+   rust_link
