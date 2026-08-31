@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:3
+msgid "``mod type_directive``"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:10
+msgid "Implementation of the ``rust:type`` directive"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:90
+msgid "Macros"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:95
+msgid ""
+"DRY macro to create :rust:struct:`TypeDirective` from various syn structs."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:99
+msgid "Structs and Unions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:106
+msgid "Struct to hold the data for documenting type definitions."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:114
+msgid "The Rust path of the type."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:122
+msgid "The identifier of the type."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:130
+msgid "The options of the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:138
+msgid "The content of the directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:142
+msgid "Implementations"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:152
+msgid "Variables"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:162
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:218
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:234
+msgid "Functions"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:168
+msgid "Change the parent module of the type."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:175
+msgid "Return the visibility of this directive."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:182
+msgid "Create a type directive from a foreign type definition."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:189
+msgid "Create a type directive from a type definition within an impl block."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:196
+msgid "Create a type directive from a type definition."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:203
+msgid ""
+"Create a type directive from a type definition within a trait definition."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/directives/type_directive.rst:208
+msgid "Traits implemented"
+msgstr ""
