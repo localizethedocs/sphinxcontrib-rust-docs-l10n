@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 12:36+0000\n"
+"POT-Creation-Date: 2026-08-31 16:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,4 +55,12 @@ msgstr ""
 
 #: ../../../docs/release-notes.rst:18
 msgid "dependencies: Add support for Sphinx 9.x and myst-parser 5.x"
+msgstr ""
+
+#: ../../../docs/release-notes.rst:0
+msgid "v1.2.1"
+msgstr ""
+
+#: ../../../docs/release-notes.rst:22
+msgid "fix: Footnotes are skipped when checking for auto-links to Rust items."
 msgstr ""
