@@ -1,0 +1,290 @@
+=========================
+``mod directive_options``
+=========================
+
+
+.. rust:module:: sphinx_rustdocgen::directives::directive_options
+   :index: 0
+   :vis: pvt
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: std::fmt::Display
+      :used_name: Display
+
+
+   .. rust:use:: std::fmt::Formatter
+      :used_name: Formatter
+
+
+   .. rust:use:: std::str::FromStr
+      :used_name: FromStr
+
+
+   .. rust:use:: serde::Deserialize
+      :used_name: Deserialize
+
+
+   .. rust:use:: syn::Visibility
+      :used_name: Visibility
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdOption
+      :used_name: MdOption
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstOption
+      :used_name: RstOption
+
+
+   .. rust:use:: sphinx_rustdocgen::nodes::Node
+      :used_name: Node
+
+
+   .. rubric:: Enums
+
+
+   .. rust:enum:: sphinx_rustdocgen::directives::directive_options::DirectiveOption
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"enum"},{"type":"space"},{"type":"name","value":"DirectiveOption"}]
+
+      Enum to represent the various options for the directives.
+      
+      The enum implements the :rust:trait:`RstOption` and :rust:trait:`MdOption`
+      traits for easily converting the options to required text.
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::DirectiveOption::Index
+         :index: 2
+         :vis: crate
+         :toc: Index
+         :layout: [{"type":"name","value":"Index"},{"type":"punctuation","value":"("},{"type":"link","value":"IndexEntryType","target":"IndexEntryType"},{"type":"punctuation","value":")"}]
+
+         The ``:index:`` option
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::DirectiveOption::Vis
+         :index: 2
+         :vis: crate
+         :toc: Vis
+         :layout: [{"type":"name","value":"Vis"},{"type":"punctuation","value":"("},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"}]
+
+         The ``:vis:`` option.
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::DirectiveOption::Layout
+         :index: 2
+         :vis: crate
+         :toc: Layout
+         :layout: [{"type":"name","value":"Layout"},{"type":"punctuation","value":"("},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"}]
+
+         The ``:layout:`` option.
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::DirectiveOption::Toc
+         :index: 2
+         :vis: crate
+         :toc: Toc
+         :layout: [{"type":"name","value":"Toc"},{"type":"punctuation","value":"("},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":")"}]
+
+         The ``:toc:`` option.
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::directive_options::DirectiveOption::RstOption
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"RstOption","target":"RstOption"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"DirectiveOption","target":"DirectiveOption"}]
+         :toc: impl RstOption for DirectiveOption
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::directive_options::DirectiveOption::RstOption::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"indent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::directive_options::DirectiveOption::MdOption
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MdOption","target":"MdOption"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"DirectiveOption","target":"DirectiveOption"}]
+         :toc: impl MdOption for DirectiveOption
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::directive_options::DirectiveOption::MdOption::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+   .. rust:enum:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"enum"},{"type":"space"},{"type":"name","value":"DirectiveVisibility"}]
+
+      Enum for the values of the :rust:struct:`DirectiveOption::Vis` option
+      
+      The enum is ordered ``Pub < Crate < Pvt``, so it can be efficiently
+      compared for filtering. Note that ordering here is opposite to that of the
+      visibility itself.
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::Pub
+         :index: 2
+         :vis: crate
+         :toc: Pub
+         :layout: [{"type":"name","value":"Pub"}]
+
+         Public visibility
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::Crate
+         :index: 2
+         :vis: crate
+         :toc: Crate
+         :layout: [{"type":"name","value":"Crate"}]
+
+         Crate visibility
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::Pvt
+         :index: 2
+         :vis: crate
+         :toc: Pvt
+         :layout: [{"type":"name","value":"Pvt"}]
+
+         Private visibility
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+         :toc: impl DirectiveVisibility
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::effective_visibility
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"effective_visibility"},{"type":"punctuation","value":"("},{"type":"name","value":"visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Self","target":"Self"}]
+
+            Determine the effective visibility for an item based on its visibility
+            or its parent's visibility.
+            
+            Args:
+                :visibility: The item's visibility.
+                :inherited_visibility: The visibility of the item's parent.
+            
+            Returns:
+                The directive visibility applicable to the item.
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::Display
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"Display","target":"Display"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+         :toc: impl Display for DirectiveVisibility
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::Display::fmt
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"fmt"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"f"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"link","value":"Formatter","target":"Formatter"},{"type":"punctuation","value":"<"},{"type":"lifetime","value":"'_"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"std","target":"std"},{"type":"punctuation","value":"::"},{"type":"name","value":"fmt"},{"type":"punctuation","value":"::"},{"type":"name","value":"Result"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::From
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"From","target":"From"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+         :toc: impl From for DirectiveVisibility
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::From::from
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from"},{"type":"punctuation","value":"("},{"type":"name","value":"value"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Self","target":"Self"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::FromStr
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"FromStr","target":"FromStr"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+         :toc: impl FromStr for DirectiveVisibility
+
+
+         .. rubric:: Types
+
+
+         .. rust:type:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::FromStr::Err
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"type"},{"type":"space"},{"type":"name","value":"Err"}]
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility::FromStr::from_str
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_str"},{"type":"punctuation","value":"("},{"type":"name","value":"s"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Result","target":"Result"},{"type":"punctuation","value":"<"},{"type":"link","value":"Self","target":"Self"},{"type":"punctuation","value":", "},{"type":"link","value":"Self","target":"Self"},{"type":"punctuation","value":"::"},{"type":"name","value":"Err"},{"type":"punctuation","value":">"}]
+
+
+   .. rust:enum:: sphinx_rustdocgen::directives::directive_options::IndexEntryType
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"enum"},{"type":"space"},{"type":"name","value":"IndexEntryType"}]
+
+      The different index entry types.
+      
+      This corresponds to the Python enum
+      :py:class:`sphinxcontrib_rust.items.SphinxIndexEntryType`.
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::IndexEntryType::None
+         :index: 2
+         :vis: crate
+         :toc: None
+         :layout: [{"type":"name","value":"None"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::IndexEntryType::Normal
+         :index: 2
+         :vis: crate
+         :toc: Normal
+         :layout: [{"type":"name","value":"Normal"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::IndexEntryType::WithSubEntries
+         :index: 2
+         :vis: crate
+         :toc: WithSubEntries
+         :layout: [{"type":"name","value":"WithSubEntries"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::directive_options::IndexEntryType::SubEntry
+         :index: 2
+         :vis: crate
+         :toc: SubEntry
+         :layout: [{"type":"name","value":"SubEntry"}]
+

@@ -1,0 +1,290 @@
+========================
+``mod struct_directive``
+========================
+
+
+.. rust:module:: sphinx_rustdocgen::directives::struct_directive
+   :index: 0
+   :vis: pvt
+
+   Implementation of the ``rust:struct`` directive
+
+   .. rust:use:: sphinx_rustdocgen::directives::struct_directive
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: syn::Fields
+      :used_name: Fields
+
+
+   .. rust:use:: syn::Generics
+      :used_name: Generics
+
+
+   .. rust:use:: syn::ItemStruct
+      :used_name: ItemStruct
+
+
+   .. rust:use:: syn::ItemUnion
+      :used_name: ItemUnion
+
+
+   .. rust:use:: syn::Variant
+      :used_name: Variant
+
+
+   .. rust:use:: syn::Visibility
+      :used_name: Visibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveOption
+      :used_name: DirectiveOption
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility
+      :used_name: DirectiveVisibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::IndexEntryType
+      :used_name: IndexEntryType
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::variable_directive::VariableDirective
+      :used_name: VariableDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::Directive
+      :used_name: Directive
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::ImplDirective
+      :used_name: ImplDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::extract_doc_from_attrs
+      :used_name: extract_doc_from_attrs
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdContent
+      :used_name: MdContent
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdDirective
+      :used_name: MdDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstContent
+      :used_name: RstContent
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstDirective
+      :used_name: RstDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::nodes::Node
+      :used_name: Node
+
+
+   .. rust:use:: sphinx_rustdocgen::nodes::nodes_for_generics
+      :used_name: nodes_for_generics
+
+
+   .. rust:use:: sphinx_rustdocgen::nodes::nodes_for_type
+      :used_name: nodes_for_type
+
+
+   .. rust:use:: sphinx_rustdocgen::nodes::nodes_for_where_clause
+      :used_name: nodes_for_where_clause
+
+
+   .. rubric:: Macros
+
+
+   .. rust:macro:: sphinx_rustdocgen::directives::struct_directive::make_nodes
+      :index: 0
+      :vis: pvt
+
+      DRY macro to create the nodes for the directive's layout.
+
+   .. rubric:: Structs and Unions
+
+
+   .. rust:struct:: sphinx_rustdocgen::directives::struct_directive::StructDirective
+      :index: 1
+      :vis: pub
+      :toc: struct StructDirective
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"StructDirective"}]
+
+      Struct to hold details for documenting a struct or a union.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::struct_directive::StructDirective::name
+         :index: 2
+         :vis: crate
+         :toc: name
+         :layout: [{"type":"name","value":"name"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+         The full Rust path of the struct, used as the name of the directive.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::struct_directive::StructDirective::ident
+         :index: 2
+         :vis: crate
+         :toc: ident
+         :layout: [{"type":"name","value":"ident"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+         The identifier for the struct.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::struct_directive::StructDirective::options
+         :index: 2
+         :vis: crate
+         :toc: options
+         :layout: [{"type":"name","value":"options"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"DirectiveOption","target":"DirectiveOption"},{"type":"punctuation","value":">"}]
+
+         The directive options to use.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::struct_directive::StructDirective::content
+         :index: 2
+         :vis: crate
+         :toc: content
+         :layout: [{"type":"name","value":"content"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         The docstring for the struct.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::struct_directive::StructDirective::fields
+         :index: 2
+         :vis: crate
+         :toc: fields
+         :layout: [{"type":"name","value":"fields"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"VariableDirective","target":"VariableDirective"},{"type":"punctuation","value":">"}]
+
+         The fields of the struct, named or unnamed.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::struct_directive::StructDirective::self_impls
+         :index: 2
+         :vis: crate
+         :toc: self_impls
+         :layout: [{"type":"name","value":"self_impls"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"ImplDirective","target":"ImplDirective"},{"type":"punctuation","value":">"}]
+
+         Items within impl blocks for the struct/union.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::struct_directive::StructDirective::trait_impls
+         :index: 2
+         :vis: crate
+         :toc: trait_impls
+         :layout: [{"type":"name","value":"trait_impls"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"ImplDirective","target":"ImplDirective"},{"type":"punctuation","value":">"}]
+
+         Trait impls for the struct/union.
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::struct_directive::StructDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"StructDirective","target":"StructDirective"}]
+         :toc: impl StructDirective
+
+
+         .. rubric:: Variables
+
+
+         .. rust:variable:: sphinx_rustdocgen::directives::struct_directive::StructDirective::DIRECTIVE_NAME
+            :index: -1
+            :vis: pvt
+            :toc: const DIRECTIVE_NAME
+            :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"DIRECTIVE_NAME"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"}]
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::struct_directive::StructDirective::add_impl
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"add_impl"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"name","value":"impl_"},{"type":"punctuation","value":": "},{"type":"link","value":"ImplDirective","target":"ImplDirective"},{"type":"punctuation","value":")"}]
+
+            Add the impl directive to the struct.
+            
+            The parent and visibility of the impl directive are updated along with
+            the ownership.
+            
+            Args:
+                :impl\_: The :rust:struct:`ImplDirective` for the struct.
+
+         .. rust:function:: sphinx_rustdocgen::directives::struct_directive::StructDirective::change_parent
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"change_parent"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"new_parent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"}]
+
+            Change the parent module of the struct and its items.
+
+         .. rust:function:: sphinx_rustdocgen::directives::struct_directive::StructDirective::directive_visibility
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"directive_visibility"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+
+            Return the visibility of this directive.
+
+         .. rust:function:: sphinx_rustdocgen::directives::struct_directive::StructDirective::from_item
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_item"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ItemStruct","target":"ItemStruct"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+
+            Create a struct directive for a struct.
+
+         .. rust:function:: sphinx_rustdocgen::directives::struct_directive::StructDirective::from_union
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_union"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ItemUnion","target":"ItemUnion"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+
+            Create a struct directive for a union.
+
+         .. rust:function:: sphinx_rustdocgen::directives::struct_directive::StructDirective::from_variant
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_variant"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"variant"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Variant","target":"Variant"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"StructDirective","target":"StructDirective"}]
+
+            Create a struct directive for an enum variant.
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::struct_directive::StructDirective::RstDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"RstDirective","target":"RstDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"StructDirective","target":"StructDirective"}]
+         :toc: impl RstDirective for StructDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::struct_directive::StructDirective::RstDirective::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::struct_directive::StructDirective::MdDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MdDirective","target":"MdDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"StructDirective","target":"StructDirective"}]
+         :toc: impl MdDirective for StructDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::struct_directive::StructDirective::MdDirective::fence_size
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"fence_size"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"usize","target":"usize"}]
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::struct_directive::StructDirective::MdDirective::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+

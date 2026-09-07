@@ -1,0 +1,586 @@
+===============
+``mod formats``
+===============
+
+
+.. rust:module:: sphinx_rustdocgen::formats
+   :index: 0
+   :vis: pvt
+
+   Module for handling the output formats supported.
+
+   .. rust:use:: sphinx_rustdocgen::formats
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: std::fmt::Display
+      :used_name: Display
+
+
+   .. rust:use:: std::str::FromStr
+      :used_name: FromStr
+
+
+   .. rust:use:: serde::Deserialize
+      :used_name: Deserialize
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::Directive
+      :used_name: Directive
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::DirectiveVisibility
+      :used_name: DirectiveVisibility
+
+
+   .. rubric:: Functions
+
+
+   .. rust:function:: sphinx_rustdocgen::formats::generate_decoration
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"generate_decoration"},{"type":"punctuation","value":"("},{"type":"name","value":"ch"},{"type":"punctuation","value":": "},{"type":"link","value":"char","target":"char"},{"type":"punctuation","value":", "},{"type":"name","value":"len"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"String","target":"String"}]
+
+      Generate title decoration string for RST or fence for MD.
+      
+      Args:
+          :ch: The character to use.
+          :len: The length of the decoration required.
+      
+      Returns:
+          A string of length ``len`` composed entirely of ``ch``.
+
+   .. rubric:: Traits
+
+
+   .. rust:trait:: sphinx_rustdocgen::formats::MdContent
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"trait"},{"type":"space"},{"type":"name","value":"MdContent"}]
+
+      Trait for anything that can be converted to MD directive content.
+      
+      This is implemented for all ``IntoIterator<Item = String>``, effectively
+      allowing ``Vec<String>`` to be converted to MD content lines.
+
+      .. rubric:: Functions
+
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdContent::get_md_text
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rubric:: Implemented for
+
+
+      .. rust:impl:: sphinx_rustdocgen::formats::T::MdContent
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"punctuation","value":"<"},{"type":"name","value":"T"},{"type":"punctuation","value":">"},{"type":"space"},{"type":"link","value":"MdContent","target":"MdContent"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"T","target":"T"},{"type":"newline"},{"type":"keyword","value":"where"},{"type":"newline"},{"type":"indent"},{"type":"link","value":"T","target":"T"},{"type":"punctuation","value":": "},{"type":"link","value":"IntoIterator","target":"IntoIterator"},{"type":"punctuation","value":"<"},{"type":"name","value":"Item"},{"type":"punctuation","value":" = "},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+         :toc: impl MdContent for T
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::formats::T::MdContent::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+   .. rust:trait:: sphinx_rustdocgen::formats::MdDirective
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"trait"},{"type":"space"},{"type":"name","value":"MdDirective"}]
+
+      Trait for directives that can be written as MD content
+
+      .. rubric:: Variables
+
+
+      .. rust:variable:: sphinx_rustdocgen::formats::MdDirective::DEFAULT_FENCE_SIZE
+         :index: -1
+         :vis: crate
+         :toc: const DEFAULT_FENCE_SIZE
+         :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"DEFAULT_FENCE_SIZE"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"}]
+
+
+      .. rubric:: Functions
+
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdDirective::calc_fence_size
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"calc_fence_size"},{"type":"punctuation","value":"("},{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"punctuation","value":"["},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":"]"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"usize","target":"usize"}]
+
+         Calculate the fence size required for the item.
+         
+         The ``items`` are the members of the current item. So, for
+         a struct, these will be the list of its fields, for an enum,
+         the variants, for a module, the items defined in it, etc.
+         
+         The fence size for the item is 1 + the max fence size of all
+         its members. If it has no members, the fence size is the default fence
+         size. So, the returned value is the minimum fence size required to
+         properly document the item and its members in Markdown.
+         
+         Args:
+             :items: Items which are members of the current item.
+         
+         Returns:
+             The minimum fence size required to document the item and all its
+             nested items.
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdDirective::fence_size
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"fence_size"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"usize","target":"usize"}]
+
+         Return the fence size required for documenting the item.
+         
+         The default implementation returns ``4``, which allows for members
+         with no items to create sections within the docstrings, that do not
+         show up in the ``toctree``.
+         
+         Implementations may use
+         :rust:fn:`MdDirective::calc_fence_size`
+         to override this, when there are nested items present.
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdDirective::get_md_text
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Generate MD text with the given fence size.
+         
+         Implementations must provide a vec of the lines of the content of the
+         item and all its members.
+         
+         Args:
+             :fence_size: The size of the fence for the directive. Use the
+                 ``make_fence`` function to get the actual fence string.
+             :max_visibility: Include only items with visibility up to the
+                 defined level.
+         
+         Returns:
+             The MD text for the documentation of the item and its members.
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdDirective::make_fence
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_fence"},{"type":"punctuation","value":"("},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"String","target":"String"}]
+
+         Make a string for the fences for the directive.
+         
+         Args:
+             :fence_size: The size of the fence, must be at least 3.
+         
+         Returns:
+             A string of colons of length ``fence_size``.
+         
+         Panics:
+             If the ``fence_size`` is less than 3.
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdDirective::make_md_header
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_md_header"},{"type":"punctuation","value":"<"},{"type":"name","value":"O"},{"type":"punctuation","value":": "},{"type":"link","value":"MdOption","target":"MdOption"},{"type":"punctuation","value":", "},{"type":"name","value":"D"},{"type":"punctuation","value":": "},{"type":"link","value":"Display","target":"Display"},{"type":"punctuation","value":", "},{"type":"name","value":"E"},{"type":"punctuation","value":": "},{"type":"link","value":"Display","target":"Display"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"name","value":"directive"},{"type":"punctuation","value":": "},{"type":"link","value":"D","target":"D"},{"type":"punctuation","value":", "},{"type":"name","value":"name"},{"type":"punctuation","value":": "},{"type":"link","value":"E","target":"E"},{"type":"punctuation","value":", "},{"type":"name","value":"options"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"punctuation","value":"["},{"type":"link","value":"O","target":"O"},{"type":"punctuation","value":"]"},{"type":"punctuation","value":", "},{"type":"name","value":"fence"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Make the MD directive header from the directive, name and options.
+         
+         Args:
+             :directive: The MD directive to make the header for.
+             :name: The name of the directive.
+             :options: The directive options to add.
+             :fence: The fence to use for the directive.
+         
+         Returns:
+             A Vec of the directive's header lines.
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdDirective::make_md_list
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_md_list"},{"type":"punctuation","value":"("},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"title"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"punctuation","value":"["},{"type":"punctuation","value":"("},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":", "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"punctuation","value":"]"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Make an MD list of items.
+         
+         Args:
+             :fence_size: The fence size for the list title.
+             :title: The title for the list.
+             :items: A vec of item name and content tuples.
+         
+         Returns:
+             Lines of MD text for the list, with the title.
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdDirective::make_md_section
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_md_section"},{"type":"punctuation","value":"("},{"type":"name","value":"section"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Make section in an MD document with the given title and items.
+         
+         Args:
+             :section: The title of the section.
+             :fence_size: The fence size of the section.
+             :items: The items to include in the section.
+             :max_visibility: The max visibility of the items to include.
+         
+         Returns:
+             The MD text for the section.
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdDirective::make_md_toctree
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_md_toctree"},{"type":"punctuation","value":"<"},{"type":"name","value":"I"},{"type":"punctuation","value":": "},{"type":"link","value":"Display","target":"Display"},{"type":"punctuation","value":", "},{"type":"name","value":"T"},{"type":"punctuation","value":": "},{"type":"link","value":"Iterator","target":"Iterator"},{"type":"punctuation","value":"<"},{"type":"name","value":"Item"},{"type":"punctuation","value":" = "},{"type":"link","value":"I","target":"I"},{"type":"punctuation","value":">"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"caption"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"max_depth"},{"type":"punctuation","value":": "},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"u8","target":"u8"},{"type":"punctuation","value":">"},{"type":"punctuation","value":", "},{"type":"name","value":"tree"},{"type":"punctuation","value":": "},{"type":"link","value":"T","target":"T"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Make a ``toctree`` directive for MD documents.
+         
+         Args:
+             :fence_size: The fence size for the directive.
+             :caption: The caption for the ``toctree``.
+             :maxdepth: The desired ``maxdepth`` of the ``toctree``. If None,
+                 the ``:maxdepth:`` option will not be set.
+             :tree: The ``toctree`` entries.
+
+   .. rust:trait:: sphinx_rustdocgen::formats::MdOption
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"trait"},{"type":"space"},{"type":"name","value":"MdOption"}]
+
+      Trait for MD directive options
+
+      .. rubric:: Functions
+
+
+      .. rust:function:: sphinx_rustdocgen::formats::MdOption::get_md_text
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Return the MD text for the option.
+
+   .. rust:trait:: sphinx_rustdocgen::formats::RstContent
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"trait"},{"type":"space"},{"type":"name","value":"RstContent"}]
+
+      Trait for anything that can be converted to RST directive content.
+      
+      This is implemented for all ``IntoIterator<Item = String>``, effectively
+      allowing ``Vec<String>`` to be converted to RST content lines.
+
+      .. rubric:: Functions
+
+
+      .. rust:function:: sphinx_rustdocgen::formats::RstContent::get_rst_text
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"indent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rubric:: Implemented for
+
+
+      .. rust:impl:: sphinx_rustdocgen::formats::T::RstContent
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"punctuation","value":"<"},{"type":"name","value":"T"},{"type":"punctuation","value":">"},{"type":"space"},{"type":"link","value":"RstContent","target":"RstContent"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"T","target":"T"},{"type":"newline"},{"type":"keyword","value":"where"},{"type":"newline"},{"type":"indent"},{"type":"link","value":"T","target":"T"},{"type":"punctuation","value":": "},{"type":"link","value":"IntoIterator","target":"IntoIterator"},{"type":"punctuation","value":"<"},{"type":"name","value":"Item"},{"type":"punctuation","value":" = "},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+         :toc: impl RstContent for T
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::formats::T::RstContent::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"indent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+   .. rust:trait:: sphinx_rustdocgen::formats::RstDirective
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"trait"},{"type":"space"},{"type":"name","value":"RstDirective"}]
+
+      Trait for directives that can be written as RST content
+
+      .. rubric:: Variables
+
+
+      .. rust:variable:: sphinx_rustdocgen::formats::RstDirective::INDENT
+         :index: -1
+         :vis: crate
+         :toc: const INDENT
+         :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"INDENT"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"}]
+
+
+      .. rubric:: Functions
+
+
+      .. rust:function:: sphinx_rustdocgen::formats::RstDirective::get_rst_text
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Generate RST text with the given level of indentation.
+         
+         Implementations must provide a vec of the lines of the content of the
+         item and all its members.
+         
+         Args:
+             :level: The level of indentation for the content. Use the
+                 ``make_indent`` and ``make_content_indent`` functions to get
+                 the actual indentation string.
+             :max_visibility: Include only items with visibility up to the
+                 defined level.
+         
+         Returns:
+             The RST text for the documentation of the item and its members.
+
+      .. rust:function:: sphinx_rustdocgen::formats::RstDirective::make_content_indent
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_content_indent"},{"type":"punctuation","value":"("},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"String","target":"String"}]
+
+         Make a string for indenting the directive's content and options
+         
+         Args:
+             :level: The level of the indentation.
+         
+         Returns:
+             A string that is ``Self::INDENT`` repeated ``level + 1`` times.
+
+      .. rust:function:: sphinx_rustdocgen::formats::RstDirective::make_indent
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_indent"},{"type":"punctuation","value":"("},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"String","target":"String"}]
+
+         Make a string for indenting the directive.
+         
+         Args:
+             :level: The level of the indentation.
+         
+         Returns:
+             A string that is ``Self::INDENT`` repeated ``level`` times.
+
+      .. rust:function:: sphinx_rustdocgen::formats::RstDirective::make_rst_header
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_rst_header"},{"type":"punctuation","value":"<"},{"type":"name","value":"O"},{"type":"punctuation","value":": "},{"type":"link","value":"RstOption","target":"RstOption"},{"type":"punctuation","value":", "},{"type":"name","value":"D"},{"type":"punctuation","value":": "},{"type":"link","value":"Display","target":"Display"},{"type":"punctuation","value":", "},{"type":"name","value":"E"},{"type":"punctuation","value":": "},{"type":"link","value":"Display","target":"Display"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"name","value":"directive"},{"type":"punctuation","value":": "},{"type":"link","value":"D","target":"D"},{"type":"punctuation","value":", "},{"type":"name","value":"name"},{"type":"punctuation","value":": "},{"type":"link","value":"E","target":"E"},{"type":"punctuation","value":", "},{"type":"name","value":"options"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"punctuation","value":"["},{"type":"link","value":"O","target":"O"},{"type":"punctuation","value":"]"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Make the RST directive header from the directive, name and options.
+         
+         Args:
+             :directive: The RST directive to make the header for.
+             :name: The name of the directive.
+             :options: The directive options to add.
+             :level: The indentation level of the directive.
+         
+         Returns:
+             A Vec of the directive's header lines.
+
+      .. rust:function:: sphinx_rustdocgen::formats::RstDirective::make_rst_list
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_rst_list"},{"type":"punctuation","value":"("},{"type":"name","value":"indent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"title"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"punctuation","value":"["},{"type":"punctuation","value":"("},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":", "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"punctuation","value":"]"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Make an RST list of items.
+         
+         Args:
+             :indent: The indentation for the list items.
+             :title: The title for the list.
+             :items: A vec of item name and content tuples.
+         
+         Returns:
+             Lines of RST text for the list, with the title.
+
+      .. rust:function:: sphinx_rustdocgen::formats::RstDirective::make_rst_section
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_rst_section"},{"type":"punctuation","value":"("},{"type":"name","value":"section"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Make section in an RST document with the given title and items.
+         
+         Args:
+             :section: The title of the section.
+             :level: The indentation level of the section.
+             :items: The items to include in the section.
+             :max_visibility: The max visibility of the items to include.
+         
+         Returns:
+             The RST text for the section.
+
+      .. rust:function:: sphinx_rustdocgen::formats::RstDirective::make_rst_toctree
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_rst_toctree"},{"type":"punctuation","value":"<"},{"type":"name","value":"I"},{"type":"punctuation","value":": "},{"type":"link","value":"Display","target":"Display"},{"type":"punctuation","value":", "},{"type":"name","value":"T"},{"type":"punctuation","value":": "},{"type":"link","value":"Iterator","target":"Iterator"},{"type":"punctuation","value":"<"},{"type":"name","value":"Item"},{"type":"punctuation","value":" = "},{"type":"link","value":"I","target":"I"},{"type":"punctuation","value":">"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"name","value":"indent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"caption"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"max_depth"},{"type":"punctuation","value":": "},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"u8","target":"u8"},{"type":"punctuation","value":">"},{"type":"punctuation","value":", "},{"type":"name","value":"tree"},{"type":"punctuation","value":": "},{"type":"link","value":"T","target":"T"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Make a ``toctree`` directive for RST documents.
+         
+         Args:
+             :indent: The indentation for the directive.
+             :caption: The caption for the ``toctree``.
+             :maxdepth: The desired ``maxdepth`` of the ``toctree``. If None,
+                 the ``:maxdepth:`` option will not be set.
+             :tree: The ``toctree`` entries.
+
+   .. rust:trait:: sphinx_rustdocgen::formats::RstOption
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"trait"},{"type":"space"},{"type":"name","value":"RstOption"}]
+
+      Trait for RST directive options.
+
+      .. rubric:: Functions
+
+
+      .. rust:function:: sphinx_rustdocgen::formats::RstOption::get_rst_text
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"indent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         Return the RST text for the option.
+
+   .. rubric:: Enums
+
+
+   .. rust:enum:: sphinx_rustdocgen::formats::Format
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"enum"},{"type":"space"},{"type":"name","value":"Format"}]
+
+      Supported formats for the docstrings
+
+      .. rust:struct:: sphinx_rustdocgen::formats::Format::Md
+         :index: 2
+         :vis: crate
+         :toc: Md
+         :layout: [{"type":"name","value":"Md"}]
+
+         Markdown format
+
+      .. rust:struct:: sphinx_rustdocgen::formats::Format::Rst
+         :index: 2
+         :vis: crate
+         :toc: Rst
+         :layout: [{"type":"name","value":"Rst"}]
+
+         reStructuredText format
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::formats::Format
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"Format","target":"Format"}]
+         :toc: impl Format
+
+
+         .. rubric:: Variables
+
+
+         .. rust:variable:: sphinx_rustdocgen::formats::Format::MD_VALUES
+            :index: -1
+            :vis: pvt
+            :toc: const MD_VALUES
+            :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"MD_VALUES"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"["},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":"; "},{"type":"literal","value":"3"},{"type":"punctuation","value":"]"}]
+
+            Acceptable text values for Md variant, case-insensitive.
+
+         .. rust:variable:: sphinx_rustdocgen::formats::Format::RST_VALUES
+            :index: -1
+            :vis: pvt
+            :toc: const RST_VALUES
+            :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"RST_VALUES"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"["},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":"; "},{"type":"literal","value":"3"},{"type":"punctuation","value":"]"}]
+
+            Acceptable text values for Rst variant, case-insensitive.
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::formats::Format::extension
+            :index: -1
+            :vis: pub
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"extension"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"}]
+
+            Returns the extension for the format, without the leading ".".
+
+         .. rust:function:: sphinx_rustdocgen::formats::Format::format_directive
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"format_directive"},{"type":"punctuation","value":"<"},{"type":"name","value":"T"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"directive"},{"type":"punctuation","value":": "},{"type":"link","value":"T","target":"T"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"},{"type":"newline"},{"type":"keyword","value":"where"},{"type":"newline"},{"type":"indent"},{"type":"link","value":"T","target":"T"},{"type":"punctuation","value":": "},{"type":"link","value":"RstDirective","target":"RstDirective"},{"type":"punctuation","value":" + "},{"type":"link","value":"MdDirective","target":"MdDirective"}]
+
+            Get format specific content for the directive for the output file.
+            
+            The function assumes that the directive is the top level directive of
+            the output file and generates the content accordingly.
+            
+            Args:
+                :directive: The directive to get the content for, typically a
+                    ``Crate`` or ``Module`` directive.
+            
+            Returns:
+                A vec of strings which are the lines of the document.
+
+         .. rust:function:: sphinx_rustdocgen::formats::Format::make_inline_code
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_inline_code"},{"type":"punctuation","value":"<"},{"type":"name","value":"D"},{"type":"punctuation","value":": "},{"type":"link","value":"Display","target":"Display"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"text"},{"type":"punctuation","value":": "},{"type":"link","value":"D","target":"D"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"String","target":"String"}]
+
+            Convert the provided text to an inline code representation of the text
+            specific to the format.
+
+         .. rust:function:: sphinx_rustdocgen::formats::Format::make_title
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"make_title"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"title"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+            Make a format specific document title using the provided title string.
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::formats::Format::FromStr
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"FromStr","target":"FromStr"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"Format","target":"Format"}]
+         :toc: impl FromStr for Format
+
+
+         .. rubric:: Types
+
+
+         .. rust:type:: sphinx_rustdocgen::formats::Format::FromStr::Err
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"type"},{"type":"space"},{"type":"name","value":"Err"}]
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::formats::Format::FromStr::from_str
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_str"},{"type":"punctuation","value":"("},{"type":"name","value":"value"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Result","target":"Result"},{"type":"punctuation","value":"<"},{"type":"link","value":"Self","target":"Self"},{"type":"punctuation","value":", "},{"type":"link","value":"Self","target":"Self"},{"type":"punctuation","value":"::"},{"type":"name","value":"Err"},{"type":"punctuation","value":">"}]
+
+            Parses the string into an enum value, or panics.
+            
+            If the string is ``md``, ``.md`` or ``markdown``, the function
+            returns ``Md``. If the string is ``rst``, ``.rst`` or
+            ``restructuredtext``, the function returns ``Rst``. Comparison is
+            case-insensitive.
+            
+            Args:
+                :value: The value to parse.
+            
+            Returns:
+                The parsed enum value as the Ok value, or unit type as the Err.
