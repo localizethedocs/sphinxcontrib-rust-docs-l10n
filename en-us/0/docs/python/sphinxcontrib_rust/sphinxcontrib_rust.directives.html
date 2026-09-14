@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sphinxcontrib_rust.directives &mdash; sphinxcontrib-rust  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=76b4835e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/sphinxcontrib-rust-docs-l10n/docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.html" />
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=ccd1e645"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="sphinxcontrib_rust.domain" href="sphinxcontrib_rust.domain.html" />
+    <link rel="prev" title="sphinxcontrib_rust" href="sphinxcontrib_rust.html" />
+ 
+<script type="text/javascript" src="../../../ltd-provenance.js"></script>
+<script type="text/javascript" src="../../../ltd-current.js"></script>
+<script type="text/javascript" src="../../../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            sphinxcontrib-rust
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../including.html">Including the docs in the Sphinx build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roles.html">Rust specific roles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../directives.html">Rust specific directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indices.html">Rust items index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compatibility.html">Compatibility with rustdoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developing.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx-rustdocgen.html">sphinx-rustdocgen documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../sphinx-extension.html">sphinxcontrib_rust documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../sphinx-extension.html#python-package-documentation">Python package documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="sphinxcontrib_rust.html">sphinxcontrib_rust</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.html#sphinxcontrib_rust.CrateConfiguration"><code class="docutils literal notranslate"><span class="pre">CrateConfiguration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.html#sphinxcontrib_rust.generate_docs"><code class="docutils literal notranslate"><span class="pre">generate_docs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.html#sphinxcontrib_rust.setup"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">sphinxcontrib_rust.directives</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustCrateDirective"><code class="docutils literal notranslate"><span class="pre">RustCrateDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustCrateDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustCrateDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective"><code class="docutils literal notranslate"><span class="pre">RustDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective.add_target_and_index"><code class="docutils literal notranslate"><span class="pre">RustDirective.add_target_and_index()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective.get_directives"><code class="docutils literal notranslate"><span class="pre">RustDirective.get_directives()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective.handle_signature"><code class="docutils literal notranslate"><span class="pre">RustDirective.handle_signature()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective.option_spec"><code class="docutils literal notranslate"><span class="pre">RustDirective.option_spec</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustEnumDirective"><code class="docutils literal notranslate"><span class="pre">RustEnumDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustEnumDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustEnumDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustExecutableDirective"><code class="docutils literal notranslate"><span class="pre">RustExecutableDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustExecutableDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustExecutableDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustFunctionDirective"><code class="docutils literal notranslate"><span class="pre">RustFunctionDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustFunctionDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustFunctionDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustImplDirective"><code class="docutils literal notranslate"><span class="pre">RustImplDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustImplDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustImplDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustMacroDirective"><code class="docutils literal notranslate"><span class="pre">RustMacroDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustMacroDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustMacroDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustModuleDirective"><code class="docutils literal notranslate"><span class="pre">RustModuleDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustModuleDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustModuleDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustStructDirective"><code class="docutils literal notranslate"><span class="pre">RustStructDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustStructDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustStructDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustTraitDirective"><code class="docutils literal notranslate"><span class="pre">RustTraitDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustTraitDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustTraitDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustTypeDirective"><code class="docutils literal notranslate"><span class="pre">RustTypeDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustTypeDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustTypeDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustUseDirective"><code class="docutils literal notranslate"><span class="pre">RustUseDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustUseDirective.has_content"><code class="docutils literal notranslate"><span class="pre">RustUseDirective.has_content</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustUseDirective.option_spec"><code class="docutils literal notranslate"><span class="pre">RustUseDirective.option_spec</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustUseDirective.run"><code class="docutils literal notranslate"><span class="pre">RustUseDirective.run()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustUseDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustUseDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustVariableDirective"><code class="docutils literal notranslate"><span class="pre">RustVariableDirective</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#sphinxcontrib_rust.directives.RustVariableDirective.rust_item_type"><code class="docutils literal notranslate"><span class="pre">RustVariableDirective.rust_item_type</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.domain.html">sphinxcontrib_rust.domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.index.html">sphinxcontrib_rust.index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.items.html">sphinxcontrib_rust.items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.nodes.html">sphinxcontrib_rust.nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sphinxcontrib_rust.rust_link.html">sphinxcontrib_rust.rust_link</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sphinxcontrib-rust</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../sphinx-extension.html">sphinxcontrib_rust documentation</a></li>
+          <li class="breadcrumb-item"><a href="sphinxcontrib_rust.html">sphinxcontrib_rust</a></li>
+      <li class="breadcrumb-item active">sphinxcontrib_rust.directives</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-sphinxcontrib_rust.directives">
+<span id="sphinxcontrib-rust-directives"></span><h1>sphinxcontrib_rust.directives<a class="headerlink" href="#module-sphinxcontrib_rust.directives" title="Link to this heading"></a></h1>
+<p>Module for all the directive classes of the Rust domain</p>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustCrateDirective" title="sphinxcontrib_rust.directives.RustCrateDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustCrateDirective</span></code></a>(name, arguments, options, ...)</p></td>
+<td><p>Directive for handling crate documentation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective" title="sphinxcontrib_rust.directives.RustDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustDirective</span></code></a>(name, arguments, options, ...)</p></td>
+<td><p>Base class for Rust directives.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustEnumDirective" title="sphinxcontrib_rust.directives.RustEnumDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustEnumDirective</span></code></a>(name, arguments, options, ...)</p></td>
+<td><p>Directive for handling enum documentation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustExecutableDirective" title="sphinxcontrib_rust.directives.RustExecutableDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustExecutableDirective</span></code></a>(name, arguments, ...)</p></td>
+<td><p>Directive for handling executable documentation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustFunctionDirective" title="sphinxcontrib_rust.directives.RustFunctionDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustFunctionDirective</span></code></a>(name, arguments, ...)</p></td>
+<td><p>Directive for handling function documentation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustImplDirective" title="sphinxcontrib_rust.directives.RustImplDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustImplDirective</span></code></a>(name, arguments, options, ...)</p></td>
+<td><p>Directive for handling impl documentation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustMacroDirective" title="sphinxcontrib_rust.directives.RustMacroDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustMacroDirective</span></code></a>(name, arguments, options, ...)</p></td>
+<td><p>Directive for handling macro documentation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustModuleDirective" title="sphinxcontrib_rust.directives.RustModuleDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustModuleDirective</span></code></a>(name, arguments, ...)</p></td>
+<td><p>Directive for handling module documentation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustStructDirective" title="sphinxcontrib_rust.directives.RustStructDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustStructDirective</span></code></a>(name, arguments, ...)</p></td>
+<td><p>Directive for handling struct documentation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustTraitDirective" title="sphinxcontrib_rust.directives.RustTraitDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustTraitDirective</span></code></a>(name, arguments, options, ...)</p></td>
+<td><p>Directive for handling trait documentation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustTypeDirective" title="sphinxcontrib_rust.directives.RustTypeDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustTypeDirective</span></code></a>(name, arguments, options, ...)</p></td>
+<td><p>Directive for handling type documentation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustUseDirective" title="sphinxcontrib_rust.directives.RustUseDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustUseDirective</span></code></a>(name, arguments, options, ...)</p></td>
+<td><p>Directive for handling the use statements in the file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sphinxcontrib_rust.directives.RustVariableDirective" title="sphinxcontrib_rust.directives.RustVariableDirective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RustVariableDirective</span></code></a>(name, arguments, ...)</p></td>
+<td><p>Directive for handling type documentation</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustCrateDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustCrateDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustCrateDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling crate documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustCrateDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustCrateDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustDirective" title="Link to this definition"></a></dt>
+<dd><p>Base class for Rust directives.</p>
+<p>This class implements most of the logic for the directives. For each directive,
+there is a subclass that overrides any directive specific behaviour.</p>
+<p>The input for the directives is generated with the Rust code in
+<a class="reference internal" href="../../crates/sphinx-rustdocgen/directives.html#sphinx_rustdocgen-directives" title="sphinx_rustdocgen::directives"><code class="xref rust rust-module docutils literal notranslate"><span class="pre">sphinx_rustdocgen::directives</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustDirective.add_target_and_index">
+<span class="sig-name descname"><span class="pre">add_target_and_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">desc_signature</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustDirective.add_target_and_index" title="Link to this definition"></a></dt>
+<dd><p>Adds the item to the domain and generates the index for it.</p>
+<p>This is called after <a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective.handle_signature" title="sphinxcontrib_rust.directives.RustDirective.handle_signature"><code class="xref py py-func docutils literal notranslate"><span class="pre">handle_signature()</span></code></a> has executed.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the item, which is the return value from
+<a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective.handle_signature" title="sphinxcontrib_rust.directives.RustDirective.handle_signature"><code class="xref py py-func docutils literal notranslate"><span class="pre">handle_signature()</span></code></a>.</p>
+</dd>
+<dt class="field-even">sig<span class="colon">:</span></dt>
+<dd class="field-even"><p>The argument to the directive, which is the Rust path
+of the item set by the Rust doc generator.</p>
+</dd>
+<dt class="field-odd">signode<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The docutils node of the for item.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustDirective.get_directives">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_directives</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective" title="sphinxcontrib_rust.directives.RustDirective"><span class="pre">RustDirective</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustDirective.get_directives" title="Link to this definition"></a></dt>
+<dd><p>Get all the directives for the object types</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustDirective.handle_signature">
+<span class="sig-name descname"><span class="pre">handle_signature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">desc_signature</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ObjDescT</span></span></span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustDirective.handle_signature" title="Link to this definition"></a></dt>
+<dd><p>Handle the directive and generate its display signature.</p>
+<p>The display signature is what is displayed instead of the directive name and
+options in the generated output. The <code class="docutils literal notranslate"><span class="pre">:sig:</span></code> option of the directive is used
+to override the provided <code class="docutils literal notranslate"><span class="pre">sig</span></code> value. If the option is not set, the item type
+and the final component of the path are used.</p>
+<p>Raising <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> will put the <code class="docutils literal notranslate"><span class="pre">sig</span></code> value into a single node, which
+is what the super implementation does.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">sig<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The argument of the directive as set during doc generation, not the
+<code class="docutils literal notranslate"><span class="pre">:sig:</span></code> option. The Rust side of the code will put the full Rust path
+of the item as the argument.</p>
+</dd>
+<dt class="field-even">signode<span class="colon">:</span></dt>
+<dd class="field-even"><p>The docutils node for the item, to which the display signature nodes
+should be appended.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>The path for the object, which is a tuple of the Rust path components and
+defines the hierarchy of the object for indexing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustDirective.option_spec">
+<span class="sig-name descname"><span class="pre">option_spec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">OptionSpec</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'index':</span> <span class="pre">&lt;function</span> <span class="pre">RustDirective.&lt;lambda&gt;&gt;,</span> <span class="pre">'layout':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;,</span> <span class="pre">'toc':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;,</span> <span class="pre">'vis':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;}</span></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustDirective.option_spec" title="Link to this definition"></a></dt>
+<dd><p>Mapping of option names to validator functions.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">abstract</span></span><span class="w"> </span><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustEnumDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustEnumDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustEnumDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling enum documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustEnumDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustEnumDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustExecutableDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustExecutableDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustExecutableDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling executable documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustExecutableDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustExecutableDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustFunctionDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustFunctionDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustFunctionDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling function documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustFunctionDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustFunctionDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustImplDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustImplDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustImplDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling impl documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustImplDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustImplDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustMacroDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustMacroDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustMacroDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling macro documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustMacroDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustMacroDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustModuleDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustModuleDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustModuleDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling module documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustModuleDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustModuleDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustStructDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustStructDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustStructDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling struct documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustStructDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustStructDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustTraitDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustTraitDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustTraitDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling trait documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustTraitDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustTraitDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustTypeDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustTypeDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustTypeDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling type documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustTypeDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustTypeDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustUseDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustUseDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustUseDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling the use statements in the file.</p>
+<p>This is a meta-directive that does not add content. Instead, it adds the used names for
+the document to the domain data and any re-exports to the domain items.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This inherits from <a class="reference internal" href="#sphinxcontrib_rust.directives.RustDirective" title="sphinxcontrib_rust.directives.RustDirective"><code class="xref py py-class docutils literal notranslate"><span class="pre">RustDirective</span></code></a> only to make it easier to work with.
+It does not behave like other directives.</p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustUseDirective.has_content">
+<span class="sig-name descname"><span class="pre">has_content</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustUseDirective.has_content" title="Link to this definition"></a></dt>
+<dd><p>May the directive have content?</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustUseDirective.option_spec">
+<span class="sig-name descname"><span class="pre">option_spec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">OptionSpec</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'reexport':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;,</span> <span class="pre">'used_name':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged_required&gt;}</span></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustUseDirective.option_spec" title="Link to this definition"></a></dt>
+<dd><p>Mapping of option names to validator functions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustUseDirective.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustUseDirective.run" title="Link to this definition"></a></dt>
+<dd><p>Main directive entry function, called by docutils upon encountering the
+directive.</p>
+<p>This directive is meant to be quite easily subclassable, so it delegates
+to several additional methods.  What it does:</p>
+<ul class="simple">
+<li><p>find out if called as a domain-specific directive, set self.domain</p></li>
+<li><p>create a <cite>desc</cite> node to fit all description inside</p></li>
+<li><p>parse standard options, currently <cite>no-index</cite></p></li>
+<li><p>create an index node if needed as self.indexnode</p></li>
+<li><p>parse all given signatures (as returned by self.get_signatures())
+using self.handle_signature(), which should either return a name
+or raise ValueError</p></li>
+<li><p>add index entries using self.add_target_and_index()</p></li>
+<li><p>parse the content and handle doc fields in it</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustUseDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustUseDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustVariableDirective">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib_rust.directives.</span></span><span class="sig-name descname"><span class="pre">RustVariableDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_machine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinxcontrib_rust.directives.RustVariableDirective" title="Link to this definition"></a></dt>
+<dd><p>Directive for handling type documentation</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinxcontrib_rust.directives.RustVariableDirective.rust_item_type">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rust_item_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sphinxcontrib_rust.items.html#sphinxcontrib_rust.items.RustItemType" title="sphinxcontrib_rust.items.RustItemType"><span class="pre">RustItemType</span></a></em><a class="headerlink" href="#sphinxcontrib_rust.directives.RustVariableDirective.rust_item_type" title="Link to this definition"></a></dt>
+<dd><p>The Rust object type for the directive</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sphinxcontrib_rust.html" class="btn btn-neutral float-left" title="sphinxcontrib_rust" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sphinxcontrib_rust.domain.html" class="btn btn-neutral float-right" title="sphinxcontrib_rust.domain" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Munir Contractor.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

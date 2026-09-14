@@ -1,0 +1,12 @@
+sphinxcontrib\_rust.rust\_link
+==============================
+
+.. automodule:: sphinxcontrib_rust.rust_link
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      link
+   
