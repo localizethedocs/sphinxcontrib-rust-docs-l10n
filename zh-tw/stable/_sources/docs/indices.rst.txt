@@ -1,0 +1,18 @@
+================
+Rust items index
+================
+
+The extension produces an index of importable Rust items detected, and writes
+it as ``rust-items.html``. It can be referenced in the Sphinx build as
+``:ref:`rust_items``` from any document. The extension indexes all crates,
+enums, macros, modules, structs and traits, all types and variables that are
+at the top level of a module, and functions that are at the top level of a
+module. For enums, structs and traits, it also lists the variants, fields and
+items respectively as nested entries.
+
+The index is also useful for display in the sidebar but has to be incorporated
+in the CSS theme to achieve that. Refer to the docs of the CSS theme used for
+the Sphinx build on how to do that.
+
+The index of the ``sphinx-rustdocgen`` crate can be viewed at :ref:`rust-items`
+as an example.

@@ -1,0 +1,323 @@
+=====================
+``mod use_directive``
+=====================
+
+
+.. rust:module:: sphinx_rustdocgen::directives::use_directive
+   :index: 0
+   :vis: pvt
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::use_directive
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: std::collections::BTreeMap
+      :used_name: BTreeMap
+
+
+   .. rust:use:: syn
+      :used_name: syn
+
+
+   .. rust:use:: syn::ItemUse
+      :used_name: ItemUse
+
+
+   .. rust:use:: syn::UseTree
+      :used_name: UseTree
+
+
+   .. rust:use:: syn::Visibility
+      :used_name: Visibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility
+      :used_name: DirectiveVisibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::Directive
+      :used_name: Directive
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::MdDirective
+      :used_name: MdDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::ModuleDirective
+      :used_name: ModuleDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::RstDirective
+      :used_name: RstDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::extract_doc_from_attrs
+      :used_name: extract_doc_from_attrs
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdOption
+      :used_name: MdOption
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstOption
+      :used_name: RstOption
+
+
+   .. rubric:: Enums
+
+
+   .. rust:enum:: sphinx_rustdocgen::directives::use_directive::UseDirectiveOption
+      :index: 1
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"enum"},{"type":"space"},{"type":"name","value":"UseDirectiveOption"}]
+
+      Options for the use directive.
+
+      .. rust:struct:: sphinx_rustdocgen::directives::use_directive::UseDirectiveOption::UsedName
+         :index: 2
+         :vis: pvt
+         :toc: UsedName
+         :layout: [{"type":"name","value":"UsedName"},{"type":"punctuation","value":"("},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::use_directive::UseDirectiveOption::Reexport
+         :index: 2
+         :vis: pvt
+         :toc: Reexport
+         :layout: [{"type":"name","value":"Reexport"},{"type":"punctuation","value":"("},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":")"}]
+
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::use_directive::UseDirectiveOption::RstOption
+         :index: -1
+         :vis: pvt
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"RstOption","target":"RstOption"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"UseDirectiveOption","target":"UseDirectiveOption"}]
+         :toc: impl RstOption for UseDirectiveOption
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirectiveOption::RstOption::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"indent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::use_directive::UseDirectiveOption::MdOption
+         :index: -1
+         :vis: pvt
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MdOption","target":"MdOption"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"UseDirectiveOption","target":"UseDirectiveOption"}]
+         :toc: impl MdOption for UseDirectiveOption
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirectiveOption::MdOption::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+   .. rubric:: Structs and Unions
+
+
+   .. rust:struct:: sphinx_rustdocgen::directives::use_directive::UseDirective
+      :index: 1
+      :vis: pub
+      :toc: struct UseDirective
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"UseDirective"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::use_directive::UseDirective::paths
+         :index: 2
+         :vis: crate
+         :toc: paths
+         :layout: [{"type":"name","value":"paths"},{"type":"punctuation","value":": "},{"type":"link","value":"BTreeMap","target":"BTreeMap"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":", "},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::use_directive::UseDirective::reexport
+         :index: 2
+         :vis: crate
+         :toc: reexport
+         :layout: [{"type":"name","value":"reexport"},{"type":"punctuation","value":": "},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::use_directive::UseDirective::content
+         :index: 2
+         :vis: crate
+         :toc: content
+         :layout: [{"type":"name","value":"content"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::use_directive::UseDirective::directive_visibility
+         :index: 2
+         :vis: pvt
+         :toc: directive_visibility
+         :layout: [{"type":"name","value":"directive_visibility"},{"type":"punctuation","value":": "},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::use_directive::UseDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"UseDirective","target":"UseDirective"}]
+         :toc: impl UseDirective
+
+
+         .. rubric:: Variables
+
+
+         .. rust:variable:: sphinx_rustdocgen::directives::use_directive::UseDirective::DIRECTIVE_NAME
+            :index: -1
+            :vis: pvt
+            :toc: const DIRECTIVE_NAME
+            :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"DIRECTIVE_NAME"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"}]
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::contains
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"contains"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"item_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"bool","target":"bool"}]
+
+            Check whether the directive contains the given path.
+            
+            This returns true if the ``item_path`` is one of the paths in the
+            directive.
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::directive_visibility
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"directive_visibility"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+
+            Return the visibility of this directive.
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::find
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"find"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"ident"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+            Find the path for the given ident within the use directive, if any.
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::for_path
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"for_path"},{"type":"punctuation","value":"("},{"type":"name","value":"path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"target"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Self","target":"Self"}]
+
+            Create a use directive for a path with the provided target.
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::for_use_paths
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"for_use_paths"},{"type":"punctuation","value":"("},{"type":"name","value":"paths"},{"type":"punctuation","value":": "},{"type":"link","value":"BTreeMap","target":"BTreeMap"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":", "},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Self","target":"Self"}]
+
+            Create a use directive using the provided used name to path map.
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::from_item
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_item"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ItemUse","target":"ItemUse"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Self","target":"Self"}]
+
+            Create a use directive from the AST item parsed by syn.
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::from_item_as_directive
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_item_as_directive"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ItemUse","target":"ItemUse"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+
+            Create a use directive and wrap it within the
+            :rust:struct:`Directive::UseDirective` enum variant.
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::inline
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"inline"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"item_name"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"("},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":", "},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":")"},{"type":"punctuation","value":">"}]
+
+            Inlines an item and returns it as a new ``(used_name, path)`` tuple.
+            
+            The new path is ``{reexport}::{used_name}`` of the old path. The used
+            name for the new path is the same as that of the old path.
+            
+            Returns:
+                The function returns None if the directive is not a re-export or
+                a path matching the item was not found.
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::resolve_relative_paths
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"resolve_relative_paths"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"modules"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"ModuleDirective","target":"ModuleDirective"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"}]
+
+            Resolve any relative paths using the list of modules provided.
+            
+            The method checks if any of the use paths are relative paths by
+            comparing the first segment with the module's ident. If it matches,
+            the path is updated to be an absolute path starting with the crate.
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::use_directive::UseDirective::RstDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"RstDirective","target":"RstDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"UseDirective","target":"UseDirective"}]
+         :toc: impl RstDirective for UseDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::RstDirective::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"punctuation","value":"_"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::use_directive::UseDirective::MdDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MdDirective","target":"MdDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"UseDirective","target":"UseDirective"}]
+         :toc: impl MdDirective for UseDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::use_directive::UseDirective::MdDirective::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"punctuation","value":"_"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+   .. rust:struct:: sphinx_rustdocgen::directives::use_directive::UsePathBuilder
+      :index: 1
+      :vis: crate
+      :toc: struct UsePathBuilder
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"UsePathBuilder"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::use_directive::UsePathBuilder::path
+         :index: 2
+         :vis: crate
+         :toc: path
+         :layout: [{"type":"name","value":"path"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::use_directive::UsePathBuilder::used_name
+         :index: 2
+         :vis: crate
+         :toc: used_name
+         :layout: [{"type":"name","value":"used_name"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+

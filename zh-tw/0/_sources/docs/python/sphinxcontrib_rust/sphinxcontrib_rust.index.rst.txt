@@ -1,0 +1,12 @@
+sphinxcontrib\_rust.index
+=========================
+
+.. automodule:: sphinxcontrib_rust.index
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      RustIndex
+   

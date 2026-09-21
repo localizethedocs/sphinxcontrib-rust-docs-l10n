@@ -1,0 +1,585 @@
+==================
+``mod directives``
+==================
+
+
+.. rust:module:: sphinx_rustdocgen::directives
+   :index: 0
+   :vis: crate
+
+   Module for the various Sphinx directives for the Rust domain.
+   
+   The module primarily provides the :rust:enum:`Directive`, which implements
+   the various directives using directive specific structs. The enum and all
+   directive specific structs implement both
+   :rust:trait:`~sphinx_rustdocgen::formats::RstContent` and
+   :rust:trait:`~sphinx_rustdocgen::formats::MdContent` traits.
+   It also provides the :rust:enum:`DirectiveOption` enum, which
+   implements the various options of the directive.
+   
+   The output of the directives is parsed by the
+   :py:class:`sphinxcontrib_rust.directives.RustDirective` within the Python
+   extension.
+
+   .. rubric:: Modules
+   .. toctree::
+      :maxdepth: 1
+
+      directives/crate_directive
+      directives/directive_options
+      directives/enum_directive
+      directives/executable_directive
+      directives/function_directive
+      directives/impl_directive
+      directives/macro_directive
+      directives/module_directive
+      directives/struct_directive
+      directives/trait_directive
+      directives/type_directive
+      directives/use_directive
+      directives/variable_directive
+
+
+   .. rust:use:: sphinx_rustdocgen::directives
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: syn::Attribute
+      :used_name: Attribute
+
+
+   .. rust:use:: syn::Expr
+      :used_name: Expr
+
+
+   .. rust:use:: syn::ForeignItem
+      :used_name: ForeignItem
+
+
+   .. rust:use:: syn::ImplItem
+      :used_name: ImplItem
+
+
+   .. rust:use:: syn::Item
+      :used_name: Item
+
+
+   .. rust:use:: syn::Lit
+      :used_name: Lit
+
+
+   .. rust:use:: syn::TraitItem
+      :used_name: TraitItem
+
+
+   .. rust:use:: syn::Visibility
+      :used_name: Visibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::crate_directive::CrateDirective
+      :used_name: CrateDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility
+      :used_name: DirectiveVisibility
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::enum_directive::EnumDirective
+      :used_name: EnumDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::executable_directive::ExecutableDirective
+      :used_name: ExecutableDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::function_directive::FunctionDirective
+      :used_name: FunctionDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::impl_directive::ImplDirective
+      :used_name: ImplDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::macro_directive::MacroDirective
+      :used_name: MacroDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::module_directive::ModuleDirective
+      :used_name: ModuleDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::struct_directive::StructDirective
+      :used_name: StructDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::trait_directive::TraitDirective
+      :used_name: TraitDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::type_directive::TypeDirective
+      :used_name: TypeDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::use_directive::UseDirective
+      :used_name: UseDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::variable_directive::VariableDirective
+      :used_name: VariableDirective
+      :reexport: sphinx_rustdocgen::directives
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdDirective
+      :used_name: MdDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstDirective
+      :used_name: RstDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::utils::SourceCodeFile
+      :used_name: SourceCodeFile
+
+   .. rubric:: Re-exports
+
+   * :rust:any:`sphinx_rustdocgen::directives::crate_directive::CrateDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::directive_options::DirectiveVisibility`
+   * :rust:any:`sphinx_rustdocgen::directives::enum_directive::EnumDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::executable_directive::ExecutableDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::function_directive::FunctionDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::impl_directive::ImplDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::macro_directive::MacroDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::module_directive::ModuleDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::struct_directive::StructDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::trait_directive::TraitDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::type_directive::TypeDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::use_directive::UseDirective`
+   * :rust:any:`sphinx_rustdocgen::directives::variable_directive::VariableDirective`
+
+   .. rubric:: Types
+
+
+   .. rust:type:: sphinx_rustdocgen::directives::ItemSections
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"type"},{"type":"space"},{"type":"name","value":"ItemSections"}]
+
+      Named type for the output of :rust:fn:`order_items`.
+
+   .. rubric:: Macros
+
+
+   .. rust:macro:: sphinx_rustdocgen::directives::push_sorted
+      :index: 0
+      :vis: pvt
+
+      Macro to sort and push items within a vec.
+
+   .. rubric:: Functions
+
+
+   .. rust:function:: sphinx_rustdocgen::directives::extract_doc_from_attrs
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"extract_doc_from_attrs"},{"type":"punctuation","value":"("},{"type":"name","value":"attrs"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Attribute","target":"Attribute"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+      Extract the docstring from the attrs of an item.
+      
+      Args:
+          :attrs: ``syn::attr::Attribute`` vec.
+      
+      Returns:
+          A vec of strings, where each string is a line of a documentation
+          comment. If there are no documentation comments, an empty vec is
+          returned.
+
+   .. rust:function:: sphinx_rustdocgen::directives::order_items
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"order_items"},{"type":"punctuation","value":"("},{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"ItemSections","target":"ItemSections"}]
+
+      Order the items for documentation
+      
+      The items are ordered using the following rules:
+      
+      1. If the item is a module without content, it is removed and a link to the
+         module is added to the ``toctree``. If there are no such module, the
+         ``toctree`` isn't added.
+      2. Each directive is then separated by type and ordered alphabetically
+         except for ``impl`` directives.
+      3. All ``impl`` blocks associated with a struct or enum are ordered after
+         it, starting with the associated ``impl`` block, followed by trait
+         ``impl`` blocks in alphabetical order.
+      
+      It uses the :rust:any:`push_sorted!()` macro.
+      
+      Returns:
+         A vec of section names with their directives.
+
+   .. rubric:: Enums
+
+
+   .. rust:enum:: sphinx_rustdocgen::directives::Directive
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"enum"},{"type":"space"},{"type":"name","value":"Directive"}]
+
+      The Sphinx directives that are implemented by the Rust domain.
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Crate
+         :index: 2
+         :vis: crate
+         :toc: Crate
+         :layout: [{"type":"name","value":"Crate"},{"type":"punctuation","value":"("},{"type":"link","value":"CrateDirective","target":"CrateDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Enum
+         :index: 2
+         :vis: crate
+         :toc: Enum
+         :layout: [{"type":"name","value":"Enum"},{"type":"punctuation","value":"("},{"type":"link","value":"EnumDirective","target":"EnumDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Executable
+         :index: 2
+         :vis: crate
+         :toc: Executable
+         :layout: [{"type":"name","value":"Executable"},{"type":"punctuation","value":"("},{"type":"link","value":"ExecutableDirective","target":"ExecutableDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Function
+         :index: 2
+         :vis: crate
+         :toc: Function
+         :layout: [{"type":"name","value":"Function"},{"type":"punctuation","value":"("},{"type":"link","value":"FunctionDirective","target":"FunctionDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Impl
+         :index: 2
+         :vis: crate
+         :toc: Impl
+         :layout: [{"type":"name","value":"Impl"},{"type":"punctuation","value":"("},{"type":"link","value":"ImplDirective","target":"ImplDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Macro
+         :index: 2
+         :vis: crate
+         :toc: Macro
+         :layout: [{"type":"name","value":"Macro"},{"type":"punctuation","value":"("},{"type":"link","value":"MacroDirective","target":"MacroDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Module
+         :index: 2
+         :vis: crate
+         :toc: Module
+         :layout: [{"type":"name","value":"Module"},{"type":"punctuation","value":"("},{"type":"link","value":"ModuleDirective","target":"ModuleDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Struct
+         :index: 2
+         :vis: crate
+         :toc: Struct
+         :layout: [{"type":"name","value":"Struct"},{"type":"punctuation","value":"("},{"type":"link","value":"StructDirective","target":"StructDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Trait
+         :index: 2
+         :vis: crate
+         :toc: Trait
+         :layout: [{"type":"name","value":"Trait"},{"type":"punctuation","value":"("},{"type":"link","value":"TraitDirective","target":"TraitDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Type
+         :index: 2
+         :vis: crate
+         :toc: Type
+         :layout: [{"type":"name","value":"Type"},{"type":"punctuation","value":"("},{"type":"link","value":"TypeDirective","target":"TypeDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Use
+         :index: 2
+         :vis: crate
+         :toc: Use
+         :layout: [{"type":"name","value":"Use"},{"type":"punctuation","value":"("},{"type":"link","value":"UseDirective","target":"UseDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::directives::Directive::Variable
+         :index: 2
+         :vis: crate
+         :toc: Variable
+         :layout: [{"type":"name","value":"Variable"},{"type":"punctuation","value":"("},{"type":"link","value":"VariableDirective","target":"VariableDirective"},{"type":"punctuation","value":")"}]
+
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::Directive
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+         :toc: impl Directive
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::add_content
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"add_content"},{"type":"punctuation","value":"<"},{"type":"name","value":"I"},{"type":"punctuation","value":": "},{"type":"link","value":"IntoIterator","target":"IntoIterator"},{"type":"punctuation","value":"<"},{"type":"name","value":"Item"},{"type":"punctuation","value":" = "},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"content"},{"type":"punctuation","value":": "},{"type":"link","value":"I","target":"I"},{"type":"punctuation","value":")"}]
+
+            Add the content to the directive.
+            
+            The content is appended to any existing content.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::change_parent
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"change_parent"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"new_parent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"}]
+
+            Change the parent of the directive.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::directive_visibility
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"directive_visibility"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+
+            Get the visibility of the directive.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::from_extern_item
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_extern_item"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ForeignItem","target":"ForeignItem"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+            Create the appropriate directive from the provided ``syn::ForeignItem``
+            
+            Args:
+                :parent_path: The path of the module which defines the items.
+                :item: The foreign item to parse into a directive.
+            
+            Returns:
+                An option a :rust:enum:`Directive` variant.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::from_extern_items
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_extern_items"},{"type":"punctuation","value":"<"},{"type":"lifetime","value":"'a"},{"type":"punctuation","value":", "},{"type":"name","value":"T"},{"type":"punctuation","value":": "},{"type":"link","value":"Iterator","target":"Iterator"},{"type":"punctuation","value":"<"},{"type":"name","value":"Item"},{"type":"punctuation","value":" = "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'a"},{"type":"space"},{"type":"link","value":"ForeignItem","target":"ForeignItem"},{"type":"punctuation","value":">"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"link","value":"T","target":"T"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+            Create the appropriate directives from the provided ``syn::ForeignItem``
+            iterator.
+            
+            Args:
+                :parent_path: The path of the trait which defines the items.
+                :items: The foreign items to parse into a directive.
+            
+            Returns:
+                An vec of :rust:enum:`Directive` variants.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::from_impl_item
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_impl_item"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ImplItem","target":"ImplItem"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+            Create the appropriate directive from the provided ``syn::ImplItem``
+            
+            Args:
+                :parent_path: The path of the impl block which defines the item.
+                :item: The impl item to parse into a directive.
+            
+            Returns:
+                An option a :rust:enum:`Directive` variant.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::from_impl_items
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_impl_items"},{"type":"punctuation","value":"<"},{"type":"lifetime","value":"'a"},{"type":"punctuation","value":", "},{"type":"name","value":"T"},{"type":"punctuation","value":": "},{"type":"link","value":"Iterator","target":"Iterator"},{"type":"punctuation","value":"<"},{"type":"name","value":"Item"},{"type":"punctuation","value":" = "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'a"},{"type":"space"},{"type":"link","value":"ImplItem","target":"ImplItem"},{"type":"punctuation","value":">"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"link","value":"T","target":"T"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+            Create the appropriate directives from the provided ``syn::ImplItem``
+            iterator.
+            
+            Args:
+                :parent_path: The path of the impl block which defines the items.
+                :items: The impl items to parse into a directive.
+            
+            Returns:
+                An vec of :rust:enum:`Directive` variants.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::from_item
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_item"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Item","target":"Item"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+            Create the appropriate directive from the provided ``syn::Item``
+            
+            Args:
+                :parent_path: The parent path of the item.
+                :item: The item to parse into a directive.
+            
+            Returns:
+                An option a :rust:enum:`Directive` variant.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::from_trait_item
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_trait_item"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"TraitItem","target":"TraitItem"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+            Create the appropriate directive from the provided ``syn::TraitItem``
+            
+            Args:
+                :parent_path: The path of the trait which defines the items.
+                :item: The trait item to parse into a directive.
+            
+            Returns:
+                An option a :rust:enum:`Directive` variant.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::from_trait_items
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_trait_items"},{"type":"punctuation","value":"<"},{"type":"lifetime","value":"'a"},{"type":"punctuation","value":", "},{"type":"name","value":"T"},{"type":"punctuation","value":": "},{"type":"link","value":"Iterator","target":"Iterator"},{"type":"punctuation","value":"<"},{"type":"name","value":"Item"},{"type":"punctuation","value":" = "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'a"},{"type":"space"},{"type":"link","value":"TraitItem","target":"TraitItem"},{"type":"punctuation","value":">"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"link","value":"T","target":"T"},{"type":"punctuation","value":", "},{"type":"name","value":"inherited_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Visibility","target":"Visibility"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+            Create the appropriate directives from the provided ``syn::TraitItem``
+            iterator.
+            
+            Args:
+                :parent_path: The path of the module which defines the items.
+                :items: The trait items to parse into a directive.
+            
+            Returns:
+                An vec of :rust:enum:`Directive` variants.
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::name
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"name"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"}]
+
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::Directive::RstDirective
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"RstDirective","target":"RstDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+         :toc: impl RstDirective for Directive
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::RstDirective::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::Directive::MdDirective
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MdDirective","target":"MdDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"Directive","target":"Directive"}]
+         :toc: impl MdDirective for Directive
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::MdDirective::fence_size
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"fence_size"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"usize","target":"usize"}]
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::Directive::MdDirective::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+   .. rubric:: Structs and Unions
+
+
+   .. rust:struct:: sphinx_rustdocgen::directives::FileDirectives
+      :index: 1
+      :vis: crate
+      :toc: struct FileDirectives
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"FileDirectives"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::FileDirectives::modules
+         :index: 2
+         :vis: crate
+         :toc: modules
+         :layout: [{"type":"name","value":"modules"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"ModuleDirective","target":"ModuleDirective"},{"type":"punctuation","value":">"}]
+
+         The directives for the modules defined in the file.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::FileDirectives::impls
+         :index: 2
+         :vis: crate
+         :toc: impls
+         :layout: [{"type":"name","value":"impls"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"ImplDirective","target":"ImplDirective"},{"type":"punctuation","value":">"}]
+
+         The directives for the impls defined in the file.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::FileDirectives::uses
+         :index: 2
+         :vis: crate
+         :toc: uses
+         :layout: [{"type":"name","value":"uses"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"UseDirective","target":"UseDirective"},{"type":"punctuation","value":">"}]
+
+         The directives for the use statements in the file.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::FileDirectives::items
+         :index: 2
+         :vis: crate
+         :toc: items
+         :layout: [{"type":"name","value":"items"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+         The directives for all other items in the file.
+         This will never contain a module, impl or use directive.
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::FileDirectives
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"FileDirectives","target":"FileDirectives"}]
+         :toc: impl FileDirectives
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::FileDirectives::claim_impls
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"claim_impls"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"parent_name"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"impls"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"ImplDirective","target":"ImplDirective"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"ImplDirective","target":"ImplDirective"},{"type":"punctuation","value":">"}]
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::FileDirectives::from_ast_items
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_ast_items"},{"type":"punctuation","value":"("},{"type":"name","value":"ast_items"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Item","target":"Item"},{"type":"punctuation","value":">"},{"type":"punctuation","value":", "},{"type":"name","value":"module_parent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"SourceCodeFile","target":"SourceCodeFile"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Self","target":"Self"}]
+
+            Create new file directives from the AST of a file.
+            
+            Args:
+                :ast_items: A list of items parsed by syn.
+                :module_parent: The parent source code file to find
+                   modules under.

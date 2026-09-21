@@ -1,0 +1,191 @@
+========================
+Rust specific directives
+========================
+
+.. note::
+
+   Understanding this is not required to use the tool. Most things can be achieved with :doc:`including` and
+   :doc:`roles`. This is an internal interface and there is no guarantee of stability.
+
+The extension adds the directives listed here, that are used by the :rust:exe:`sphinx-rustdocgen` in its output.
+All directives, except :rst:dir:`rust:use`, can have content. Directives can be nested under each other for structuring
+the documentation. See the documentation for the individual directives, if defining them manually in a document.
+However, that is not a recommended use and the directives are designed for programmatic creation and manipulation.
+
+All directives, except :rst:dir:`rust:use`, take the following options:
+
+:index: (Required) A integer that indicates the type of the index.
+        See :py:class:`sphinxcontrib_rust.items.SphinxIndexEntryType` or
+        :rust:enum:`sphinx_rustdocgen::directives::IndexEntryType` for values.
+:vis: (Required) The visibility of the directive, ``pub``, ``crate`` or ``pvt``.
+:layout: (Optional) A JSON list of :py:class:`sphinxcontrib_rust.nodes.Node` objects.
+         Currently, the JSON must be entirely on one line. If not provided, the
+         directives signature will be rendered as the item type in a keyword node
+         and the last segment of the directive item's path as the name.
+:toc: (Optional) The signature of the directive to display in the ``toctree``.
+      By default, this is the item type and the identifier of the item.
+
+.. rst:directive:: rust:crate
+
+   The ``.. rust:crate:: <crate_name>`` directive documents the crate itself, using the documentation from the
+   ``lib.rs`` file. ::
+
+     .. rust:crate:: <my_crate>
+
+        This is my awesome crate.
+
+        .. rust:module:: <my_crate>::<some_module>
+     ...
+
+.. rst:directive:: rust:enum
+
+   The ``.. rust:enum:: <enum_path>`` directive documents an enum. To document individual variants, use the ``struct``
+   directive and nest it under the ``enum`` directive. ::
+
+     .. rust:enum:: <my_crate>::<some_module>::<my_enum>
+
+        Enum docstring here
+
+        .. rust:struct:: <my_crate>::<some_module>::<my_enum>::<variant0>
+     ...
+
+.. rst:directive:: rust:executable
+
+   The ``.. rust:executable:: <executable_name>`` directive documents an executable provided by the crate. Note that the
+   target here is the name of the generated executable, and not a Rust path to the executable. Items within the
+   executable can be referenced with the executable name as the prefix instead of the crate name. ::
+
+     .. rust:executable:: <my-crate>
+
+        This is my awesome crate's executable.
+
+        .. rust:module:: <my-crate>::<some_module>
+     ...
+
+.. rst:directive:: rust:function
+
+   The ``.. rust:function:: <fn_path>`` directive documents a function. The function may be an associated function of
+   a struct/enum, or part of a trait impl of a struct.
+
+   In such cases, the path to the function is ``<module_path>::<struct_ident>::<fn_ident>`` or
+   ``<module_path>::<struct_ident>::<trait_ident>::<fn_ident>``. The ``module_path`` must be the path of the module in
+   which the struct or the enum is defined, and not where the impl is defined.
+
+   The directive can also be used for a function declaration within an ``extern "C"`` block. In this case, the function
+   is nested directly under the module and the reference path should be ``<module_path>::<fn_ident>``. ::
+
+     .. rust::module:: <my_crate>::<some_module>
+        .. rust:function:: <my_crate>::<some_module>::<func>
+
+           Function docstring here.
+
+     .. rust:struct:: <my_crate>::<some_module>::<struct>
+        .. rust:impl:: <my_crate>::<some_module>::<struct>
+           .. rust:function:: <my_crate>::<some_module>::<struct>::<func>
+
+              Function docstring here
+
+        .. rust:impl:: <my_crate>::<some_module>::<struct>::<trait>
+           .. rust:function:: <my_crate>::<some_module>::<struct>::<trait>::<trait_func>
+
+.. rst:directive:: rust:impl
+
+   The ``.. rust:impl:: <impl_path>`` directive documents an impl block. For inherent impl blocks, the path is the
+   path to the ``Self`` type of the impl block (i.e. the struct or enum). For trait impl blocks, the path is the path
+   to the ``Self`` type, followed by the trait name. This also applies to trait impls on generics, where the ``Self``
+   type is the generic used (``T``, ``Vec<T>``, etc.).
+
+   If manually writing the documentation, it is best to nest impl blocks under the struct/enum's directive,
+   with the impl block of the struct/enum first, followed by various trait impls of the struct/enum.
+
+.. rst:directive:: rust:macro
+
+   The ``.. rust:macro:: <marco_path>`` directive documents a macro. ::
+
+     .. rust:module:: <my_crate>::<some_module>
+        .. rust:macro:: <my_crate>::<some_module>::<macro>
+
+           Macro docstring.
+
+.. rst:directive:: rust:module
+
+   The ``.. rust:module:: <module_path>`` directive documents a macro. When the module contains other modules, they can
+   be nested under the parent module's directive or in a different file and linked to parent module using a ``toctree``.
+
+   The :doc:`sphinx-rustdocgen` automatically organizes the module directives based on where the module's items are
+   defined and places the links in the parent module.
+
+.. rst:directive:: rust:struct
+
+   The ``.. rust:struct:: <struct_path>`` directive documents a struct, a union or an enum variant. When documenting an
+   enum variant, the path is ``.. rust:struct::<enum_path>::<variant>``.
+
+   To document individual fields, use the :rst:dir:`rust:variable` directive and nest it under the struct directive. ::
+
+     .. rust:module:: <my_crate>::<some_module>
+        .. rust:struct:: <my_crate>::<some_module>::<struct>
+
+           Struct's docstring.
+
+           .. rust:variable:: <my_crate>::<some_module>::<struct>::<field0>
+
+              Field's docstring.
+
+.. rst:directive:: rust:trait
+
+   The ``.. rust:trait:: <trait_path>`` directive documents a trait. ::
+
+     .. rust:module:: <my_crate>::<some_module>
+        .. rust:trait:: <my_crate>::<some_module>::<trait>
+
+           Trait's docstring.
+
+           .. rust:type:: <my_crate>::<some_module>::<trait>::<assoc_type>
+
+              Type's docstring.
+
+           .. rust:function:: <my_crate>::<some_module>::<trait>::<trait_function>
+
+              Function's docstring.
+
+.. rst:directive:: rust:type
+
+   The ``.. rust:type:: <type_path>`` directive documents a type defined with ``type T = ...`` syntax, including types
+   within a trait or an extern block.
+
+.. rst:directive:: rust:use
+
+   The ``.. rust:use::`` directive is a meta-directive that has no content. The argument to the directive is a path that
+   is used in the file being processed.
+
+   The directive has a required option, ``used_name``, which indicates the name provided by the use path that can be
+   used in references in the same file. The value can be set to ``self`` to reference items defined within the document
+   itself.
+
+   It also has an optional option, ``reexport``, whose value is the path under which the name is reexported. This is
+   generally the path of the module in which the use statement appears.
+
+   This allows using shorter paths for Rust item references within the document itself. Note that this only applies to
+   references, and not directive names.
+
+   There can be multiple ``rust:use`` directives in a document. If there are conflicts, the last defined mapping is
+   picked. ::
+
+     .. rust:module:: <my_crate>::<some_module>
+
+        .. rust:use:: <my_crate>::<other_module>::<other_struct>
+           :used_name: <other_struct>
+
+        .. rust:use:: <my_crate>::<some_module>::<submodule>::<submodule_struct>
+           :used_name: <submodule_struct>
+           :reexport: <my_crate>::<some_module>
+
+.. rst:directive:: rust:variable
+
+   The ``.. rust:variable:: <variable_path>`` directive documents a variable or a field in a struct.
+
+   For fields, the path is the ``<struct_path>::<field_name>``. For tuple structs, the ``field_name`` is the index of
+   the field within the tuple.
+
+   The variable can also be a static variable declaration within an ``extern "C"`` block. In this case, the variable is
+   nested directly under the module and the reference path should be ``<module_path>::<type_ident>``.
