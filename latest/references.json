@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-19 11:58:53 -0700",
-      "hash" : "d44194b3de4ecf481fdce333a48ed196c478a9cc",
-      "title" : "Fix Cargo.lock for release"
+      "date" : "2026-07-19 13:14:08 -0700",
+      "hash" : "8cc53972d8c11381575ad740cd3f712c62033e27",
+      "title" : "Fix path for script"
     }
   },
   "type" : "branch",
