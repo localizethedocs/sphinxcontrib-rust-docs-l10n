@@ -1,0 +1,196 @@
+=============
+``mod utils``
+=============
+
+
+.. rust:module:: sphinx_rustdocgen::utils
+   :index: 0
+   :vis: pvt
+
+   Module for various utility classes and structs.
+
+   .. rust:use:: sphinx_rustdocgen::utils
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: std::fs::read_to_string
+      :used_name: read_to_string
+
+
+   .. rust:use:: std::path::Path
+      :used_name: Path
+
+
+   .. rust:use:: std::path::PathBuf
+      :used_name: PathBuf
+
+
+   .. rust:use:: cargo_toml::Manifest
+      :used_name: Manifest
+
+
+   .. rust:use:: cargo_toml::Product
+      :used_name: Product
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::DirectiveVisibility
+      :used_name: DirectiveVisibility
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::Format
+      :used_name: Format
+
+
+   .. rubric:: Functions
+
+
+   .. rust:function:: sphinx_rustdocgen::utils::check_for_manifest
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"check_for_manifest"},{"type":"punctuation","value":"("},{"type":"name","value":"paths"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"&"},{"type":"link","value":"Path","target":"Path"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"punctuation","value":"("},{"type":"link","value":"PathBuf","target":"PathBuf"},{"type":"punctuation","value":", "},{"type":"link","value":"CargoManifest","target":"CargoManifest"},{"type":"punctuation","value":")"},{"type":"punctuation","value":">"}]
+
+      Check the provided paths for the Cargo.toml file.
+      
+      Returns:
+          A Some value of the path that contained the Cargo manifest and the
+          associated manifest for the first path contains a ``Cargo.toml`` file.
+
+   .. rubric:: Traits
+
+
+   .. rust:trait:: sphinx_rustdocgen::utils::FileTopLevelDirective
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"trait"},{"type":"space"},{"type":"name","value":"FileTopLevelDirective"}]
+
+
+      .. rubric:: Functions
+
+
+      .. rust:function:: sphinx_rustdocgen::utils::FileTopLevelDirective::get_doc_file
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_doc_file"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"link","value":"Path","target":"Path"}]
+
+
+      .. rust:function:: sphinx_rustdocgen::utils::FileTopLevelDirective::get_text
+         :index: 2
+         :vis: crate
+         :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"format"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Format","target":"Format"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+   .. rubric:: Structs and Unions
+
+
+   .. rust:struct:: sphinx_rustdocgen::utils::CargoManifest
+      :index: 1
+      :vis: crate
+      :toc: struct CargoManifest
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"CargoManifest"},{"type":"punctuation","value":"("},{"type":"link","value":"Manifest","target":"Manifest"},{"type":"punctuation","value":")"}]
+
+      Newtype struct for the Cargo manifest from cargo_toml.
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::utils::CargoManifest
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"CargoManifest","target":"CargoManifest"}]
+         :toc: impl CargoManifest
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::utils::CargoManifest::executable_files
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"executable_files"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"crate_dir"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Path","target":"Path"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"SourceCodeFile","target":"SourceCodeFile"},{"type":"punctuation","value":">"}]
+
+            Get all the executable files in the crate.
+
+         .. rust:function:: sphinx_rustdocgen::utils::CargoManifest::lib_file
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"lib_file"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"crate_dir"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Path","target":"Path"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"SourceCodeFile","target":"SourceCodeFile"},{"type":"punctuation","value":">"}]
+
+            Get the library file for the crate, if any.
+
+   .. rust:struct:: sphinx_rustdocgen::utils::SourceCodeFile
+      :index: 1
+      :vis: crate
+      :toc: struct SourceCodeFile
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"SourceCodeFile"}]
+
+      Struct for the source code files encountered when scanning the crate.
+
+      .. rust:variable:: sphinx_rustdocgen::utils::SourceCodeFile::path
+         :index: 2
+         :vis: crate
+         :toc: path
+         :layout: [{"type":"name","value":"path"},{"type":"punctuation","value":": "},{"type":"link","value":"PathBuf","target":"PathBuf"}]
+
+         The path to the file.
+
+      .. rust:variable:: sphinx_rustdocgen::utils::SourceCodeFile::item
+         :index: 2
+         :vis: crate
+         :toc: item
+         :layout: [{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+         The name of the item in the file.
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::utils::SourceCodeFile
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"SourceCodeFile","target":"SourceCodeFile"}]
+         :toc: impl SourceCodeFile
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::utils::SourceCodeFile::ast
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"ast"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"syn","target":"syn"},{"type":"punctuation","value":"::"},{"type":"name","value":"File"}]
+
+            Generate and return the AST for the file.
+
+         .. rust:function:: sphinx_rustdocgen::utils::SourceCodeFile::crate_name
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"crate_name"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"}]
+
+            Returns the name of the crate from the item name.
+
+         .. rust:function:: sphinx_rustdocgen::utils::SourceCodeFile::from_product
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_product"},{"type":"punctuation","value":"("},{"type":"name","value":"prd"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Product","target":"Product"},{"type":"punctuation","value":", "},{"type":"name","value":"crate_dir"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Path","target":"Path"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Self","target":"Self"}]
+
+            Create an instance for the product in the crate.
+            
+            Args:
+                :prd: The product for which the file should be created.
+                :crate_dir: The path for the crate's directory, used to
+                    generate the absolute path for the file.
+
+         .. rust:function:: sphinx_rustdocgen::utils::SourceCodeFile::to_parent_directory
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"to_parent_directory"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Self","target":"Self"}]
+
+            Get the parent directory of the file for the item.
+            
+            The item of the returned struct is the same as this struct's item.
+            This is mainly used for ``mod.rs`` and ``lib.rs`` files, where the
+            directory name determines the item's name.

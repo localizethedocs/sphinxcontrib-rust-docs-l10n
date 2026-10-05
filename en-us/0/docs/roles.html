@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rust specific roles &mdash; sphinxcontrib-rust  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=76b4835e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/sphinxcontrib-rust-docs-l10n/docs/roles.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=ccd1e645"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rust specific directives" href="directives.html" />
+    <link rel="prev" title="Including the docs in the Sphinx build" href="including.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            sphinxcontrib-rust
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Detailed docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="including.html">Including the docs in the Sphinx build</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rust specific roles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#role-targets-within-docstrings">Role targets within docstrings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#markdown-docstrings-and-intra-doc-links">Markdown docstrings and intra-doc links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#restructuredtext-and-intra-doc-links">reStructuredText and intra-doc links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#provided-roles">Provided roles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-any"><code class="docutils literal notranslate"><span class="pre">:rust:any:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-crate"><code class="docutils literal notranslate"><span class="pre">:rust:crate:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-enum"><code class="docutils literal notranslate"><span class="pre">:rust:enum:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-exe"><code class="docutils literal notranslate"><span class="pre">:rust:exe:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-executable"><code class="docutils literal notranslate"><span class="pre">:rust:executable:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-fn"><code class="docutils literal notranslate"><span class="pre">:rust:fn:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-function"><code class="docutils literal notranslate"><span class="pre">:rust:function:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-impl"><code class="docutils literal notranslate"><span class="pre">:rust:impl:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-macro"><code class="docutils literal notranslate"><span class="pre">:rust:macro:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-module"><code class="docutils literal notranslate"><span class="pre">:rust:module:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-struct"><code class="docutils literal notranslate"><span class="pre">:rust:struct:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-trait"><code class="docutils literal notranslate"><span class="pre">:rust:trait:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-type"><code class="docutils literal notranslate"><span class="pre">:rust:type:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-variable"><code class="docutils literal notranslate"><span class="pre">:rust:variable:</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#role-rust-var"><code class="docutils literal notranslate"><span class="pre">:rust:var:</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="directives.html">Rust specific directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indices.html">Rust items index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility with rustdoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-rustdocgen.html">sphinx-rustdocgen documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-extension.html">sphinxcontrib_rust documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to sphinxcontrib-rust</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinxcontrib-rust</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Rust specific roles</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/docs/roles.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rust-specific-roles">
+<h1>Rust specific roles<a class="headerlink" href="#rust-specific-roles" title="Link to this heading"></a></h1>
+<p>The extension provides the following docutils roles, which can be referenced as <code class="docutils literal notranslate"><span class="pre">{&lt;role_name&gt;}`&lt;target&gt;`</span></code> in Markdown
+and as <code class="docutils literal notranslate"><span class="pre">:&lt;role_name&gt;:`target`</span></code> in reStructuredText.</p>
+<p>For all roles, the target is the double colon (<code class="docutils literal notranslate"><span class="pre">::</span></code>) delimited full Rust path to the item, similar to the path used
+when importing the item. This syntax is slightly extended to accommodate linking to trait impl blocks and fields within
+a struct.</p>
+<p>For all importable items like structs, enums, traits, etc., the target path is the Rust import path,
+either <code class="docutils literal notranslate"><span class="pre">&lt;crate_name&gt;::&lt;module_path&gt;::&lt;item&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;executable_name&gt;::&lt;module_path&gt;::&lt;item&gt;</span></code>.</p>
+<p>To link to an implementation of a trait by a struct or enum, the target is provided as
+<code class="docutils literal notranslate"><span class="pre">&lt;crate_name&gt;::&lt;module_path&gt;::&lt;item&gt;::&lt;trait_name&gt;::&lt;trait_item&gt;</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Adding a <code class="docutils literal notranslate"><span class="pre">~</span></code> before the path will display only the final portion of the path as the link text. So,
+<code class="docutils literal notranslate"><span class="pre">:rust:fn:`~crate::module::func`</span></code> will display only <code class="docutils literal notranslate"><span class="pre">func</span></code> as the link text.</p>
+</div>
+<section id="role-targets-within-docstrings">
+<h2>Role targets within docstrings<a class="headerlink" href="#role-targets-within-docstrings" title="Link to this heading"></a></h2>
+<p>When writing docstrings, targets can be specified relative to the module and its imports.</p>
+<p>Any items defined or imported in the same file with a <code class="docutils literal notranslate"><span class="pre">use</span></code> statement may be referenced directly.
+So, <code class="docutils literal notranslate"><span class="pre">:rust:struct:`Foo`</span></code> will link to a <code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">Foo</span></code> defined or imported within that file. This makes the
+references within the docstrings much shorter and the docstrings easier to read. The text for the link will be
+<code class="docutils literal notranslate"><span class="pre">Foo</span></code> in this case, without the need for a preceding <code class="docutils literal notranslate"><span class="pre">~</span></code>.</p>
+<p>The short reference can also be used for items that are members of or associated with an defined or imported item.
+For example, a variant of an enum defined within the file can be referenced as <code class="docutils literal notranslate"><span class="pre">:rust:struct:`&lt;enum&gt;::&lt;variant&gt;`</span></code>
+within the file itself. In this case, the link text will be <code class="docutils literal notranslate"><span class="pre">&lt;enum&gt;::&lt;variant&gt;</span></code>. A <code class="docutils literal notranslate"><span class="pre">~</span></code> can be added here to display
+only <code class="docutils literal notranslate"><span class="pre">&lt;variant&gt;</span></code> as the link text.</p>
+<p>Short references are not supported for items that are imported as part of a glob (<code class="docutils literal notranslate"><span class="pre">*</span></code>) import.</p>
+<section id="markdown-docstrings-and-intra-doc-links">
+<h3>Markdown docstrings and intra-doc links<a class="headerlink" href="#markdown-docstrings-and-intra-doc-links" title="Link to this heading"></a></h3>
+<p>The tool supports rustdoc’s <a class="reference internal" href="compatibility.html#intra-doc"><span class="std std-ref">Intra-doc links</span></a> and targets may be referenced in the markdown docstrings directly using
+<code class="docutils literal notranslate"><span class="pre">[&lt;target&gt;]</span></code> or <code class="docutils literal notranslate"><span class="pre">[`&lt;target&gt;`]</span></code>. This feature also works in docs besides docstrings, but the target must be an
+absolute path. Literal text enclosed within brackets must be escaped using backslash (e.g. <code class="docutils literal notranslate"><span class="pre">\[not</span> <span class="pre">a</span> <span class="pre">link]</span></code>) otherwise
+it will appear as a broken link.</p>
+</section>
+<section id="restructuredtext-and-intra-doc-links">
+<h3>reStructuredText and intra-doc links<a class="headerlink" href="#restructuredtext-and-intra-doc-links" title="Link to this heading"></a></h3>
+<p>Behaviour similar to Markdown <a class="reference internal" href="compatibility.html#intra-doc"><span class="std std-ref">Intra-doc links</span></a> links can be enabled by adding the <a class="reference internal" href="#role-rust-any" title="rust:any role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">rust:any</span></code></a> as the
+<code class="docutils literal notranslate"><span class="pre">default_role</span></code> in Sphinx’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. With this, items can be linked simply with <code class="docutils literal notranslate"><span class="pre">`&lt;target&gt;`</span></code> even outside the
+docstrings.</p>
+</section>
+</section>
+<section id="provided-roles">
+<h2>Provided roles<a class="headerlink" href="#provided-roles" title="Link to this heading"></a></h2>
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-any">
+<span class="sig-name descname"><span class="pre">:rust:any:</span></span><a class="headerlink" href="#role-rust-any" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:any:`&lt;target&gt;`</span></code> finds any item that matches the target and links to it. This is similar to Sphinx’s <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/referencing.html#role-any">any</a>
+role, but within the Rust domain. Use this role as the default role for the build to reference Rust items without
+any role specified.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-crate">
+<span class="sig-name descname"><span class="pre">:rust:crate:</span></span><a class="headerlink" href="#role-rust-crate" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:crate:`&lt;crate_name&gt;`</span></code> links to the crate’s documentation, within <code class="docutils literal notranslate"><span class="pre">lib.rs</span></code>.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-enum">
+<span class="sig-name descname"><span class="pre">:rust:enum:</span></span><a class="headerlink" href="#role-rust-enum" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">:rust:enum:`&lt;enum_path&gt;`</span></code> links to an enum’s documentation. Specific variant’s within the enum can be referenced</dt><dd><p>using the <code class="docutils literal notranslate"><span class="pre">struct</span></code> role.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-exe">
+<span class="sig-name descname"><span class="pre">:rust:exe:</span></span><a class="headerlink" href="#role-rust-exe" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:exe:`&lt;executable_name&gt;`</span></code> links to an executable’s documentation.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-executable">
+<span class="sig-name descname"><span class="pre">:rust:executable:</span></span><a class="headerlink" href="#role-rust-executable" title="Link to this definition"></a></dt>
+<dd><p>Alias for <a class="reference internal" href="#role-rust-exe" title="rust:exe role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">rust:exe</span></code></a>.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-fn">
+<span class="sig-name descname"><span class="pre">:rust:fn:</span></span><a class="headerlink" href="#role-rust-fn" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:fn:`&lt;fn_path&gt;`</span></code> links to a function’s documentation.</p>
+<p>To a reference an associated function, use the full path to the impl block where the function is defined, followed
+by the function’s name. See the <a class="reference internal" href="#role-rust-impl" title="rust:impl role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">rust:impl</span></code></a> documentation below for details.</p>
+<p>Note that the path <code class="docutils literal notranslate"><span class="pre">&lt;trait_path&gt;::&lt;fn&gt;</span></code> references the function declaration within the trait, whereas
+<code class="docutils literal notranslate"><span class="pre">&lt;struct_path&gt;::&lt;trait&gt;::&lt;fn&gt;</span></code> references the implementation of the trait’s function for the struct.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-function">
+<span class="sig-name descname"><span class="pre">:rust:function:</span></span><a class="headerlink" href="#role-rust-function" title="Link to this definition"></a></dt>
+<dd><p>Alias for <a class="reference internal" href="#role-rust-fn" title="rust:fn role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">rust:fn</span></code></a>.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-impl">
+<span class="sig-name descname"><span class="pre">:rust:impl:</span></span><a class="headerlink" href="#role-rust-impl" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:impl:`&lt;impl_path&gt;`</span></code> links to an impl block, either of the struct, or for a trait for a struct. The
+<code class="docutils literal notranslate"><span class="pre">&lt;impl_path&gt;</span></code> is provided as <code class="docutils literal notranslate"><span class="pre">&lt;crate_name&gt;::&lt;module_name&gt;::&lt;item&gt;</span></code> for struct or enum impl blocks and as
+<code class="docutils literal notranslate"><span class="pre">&lt;crate_name&gt;::&lt;module_name&gt;::&lt;item&gt;::&lt;trait_name&gt;</span></code> for trait impl blocks.</p>
+<p>When referencing an impl block for a struct or an enum, use the full path to the impl block within the crate. So,
+if the <code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">Foo</span></code> block is in a different module from the struct itself, the path must reference the module
+of the impl block. Items within the impl block like functions and variables are then nested under this path.</p>
+<p>When referencing a trait impl block, the last two components of the path are <code class="docutils literal notranslate"><span class="pre">&lt;item&gt;::&lt;trait&gt;</span></code>. So, a block
+<code class="docutils literal notranslate"><span class="pre">impl</span> <span class="pre">Display</span> <span class="pre">for</span> <span class="pre">Foo</span></code> is referenced as <code class="docutils literal notranslate"><span class="pre">crate::module::Foo::Display</span></code>.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-macro">
+<span class="sig-name descname"><span class="pre">:rust:macro:</span></span><a class="headerlink" href="#role-rust-macro" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:macro:`&lt;macro_path&gt;`</span></code> inks to a macro’s documentation.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-module">
+<span class="sig-name descname"><span class="pre">:rust:module:</span></span><a class="headerlink" href="#role-rust-module" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">:rust:module:`&lt;module_path&gt;`</span></code> inks to the module’s documentation. The module path here is the Rust path of the</dt><dd><p>module, not its file’s path. So, even if the module is defined in a <code class="docutils literal notranslate"><span class="pre">mod.rs</span></code> file, the path here will be the path
+to import the module in a <code class="docutils literal notranslate"><span class="pre">use</span></code> statement.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-struct">
+<span class="sig-name descname"><span class="pre">:rust:struct:</span></span><a class="headerlink" href="#role-rust-struct" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:struct:`&lt;struct_path&gt;`</span></code> links to a struct or an enum variant’s documentation. For an enum variant,
+use <code class="docutils literal notranslate"><span class="pre">:rust:struct:`&lt;enum_path&gt;::&lt;variant&gt;`</span></code> as the target.</p>
+<p>Specific fields within the struct or variant can be referenced using the <a class="reference internal" href="#role-rust-variable" title="rust:variable role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">rust:variable</span></code></a> role.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-trait">
+<span class="sig-name descname"><span class="pre">:rust:trait:</span></span><a class="headerlink" href="#role-rust-trait" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:trait:`&lt;trait_path&gt;`</span></code> links to a trait’s documentation. Items defined within the trait are nested under the
+trait’s path.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-type">
+<span class="sig-name descname"><span class="pre">:rust:type:</span></span><a class="headerlink" href="#role-rust-type" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:type:`&lt;type_path&gt;`</span></code> links to a type’s documentation.</p>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-variable">
+<span class="sig-name descname"><span class="pre">:rust:variable:</span></span><a class="headerlink" href="#role-rust-variable" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">:rust:variable:`&lt;variable_path&gt;`</span></code> links to a static or const variable, or to a field within a struct or enum
+variant.</p>
+<div class="line-block">
+<div class="line">For fields of a struct, the path is <code class="docutils literal notranslate"><span class="pre">&lt;struct_path&gt;::&lt;field_name&gt;</span></code>.</div>
+<div class="line">For tuple structs, the field’s index should be used instead of the name (<code class="docutils literal notranslate"><span class="pre">&lt;struct_path&gt;::0</span></code>).</div>
+<div class="line">For an enum variant’s fields, the path is <code class="docutils literal notranslate"><span class="pre">&lt;enum_path&gt;::&lt;variant&gt;::&lt;field_name&gt;</span></code>, with field index instead of
+name for tuple variants.</div>
+</div>
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-rust-var">
+<span class="sig-name descname"><span class="pre">:rust:var:</span></span><a class="headerlink" href="#role-rust-var" title="Link to this definition"></a></dt>
+<dd><p>Alias for <a class="reference internal" href="#role-rust-variable" title="rust:variable role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">rust:variable</span></code></a>.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="including.html" class="btn btn-neutral float-left" title="Including the docs in the Sphinx build" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="directives.html" class="btn btn-neutral float-right" title="Rust specific directives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Munir Contractor.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
