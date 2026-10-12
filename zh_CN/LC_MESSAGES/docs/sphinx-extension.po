@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Munir Contractor
+# This file is distributed under the same license as the sphinxcontrib-rust package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinxcontrib-rust 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 12:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../docs/sphinx-extension.rst:3
+msgid "sphinxcontrib_rust documentation"
+msgstr ""
+
+#: ../../../docs/sphinx-extension.rst:5
+msgid ""
+"``sphinxcontrib_rust`` is a Sphinx extension that parses the Sphinx "
+"directives and roles for the ``rust`` domain."
+msgstr ""
+
+#: ../../../docs/sphinx-extension.rst:7
+msgid ""
+"The extension is tightly coupled with the :rust:exe:`sphinx-rustdocgen` "
+"executable, which generates the appropriate content for the extension."
+msgstr ""
+
+#: ../../../docs/sphinx-extension.rst:10
+msgid ""
+"It *can* be used without the Rust executable itself, by directly using the "
+"directives in the reStructuredText or Markdown files. But that will result "
+"in a lot more typing for you."
+msgstr ""
+
+#: ../../../docs/sphinx-extension.rst:13
+msgid ""
+"The documentation here is primarily meant for potential contributors and "
+"developers, who want to add features or fix bugs. Users should read the "
+"documentation in :ref:`usage` and/or :ref:`details`, or submit an issue."
+msgstr ""
+
+#: ../../../docs/sphinx-extension.rst:17
+msgid "Python package documentation"
+msgstr ""
+
+#: ../../../docs/sphinx-extension.rst:23:<autosummary>:1
+msgid ":py:obj:`sphinxcontrib_rust <sphinxcontrib_rust>`\\"
+msgstr ""
+
+#: ../../../docs/sphinx-extension.rst:23:<autosummary>:1
+msgid ""
+"Init module for the extension with the ``setup`` function used by Sphinx"
+msgstr ""
