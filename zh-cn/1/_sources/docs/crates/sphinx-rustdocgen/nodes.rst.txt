@@ -1,0 +1,454 @@
+=============
+``mod nodes``
+=============
+
+
+.. rust:module:: sphinx_rustdocgen::nodes
+   :index: 0
+   :vis: pvt
+
+   Module for generating a semi-structured representation of Rust signatures.
+   
+   The module helps with mapping the content of Rust signatures to the
+   appropriate docutils node type.
+
+   .. rust:use:: sphinx_rustdocgen::nodes
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: std::fmt::Debug
+      :used_name: Debug
+
+
+   .. rust:use:: quote::ToTokens
+      :used_name: ToTokens
+
+
+   .. rust:use:: serde::ser::SerializeMap
+      :used_name: SerializeMap
+
+
+   .. rust:use:: serde::Serialize
+      :used_name: Serialize
+
+
+   .. rust:use:: serde::Serializer
+      :used_name: Serializer
+
+
+   .. rust:use:: syn::punctuated::Punctuated
+      :used_name: Punctuated
+
+
+   .. rust:use:: syn::Abi
+      :used_name: Abi
+
+
+   .. rust:use:: syn::AngleBracketedGenericArguments
+      :used_name: AngleBracketedGenericArguments
+
+
+   .. rust:use:: syn::BoundLifetimes
+      :used_name: BoundLifetimes
+
+
+   .. rust:use:: syn::Expr
+      :used_name: Expr
+
+
+   .. rust:use:: syn::ExprLit
+      :used_name: ExprLit
+
+
+   .. rust:use:: syn::GenericArgument
+      :used_name: GenericArgument
+
+
+   .. rust:use:: syn::GenericParam
+      :used_name: GenericParam
+
+
+   .. rust:use:: syn::Generics
+      :used_name: Generics
+
+
+   .. rust:use:: syn::LifetimeParam
+      :used_name: LifetimeParam
+
+
+   .. rust:use:: syn::ParenthesizedGenericArguments
+      :used_name: ParenthesizedGenericArguments
+
+
+   .. rust:use:: syn::Pat
+      :used_name: Pat
+
+
+   .. rust:use:: syn::PatType
+      :used_name: PatType
+
+
+   .. rust:use:: syn::Path
+      :used_name: Path
+
+
+   .. rust:use:: syn::PathArguments
+      :used_name: PathArguments
+
+
+   .. rust:use:: syn::PathSegment
+      :used_name: PathSegment
+
+
+   .. rust:use:: syn::ReturnType
+      :used_name: ReturnType
+
+
+   .. rust:use:: syn::Token
+      :used_name: Token
+
+
+   .. rust:use:: syn::TraitBoundModifier
+      :used_name: TraitBoundModifier
+
+
+   .. rust:use:: syn::Type
+      :used_name: Type
+
+
+   .. rust:use:: syn::TypeBareFn
+      :used_name: TypeBareFn
+
+
+   .. rust:use:: syn::TypeParam
+      :used_name: TypeParam
+
+
+   .. rust:use:: syn::TypeParamBound
+      :used_name: TypeParamBound
+
+
+   .. rust:use:: syn::TypePath
+      :used_name: TypePath
+
+
+   .. rust:use:: syn::WhereClause
+      :used_name: WhereClause
+
+
+   .. rust:use:: syn::WherePredicate
+      :used_name: WherePredicate
+
+
+   .. rubric:: Functions
+
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_abi_opt
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_abi_opt"},{"type":"punctuation","value":"("},{"type":"name","value":"abi"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"Abi","target":"Abi"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for an optional ABI specification.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_angle_bracket_generic_args
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_angle_bracket_generic_args"},{"type":"punctuation","value":"("},{"type":"name","value":"angled_args"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"AngleBracketedGenericArguments","target":"AngleBracketedGenericArguments"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for angle bracket generic arguments in paths.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_bare_fn
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_bare_fn"},{"type":"punctuation","value":"("},{"type":"name","value":"bare_fn"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"TypeBareFn","target":"TypeBareFn"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a bare fn type.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_bound_lifetimes
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_bound_lifetimes"},{"type":"punctuation","value":"("},{"type":"name","value":"bound_lts"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"BoundLifetimes","target":"BoundLifetimes"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for bound lifetimes.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_expr_lit
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_expr_lit"},{"type":"punctuation","value":"("},{"type":"name","value":"expr_lit"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ExprLit","target":"ExprLit"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a literal expression.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_generic_argument
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_generic_argument"},{"type":"punctuation","value":"("},{"type":"name","value":"generic_arg"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"GenericArgument","target":"GenericArgument"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a generic argument.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_generic_param
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_generic_param"},{"type":"punctuation","value":"("},{"type":"name","value":"generic_param"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"GenericParam","target":"GenericParam"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a generic parameter, along with its bounds.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_generics
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_generics"},{"type":"punctuation","value":"("},{"type":"name","value":"generics"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Generics","target":"Generics"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for generics declared for an item.
+      
+      The function does not create nodes for the where clause of the generics.
+      Use :rust:fn:`nodes_for_where_clause` to generate nodes for it.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_lifetime_param
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_lifetime_param"},{"type":"punctuation","value":"("},{"type":"name","value":"lifetime_param"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"LifetimeParam","target":"LifetimeParam"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a lifetime parameter.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_parenthesized_generic_args
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_parenthesized_generic_args"},{"type":"punctuation","value":"("},{"type":"name","value":"paren_args"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ParenthesizedGenericArguments","target":"ParenthesizedGenericArguments"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for parenthesized generic arguments in paths.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_pat
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_pat"},{"type":"punctuation","value":"("},{"type":"name","value":"pat"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Pat","target":"Pat"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a pattern binding.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_pat_type
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_pat_type"},{"type":"punctuation","value":"("},{"type":"name","value":"pat_type"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"PatType","target":"PatType"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a type pattern binding.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_path
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_path"},{"type":"punctuation","value":"("},{"type":"name","value":"path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Path","target":"Path"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a path.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_path_segment
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_path_segment"},{"type":"punctuation","value":"("},{"type":"name","value":"segment"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"PathSegment","target":"PathSegment"},{"type":"punctuation","value":", "},{"type":"name","value":"make_link"},{"type":"punctuation","value":": "},{"type":"link","value":"bool","target":"bool"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a path segment.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_return_type
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_return_type"},{"type":"punctuation","value":"("},{"type":"name","value":"return_type"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ReturnType","target":"ReturnType"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for the return type of function.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_type
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_type"},{"type":"punctuation","value":"("},{"type":"name","value":"ty"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Type","target":"Type"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a type specification.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_type_param
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_type_param"},{"type":"punctuation","value":"("},{"type":"name","value":"type_param"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"TypeParam","target":"TypeParam"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a type parameter, along with its bounds.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_type_param_bound
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_type_param_bound"},{"type":"punctuation","value":"("},{"type":"name","value":"type_param_bound"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"TypeParamBound","target":"TypeParamBound"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for a type parameter binding.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_type_param_bounds
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_type_param_bounds"},{"type":"punctuation","value":"("},{"type":"name","value":"type_param_bounds"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Punctuated","target":"Punctuated"},{"type":"punctuation","value":"<"},{"type":"link","value":"TypeParamBound","target":"TypeParamBound"},{"type":"punctuation","value":", "},{"type":"punctuation","value":"?"},{"type":"punctuation","value":">"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for all type parameters in a binding.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::nodes_for_where_clause
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"nodes_for_where_clause"},{"type":"punctuation","value":"("},{"type":"name","value":"where_clause"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"WhereClause","target":"WhereClause"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Node","target":"Node"},{"type":"punctuation","value":">"}]
+
+      Create nodes for the where clause of generics for an item.
+      
+      The created nodes will insert a newline node as the first node, and
+      between each predicate.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::type_name
+      :index: 0
+      :vis: crate
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"type_name"},{"type":"punctuation","value":"("},{"type":"name","value":"ty"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Type","target":"Type"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"String","target":"String"}]
+
+      Get simple name for a type.
+      
+      The simple name is the name without any generic arguments.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::type_param_bound_name
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"type_param_bound_name"},{"type":"punctuation","value":"("},{"type":"name","value":"type_param_bound"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"TypeParamBound","target":"TypeParamBound"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"String","target":"String"}]
+
+      Get simple name for a type parameter bound.
+      
+      The simple name is the name without any generic arguments.
+
+   .. rust:function:: sphinx_rustdocgen::nodes::type_path_name
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"type_path_name"},{"type":"punctuation","value":"("},{"type":"name","value":"type_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"TypePath","target":"TypePath"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"String","target":"String"}]
+
+      Get simple name for a type path.
+      
+      The simple name is essentially the path created from the identifiers of
+      each segment of the type path.
+
+   .. rubric:: Enums
+
+
+   .. rust:enum:: sphinx_rustdocgen::nodes::Node
+      :index: 1
+      :vis: crate
+      :layout: [{"type":"keyword","value":"enum"},{"type":"space"},{"type":"name","value":"Node"}]
+
+      Enum representing various docutils nodes for item signatures
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Name
+         :index: 2
+         :vis: crate
+         :toc: Name
+         :layout: [{"type":"name","value":"Name"},{"type":"punctuation","value":"("},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":")"}]
+
+         The node for a name in the signature.
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Link
+         :index: 2
+         :vis: crate
+         :toc: Link
+         :layout: [{"type":"name","value":"Link"}]
+
+         A node for link to another item in the signature.
+
+         .. rust:variable:: sphinx_rustdocgen::nodes::Node::Link::value
+            :index: -1
+            :vis: crate
+            :toc: value
+            :layout: [{"type":"name","value":"value"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+
+         .. rust:variable:: sphinx_rustdocgen::nodes::Node::Link::target
+            :index: -1
+            :vis: crate
+            :toc: target
+            :layout: [{"type":"name","value":"target"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Keyword
+         :index: 2
+         :vis: crate
+         :toc: Keyword
+         :layout: [{"type":"name","value":"Keyword"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"}]
+
+         A node for a keyword in the signature.
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Punctuation
+         :index: 2
+         :vis: crate
+         :toc: Punctuation
+         :layout: [{"type":"name","value":"Punctuation"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"}]
+
+         A node for a punctuation in the signature.
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Space
+         :index: 2
+         :vis: crate
+         :toc: Space
+         :layout: [{"type":"name","value":"Space"}]
+
+         A node for a single space in the signature.
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Newline
+         :index: 2
+         :vis: crate
+         :toc: Newline
+         :layout: [{"type":"name","value":"Newline"}]
+
+         A node for a newline in the signature.
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Indent
+         :index: 2
+         :vis: crate
+         :toc: Indent
+         :layout: [{"type":"name","value":"Indent"}]
+
+         A node for adding an indentation before the line.
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Operator
+         :index: 2
+         :vis: crate
+         :toc: Operator
+         :layout: [{"type":"name","value":"Operator"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"}]
+
+         A node for an operator in the signature.
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Returns
+         :index: 2
+         :vis: crate
+         :toc: Returns
+         :layout: [{"type":"name","value":"Returns"}]
+
+         A node for the returns symbol.
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Literal
+         :index: 2
+         :vis: crate
+         :toc: Literal
+         :layout: [{"type":"name","value":"Literal"},{"type":"punctuation","value":"("},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":")"}]
+
+         A literal string to include in the signature.
+
+      .. rust:struct:: sphinx_rustdocgen::nodes::Node::Lifetime
+         :index: 2
+         :vis: crate
+         :toc: Lifetime
+         :layout: [{"type":"name","value":"Lifetime"},{"type":"punctuation","value":"("},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":")"}]
+
+         A node for a lifetime name. This is not a docutils node, but kept
+         separate for easier identification.
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::nodes::Node::Serialize
+         :index: -1
+         :vis: crate
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"Serialize","target":"Serialize"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"Node","target":"Node"}]
+         :toc: impl Serialize for Node
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::nodes::Node::Serialize::serialize
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"serialize"},{"type":"punctuation","value":"<"},{"type":"name","value":"S"},{"type":"punctuation","value":">"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"serializer"},{"type":"punctuation","value":": "},{"type":"link","value":"S","target":"S"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Result","target":"Result"},{"type":"punctuation","value":"<"},{"type":"link","value":"S","target":"S"},{"type":"punctuation","value":"::"},{"type":"name","value":"Ok"},{"type":"punctuation","value":", "},{"type":"link","value":"S","target":"S"},{"type":"punctuation","value":"::"},{"type":"name","value":"Error"},{"type":"punctuation","value":">"},{"type":"newline"},{"type":"keyword","value":"where"},{"type":"newline"},{"type":"indent"},{"type":"link","value":"S","target":"S"},{"type":"punctuation","value":": "},{"type":"link","value":"Serializer","target":"Serializer"}]
+

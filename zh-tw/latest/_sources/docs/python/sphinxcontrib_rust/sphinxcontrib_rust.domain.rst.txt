@@ -1,0 +1,13 @@
+sphinxcontrib\_rust.domain
+==========================
+
+.. automodule:: sphinxcontrib_rust.domain
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      RustDomain
+      RustXRefRole
+   

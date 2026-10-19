@@ -1,0 +1,23 @@
+================================
+sphinxcontrib_rust documentation
+================================
+
+``sphinxcontrib_rust`` is a Sphinx extension that parses the Sphinx directives and roles for the ``rust`` domain.
+
+The extension is tightly coupled with the :rust:exe:`sphinx-rustdocgen` executable, which generates the appropriate
+content for the extension.
+
+It *can* be used without the Rust executable itself, by directly using the directives in the reStructuredText or
+Markdown files. But that will result in a lot more typing for you.
+
+The documentation here is primarily meant for potential contributors and developers, who want to add features or fix
+bugs. Users should read the documentation in :ref:`usage` and/or :ref:`details`, or submit an issue.
+
+Python package documentation
+----------------------------
+
+.. autosummary::
+   :toctree: python/sphinxcontrib_rust
+   :recursive:
+
+   sphinxcontrib_rust
