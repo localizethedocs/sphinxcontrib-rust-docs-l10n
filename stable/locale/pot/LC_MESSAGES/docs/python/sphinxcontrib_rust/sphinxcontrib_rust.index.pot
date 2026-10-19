@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust stable\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 13:10+0000\n"
+"POT-Creation-Date: 2026-10-19 16:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "sphinxcontrib\\_rust.index"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index:1
 msgid "Module for code related to generating the index of Rust items"
 msgstr ""
@@ -34,57 +34,57 @@ msgstr ""
 msgid ":py:obj:`RustIndex <sphinxcontrib_rust.index.RustIndex>`\\ \\(domain\\)"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.index.rst:11:<autosummary>:1
 msgid "Class for implementing the index of Rust items."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex:3
 msgid ""
 "The class inherits from :py:class:`Index` and produces an index of the "
 "various items documented in the build. The index sections are the item types."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:1
 msgid "Generate the index content for a list of items of the same type."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:3
 msgid "Args:"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:0
 msgid "items"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:4
 msgid "The items to include in the index."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:0
 msgid "subtype"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:5
 msgid ""
 "The sub-entry related type. One of 0 - A normal entry 1 - A entry with "
 "subtypes. 2 - A sub-entry"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:10
 msgid "Returns:"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/index.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/index.py:docstring
 #: of sphinxcontrib_rust.index.RustIndex.generate:11
 msgid ""
 "A list of ``(key, list[IndexEntry])`` tuples that can be used as the content "
