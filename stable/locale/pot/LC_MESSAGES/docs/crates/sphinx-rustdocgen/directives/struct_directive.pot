@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust stable\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 13:10+0000\n"
+"POT-Creation-Date: 2026-10-19 16:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,75 +25,75 @@ msgstr ""
 msgid "Implementation of the ``rust:struct`` directive"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:106
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:102
 msgid "Macros"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:111
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:107
 msgid "DRY macro to create the nodes for the directive's layout."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:115
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:111
 msgid "Structs and Unions"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:122
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:118
 msgid "Struct to hold details for documenting a struct or a union."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:130
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:126
 msgid "The full Rust path of the struct, used as the name of the directive."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:138
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:134
 msgid "The identifier for the struct."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:146
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:142
 msgid "The directive options to use."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:154
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:150
 msgid "The docstring for the struct."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:162
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:158
 msgid "The fields of the struct, named or unnamed."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:170
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:166
 msgid "Items within impl blocks for the struct/union."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:178
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:174
 msgid "Trait impls for the struct/union."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:182
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:178
 msgid "Implementations"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:192
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:188
 msgid "Variables"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:202
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:263
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:279
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:198
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:259
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:275
 msgid "Functions"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:208
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:204
 msgid "Add the impl directive to the struct."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:210
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:206
 msgid ""
 "The parent and visibility of the impl directive are updated along with the "
 "ownership."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:213
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:209
 msgid "Args:"
 msgstr ""
 
@@ -101,30 +101,30 @@ msgstr ""
 msgid "impl\\_"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:214
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:210
 msgid "The :rust:struct:`ImplDirective` for the struct."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:221
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:217
 msgid "Change the parent module of the struct and its items."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:228
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:224
 msgid "Return the visibility of this directive."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:235
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:231
 msgid "Create a struct directive for a struct."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:242
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:238
 msgid "Create a struct directive for a union."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:249
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:245
 msgid "Create a struct directive for an enum variant."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:253
+#: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:249
 msgid "Traits implemented"
 msgstr ""
