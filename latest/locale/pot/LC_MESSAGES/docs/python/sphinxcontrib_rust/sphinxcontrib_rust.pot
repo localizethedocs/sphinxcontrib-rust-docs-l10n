@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 13:09+0000\n"
+"POT-Creation-Date: 2026-10-19 16:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "sphinxcontrib\\_rust"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust:1
 msgid ""
 "Init module for the extension with the ``setup`` function used by Sphinx"
@@ -35,7 +35,7 @@ msgstr ""
 msgid ":py:obj:`generate_docs <sphinxcontrib_rust.generate_docs>`\\ \\(app\\)"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.generate_docs:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:13:<autosummary>:1
 msgid "Generate the Rust docs once the builder is ready."
@@ -45,7 +45,7 @@ msgstr ""
 msgid ":py:obj:`setup <sphinxcontrib_rust.setup>`\\ \\(app\\)"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.setup:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:13:<autosummary>:1
 msgid "Set up the extension"
@@ -61,25 +61,25 @@ msgid ""
 "\\(crate\\_name\\, crate\\_dir\\, ...\\)"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:18:<autosummary>:1
 msgid "Dataclass for the crate configuration."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration:3
 msgid ""
 "This is the Python equivalent of :rust:struct:`sphinx_rustdocgen::"
 "Configuration`. It is serialized as JSON and shared with the Rust executable."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:1
 msgid "Extract the configuration for the crates from the Sphinx configuration."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:3
 msgid ""
 "The function mainly checks whether a given configuration option is global or "
@@ -88,46 +88,46 @@ msgid ""
 "their ``crate_dir`` field."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:8
 #: sphinxcontrib_rust.generate_docs:3
 msgid "Args:"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:0
 #: sphinxcontrib_rust.generate_docs:0
 msgid "config"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:9
 msgid "The Sphinx configuration."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:11
 msgid "Returns:"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration.from_sphinx_config:12
 msgid ""
 "A tuple of the path of the executable for generating the docs and a dict of "
 "crate name to crate configuration mapping."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.generate_docs:0
 msgid "app"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.generate_docs:4
 msgid "The Sphinx application."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.generate_docs:5
 msgid "The parsed configuration."
 msgstr ""

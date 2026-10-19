@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 13:09+0000\n"
+"POT-Creation-Date: 2026-10-19 16:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "sphinxcontrib\\_rust.nodes"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes:1
 msgid ""
 "Module for creating docutils nodes from the JSON in the layout option of the "
@@ -38,7 +38,7 @@ msgid ""
 "target\\]\\)"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.nodes.rst:12:<autosummary>:1
 msgid "A node in the document signatures that represents a Rust item."
@@ -49,13 +49,13 @@ msgid ""
 ":py:obj:`NodeType <sphinxcontrib_rust.nodes.NodeType>`\\ \\(\\*values\\)"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.NodeType:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.nodes.rst:12:<autosummary>:1
 msgid "Types of the nodes for the Rust items in the signatures"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node:3
 msgid ""
 "The node is a dataclass that encapsulates the details of a Rust token and "
@@ -66,13 +66,13 @@ msgid ""
 "``LINK`` nodes to generate a link to the target."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:1
 msgid ""
 "Create a Rust item signature under the ``signode`` from the given ``nodes``"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:3
 msgid ""
 "The method will also add the generated nodes as children of the given "
@@ -80,38 +80,38 @@ msgid ""
 "multiline signatures, the permalink is added to the first line."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:7
 msgid "Args:"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:0
 msgid "name"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:8
 msgid "The name of the item whose signature is to be generated."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:0
 msgid "nodes"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:9
 msgid "The list of nodes with the layout of the signature."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:11
 #: sphinxcontrib_rust.nodes.Node.to_docutils_node:3
 msgid "Returns:"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.create_signature:12
 msgid ""
 "A tuple, whose first element indicates whether the signature is multiline or "
@@ -119,32 +119,32 @@ msgid ""
 "signature."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.text:1
 msgid "Get the text for the node"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.to_docutils_node:1
 msgid "Convert a node to the appropriate docutils node."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.to_docutils_node:4
 msgid "The docutils node for self, with any children node added."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.to_docutils_node:6
 msgid "Raises:"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.to_docutils_node:0
 msgid "ValueError"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.Node.to_docutils_node:7
 msgid ""
 "If called with a node of type ``NodeType.NEWLINE``. The newline does not "
@@ -152,7 +152,7 @@ msgid ""
 "``addnodes.desc_signature_line``."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/nodes.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/nodes.py:docstring
 #: of sphinxcontrib_rust.nodes.NodeType.from_str:1
 msgid "Get the node type enum from the string value"
 msgstr ""
