@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 13:09+0000\n"
+"POT-Creation-Date: 2026-10-19 16:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,180 +32,184 @@ msgid ""
 "appropriate docutils node type."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:149
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:449
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:153
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:460
 msgid "Functions"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:155
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:159
 msgid "Create nodes for an optional ABI specification."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:162
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:166
 msgid "Create nodes for angle bracket generic arguments in paths."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:169
-msgid "Create nodes for a bare fn type."
-msgstr ""
-
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:176
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:173
 msgid "Create nodes for bound lifetimes."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:183
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:180
 msgid "Create nodes for a literal expression."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:190
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:187
+msgid "Create nodes for a FnPtr type."
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:194
 msgid "Create nodes for a generic argument."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:197
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:201
 msgid "Create nodes for a generic parameter, along with its bounds."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:204
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:208
 msgid "Create nodes for generics declared for an item."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:206
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:210
 msgid ""
 "The function does not create nodes for the where clause of the generics. "
 "Use :rust:fn:`nodes_for_where_clause` to generate nodes for it."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:214
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:218
 msgid "Create nodes for a lifetime parameter."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:221
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:225
+msgid "Create nodes for a named arg"
+msgstr ""
+
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:232
 msgid "Create nodes for parenthesized generic arguments in paths."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:228
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:239
 msgid "Create nodes for a pattern binding."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:235
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:246
 msgid "Create nodes for a type pattern binding."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:242
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:253
 msgid "Create nodes for a path."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:249
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:260
 msgid "Create nodes for a path segment."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:256
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:267
 msgid "Create nodes for the return type of function."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:263
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:274
 msgid "Create nodes for a type specification."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:270
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:281
 msgid "Create nodes for a type parameter, along with its bounds."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:277
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:288
 msgid "Create nodes for a type parameter binding."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:284
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:295
 msgid "Create nodes for all type parameters in a binding."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:291
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:302
 msgid "Create nodes for the where clause of generics for an item."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:293
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:304
 msgid ""
 "The created nodes will insert a newline node as the first node, and between "
 "each predicate."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:301
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:312
 msgid "Get simple name for a type."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:303
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:312
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:314
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:323
 msgid "The simple name is the name without any generic arguments."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:310
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:321
 msgid "Get simple name for a type parameter bound."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:319
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:330
 msgid "Get simple name for a type path."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:321
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:332
 msgid ""
 "The simple name is essentially the path created from the identifiers of each "
 "segment of the type path."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:326
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:337
 msgid "Enums"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:332
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:343
 msgid "Enum representing various docutils nodes for item signatures"
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:340
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:351
 msgid "The node for a name in the signature."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:348
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:359
 msgid "A node for link to another item in the signature."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:370
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:381
 msgid "A node for a keyword in the signature."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:378
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:389
 msgid "A node for a punctuation in the signature."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:386
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:397
 msgid "A node for a single space in the signature."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:394
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:405
 msgid "A node for a newline in the signature."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:402
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:413
 msgid "A node for adding an indentation before the line."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:410
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:421
 msgid "A node for an operator in the signature."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:418
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:429
 msgid "A node for the returns symbol."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:426
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:437
 msgid "A literal string to include in the signature."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:434
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:445
 msgid ""
 "A node for a lifetime name. This is not a docutils node, but kept separate "
 "for easier identification."
 msgstr ""
 
-#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:439
+#: ../../../docs/crates/sphinx-rustdocgen/nodes.rst:450
 msgid "Traits implemented"
 msgstr ""
