@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 13:09+0000\n"
+"POT-Creation-Date: 2026-10-26 15:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "sphinxcontrib\\_rust.rust\\_link"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link:1
 msgid "Module for enabling intra-doc links similar to Rustdoc"
 msgstr ""
@@ -35,15 +35,15 @@ msgid ""
 ":py:obj:`link <sphinxcontrib_rust.rust_link.link>`\\ \\(state\\, silent\\)"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link.link:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rust_link.rst:11:<autosummary>:1
 msgid ""
-"This is a monkey patch used to replace the :py:func:`markdown_it."
-"rules_inline.link.link`."
+"This is a monkey patch used to replace "
+"the :py:func:`markdown_it.rules_inline.link.link`."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link.link:3
 msgid ""
 "The main difference here is that it will mark any text with brackets as a "
@@ -52,12 +52,12 @@ msgid ""
 "links out of text that is not a Rust item name."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link.link:7
 msgid "Returns:"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/rust_link.py:docstring
 #: of sphinxcontrib_rust.rust_link.link:8
 msgid "True, if it found a link, otherwise False."
 msgstr ""
