@@ -39,8 +39,8 @@ msgstr ""
 #: of sphinxcontrib_rust.rust_link.link:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rust_link.rst:11:<autosummary>:1
 msgid ""
-"This is a monkey patch used to replace the :py:func:`markdown_it."
-"rules_inline.link.link`."
+"This is a monkey patch used to replace "
+"the :py:func:`markdown_it.rules_inline.link.link`."
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/rust_link.py:docstring

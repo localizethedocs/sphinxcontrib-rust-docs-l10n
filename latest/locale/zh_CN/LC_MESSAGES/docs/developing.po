@@ -51,8 +51,9 @@ msgstr ""
 
 #: ../../../docs/developing.rst:17
 msgid ""
-"The Rust crate has two main modules, :rust:module:`sphinx_rustdocgen::"
-"formats` and :rust:module:`sphinx_rustdocgen::directives`."
+"The Rust crate has two main "
+"modules, :rust:module:`sphinx_rustdocgen::formats` "
+"and :rust:module:`sphinx_rustdocgen::directives`."
 msgstr ""
 
 #: ../../../docs/developing.rst:20
@@ -65,13 +66,13 @@ msgstr ""
 #: ../../../docs/developing.rst:23
 msgid ""
 "The ``directives`` module and its submodules implement the Rust side of all "
-"the :doc:`directives`. The :rust:enum:`~sphinx_rustdocgen::directives::"
-"Directive` enum is where new directives should be added first. Each variant "
-"of this enum is a newtype for a struct that holds the details of the "
-"directive. The structs must implement both :rust:trait:`sphinx_rustdocgen::"
-"formats::RstDirective` and :rust:trait:`sphinx_rustdocgen::formats::"
-"MdDirective` traits. Take a look at one of the existing directive "
-"implementation for an example."
+"the :doc:`directives`. "
+"The :rust:enum:`~sphinx_rustdocgen::directives::Directive` enum is where new "
+"directives should be added first. Each variant of this enum is a newtype for "
+"a struct that holds the details of the directive. The structs must implement "
+"both :rust:trait:`sphinx_rustdocgen::formats::RstDirective` "
+"and :rust:trait:`sphinx_rustdocgen::formats::MdDirective` traits. Take a "
+"look at one of the existing directive implementation for an example."
 msgstr ""
 
 #: ../../../docs/developing.rst:30
@@ -91,16 +92,16 @@ msgstr ""
 #: ../../../docs/developing.rst:37
 msgid ""
 "The directives are defined in :py:mod:`sphinxcontrib_rust.directives`. All "
-"the directives inherit from the :py:class:`sphinxcontrib_rust.directives."
-"RustDirective` class, which handles the options and converts them into the "
-"directive's display text."
+"the directives inherit from "
+"the :py:class:`sphinxcontrib_rust.directives.RustDirective` class, which "
+"handles the options and converts them into the directive's display text."
 msgstr ""
 
 #: ../../../docs/developing.rst:41
 msgid ""
-"The Sphinx domain itself is implemented in :py:mod:`sphinxcontrib_rust."
-"domain` module. The domain mostly just manages the directives for "
-"referencing and indexing."
+"The Sphinx domain itself is implemented "
+"in :py:mod:`sphinxcontrib_rust.domain` module. The domain mostly just "
+"manages the directives for referencing and indexing."
 msgstr ""
 
 #: ../../../docs/developing.rst:44
@@ -166,17 +167,19 @@ msgstr ""
 #: ../../../docs/developing.rst:73
 msgid ""
 "Use syn_ to generate an AST and analyze it to extract the docstrings and "
-"identify the visibility of the items in the file. This creates a :rust:"
-"struct:`~sphinx_rustdocgen::directives::crate_directive::CrateDirective` "
-"struct for the library file, a :rust:struct:`~sphinx_rustdocgen::directives::"
-"executable_directive::ExecutableDirective` for each executable."
+"identify the visibility of the items in the file. This creates "
+"a :rust:struct:`~sphinx_rustdocgen::directives::crate_directive::CrateDirective` "
+"struct for the library file, "
+"a :rust:struct:`~sphinx_rustdocgen::directives::executable_directive::ExecutableDirective` "
+"for each executable."
 msgstr ""
 
 #: ../../../docs/developing.rst:79
 msgid ""
 "Queue any submodules discovered within the crate and identify their source "
-"files. A :rust:struct:`~sphinx_rustdocgen::directives::module_directive::"
-"ModuleDirective` struct is generated for the module files discovered."
+"files. "
+"A :rust:struct:`~sphinx_rustdocgen::directives::module_directive::ModuleDirective` "
+"struct is generated for the module files discovered."
 msgstr ""
 
 #: ../../../docs/developing.rst:82
@@ -187,9 +190,9 @@ msgstr ""
 
 #: ../../../docs/developing.rst:85
 msgid ""
-"Once the subprocess completes, Sphinx will run the build process. The :py:"
-"mod:`sphinxcontrib_rust` domain will now parse any Rust specific directives "
-"and cross-references as they are discovered by Sphinx."
+"Once the subprocess completes, Sphinx will run the build process. "
+"The :py:mod:`sphinxcontrib_rust` domain will now parse any Rust specific "
+"directives and cross-references as they are discovered by Sphinx."
 msgstr ""
 
 #: ../../../docs/developing.rst:88

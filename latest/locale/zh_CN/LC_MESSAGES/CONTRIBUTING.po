@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:26
 msgid ""
-"Please read the documentation on `readthedocs <https://sphinxcontrib-rust."
-"readthedocs.io/en/stable/index.html>`_ or `Gitlab Pages <https://"
+"Please read the documentation on `readthedocs <https://sphinxcontrib-"
+"rust.readthedocs.io/en/stable/index.html>`_ or `Gitlab Pages <https://"
 "sphinxcontrib-rust-mmc691-8fb22cc6152ca3a233f41dbc6179d6a5fd539.gitlab.io/"
 ">`_ before asking the question."
 msgstr ""

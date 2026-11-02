@@ -85,8 +85,8 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:241
 msgid ""
-"Create a use directive and wrap it within the :rust:struct:`Directive::"
-"UseDirective` enum variant."
+"Create a use directive and wrap it within "
+"the :rust:struct:`Directive::UseDirective` enum variant."
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/use_directive.rst:249
