@@ -1,0 +1,90 @@
+=======================
+Developer Documentation
+=======================
+
+Organization
+============
+
+The project consists of 3 main components:
+
+1. The :rust:crate:`sphinx_rustdocgen` crate for extracting and formatting the documentation comments from Rust code.
+2. The :py:mod:`sphinxcontrib_rust` Sphinx extension for parsing the output of the executable.
+3. Project documentation and CI for testing and maintaining.
+
+Rust crate
+----------
+
+The Rust crate has two main modules, :rust:module:`sphinx_rustdocgen::formats` and
+:rust:module:`sphinx_rustdocgen::directives`.
+
+The ``formats`` module consists of various traits that implement formatting the output as reStructuredText
+or Markdown. Most code related to formatting the details of a directive lives in this module.
+
+The ``directives`` module and its submodules implement the Rust side of all the :doc:`directives`.
+The :rust:enum:`~sphinx_rustdocgen::directives::Directive` enum is where new directives should be added
+first. Each variant of this enum is a newtype for a struct that holds the details of the directive.
+The structs must implement both
+:rust:trait:`sphinx_rustdocgen::formats::RstDirective` and :rust:trait:`sphinx_rustdocgen::formats::MdDirective`
+traits. Take a look at one of the existing directive implementation for an example.
+
+See :doc:`sphinx-rustdocgen` for more details.
+
+Sphinx extension
+----------------
+
+The Sphinx extension is largely dedicated to reading the directive and converting them to content.
+
+The directives are defined in :py:mod:`sphinxcontrib_rust.directives`. All the directives inherit from
+the :py:class:`sphinxcontrib_rust.directives.RustDirective` class, which handles the options and converts
+them into the directive's display text.
+
+The Sphinx domain itself is implemented in :py:mod:`sphinxcontrib_rust.domain` module. The domain
+mostly just manages the directives for referencing and indexing.
+
+The ``__init__.py`` file of the package is the interface for Sphinx to connect with the extension
+and for the extension to execute the Rust executable to generate the pages.
+
+See :doc:`sphinx-extension` for more details.
+
+Docs and CI
+-----------
+
+The CI for the project makes sure that the Rust and Python code are properly formatted and
+linted as per the :ref:`code-style`.
+
+It will first test the Rust crate and then the Sphinx extension. As part of the test, the project
+will run on itself. It will also ensure that the Python package can be built and the documentation
+is generated properly for readthedocs.org and for GitLab pages.
+
+Design and execution
+====================
+
+The workflow of the extension is
+
+1. Configure Sphinx to use the extension and add any necessary options.
+   This is also where any monkey patching happens.
+2. Start the Sphinx build.
+3. Once Sphinx has created the builder (``builder-inited`` event), start a subprocess to
+   execute the ``sphinx-rustdocgen`` binary.
+4. The subprocess will traverse the crate, starting with the crate's library and executable
+   files, discovering any modules that were changed since the last build along the way.
+   As long as it has files to process, it will
+
+   a. Use syn_ to generate an AST and analyze it to extract the docstrings and identify the
+      visibility of the items in the file.
+      This creates a :rust:struct:`~sphinx_rustdocgen::directives::crate_directive::CrateDirective`
+      struct for the library file, a
+      :rust:struct:`~sphinx_rustdocgen::directives::executable_directive::ExecutableDirective` for
+      each executable.
+   b. Queue any submodules discovered within the crate and identify their source files.
+      A :rust:struct:`~sphinx_rustdocgen::directives::module_directive::ModuleDirective`
+      struct is generated for the module files discovered.
+   c. Write the document for the file to configured output directory, if it was updated,
+      and fetch the next file from the queue.
+
+5. Once the subprocess completes, Sphinx will run the build process.
+   The :py:mod:`sphinxcontrib_rust` domain will now parse any Rust specific directives and cross-references as they
+   are discovered by Sphinx.
+6. Sphinx build finishes
+
+.. _syn: https://docs.rs/syn/latest/syn/
