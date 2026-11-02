@@ -136,6 +136,6 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/directive_options.rst:261
 msgid ""
-"This corresponds to the Python enum :py:class:`sphinxcontrib_rust.items."
-"SphinxIndexEntryType`."
+"This corresponds to the Python "
+"enum :py:class:`sphinxcontrib_rust.items.SphinxIndexEntryType`."
 msgstr ""
