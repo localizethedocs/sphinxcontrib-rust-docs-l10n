@@ -57,11 +57,11 @@ msgstr "類別"
 
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.rst:18:<autosummary>:1
 msgid ""
-":py:obj:`CrateConfiguration <sphinxcontrib_rust.CrateConfiguration>`\\ "
-"\\(crate\\_name\\, crate\\_dir\\, ...\\)"
+":py:obj:`CrateConfiguration <sphinxcontrib_rust.CrateConfiguration>`\\ \\"
+"(crate\\_name\\, crate\\_dir\\, ...\\)"
 msgstr ""
-":py:obj:`CrateConfiguration <sphinxcontrib_rust.CrateConfiguration>`\\ "
-"\\(crate\\_name\\, crate\\_dir\\, ...\\)"
+":py:obj:`CrateConfiguration <sphinxcontrib_rust.CrateConfiguration>`\\ \\"
+"(crate\\_name\\, crate\\_dir\\, ...\\)"
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration:1
@@ -72,8 +72,9 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring
 #: of sphinxcontrib_rust.CrateConfiguration:3
 msgid ""
-"This is the Python equivalent of :rust:struct:`sphinx_rustdocgen::"
-"Configuration`. It is serialized as JSON and shared with the Rust executable."
+"This is the Python equivalent "
+"of :rust:struct:`sphinx_rustdocgen::Configuration`. It is serialized as JSON "
+"and shared with the Rust executable."
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/__init__.py:docstring

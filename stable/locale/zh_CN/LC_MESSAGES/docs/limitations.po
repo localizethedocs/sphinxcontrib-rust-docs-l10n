@@ -69,8 +69,8 @@ msgstr ""
 
 #: ../../../docs/limitations.rst:21
 msgid ""
-"Links to items imported with a glob ``use`` statement (e.g. ``use my_crate::"
-"*``)."
+"Links to items imported with a glob ``use`` statement (e.g. ``use "
+"my_crate::*``)."
 msgstr ""
 
 #: ../../../docs/limitations.rst:23
@@ -95,9 +95,9 @@ msgstr ""
 
 #: ../../../docs/limitations.rst:31
 msgid ""
-"Use markdown for compatibility with Rust tooling and see :doc:"
-"`compatibility` for any changes required to support the markdown syntax in "
-"use."
+"Use markdown for compatibility with Rust tooling and "
+"see :doc:`compatibility` for any changes required to support the markdown "
+"syntax in use."
 msgstr ""
 
 #: ../../../docs/limitations.rst:34
