@@ -30,13 +30,13 @@ msgstr ""
 
 #: ../../../docs/directives.rst:10
 msgid ""
-"The extension adds the directives listed here, that are used by the :rust:"
-"exe:`sphinx-rustdocgen` in its output. All directives, except :rst:dir:`rust:"
-"use`, can have content. Directives can be nested under each other for "
-"structuring the documentation. See the documentation for the individual "
-"directives, if defining them manually in a document. However, that is not a "
-"recommended use and the directives are designed for programmatic creation "
-"and manipulation."
+"The extension adds the directives listed here, that are used by "
+"the :rust:exe:`sphinx-rustdocgen` in its output. All directives, "
+"except :rst:dir:`rust:use`, can have content. Directives can be nested under "
+"each other for structuring the documentation. See the documentation for the "
+"individual directives, if defining them manually in a document. However, "
+"that is not a recommended use and the directives are designed for "
+"programmatic creation and manipulation."
 msgstr ""
 
 #: ../../../docs/directives.rst:15
@@ -49,9 +49,9 @@ msgstr ""
 
 #: ../../../docs/directives.rst:17
 msgid ""
-"(Required) A integer that indicates the type of the index. See :py:class:"
-"`sphinxcontrib_rust.items.SphinxIndexEntryType` or :rust:enum:"
-"`sphinx_rustdocgen::directives::IndexEntryType` for values."
+"(Required) A integer that indicates the type of the index. "
+"See :py:class:`sphinxcontrib_rust.items.SphinxIndexEntryType` "
+"or :rust:enum:`sphinx_rustdocgen::directives::IndexEntryType` for values."
 msgstr ""
 
 #: ../../../docs/directives.rst:0
@@ -224,8 +224,8 @@ msgstr ""
 #: ../../../docs/directives.rst:120
 msgid ""
 "The ``.. rust:struct:: <struct_path>`` directive documents a struct, a union "
-"or an enum variant. When documenting an enum variant, the path is ``.. rust:"
-"struct::<enum_path>::<variant>``."
+"or an enum variant. When documenting an enum variant, the path is ``.. "
+"rust:struct::<enum_path>::<variant>``."
 msgstr ""
 
 #: ../../../docs/directives.rst:123

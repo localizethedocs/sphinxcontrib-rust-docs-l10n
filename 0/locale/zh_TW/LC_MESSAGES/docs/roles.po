@@ -114,9 +114,9 @@ msgstr "reStructuredText 與文件內連結"
 #: ../../../docs/roles.rst:51
 msgid ""
 "Behaviour similar to Markdown :ref:`intra-doc` links can be enabled by "
-"adding the :rst:role:`rust:any` as the ``default_role`` in Sphinx's ``conf."
-"py``. With this, items can be linked simply with ```<target>``` even outside "
-"the docstrings."
+"adding the :rst:role:`rust:any` as the ``default_role`` in Sphinx's "
+"``conf.py``. With this, items can be linked simply with ```<target>``` even "
+"outside the docstrings."
 msgstr ""
 
 #: ../../../docs/roles.rst:56
@@ -163,8 +163,8 @@ msgstr ""
 #: ../../../docs/roles.rst:85
 msgid ""
 "To a reference an associated function, use the full path to the impl block "
-"where the function is defined, followed by the function's name. See the :rst:"
-"role:`rust:impl` documentation below for details."
+"where the function is defined, followed by the function's name. See "
+"the :rst:role:`rust:impl` documentation below for details."
 msgstr ""
 
 #: ../../../docs/roles.rst:88
@@ -215,9 +215,9 @@ msgstr ""
 
 #: ../../../docs/roles.rst:115
 msgid ""
-"module, not its file's path. So, even if the module is defined in a ``mod."
-"rs`` file, the path here will be the path to import the module in a ``use`` "
-"statement."
+"module, not its file's path. So, even if the module is defined in a "
+"``mod.rs`` file, the path here will be the path to import the module in a "
+"``use`` statement."
 msgstr ""
 
 #: ../../../docs/roles.rst:120
@@ -229,8 +229,8 @@ msgstr ""
 
 #: ../../../docs/roles.rst:123
 msgid ""
-"Specific fields within the struct or variant can be referenced using the :"
-"rst:role:`rust:variable` role."
+"Specific fields within the struct or variant can be referenced using "
+"the :rst:role:`rust:variable` role."
 msgstr ""
 
 #: ../../../docs/roles.rst:127

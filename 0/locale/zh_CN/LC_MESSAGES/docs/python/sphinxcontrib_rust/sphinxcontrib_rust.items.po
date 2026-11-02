@@ -46,8 +46,8 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
 #: of sphinxcontrib_rust.items.RustItem:1:<autosummary>:1
 msgid ""
-":py:obj:`RustItemType <sphinxcontrib_rust.items.RustItemType>`\\ "
-"\\(\\*values\\)"
+":py:obj:`RustItemType <sphinxcontrib_rust.items.RustItemType>`\\ \\"
+"(\\*values\\)"
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
@@ -59,8 +59,8 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
 #: of sphinxcontrib_rust.items.RustItem:1:<autosummary>:1
 msgid ""
-":py:obj:`SphinxIndexEntryType <sphinxcontrib_rust.items."
-"SphinxIndexEntryType>`\\ \\(\\*values\\)"
+":py:obj:`SphinxIndexEntryType "
+"<sphinxcontrib_rust.items.SphinxIndexEntryType>`\\ \\(\\*values\\)"
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
@@ -263,8 +263,8 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
 #: of sphinxcontrib_rust.items.SphinxIndexEntryType:3
 msgid ""
-"The corresponding Rust enum is :rust:crate:`sphinx_rustdocgen::directives::"
-"IndexEntryType`."
+"The corresponding Rust enum "
+"is :rust:crate:`sphinx_rustdocgen::directives::IndexEntryType`."
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
@@ -275,6 +275,6 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/items.py:docstring
 #: of sphinxcontrib_rust.items.SphinxIndexEntryType:6
 msgid ""
-"https://www.sphinx-doc.org/en/master/extdev/domainapi.html#sphinx.domains."
-"Index.generate"
+"https://www.sphinx-doc.org/en/master/extdev/"
+"domainapi.html#sphinx.domains.Index.generate"
 msgstr ""

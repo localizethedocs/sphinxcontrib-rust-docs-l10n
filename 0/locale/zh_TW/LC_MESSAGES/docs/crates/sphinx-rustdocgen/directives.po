@@ -29,16 +29,18 @@ msgstr ""
 msgid ""
 "The module primarily provides the :rust:enum:`Directive`, which implements "
 "the various directives using directive specific structs. The enum and all "
-"directive specific structs implement both :rust:trait:`~sphinx_rustdocgen::"
-"formats::RstContent` and :rust:trait:`~sphinx_rustdocgen::formats::"
-"MdContent` traits. It also provides the :rust:enum:`DirectiveOption` enum, "
-"which implements the various options of the directive."
+"directive specific structs implement "
+"both :rust:trait:`~sphinx_rustdocgen::formats::RstContent` "
+"and :rust:trait:`~sphinx_rustdocgen::formats::MdContent` traits. It also "
+"provides the :rust:enum:`DirectiveOption` enum, which implements the various "
+"options of the directive."
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:20
 msgid ""
-"The output of the directives is parsed by the :py:class:`sphinxcontrib_rust."
-"directives.RustDirective` within the Python extension."
+"The output of the directives is parsed by "
+"the :py:class:`sphinxcontrib_rust.directives.RustDirective` within the "
+"Python extension."
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:24
@@ -50,63 +52,47 @@ msgid "Re-exports"
 msgstr "重新匯出"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:161
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::crate_directive::CrateDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::crate_directive::CrateDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:162
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::directive_options::"
-"DirectiveVisibility`"
-msgstr ""
-":rust:any:`sphinx_rustdocgen::directives::directive_options::"
-"DirectiveVisibility`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::directive_options::DirectiveVisibility`"
+msgstr ":rust:any:`sphinx_rustdocgen::directives::directive_options::DirectiveVisibility`"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:163
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::enum_directive::EnumDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::enum_directive::EnumDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:164
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::executable_directive::"
-"ExecutableDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::executable_directive::ExecutableDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:165
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::function_directive::"
-"FunctionDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::function_directive::FunctionDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:166
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::impl_directive::ImplDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::impl_directive::ImplDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:167
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::macro_directive::MacroDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::macro_directive::MacroDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:168
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::module_directive::ModuleDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::module_directive::ModuleDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:169
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::struct_directive::StructDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::struct_directive::StructDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:170
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::trait_directive::TraitDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::trait_directive::TraitDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:171
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::type_directive::TypeDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::type_directive::TypeDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:172
@@ -114,9 +100,7 @@ msgid ":rust:any:`sphinx_rustdocgen::directives::use_directive::UseDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:173
-msgid ""
-":rust:any:`sphinx_rustdocgen::directives::variable_directive::"
-"VariableDirective`"
+msgid ":rust:any:`sphinx_rustdocgen::directives::variable_directive::VariableDirective`"
 msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives.rst:177

@@ -44,8 +44,8 @@ msgstr ""
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring
 #: of sphinxcontrib_rust.domain.RustDomain:1:<autosummary>:1
 msgid ""
-":py:obj:`RustXRefRole <sphinxcontrib_rust.domain.RustXRefRole>`\\ "
-"\\(\\[fix\\_parens\\, lowercase\\, ...\\]\\)"
+":py:obj:`RustXRefRole <sphinxcontrib_rust.domain.RustXRefRole>`\\ \\(\\"
+"[fix\\_parens\\, lowercase\\, ...\\]\\)"
 msgstr ""
 
 #: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/domain.py:docstring

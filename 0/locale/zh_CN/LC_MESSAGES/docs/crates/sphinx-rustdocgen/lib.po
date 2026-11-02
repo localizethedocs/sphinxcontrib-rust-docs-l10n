@@ -187,6 +187,6 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:313
 msgid ""
-"Create a validated and normalized version of the :rust:struct:"
-"`Configuration`."
+"Create a validated and normalized version of "
+"the :rust:struct:`Configuration`."
 msgstr ""

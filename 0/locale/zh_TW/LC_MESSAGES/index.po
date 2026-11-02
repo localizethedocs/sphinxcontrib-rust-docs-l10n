@@ -308,9 +308,9 @@ msgstr ""
 msgid ""
 "(Required) A dict of crate names and their source code directories. This "
 "must be a dict even for a single crate. It determines which crates are "
-"documented. The directory should be the one which contains the ``Cargo."
-"toml`` file for the crate and each crate in the workspace must be listed "
-"explicitly."
+"documented. The directory should be the one which contains the "
+"``Cargo.toml`` file for the crate and each crate in the workspace must be "
+"listed explicitly."
 msgstr ""
 
 #: ../../../index.rst:0

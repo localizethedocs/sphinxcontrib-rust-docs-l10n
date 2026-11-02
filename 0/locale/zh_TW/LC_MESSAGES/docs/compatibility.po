@@ -137,8 +137,8 @@ msgstr ""
 #: ../../../docs/compatibility.rst:65
 msgid ""
 "Enable the ``tasklist`` extension for myst-parser in ``conf.py``. The syntax "
-"is the same with this extension enabled. See https://myst-parser.readthedocs."
-"io/en/latest/syntax/optional.html#task-lists for details."
+"is the same with this extension enabled. See https://myst-"
+"parser.readthedocs.io/en/latest/syntax/optional.html#task-lists for details."
 msgstr ""
 
 #: ../../../docs/compatibility.rst:69
@@ -162,9 +162,10 @@ msgid ""
 "Rust uses a separate div class for this as described `here <https://doc.rust-"
 "lang.org/rustdoc/how-to-write-documentation.html#adding-a-warning-block>`_. "
 "To support a similar syntax for admonitions, enable the ``html_admonition`` "
-"extension for myst-parser in ``conf.py``. See https://myst-parser."
-"readthedocs.io/en/latest/syntax/optional.html#html-admonitions for details. "
-"There are some additional features supported by myst-parser compared to Rust."
+"extension for myst-parser in ``conf.py``. See https://myst-"
+"parser.readthedocs.io/en/latest/syntax/optional.html#html-admonitions for "
+"details. There are some additional features supported by myst-parser "
+"compared to Rust."
 msgstr ""
 
 #: ../../../docs/compatibility.rst:84
