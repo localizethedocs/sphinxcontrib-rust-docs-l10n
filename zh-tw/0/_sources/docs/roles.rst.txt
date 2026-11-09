@@ -1,0 +1,148 @@
+===================
+Rust specific roles
+===================
+
+The extension provides the following docutils roles, which can be referenced as ``{<role_name>}`<target>``` in Markdown
+and as ``:<role_name>:`target``` in reStructuredText.
+
+For all roles, the target is the double colon (``::``) delimited full Rust path to the item, similar to the path used
+when importing the item. This syntax is slightly extended to accommodate linking to trait impl blocks and fields within
+a struct.
+
+For all importable items like structs, enums, traits, etc., the target path is the Rust import path,
+either ``<crate_name>::<module_path>::<item>`` or ``<executable_name>::<module_path>::<item>``.
+
+To link to an implementation of a trait by a struct or enum, the target is provided as
+``<crate_name>::<module_path>::<item>::<trait_name>::<trait_item>``.
+
+.. tip::
+
+    Adding a ``~`` before the path will display only the final portion of the path as the link text. So,
+    ``:rust:fn:`~crate::module::func``` will display only ``func`` as the link text.
+
+Role targets within docstrings
+------------------------------
+
+When writing docstrings, targets can be specified relative to the module and its imports.
+
+Any items defined or imported in the same file with a ``use`` statement may be referenced directly.
+So, ``:rust:struct:`Foo``` will link to a ``struct Foo`` defined or imported within that file. This makes the
+references within the docstrings much shorter and the docstrings easier to read. The text for the link will be
+``Foo`` in this case, without the need for a preceding ``~``.
+
+The short reference can also be used for items that are members of or associated with an defined or imported item.
+For example, a variant of an enum defined within the file can be referenced as ``:rust:struct:`<enum>::<variant>```
+within the file itself. In this case, the link text will be ``<enum>::<variant>``. A ``~`` can be added here to display
+only ``<variant>`` as the link text.
+
+Short references are not supported for items that are imported as part of a glob (``*``) import.
+
+Markdown docstrings and intra-doc links
++++++++++++++++++++++++++++++++++++++++
+
+The tool supports rustdoc's :ref:`intra-doc` and targets may be referenced in the markdown docstrings directly using
+``[<target>]`` or ``[`<target>`]``. This feature also works in docs besides docstrings, but the target must be an
+absolute path. Literal text enclosed within brackets must be escaped using backslash (e.g. ``\[not a link]``) otherwise
+it will appear as a broken link.
+
+reStructuredText and intra-doc links
+++++++++++++++++++++++++++++++++++++
+
+Behaviour similar to Markdown :ref:`intra-doc` links can be enabled by adding the :rst:role:`rust:any` as the
+``default_role`` in Sphinx's ``conf.py``. With this, items can be linked simply with ```<target>``` even outside the
+docstrings.
+
+Provided roles
+--------------
+
+.. rst:role:: rust:any
+
+   ``:rust:any:`<target>``` finds any item that matches the target and links to it. This is similar to Sphinx's any_
+   role, but within the Rust domain. Use this role as the default role for the build to reference Rust items without
+   any role specified.
+
+.. rst:role:: rust:crate
+
+   ``:rust:crate:`<crate_name>``` links to the crate's documentation, within ``lib.rs``.
+
+.. rst:role:: rust:enum
+
+   ``:rust:enum:`<enum_path>``` links to an enum's documentation. Specific variant's within the enum can be referenced
+    using the ``struct`` role.
+
+.. rst:role:: rust:exe
+
+   ``:rust:exe:`<executable_name>``` links to an executable's documentation.
+
+.. rst:role:: rust:executable
+
+   Alias for :rst:role:`rust:exe`.
+
+.. rst:role:: rust:fn
+
+   ``:rust:fn:`<fn_path>``` links to a function's documentation.
+
+   To a reference an associated function, use the full path to the impl block where the function is defined, followed
+   by the function's name. See the :rst:role:`rust:impl` documentation below for details.
+
+   Note that the path ``<trait_path>::<fn>`` references the function declaration within the trait, whereas
+   ``<struct_path>::<trait>::<fn>`` references the implementation of the trait's function for the struct.
+
+.. rst:role:: rust:function
+
+    Alias for :rst:role:`rust:fn`.
+
+.. rst:role:: rust:impl
+
+   ``:rust:impl:`<impl_path>``` links to an impl block, either of the struct, or for a trait for a struct. The
+   ``<impl_path>`` is provided as ``<crate_name>::<module_name>::<item>`` for struct or enum impl blocks and as
+   ``<crate_name>::<module_name>::<item>::<trait_name>`` for trait impl blocks.
+
+   When referencing an impl block for a struct or an enum, use the full path to the impl block within the crate. So,
+   if the ``impl Foo`` block is in a different module from the struct itself, the path must reference the module
+   of the impl block. Items within the impl block like functions and variables are then nested under this path.
+
+   When referencing a trait impl block, the last two components of the path are ``<item>::<trait>``. So, a block
+   ``impl Display for Foo`` is referenced as ``crate::module::Foo::Display``.
+
+.. rst:role:: rust:macro
+
+   ``:rust:macro:`<macro_path>``` inks to a macro's documentation.
+
+.. rst:role:: rust:module
+
+   ``:rust:module:`<module_path>``` inks to the module's documentation. The module path here is the Rust path of the
+    module, not its file's path. So, even if the module is defined in a ``mod.rs`` file, the path here will be the path
+    to import the module in a ``use`` statement.
+
+.. rst:role:: rust:struct
+
+   ``:rust:struct:`<struct_path>``` links to a struct or an enum variant's documentation. For an enum variant,
+   use ``:rust:struct:`<enum_path>::<variant>``` as the target.
+
+   Specific fields within the struct or variant can be referenced using the :rst:role:`rust:variable` role.
+
+.. rst:role:: rust:trait
+
+   ``:rust:trait:`<trait_path>``` links to a trait's documentation. Items defined within the trait are nested under the
+   trait's path.
+
+.. rst:role:: rust:type
+
+   ``:rust:type:`<type_path>``` links to a type's documentation.
+
+.. rst:role:: rust:variable
+
+   ``:rust:variable:`<variable_path>``` links to a static or const variable, or to a field within a struct or enum
+   variant.
+
+   | For fields of a struct, the path is ``<struct_path>::<field_name>``.
+   | For tuple structs, the field's index should be used instead of the name (``<struct_path>::0``).
+   | For an enum variant's fields, the path is ``<enum_path>::<variant>::<field_name>``, with field index instead of
+     name for tuple variants.
+
+.. rst:role:: rust:var
+
+   Alias for :rst:role:`rust:variable`.
+
+.. _any: https://www.sphinx-doc.org/en/master/usage/referencing.html#role-any

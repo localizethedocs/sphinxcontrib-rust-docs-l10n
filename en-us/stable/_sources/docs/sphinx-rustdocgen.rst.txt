@@ -1,0 +1,15 @@
+===============================
+sphinx-rustdocgen documentation
+===============================
+
+The ``sphinx-rustdocgen`` crate consists of an executable, :rust:exe:`sphinx-rustdocgen` and a supporting library crate.
+
+.. toctree::
+   :hidden:
+
+   crates/sphinx-rustdocgen/main
+
+.. toctree::
+   :maxdepth: 3
+
+   crates/sphinx-rustdocgen/lib

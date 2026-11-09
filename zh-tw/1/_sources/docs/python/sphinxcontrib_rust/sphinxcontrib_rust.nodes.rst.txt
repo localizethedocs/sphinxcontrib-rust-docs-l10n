@@ -1,0 +1,13 @@
+sphinxcontrib\_rust.nodes
+=========================
+
+.. automodule:: sphinxcontrib_rust.nodes
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Node
+      NodeType
+   
