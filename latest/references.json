@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-19 11:58:53 -0700",
-      "hash" : "d44194b3de4ecf481fdce333a48ed196c478a9cc",
-      "title" : "Fix Cargo.lock for release"
+      "date" : "2026-10-17 18:04:13 -0700",
+      "hash" : "4ffe5644af2be085cccd8c04375153662da8f270",
+      "title" : "Update to syn 3.0 and cargo_toml 1.0"
     }
   },
   "type" : "branch",
