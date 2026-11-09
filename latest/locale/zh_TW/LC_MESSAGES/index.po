@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 13:09+0000\n"
+"POT-Creation-Date: 2026-11-02 18:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../index.rst:203
+#: ../../../index.rst:205
 msgid "Detailed docs"
 msgstr ""
 
@@ -197,6 +197,8 @@ msgid ""
 "    \"strikethrough\",\n"
 "    \"tasklist\",\n"
 "}\n"
+"myst_strikethrough_single_tilde = True # Requires myst-parser>=5.1.0\n"
+"myst_colon_fence_exact_match = True # Requires myst-parser>=5.1.0\n"
 "rust_crates = {\n"
 "    \"my_crate\": \".\",\n"
 "    \"my_crate_derive\": \"my-crate-derive\",\n"
@@ -205,7 +207,7 @@ msgid ""
 "rust_rustdoc_fmt = \"md\""
 msgstr ""
 
-#: ../../../index.rst:111
+#: ../../../index.rst:113
 msgid ""
 "This will generate the documentation from your Rust crates and put them in "
 "the ``docs/crates/<crate_name>`` directories. :doc:`docs/including` "
@@ -214,18 +216,18 @@ msgid ""
 "other docs in the Sphinx build."
 msgstr ""
 
-#: ../../../index.rst:115
+#: ../../../index.rst:117
 msgid ""
 "See the `configuration options for MyST`_  for other options that are "
 "supported by myst-parser. They can be changed as required to customize the "
 "generated docs."
 msgstr ""
 
-#: ../../../index.rst:119
+#: ../../../index.rst:121
 msgid "reStructuredText docstrings"
 msgstr "reStructuredText 文件字串"
 
-#: ../../../index.rst:121
+#: ../../../index.rst:123
 msgid ""
 "Using the extension, it is also possible to write the Rust docstrings in "
 "reStructuredText. Note that this makes the docstrings unusable with Rustdoc "
@@ -234,14 +236,14 @@ msgid ""
 "documentation on docs.rs for the crate will not be rendered properly."
 msgstr ""
 
-#: ../../../index.rst:126
+#: ../../../index.rst:128
 msgid ""
 "To enable RST docstrings, add the extension to the ``conf.py`` file and "
 "configure it appropriately."
 msgstr ""
 "若要啟用 RST 文件字串，請將此擴充功能增添到 ``conf.py`` 檔案並進行適當設定。"
 
-#: ../../../index.rst:128
+#: ../../../index.rst:130
 msgid ""
 "extensions = [\"sphinxcontrib_rust\"]\n"
 "rust_crates = {\n"
@@ -252,7 +254,7 @@ msgid ""
 "rust_rustdoc_fmt = \"rst\""
 msgstr ""
 
-#: ../../../index.rst:138
+#: ../../../index.rst:140
 msgid ""
 "This will generate the documentation from your Rust crates and put them in "
 "the ``docs/crates/<crate_name>`` directories. You can link against the "
@@ -262,11 +264,11 @@ msgid ""
 "build."
 msgstr ""
 
-#: ../../../index.rst:144
+#: ../../../index.rst:146
 msgid "Recommendations"
 msgstr ""
 
-#: ../../../index.rst:146
+#: ../../../index.rst:148
 msgid ""
 "Use a HTML theme that allows expanding the TOC in the sidebar completely. "
 "For example, if using ``sphinx_rtd_theme``, set the ``navigation_depth`` in "
@@ -274,7 +276,7 @@ msgid ""
 "{\"navigation_depth\": -1}``). This makes the sidebar much better to use."
 msgstr ""
 
-#: ../../../index.rst:149
+#: ../../../index.rst:151
 msgid ""
 "It is possible to write docstrings in Markdown and other documentation in "
 "reStructuredText. The configuration should be the same as what is described "
@@ -282,11 +284,11 @@ msgid ""
 "of the choice of the docstrings syntax."
 msgstr ""
 
-#: ../../../index.rst:154
+#: ../../../index.rst:156
 msgid "Options"
 msgstr "選項"
 
-#: ../../../index.rst:156
+#: ../../../index.rst:158
 msgid ""
 "Options are simply Python variables set in the ``conf.py`` file. Most "
 "options can be provided as a global value or a dict of values per crate, "
@@ -298,7 +300,7 @@ msgstr ""
 msgid "rust_crates"
 msgstr ""
 
-#: ../../../index.rst:159
+#: ../../../index.rst:161
 msgid ""
 "(Required) A dict of crate names and their source code directories. This "
 "must be a dict even for a single crate. It determines which crates are "
@@ -311,7 +313,7 @@ msgstr ""
 msgid "rust_doc_dir"
 msgstr ""
 
-#: ../../../index.rst:164
+#: ../../../index.rst:166
 msgid ""
 "(Required) A directory under which to write the docs for all crates, or a "
 "dict of directory for each crate name. The directories will be read by "
@@ -324,7 +326,7 @@ msgstr ""
 msgid "rust_rustdoc_fmt"
 msgstr ""
 
-#: ../../../index.rst:170
+#: ../../../index.rst:172
 msgid "Either ``rst`` or ``md``. (Default: ``rst``)"
 msgstr ""
 
@@ -332,7 +334,7 @@ msgstr ""
 msgid "rust_visibility"
 msgstr ""
 
-#: ../../../index.rst:171
+#: ../../../index.rst:173
 msgid ""
 "Only includes documentation and indexes for items with visibility greater "
 "than or equal to the setting. The value can be ``pub``, ``crate`` or "
@@ -344,7 +346,7 @@ msgstr ""
 msgid "rust_strip_src"
 msgstr ""
 
-#: ../../../index.rst:174
+#: ../../../index.rst:176
 msgid ""
 "Whether to remove the ``src/`` directory when creating output files or not. "
 "The default is ``True``, since that was the initial behavior. So, instead of "
@@ -354,7 +356,7 @@ msgid ""
 "path. (Default: True)"
 msgstr ""
 
-#: ../../../index.rst:181
+#: ../../../index.rst:183
 msgid ""
 "The below options are global options, and cannot be specified per crate."
 msgstr ""
@@ -363,7 +365,7 @@ msgstr ""
 msgid "rust_generate_mode"
 msgstr ""
 
-#: ../../../index.rst:183
+#: ../../../index.rst:185
 msgid ""
 "One of ``always``, ``skip`` or ``changed``. If set to ``always``, all "
 "documents are regenerated. If set to ``skip``, the docs are not regenerated "
@@ -376,7 +378,7 @@ msgstr ""
 msgid "rust_rustdocgen"
 msgstr ""
 
-#: ../../../index.rst:188
+#: ../../../index.rst:190
 msgid ""
 "The path to the ``sphinx-rustdocgen`` executable to use. The path must be an "
 "absolute path or relative to Sphinx's working directory. (Default: Obtained "
