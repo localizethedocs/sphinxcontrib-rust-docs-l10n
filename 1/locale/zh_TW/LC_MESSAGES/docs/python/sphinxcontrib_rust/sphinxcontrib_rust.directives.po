@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinxcontrib-rust 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 12:36+0000\n"
+"POT-Creation-Date: 2026-11-02 17:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "sphinxcontrib\\_rust.directives"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives:1
 msgid "Module for all the directive classes of the Rust domain"
 msgstr ""
@@ -40,7 +40,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustCrateDirective>`\\ \\(name\\, "
 "arguments\\, options\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustCrateDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling crate documentation"
@@ -54,7 +54,7 @@ msgstr ""
 ":py:obj:`RustDirective <sphinxcontrib_rust.directives.RustDirective>`\\ \\"
 "(name\\, arguments\\, options\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Base class for Rust directives."
@@ -70,7 +70,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustEnumDirective>`\\ \\(name\\, arguments\\, "
 "options\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustEnumDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling enum documentation"
@@ -86,7 +86,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustExecutableDirective>`\\ \\(name\\, "
 "arguments\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustExecutableDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling executable documentation"
@@ -102,7 +102,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustFunctionDirective>`\\ \\(name\\, "
 "arguments\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustFunctionDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling function documentation"
@@ -118,7 +118,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustImplDirective>`\\ \\(name\\, arguments\\, "
 "options\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustImplDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling impl documentation"
@@ -134,7 +134,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustMacroDirective>`\\ \\(name\\, "
 "arguments\\, options\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustMacroDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling macro documentation"
@@ -150,7 +150,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustModuleDirective>`\\ \\(name\\, "
 "arguments\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustModuleDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling module documentation"
@@ -166,7 +166,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustStructDirective>`\\ \\(name\\, "
 "arguments\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustStructDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling struct documentation"
@@ -182,7 +182,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustTraitDirective>`\\ \\(name\\, "
 "arguments\\, options\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustTraitDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling trait documentation"
@@ -198,7 +198,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustTypeDirective>`\\ \\(name\\, arguments\\, "
 "options\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustTypeDirective:1
 #: sphinxcontrib_rust.directives.RustVariableDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
@@ -215,7 +215,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustUseDirective>`\\ \\(name\\, arguments\\, "
 "options\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective:1
 #: ../../../docs/python/sphinxcontrib_rust/sphinxcontrib_rust.directives.rst:23:<autosummary>:1
 msgid "Directive for handling the use statements in the file."
@@ -231,7 +231,7 @@ msgstr ""
 "<sphinxcontrib_rust.directives.RustVariableDirective>`\\ \\(name\\, "
 "arguments\\, ...\\)"
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustCrateDirective.rust_item_type:1
 #: sphinxcontrib_rust.directives.RustDirective.rust_item_type:1
 #: sphinxcontrib_rust.directives.RustEnumDirective.rust_item_type:1
@@ -248,7 +248,7 @@ msgstr ""
 msgid "The Rust object type for the directive"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective:3
 msgid ""
 "This class implements most of the logic for the directives. For each "
@@ -256,76 +256,76 @@ msgid ""
 "behaviour."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective:6
 msgid ""
 "The input for the directives is generated with the Rust code "
 "in :rust:module:`sphinx_rustdocgen::directives`"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.add_target_and_index:1
 msgid "Adds the item to the domain and generates the index for it."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.add_target_and_index:3
 msgid "This is called after :py:func:`handle_signature` has executed."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.add_target_and_index:5
 #: sphinxcontrib_rust.directives.RustDirective.handle_signature:11
 msgid "Args:"
 msgstr "引數："
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.add_target_and_index:0
 msgid "name"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.add_target_and_index:6
 msgid ""
 "The name of the item, which is the return value "
 "from :py:func:`handle_signature`."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.add_target_and_index:0
 #: sphinxcontrib_rust.directives.RustDirective.handle_signature:0
 msgid "sig"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.add_target_and_index:8
 msgid ""
 "The argument to the directive, which is the Rust path of the item set by the "
 "Rust doc generator."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.add_target_and_index:0
 #: sphinxcontrib_rust.directives.RustDirective.handle_signature:0
 msgid "signode"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.add_target_and_index:10
 msgid "The docutils node of the for item."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.get_directives:1
 msgid "Get all the directives for the object types"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.handle_signature:1
 msgid "Handle the directive and generate its display signature."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.handle_signature:3
 msgid ""
 "The display signature is what is displayed instead of the directive name and "
@@ -334,14 +334,14 @@ msgid ""
 "item type and the final component of the path are used."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.handle_signature:8
 msgid ""
 "Raising ``ValueError`` will put the ``sig`` value into a single node, which "
 "is what the super implementation does."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.handle_signature:12
 msgid ""
 "The argument of the directive as set during doc generation, not the "
@@ -349,32 +349,32 @@ msgid ""
 "the item as the argument."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.handle_signature:15
 msgid ""
 "The docutils node for the item, to which the display signature nodes should "
 "be appended."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.handle_signature:18
 msgid "Returns:"
 msgstr "回傳值："
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.handle_signature:19
 msgid ""
 "The path for the object, which is a tuple of the Rust path components and "
 "defines the hierarchy of the object for indexing."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustDirective.option_spec:1
 #: sphinxcontrib_rust.directives.RustUseDirective.option_spec:1
 msgid "Mapping of option names to validator functions."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective:3
 msgid ""
 "This is a meta-directive that does not add content. Instead, it adds the "
@@ -382,53 +382,53 @@ msgid ""
 "domain items."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective:8
 msgid ""
 "This inherits from :py:class:`RustDirective` only to make it easier to work "
 "with. It does not behave like other directives."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.has_content:1
 msgid "May the directive have content?"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.run:1
 msgid ""
 "Main directive entry function, called by docutils upon encountering the "
 "directive."
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.run:4
 msgid ""
 "This directive is meant to be quite easily subclassable, so it delegates to "
 "several additional methods.  What it does:"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.run:7
 msgid "find out if called as a domain-specific directive, set self.domain"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.run:8
 msgid "create a `desc` node to fit all description inside"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.run:9
 msgid "parse standard options, currently `no-index`"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.run:10
 msgid "create an index node if needed as self.indexnode"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.run:11
 msgid ""
 "parse all given signatures (as returned by self.get_signatures()) using "
@@ -436,12 +436,12 @@ msgid ""
 "ValueError"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.run:14
 msgid "add index entries using self.add_target_and_index()"
 msgstr ""
 
-#: ../../../../../.conda/lib/python3.14/site-packages/sphinxcontrib_rust/directives.py:docstring
+#: ../../../../../.conda/lib/python3.15/site-packages/sphinxcontrib_rust/directives.py:docstring
 #: of sphinxcontrib_rust.directives.RustUseDirective.run:15
 msgid "parse the content and handle doc fields in it"
 msgstr ""
