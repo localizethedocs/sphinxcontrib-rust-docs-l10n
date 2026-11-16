@@ -1,0 +1,174 @@
+=======================
+``mod macro_directive``
+=======================
+
+
+.. rust:module:: sphinx_rustdocgen::directives::macro_directive
+   :index: 0
+   :vis: pvt
+
+   Implementation of the ``rust:macro`` directive
+
+   .. rust:use:: sphinx_rustdocgen::directives::macro_directive
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: syn::ItemMacro
+      :used_name: ItemMacro
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveOption
+      :used_name: DirectiveOption
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility
+      :used_name: DirectiveVisibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::IndexEntryType
+      :used_name: IndexEntryType
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::Directive
+      :used_name: Directive
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::extract_doc_from_attrs
+      :used_name: extract_doc_from_attrs
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdContent
+      :used_name: MdContent
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdDirective
+      :used_name: MdDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstContent
+      :used_name: RstContent
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstDirective
+      :used_name: RstDirective
+
+
+   .. rubric:: Structs and Unions
+
+
+   .. rust:struct:: sphinx_rustdocgen::directives::macro_directive::MacroDirective
+      :index: 1
+      :vis: pub
+      :toc: struct MacroDirective
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"MacroDirective"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::name
+         :index: 2
+         :vis: crate
+         :toc: name
+         :layout: [{"type":"name","value":"name"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::ident
+         :index: 2
+         :vis: crate
+         :toc: ident
+         :layout: [{"type":"name","value":"ident"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::options
+         :index: 2
+         :vis: crate
+         :toc: options
+         :layout: [{"type":"name","value":"options"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"DirectiveOption","target":"DirectiveOption"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:variable:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::content
+         :index: 2
+         :vis: crate
+         :toc: content
+         :layout: [{"type":"name","value":"content"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::macro_directive::MacroDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MacroDirective","target":"MacroDirective"}]
+         :toc: impl MacroDirective
+
+
+         .. rubric:: Variables
+
+
+         .. rust:variable:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::DIRECTIVE_NAME
+            :index: -1
+            :vis: pvt
+            :toc: const DIRECTIVE_NAME
+            :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"DIRECTIVE_NAME"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"}]
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::change_parent
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"change_parent"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"new_parent"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":")"}]
+
+            Change the parent module of the macro.
+
+         .. rust:function:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::directive_visibility
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"directive_visibility"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"}]
+
+            Return the visibility of this directive.
+
+         .. rust:function:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::from_item
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"from_item"},{"type":"punctuation","value":"("},{"type":"name","value":"parent_path"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"},{"type":"punctuation","value":", "},{"type":"name","value":"item"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"ItemMacro","target":"ItemMacro"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Option","target":"Option"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::RstDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"RstDirective","target":"RstDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"MacroDirective","target":"MacroDirective"}]
+         :toc: impl RstDirective for MacroDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::RstDirective::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::MdDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MdDirective","target":"MdDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"MacroDirective","target":"MacroDirective"}]
+         :toc: impl MdDirective for MacroDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::macro_directive::MacroDirective::MdDirective::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+

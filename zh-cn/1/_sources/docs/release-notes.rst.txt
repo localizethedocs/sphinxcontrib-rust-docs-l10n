@@ -1,0 +1,27 @@
+Release Notes
+=============
+
+:v1.0.0:
+
+  * Initial release of the extension.
+
+:v1.0.1:
+
+  * fix: Extension does not eager evaluate potential file names while unwrapping ``Option``.
+
+:v1.1.0:
+
+  * feature: Add support for module's with custom source code paths defined with ``#[path = "..."]`` attribute.
+
+:v1.2.0:
+
+  * dependencies: Add support for Sphinx 9.x and myst-parser 5.x
+
+:v1.2.1:
+
+  * fix: Footnotes are skipped when checking for auto-links to Rust items.
+
+:v1.3.0:
+
+  * dependencies: Update to syn 3.0
+  * docs: Document MyST parser 5.1.0 extension to enable single ``~`` strikethrough syntax.

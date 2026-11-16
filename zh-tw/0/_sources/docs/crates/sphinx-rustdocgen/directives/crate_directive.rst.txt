@@ -1,0 +1,226 @@
+=======================
+``mod crate_directive``
+=======================
+
+
+.. rust:module:: sphinx_rustdocgen::directives::crate_directive
+   :index: 0
+   :vis: pvt
+
+   Implementation of the ``rust:crate`` directive.
+
+   .. rust:use:: sphinx_rustdocgen::directives::crate_directive
+      :used_name: self
+
+
+   .. rust:use:: sphinx_rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: std::collections::BTreeMap
+      :used_name: BTreeMap
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveOption
+      :used_name: DirectiveOption
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::DirectiveVisibility
+      :used_name: DirectiveVisibility
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::directive_options::IndexEntryType
+      :used_name: IndexEntryType
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::Directive
+      :used_name: Directive
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::FileDirectives
+      :used_name: FileDirectives
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::UseDirective
+      :used_name: UseDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::extract_doc_from_attrs
+      :used_name: extract_doc_from_attrs
+
+
+   .. rust:use:: sphinx_rustdocgen::directives::order_items
+      :used_name: order_items
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::Format
+      :used_name: Format
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdContent
+      :used_name: MdContent
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::MdDirective
+      :used_name: MdDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstContent
+      :used_name: RstContent
+
+
+   .. rust:use:: sphinx_rustdocgen::formats::RstDirective
+      :used_name: RstDirective
+
+
+   .. rust:use:: sphinx_rustdocgen::utils::SourceCodeFile
+      :used_name: SourceCodeFile
+
+
+   .. rubric:: Structs and Unions
+
+
+   .. rust:struct:: sphinx_rustdocgen::directives::crate_directive::CrateDirective
+      :index: 1
+      :vis: pub
+      :toc: struct CrateDirective
+      :layout: [{"type":"keyword","value":"struct"},{"type":"space"},{"type":"name","value":"CrateDirective"}]
+
+      Struct to hold data required for documenting a crate.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::name
+         :index: 2
+         :vis: crate
+         :toc: name
+         :layout: [{"type":"name","value":"name"},{"type":"punctuation","value":": "},{"type":"link","value":"String","target":"String"}]
+
+         The name of the crate.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::options
+         :index: 2
+         :vis: crate
+         :toc: options
+         :layout: [{"type":"name","value":"options"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"DirectiveOption","target":"DirectiveOption"},{"type":"punctuation","value":">"}]
+
+         The options for the crate directive.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::content
+         :index: 2
+         :vis: crate
+         :toc: content
+         :layout: [{"type":"name","value":"content"},{"type":"punctuation","value":": "},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+         The docstring for the crate's lib.rs file.
+
+      .. rust:variable:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::file_directives
+         :index: 2
+         :vis: crate
+         :toc: file_directives
+         :layout: [{"type":"name","value":"file_directives"},{"type":"punctuation","value":": "},{"type":"link","value":"FileDirectives","target":"FileDirectives"}]
+
+         The directives within the crate's document file.
+
+      .. rubric:: Implementations
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::crate_directive::CrateDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"CrateDirective","target":"CrateDirective"}]
+         :toc: impl CrateDirective
+
+
+         .. rubric:: Variables
+
+
+         .. rust:variable:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::DIRECTIVE_NAME
+            :index: -1
+            :vis: pvt
+            :toc: const DIRECTIVE_NAME
+            :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"DIRECTIVE_NAME"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"lifetime","value":"'static"},{"type":"space"},{"type":"link","value":"str","target":"str"}]
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::filter_items
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"filter_items"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"Directive","target":"Directive"},{"type":"punctuation","value":">"}]
+
+            Filter out items that will not be documented due to visibility
+            restrictions.
+            
+            The function goes through all modules and identifies items that will
+            not be documented due to the configured visibility. As part of the
+            filtering, it will also identify any re-exports that should be inlined.
+            
+            Returns:
+                A vec of directives that will not be documented.
+
+         .. rust:function:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::identify_impl_parents
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"identify_impl_parents"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"mut"},{"type":"space"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"}]
+
+            Collect all impl directive and move them under appropriate parent.
+            
+            The new parent for the impl directive is the struct or enum
+            that is its self type, or the trait that is being implemented. If both
+            the self type and trait are in the crate, the self type is preferred
+            as the parent.
+
+         .. rust:function:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::new
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"new"},{"type":"punctuation","value":"("},{"type":"name","value":"source_code_file"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"SourceCodeFile","target":"SourceCodeFile"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Self","target":"Self"}]
+
+            Create a new ``CrateDirective`` for the crate from the source file.
+
+         .. rust:function:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::text
+            :index: -1
+            :vis: crate
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"format"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"Format","target":"Format"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+            Generate the text for the crate's documentation file.
+
+      .. rubric:: Traits implemented
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::RstDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"RstDirective","target":"RstDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"CrateDirective","target":"CrateDirective"}]
+         :toc: impl RstDirective for CrateDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::RstDirective::get_rst_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_rst_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"level"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
+
+      .. rust:impl:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::MdDirective
+         :index: -1
+         :vis: pub
+         :layout: [{"type":"keyword","value":"impl"},{"type":"space"},{"type":"link","value":"MdDirective","target":"MdDirective"},{"type":"space"},{"type":"keyword","value":"for"},{"type":"space"},{"type":"link","value":"CrateDirective","target":"CrateDirective"}]
+         :toc: impl MdDirective for CrateDirective
+
+
+         .. rubric:: Functions
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::MdDirective::fence_size
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"fence_size"},{"type":"punctuation","value":"("},{"type":"punctuation","value":"&"},{"type":"keyword","value":"self"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"usize","target":"usize"}]
+
+
+         .. rust:function:: sphinx_rustdocgen::directives::crate_directive::CrateDirective::MdDirective::get_md_text
+            :index: -1
+            :vis: pvt
+            :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"get_md_text"},{"type":"punctuation","value":"("},{"type":"keyword","value":"self"},{"type":"punctuation","value":", "},{"type":"name","value":"fence_size"},{"type":"punctuation","value":": "},{"type":"link","value":"usize","target":"usize"},{"type":"punctuation","value":", "},{"type":"name","value":"max_visibility"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"DirectiveVisibility","target":"DirectiveVisibility"},{"type":"punctuation","value":")"},{"type":"space"},{"type":"returns"},{"type":"space"},{"type":"link","value":"Vec","target":"Vec"},{"type":"punctuation","value":"<"},{"type":"link","value":"String","target":"String"},{"type":"punctuation","value":">"}]
+
