@@ -23,7 +23,7 @@ msgstr "``mod struct_directive``"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:10
 msgid "Implementation of the ``rust:struct`` directive"
-msgstr ""
+msgstr "``rust:struct`` 指示詞的實現"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:102
 msgid "Macros"
@@ -31,7 +31,7 @@ msgstr "巨集"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:107
 msgid "DRY macro to create the nodes for the directive's layout."
-msgstr ""
+msgstr "用來建立指示詞配置節點的 DRY 巨集。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:111
 msgid "Structs and Unions"
@@ -47,11 +47,11 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:134
 msgid "The identifier for the struct."
-msgstr ""
+msgstr "結構體的識別碼。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:142
 msgid "The directive options to use."
-msgstr ""
+msgstr "要使用的指示詞選項。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:150
 msgid "The docstring for the struct."
@@ -71,7 +71,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:178
 msgid "Implementations"
-msgstr ""
+msgstr "實現"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:188
 msgid "Variables"
@@ -99,11 +99,11 @@ msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:0
 msgid "impl\\_"
-msgstr ""
+msgstr "impl\\_"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:210
 msgid "The :rust:struct:`ImplDirective` for the struct."
-msgstr ""
+msgstr "結構體的 :rust:struct:`ImplDirective`\\ 。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/struct_directive.rst:217
 msgid "Change the parent module of the struct and its items."
