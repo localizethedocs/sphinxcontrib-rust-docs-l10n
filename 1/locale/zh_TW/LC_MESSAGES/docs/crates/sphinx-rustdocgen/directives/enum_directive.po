@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:113
 msgid "The directive options to use."
-msgstr ""
+msgstr "要使用的指示詞選項。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:121
 msgid "The docstring for the enum."
@@ -92,7 +92,7 @@ msgstr "引數："
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:0
 msgid "impl\\_"
-msgstr ""
+msgstr "impl\\_"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/enum_directive.rst:181
 msgid "The :rust:struct:`ImplDirective` for the enum."

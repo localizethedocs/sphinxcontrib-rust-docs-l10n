@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../../docs/including.rst:24
 msgid "Via the ``toctree``"
-msgstr ""
+msgstr "透過 ``toctree``"
 
 #: ../../../docs/including.rst:26
 msgid ""
