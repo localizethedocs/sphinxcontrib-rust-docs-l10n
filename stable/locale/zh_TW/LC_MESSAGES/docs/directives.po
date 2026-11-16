@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../../docs/directives.rst:15
 msgid "All directives, except :rst:dir:`rust:use`, take the following options:"
-msgstr ""
+msgstr "除了 :rst:dir:`rust:use` 之外，所有指示詞都接受以下選項："
 
 #: ../../../docs/directives.rst:0
 msgid "index"
@@ -61,7 +61,7 @@ msgstr ""
 #: ../../../docs/directives.rst:20
 msgid ""
 "(Required) The visibility of the directive, ``pub``, ``crate`` or ``pvt``."
-msgstr ""
+msgstr "（必填）指示詞的可見性：``pub``、``crate`` 或 ``pvt``。"
 
 #: ../../../docs/directives.rst:0
 msgid "layout"

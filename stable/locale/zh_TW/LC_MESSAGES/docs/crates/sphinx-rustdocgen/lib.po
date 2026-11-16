@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:3
 msgid "Crate ``sphinx_rustdocgen``"
-msgstr ""
+msgstr "軟體箱 ``sphinx_rustdocgen``"
 
 #: ../../../docs/crates/sphinx-rustdocgen/lib.rst:9
 msgid "Library for the sphinx-rustdocgen executable."
