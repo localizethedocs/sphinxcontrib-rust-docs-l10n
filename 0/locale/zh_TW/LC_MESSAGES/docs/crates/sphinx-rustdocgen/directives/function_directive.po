@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:164
 msgid "The directive options to use."
-msgstr ""
+msgstr "要使用的指示詞選項。"
 
 #: ../../../docs/crates/sphinx-rustdocgen/directives/function_directive.rst:172
 msgid "The docstring for the function."

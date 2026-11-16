@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../index.rst:207
 msgid "Detailed docs"
-msgstr ""
+msgstr "詳細文件"
 
 #: ../../../index.rst:3
 msgid "Sphinxcontrib-rust"
