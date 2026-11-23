@@ -150,7 +150,7 @@ msgstr ""
 #: ../../../docs/roles.rst:75
 msgid ""
 "``:rust:exe:`<executable_name>``` links to an executable's documentation."
-msgstr ""
+msgstr "``:rust:exe:`<executable_name>``` 會連結到執行檔的文件。"
 
 #: ../../../docs/roles.rst:79
 msgid "Alias for :rst:role:`rust:exe`."
@@ -158,7 +158,7 @@ msgstr ":rst:role:`rust:exe` 的別名。"
 
 #: ../../../docs/roles.rst:83
 msgid "``:rust:fn:`<fn_path>``` links to a function's documentation."
-msgstr ""
+msgstr "``:rust:fn:`<fn_path>``` 會連結到函數的文件。"
 
 #: ../../../docs/roles.rst:85
 msgid ""
@@ -241,7 +241,7 @@ msgstr ""
 
 #: ../../../docs/roles.rst:132
 msgid "``:rust:type:`<type_path>``` links to a type's documentation."
-msgstr ""
+msgstr "``:rust:type:`<type_path>``` 會連結到型別的文件。"
 
 #: ../../../docs/roles.rst:136
 msgid ""
