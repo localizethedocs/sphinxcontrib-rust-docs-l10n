@@ -1,0 +1,57 @@
+=================
+sphinx-rustdocgen
+=================
+
+
+.. rust:executable:: sphinx-rustdocgen
+   :index: 0
+   :layout: [{"type":"name","value":"sphinx-rustdocgen"}]
+   :toc: sphinx-rustdocgen
+
+   sphinx-rustdocgen is an executable to extract doc comments from Rust
+   crates. It is tightly coupled with the sphinxcontrib-rust extension and is
+   used by it during the Sphinx build process.
+   
+   Usage:
+   
+   .. code-block::
+   
+      sphinx-rustdocgen <JSON config>
+   
+   See :rust:struct:`~sphinx_rustdocgen::Configuration` for the configuration
+   schema.
+
+   .. rust:use:: sphinx-rustdocgen
+      :used_name: self
+
+
+   .. rust:use:: sphinx-rustdocgen
+      :used_name: crate
+
+
+   .. rust:use:: std::env
+      :used_name: env
+
+
+   .. rust:use:: sphinx_rustdocgen::traverse_crate
+      :used_name: traverse_crate
+
+
+   .. rubric:: Variables
+
+
+   .. rust:variable:: sphinx-rustdocgen::USAGE
+      :index: 0
+      :vis: pvt
+      :toc: const USAGE
+      :layout: [{"type":"keyword","value":"const"},{"type":"space"},{"type":"name","value":"USAGE"},{"type":"punctuation","value":": "},{"type":"punctuation","value":"&"},{"type":"link","value":"str","target":"str"}]
+
+
+   .. rubric:: Functions
+
+
+   .. rust:function:: sphinx-rustdocgen::main
+      :index: 0
+      :vis: pvt
+      :layout: [{"type":"keyword","value":"fn"},{"type":"space"},{"type":"name","value":"main"},{"type":"punctuation","value":"("},{"type":"punctuation","value":")"}]
+

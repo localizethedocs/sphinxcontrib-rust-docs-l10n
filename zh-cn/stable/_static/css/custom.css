@@ -1,0 +1,9 @@
+@import 'theme.css';
+
+div.mermaid {
+    overflow: auto;
+}
+
+.wy-nav-content {
+    max-width:85%;
+}
